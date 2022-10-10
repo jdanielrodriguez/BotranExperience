@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
     marginTop: 15,
   },
   bottles: {
-    width: '70%',
+    width: '90%',
     height: '50%',
   },
   section: {
