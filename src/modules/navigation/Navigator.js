@@ -70,7 +70,7 @@ function CustomDrawerContent(props) {
           label={() => (
             <View style={{ ...styles.menuLabelFlex, marginTop: 0 }}>
               <Image
-                style={{ width: 30, height: 30, marginLeft: 'auto', marginRight: 'auto' }}
+                style={{ width: 35, height: 50, marginLeft: 'auto', marginRight: 'auto' }}
                 source={iconSettings}
               />
             </View>

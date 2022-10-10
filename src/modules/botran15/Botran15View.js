@@ -38,12 +38,12 @@ export default function Botran15Screen({ isExtended, setIsExtended }) {
             resizeMode="stretch"
           />
           <Image
-            source={require('../../../assets/images/title-ron-18.png')}
-            style={styles.title18}
+            source={require('../../../assets/images/title-ron-15.png')}
+            style={styles.title15}
             resizeMode="stretch"
           />
           <Image
-            source={require('../../../assets/images/botella-botran-18.png')}
+            source={require('../../../assets/images/botella-botran-15.png')}
             style={styles.bottles}
             resizeMode="stretch"
           />
@@ -76,9 +76,9 @@ const styles = StyleSheet.create({
     marginTop: 15,
   },
   bottles: {
-    width: '70%',
-    height: '70%',
-    marginLeft: -70
+    width: '50%',
+    height: '65%',
+    marginLeft: -50
   },
   aboutBlend: {
     width: '30%',
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
     marginBottom: -40,
     marginTop: 20,
   },
-  title18: {
+  title15: {
     width: '60%',
     height: '15%',
     marginLeft: 160,
