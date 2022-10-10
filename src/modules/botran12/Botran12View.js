@@ -11,7 +11,7 @@ import { Text } from '../../components/StyledText';
 
 
 
-export default function AboutScreen({ isExtended, setIsExtended }) {
+export default function Botran12Screen({ isExtended, setIsExtended }) {
   // const rnsUrl = 'https://reactnativestarter.com';
   // const handleClick = () => {
   //   Linking.canOpenURL(rnsUrl).then(supported => {
@@ -33,25 +33,24 @@ export default function AboutScreen({ isExtended, setIsExtended }) {
 
         <View style={[styles.section, styles.sectionLarge]}>
           <Image
-            source={require('../../../assets/images/about-button.png')}
-            style={styles.aboutTitle}
+            source={require('../../../assets/images/about-blends.png')}
+            style={styles.aboutBlend}
             resizeMode="stretch"
           />
           <Image
-            source={require('../../../assets/images/bottles.png')}
+            source={require('../../../assets/images/title-ron-18.png')}
+            style={styles.title18}
+            resizeMode="stretch"
+          />
+          <Image
+            source={require('../../../assets/images/botella-botran-18.png')}
             style={styles.bottles}
             resizeMode="stretch"
           />
           <View style={styles.priceContainer}>
             <View style={{ flexDirection: 'row' }}>
-              <Text white bold size={15} style={styles.instructions}>
-                We want to give the world a taste of the freedom, rhythm and vitality we feel here.
-                We grow, ferment and distil our cane in the rich green fields of Retalhuleu.
-              </Text>
-            </View>
-            <View style={{ flexDirection: 'row' }}>
-              <Text white bold size={15} style={styles.instructions}>
-                Then we age our rums in the montains of Quetzaltenango, perfect contidions for.
+              <Text white bold size={12} style={styles.instructions}>
+                Each of our blends shows you diferent side of Guatemala.
               </Text>
             </View>
           </View>
@@ -78,21 +77,36 @@ const styles = StyleSheet.create({
   },
   bottles: {
     width: '70%',
-    height: '50%',
-    marginTop: 150,
-    marginBottom: -100,
+    height: '70%',
+    marginLeft: -70
+  },
+  aboutBlend: {
+    width: '30%',
+    height: '5%',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    marginBottom: -40,
+    marginTop: 20,
+  },
+  title18: {
+    width: '60%',
+    height: '15%',
+    marginLeft: 160,
+    marginTop: 120,
+    position: 'absolute',
+    zIndex: 9999,
   },
   aboutTitle: {
     width: '50%',
     height: '20%',
     position: 'absolute',
-    zIndex:9999,
+    zIndex: 9999,
   },
   section: {
     flex: 1,
     paddingHorizontal: 20,
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'flex-start',
   },
   sectionLarge: {
     flex: 2,
@@ -103,7 +117,7 @@ const styles = StyleSheet.create({
   },
   priceContainer: {
     alignItems: 'center',
-    maxHeight: 150,
+    maxHeight: 150
   },
   description: {
     padding: 15,

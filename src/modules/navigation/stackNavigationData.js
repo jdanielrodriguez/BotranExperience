@@ -4,6 +4,8 @@ import { TouchableOpacity, Image } from 'react-native';
 import TabNavigator from './MainTabNavigator';
 import GalleryScreen from '../gallery/GalleryViewContainer';
 import Botran18Screen from '../botran18/Botran18ViewContainer';
+import Botran15Screen from '../botran15/Botran15ViewContainer';
+import Botran12Screen from '../botran12/Botran12ViewContainer';
 import HomeScreen from '../home/HomeViewContainer';
 import InstructionsScreen from '../instructions/InstructionsViewContainer';
 import AboutScreen from '../about/AboutViewContainer';
@@ -66,7 +68,7 @@ const StackNavigationData = [
   },
   {
     name: 'BOTRAN NO.15',
-    component: GridsScreen,
+    component: Botran15Screen,
     headerLeft: headerLeftComponent,
     headerBackground: { source: headerBackground },
     headerTitleStyle: {
@@ -77,7 +79,7 @@ const StackNavigationData = [
   },
   {
     name: 'BOTRAN NO.12',
-    component: GalleryScreen,
+    component: Botran12Screen,
     headerLeft: headerLeftComponent,
     headerBackground: { source: headerBackground },
     headerTitleStyle: {
