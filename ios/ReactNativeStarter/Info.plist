@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>ReactNativeStarter</string>
+	<string>BotranExperience</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -79,6 +79,10 @@
 		<string>Octicons.ttf</string>
 		<string>SimpleLineIcons.ttf</string>
 		<string>Zocial.ttf</string>
+		<string>harbourbold.ttf</string>
+		<string>HarbourBold.ttf</string>
+		<string>MuseoSansRounded900.ttf</string>
+		<string>MuseoSansRounded300.ttf</string>
 	</array>
 </dict>
 </plist>
