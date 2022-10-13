@@ -101,7 +101,8 @@ const styles = StyleSheet.create({
     marginLeft: 'auto',
     marginRight: 'auto',
     fontFamily: fonts.primarySemiBold,
-    fontSize: 14,
+    fontSize: 16,
+    textAlign: 'center',
     fontWeight: 'bold',
     color: '#fff'
   },
