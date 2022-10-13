@@ -2,17 +2,16 @@ package com.reactnativestarter;
 
 import android.app.Application;
 import android.content.Context;
-import com.facebook.react.PackageList;
-
-import com.facebook.react.ReactApplication;
-import com.oblador.vectoricons.VectorIconsPackage;
-import com.reactcommunity.rnlocalize.RNLocalizePackage;
 import com.BV.LinearGradient.LinearGradientPackage;
-import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
+import com.facebook.react.PackageList;
+import com.facebook.react.ReactApplication;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.soloader.SoLoader;
-
+import com.oblador.vectoricons.VectorIconsPackage;
+import com.reactcommunity.rnlocalize.RNLocalizePackage;
+import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
+import com.viromedia.bridge.ReactViroPackage;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
@@ -31,7 +30,9 @@ public class MainApplication extends Application implements ReactApplication {
 
       // Packages that cannot be autolinked yet can be added manually here, for example:
       // packages.add(new MyReactNativePackage());
-
+      packages.add(
+        new ReactViroPackage(ReactViroPackage.ViroPlatform.valueOf("AR"))
+      );
       return packages;
     }
 
@@ -49,7 +50,7 @@ public class MainApplication extends Application implements ReactApplication {
   @Override
   public void onCreate() {
     super.onCreate();
-    SoLoader.init(this, /* native exopackage */ false);
+    SoLoader.init(this, /* native exopackage */false);
     initializeFlipper(this); // Remove this line if you don't want Flipper enabled
   }
 
@@ -65,8 +66,12 @@ public class MainApplication extends Application implements ReactApplication {
          We use reflection here to pick up the class that initializes Flipper,
         since Flipper library is not available in release mode
         */
-        Class<?> aClass = Class.forName("com.facebook.flipper.ReactNativeFlipper");
-        aClass.getMethod("initializeFlipper", Context.class).invoke(null, context);
+        Class<?> aClass = Class.forName(
+          "com.facebook.flipper.ReactNativeFlipper"
+        );
+        aClass
+          .getMethod("initializeFlipper", Context.class)
+          .invoke(null, context);
       } catch (ClassNotFoundException e) {
         e.printStackTrace();
       } catch (NoSuchMethodException e) {
