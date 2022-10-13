@@ -8,7 +8,7 @@ import {
 
 import { fonts, colors } from '../../styles';
 import { Text } from '../../components/StyledText';
-// import { D3Components } from '../../components/D3Components';
+import D3Components from '../../components/D3Components';
 
 
 
@@ -26,23 +26,19 @@ export default function HomeScreen({ isExtended, setIsExtended }) {
 
   return (
     <View style={styles.container}>
-      <ImageBackground
+      <D3Components />
+      {/* <ImageBackground
         source={require('../../../assets/images/background.png')}
         style={styles.bgImage}
         resizeMode="cover"
       >
         <View style={styles.section}>
-          {/* <D3Components /> */}
-        </View>
-
-        <View style={[styles.section, styles.sectionLarge]}>
           <Text color="#19e7f7" hCenter size={15} style={styles.description}>
             {'                                                  '}
-            Vista de modelo 3D
             {'                                                  '}
           </Text>
         </View>
-      </ImageBackground>
+      </ImageBackground> */}
     </View>
   );
 }
@@ -50,8 +46,6 @@ export default function HomeScreen({ isExtended, setIsExtended }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'space-around',
   },
   bgImage: {
     flex: 1,
