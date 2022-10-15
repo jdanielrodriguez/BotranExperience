@@ -43,17 +43,17 @@ export default function InstructionsScreen({ isExtended, setIsExtended }) {
           />
           <View style={styles.priceContainer}>
             <View style={{ flexDirection: 'row' }}>
-              <Text white bold size={25} style={styles.title}>
+              <Text white size={25} style={styles.title}>
                 HOW TO ENJOY THIS EXPERIENCE.
               </Text>
             </View>
             <View style={{ flexDirection: 'row' }}>
-              <Text white bold size={15} style={styles.instructions}>
+              <Text white size={15} style={styles.instructions}>
                 Point your mobile front camera to the front label of any Botran No.12. No. 15. or No. 18. bottle.
               </Text>
             </View>
             <View style={{ flexDirection: 'row' }}>
-              <Text white bold size={12} style={styles.instructions}>
+              <Text white size={12} style={styles.instructions}>
                 Tap to start the experience.
                 {`\n`}
                 Tap to advance to each step of the process.
@@ -129,7 +129,8 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     textAlign: 'center',
     paddingHorizontal: '10%',
-    fontWeight: 'bold',
+    fontWeight: 'normal',
+    fontSize: 14,
     fontFamily: fonts.primarySemiBold,
   },
   priceLink: {

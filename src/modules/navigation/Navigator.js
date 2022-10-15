@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
     fontFamily: fonts.primarySemiBold,
     fontSize: 16,
     textAlign: 'center',
-    fontWeight: 'bold',
+    fontWeight: 'normal',
     color: '#fff'
   },
   bgImage: {
@@ -115,7 +115,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     textAlign: 'center',
     marginBottom: 15,
+    fontWeight: 'normal',
+    fontSize: 16,
     marginLeft: 15,
+    fontFamily: fonts.primarySemiBold,
     marginRight: 15
   },
   userName: {

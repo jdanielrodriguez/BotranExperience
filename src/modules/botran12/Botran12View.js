@@ -4,6 +4,7 @@ import {
   View,
   ImageBackground,
   Image,
+  ScrollView,
 } from 'react-native';
 
 import { fonts, colors } from '../../styles';
@@ -49,9 +50,28 @@ export default function Botran12Screen({ isExtended, setIsExtended }) {
           />
           <View style={styles.priceContainer}>
             <View style={{ flexDirection: 'row' }}>
-              <Text white bold size={12} style={styles.instructions}>
-                Each of our blends shows you diferent side of Guatemala.
-              </Text>
+              <ScrollView style={styles.scrollView}>
+                <Text white size={12} style={styles.instructions}>
+                  Each of our blends shows you diferent side of Guatemala.
+                  Each of our blends shows you diferent side of Guatemala.
+                  Each of our blends shows you diferent side of Guatemala.
+                  Each of our blends shows you diferent side of Guatemala.
+                  Each of our blends shows you diferent side of Guatemala.
+                  Each of our blends shows you diferent side of Guatemala.
+                  Each of our blends shows you diferent side of Guatemala.
+                  Each of our blends shows you diferent side of Guatemala.
+                  Each of our blends shows you diferent side of Guatemala.
+                  Each of our blends shows you diferent side of Guatemala.
+                  Each of our blends shows you diferent side of Guatemala.
+                  Each of our blends shows you diferent side of Guatemala.
+                  Each of our blends shows you diferent side of Guatemala.
+                  Each of our blends shows you diferent side of Guatemala.
+                  Each of our blends shows you diferent side of Guatemala.
+                  Each of our blends shows you diferent side of Guatemala.
+                  Each of our blends shows you diferent side of Guatemala.
+                  Each of our blends shows you diferent side of Guatemala.
+                </Text>
+              </ScrollView>
             </View>
           </View>
         </View>
@@ -74,6 +94,9 @@ const styles = StyleSheet.create({
     width: 100,
     height: 50,
     marginTop: 15,
+  },
+  scrollView: {
+    width: '100%',
   },
   bottles: {
     width: '50%',
@@ -138,7 +161,7 @@ const styles = StyleSheet.create({
   title: {
     textAlign: 'center',
     paddingHorizontal: '10%',
-    fontWeight: 'bold',
+    fontWeight: 'normal',
     fontFamily: fonts.primarySemiBold,
   },
   priceLink: {

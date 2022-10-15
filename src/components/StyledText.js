@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
     fontFamily: fonts.primaryRegular,
   },
   bold: {
-    fontFamily: fonts.primaryBold,
+    fontFamily: fonts.primarySemiBold,
   },
   light: {
     fontFamily: fonts.primaryLight,

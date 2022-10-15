@@ -21,7 +21,7 @@ Typography.loadTypographies({
     ...Platform.select({
       ios: {
         fontFamily: fonts.primary,
-        fontWeight: 'bold',
+        fontWeight: 'normal',
       },
       android: {
         fontFamily: fonts.primaryBold,
@@ -33,7 +33,7 @@ Typography.loadTypographies({
     ...Platform.select({
       ios: {
         fontFamily: fonts.primary,
-        fontWeight: 'bold',
+        fontWeight: 'normal',
       },
       android: {
         fontFamily: fonts.primaryBold,
@@ -49,13 +49,13 @@ Typography.loadTypographies({
     fontFamily: fonts.primary,
     fontSize: 20,
     lineHeight: 22,
-    fontWeight: 'bold',
+    fontWeight: 'normal',
   },
   rubik24Bold: {
     fontFamily: fonts.primary,
     fontSize: 24,
     lineHeight: 22,
-    fontWeight: 'bold',
+    fontWeight: 'normal',
   },
   h1Rubik: {
     fontSize: 28,
@@ -80,7 +80,7 @@ Typography.loadTypographies({
     ...Platform.select({
       ios: {
         fontFamily: fonts.primary,
-        fontWeight: 'bold',
+        fontWeight: 'normal',
       },
       android: {
         fontFamily: fonts.primaryBold,

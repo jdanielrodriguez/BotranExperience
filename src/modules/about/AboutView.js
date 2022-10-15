@@ -44,13 +44,13 @@ export default function AboutScreen({ isExtended, setIsExtended }) {
           />
           <View style={styles.priceContainer}>
             <View style={{ flexDirection: 'row' }}>
-              <Text white bold size={15} style={styles.instructions}>
+              <Text white size={15} style={styles.instructions}>
                 We want to give the world a taste of the freedom, rhythm and vitality we feel here.
                 We grow, ferment and distil our cane in the rich green fields of Retalhuleu.
               </Text>
             </View>
             <View style={{ flexDirection: 'row' }}>
-              <Text white bold size={15} style={styles.instructions}>
+              <Text white size={15} style={styles.instructions}>
                 Then we age our rums in the montains of Quetzaltenango, perfect contidions for.
               </Text>
             </View>
@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
     marginBottom: -100,
   },
   aboutTitle: {
-    width: '50%',
+    width: '70%',
     height: '20%',
     position: 'absolute',
     zIndex:9999,
@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
   title: {
     textAlign: 'center',
     paddingHorizontal: '10%',
-    fontWeight: 'bold',
+    fontWeight: 'normal',
     fontFamily: fonts.primarySemiBold,
   },
   priceLink: {
