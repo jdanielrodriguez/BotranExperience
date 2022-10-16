@@ -43,7 +43,7 @@ function CustomDrawerContent(props) {
             <DrawerItem
               key={`drawer_item-${idx + 1}`}
               label={() => (
-                <View style={{...styles.menuLabelFlex, marginTop: 10}} key={`label_item-${idx + 1}`}>
+                <View style={{...styles.menuLabelFlex, marginTop: 10, backgroundColor: '#004C48', padding: 5}} key={`label_item-${idx + 1}`}>
                   <Text style={styles.menuTitle}>{item.name}</Text>
                 </View>
               )}
@@ -60,7 +60,7 @@ function CustomDrawerContent(props) {
         ))}
         <DrawerItem
           label={() => (
-            <View style={styles.menuLabelFlex}>
+            <View style={{...styles.menuLabelFlex, backgroundColor: '#004C48', padding: 5}}>
               <Text style={styles.menuTitle}>INSTRUCTIONS</Text>
             </View>
           )}
