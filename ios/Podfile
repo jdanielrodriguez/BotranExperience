@@ -10,7 +10,7 @@ target 'BotranExperience' do
   config = use_native_modules!
   use_react_native!(:path => config["reactNativePath"])
 
-  target 'ReactNativeStarterTests' do
+  target 'BotranExperience' do
     inherit! :search_paths
     # Pods for testing
     pod 'RNBootSplash', :path => '../node_modules/react-native-bootsplash'
