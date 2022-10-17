@@ -1,18 +1,18 @@
 import React from 'react';
 import { TouchableOpacity, Image } from 'react-native';
 
-import TabNavigator from './MainTabNavigator';
-import GalleryScreen from '../gallery/GalleryViewContainer';
+// import TabNavigator from './MainTabNavigator';
+// import GalleryScreen from '../gallery/GalleryViewContainer';
 import Botran18Screen from '../botran18/Botran18ViewContainer';
 import Botran15Screen from '../botran15/Botran15ViewContainer';
 import Botran12Screen from '../botran12/Botran12ViewContainer';
 import HomeScreen from '../home/HomeViewContainer';
 import InstructionsScreen from '../instructions/InstructionsViewContainer';
 import AboutScreen from '../about/AboutViewContainer';
-import AvailableInFullVersion from '../../modules/availableInFullVersion/AvailableInFullVersionViewContainer';
+import AvailableInFullVersion from "../availableInFullVersion/AvailableInFullVersionViewContainer";
 
-import CalendarScreen from '../calendar/CalendarViewContainer';
-import GridsScreen from '../grids/GridsViewContainer';
+// import CalendarScreen from '../calendar/CalendarViewContainer';
+// import GridsScreen from '../grids/GridsViewContainer';
 // import ArticleScreen from '../article/ArticleViewContainer';
 // import ChatScreen from '../chat/ChatViewContainer';
 // import MessagesScreen from '../chat/MessagesViewContainer';
@@ -21,25 +21,23 @@ import GridsScreen from '../grids/GridsViewContainer';
 
 import { colors, fonts } from '../../styles';
 
-const headerLeftComponent = (props) => {
-  return (
-    <TouchableOpacity
-      onPress={props.onPress}
-      style={{
+const headerLeftComponent = (props) => (
+  <TouchableOpacity
+    onPress={props.onPress}
+    style={{
         paddingHorizontal: 16,
         paddingVertical: 12,
       }}
-    >
-      <Image
-        source={require('../../../assets/images/icons/arrow-back.png')}
-        resizeMode="contain"
-        style={{
+  >
+    <Image
+      source={require('../../../assets/images/icons/arrow-back.png')}
+      resizeMode="contain"
+      style={{
           height: 20,
         }}
-      />
-    </TouchableOpacity>    
+    />
+  </TouchableOpacity>
   )
-}
 
 const headerBackground = require('../../../assets/images/background.png');
 
