@@ -6,9 +6,8 @@ import {
 
 import {
   Viro3DObject, ViroAmbientLight, ViroAnimations,
-  ViroARCamera, ViroARImageMarker, ViroARScene, ViroARSceneNavigator, ViroARTrackingTargets, ViroBox,
-  ViroMaterials, ViroNode, ViroOmniLight, ViroQuad, ViroSpotLight, ViroText,
-  ViroTrackingStateConstants
+  ViroARCamera, ViroARImageMarker, ViroARScene, ViroARSceneNavigator, ViroARTrackingTargets,
+  ViroMaterials, ViroNode, ViroOmniLight, ViroQuad, ViroSpotLight, ViroTrackingStateConstants
 } from '@viro-community/react-viro';
 
 const createReactClass = require('create-react-class');
@@ -54,37 +53,63 @@ ViroAnimations.registerAnimations({
     duration: 2500, // .25 seconds
   },
 });
-const botran = () => (
-  <>
-    {spotLigth()}
-    <Viro3DObject
-      source={require("./../../assets/images/materiales/columnaA.vrx")}
-      position={[-1, -50, -100]}
-      scale={[.4, .4, .4]}
-      rotation={[0, 0, -2]}
-      lightReceivingBitMask={5}
-      animation={{ name: this.state.animationName, run: this.state.modelAnim, loop: this.state.loopState, onFinish: this._onFinish, }}
-      shadowCastingBitMask={4}
-      type="VRX"
-      resources={[
-        require('./../../assets/images/materiales/MODULOS-COLUMNA_3_12-OPTIMIZADO1/BOTRAN-No12Etiqueta.png'),
-        require('./../../assets/images/materiales/MODULOS-COLUMNA_3_12-OPTIMIZADO1/Col3-AroundTheWorld_Uvmap.png'),
-        require('./../../assets/images/materiales/MODULOS-COLUMNA_3_12-OPTIMIZADO1/Col3-Distribucion_Uvmap.png'),
-        require('./../../assets/images/materiales/MODULOS-COLUMNA_3_12-OPTIMIZADO1/Col3-Embotellado_Uvmap.png'),
-      ]}
-      onLoadStart={_onLoadStart}
-      onLoadEnd={_onLoadEnd}
-      onError={_onError}
-    />
-    <ViroQuad
-      rotation={[-90, 0, 0]}
-      width={.5}
-      height={.5}
-      arShadowReceiver
-      lightReceivingBitMask={4}
-    />
-  </>
-)
+const botran = () => {
+  const prueba5b = {
+    src: require("./../../assets/images/materiales/COL3-12-TEST-PureAnim-Emb-05b.vrx"),
+    materials: [
+      require('./../../assets/images/materiales/COL3-12-TEST-PureAnim-Emb-05b/BOTRAN-No12Etiqueta3.png'),
+      require('./../../assets/images/materiales/COL3-12-TEST-PureAnim-Emb-05b/Col3-AroundTheWorld_Uvmap.png'),
+      require('./../../assets/images/materiales/COL3-12-TEST-PureAnim-Emb-05b/Col3-Distribucion_Uvmap.png'),
+      require('./../../assets/images/materiales/COL3-12-TEST-PureAnim-Emb-05b/Col3-Embotellado_Uvmap.png'),
+      require('./../../assets/images/materiales/COL3-12-TEST-PureAnim-Emb-05b/EMBOTELLADO-PISO.png'),
+      require('./../../assets/images/materiales/COL3-12-TEST-PureAnim-Emb-05b/intro---AROUND-THE-WORLD_0004_NAVIERA.png'),
+    ]
+  }
+  const prueba5 = {
+    src: require("./../../assets/images/materiales/COL3-12-TEST-PureAnim-Emb-05.vrx"),
+    materials: [
+      require('./../../assets/images/materiales/MODULOS-COLUMNA_3_12-OPTIMIZADO1/BOTRAN-No12Etiqueta.png'),
+      require('./../../assets/images/materiales/MODULOS-COLUMNA_3_12-OPTIMIZADO1/Col3-AroundTheWorld_Uvmap.png'),
+      require('./../../assets/images/materiales/MODULOS-COLUMNA_3_12-OPTIMIZADO1/Col3-Distribucion_Uvmap.png'),
+      require('./../../assets/images/materiales/MODULOS-COLUMNA_3_12-OPTIMIZADO1/Col3-Embotellado_Uvmap.png'),
+    ]
+  }
+  const prueba6 = {
+    src: require("./../../assets/images/materiales/COL3-12-TEST-Nothing-Emb-06.vrx"),
+    materials: [
+      require('./../../assets/images/materiales/COL3-12-TEST-Nothing-Emb-06/BOTRAN-No12Etiqueta3.png'),
+      require('./../../assets/images/materiales/COL3-12-TEST-Nothing-Emb-06/Col3-AroundTheWorld_Uvmap.png'),
+      require('./../../assets/images/materiales/COL3-12-TEST-Nothing-Emb-06/Col3-Distribucion_Uvmap.png'),
+      require('./../../assets/images/materiales/COL3-12-TEST-Nothing-Emb-06/Col3-Embotellado_Uvmap.png'),
+    ]
+  }
+  return (
+    <>
+      {spotLigth()}
+      <Viro3DObject
+        source={prueba6.src}
+        position={[0, -50, -100]}
+        scale={[.4, .4, .4]}
+        rotation={[0, 0, -2]}
+        lightReceivingBitMask={5}
+        animation={{ name: this.state.animationName, run: this.state.modelAnim, loop: this.state.loopState, onFinish: this._onFinish, }}
+        shadowCastingBitMask={4}
+        type="VRX"
+        resources={prueba6.materials}
+        onLoadStart={_onLoadStart}
+        onLoadEnd={_onLoadEnd}
+        onError={_onError}
+      />
+      <ViroQuad
+        rotation={[-90, 0, 0]}
+        width={.5}
+        height={.5}
+        arShadowReceiver
+        lightReceivingBitMask={4}
+      />
+    </>
+  );
+}
 const spotLigth = () => (
   <>
     <ViroSpotLight
@@ -162,101 +187,6 @@ const emoji = () => (
   </>
 )
 
-const botran12Obj = (props) => (
-  <>
-    <ViroARImageMarker key="Botran12Mkt" target="Botran12" onAnchorFound={this._onAnchorFound} pauseUpdates={this.state.pauseUpdates}>
-      <ViroNode
-        position={[0, -.1, 0]}
-        scale={[0, 0, 0]}
-        rotation={[-90, 0, 0]}
-        dragType="FixedToWorld"
-        onDrag={() => { }}
-        animation={{ name: "scaleModel", run: this.state.playAnim, }}
-      >
-        {emoji()}
-      </ViroNode>
-    </ViroARImageMarker>
-  </>
-)
-const botran15Obj = (props) => (
-  <>
-    <ViroARImageMarker key="Botran15Mkt" target="Botran15" onAnchorFound={this._onAnchorFound} pauseUpdates={this.state.pauseUpdates}>
-      <ViroNode
-        position={[0, -.1, 0]}
-        scale={[0, 0, 0]}
-        rotation={[-90, 0, 0]}
-        dragType="FixedToWorld"
-        onDrag={() => { }}
-        animation={{ name: "scaleModel", run: this.state.playAnim, }}
-      >
-        {football()}
-      </ViroNode>
-    </ViroARImageMarker>
-  </>
-)
-const botran18Obj = (props) => (
-  <>
-    <ViroARImageMarker key="Botran18Mkt" target="Botran18" onAnchorFound={this._onAnchorFound} pauseUpdates={this.state.pauseUpdates}>
-      <ViroNode
-        position={[0, -.1, 0]}
-        scale={[0, 0, 0]}
-        rotation={[-90, 0, 0]}
-        dragType="FixedToWorld"
-        onDrag={() => { }}
-        animation={{ name: "scaleModel", run: this.state.playAnim, }}
-      >
-        {football()}
-      </ViroNode>
-    </ViroARImageMarker>
-  </>
-)
-// eslint-disable-next-line react/prefer-es6-class
-const ball = createReactClass({
-  getInitialState() {
-    return {
-      hasARInitialized: false,
-      text: "Initializing AR...",
-    };
-  },
-  // eslint-disable-next-line react/sort-comp
-  render() {
-    return (
-      <ViroARScene onTrackingUpdated={this._onTrackingUpdated}>
-
-        {/* Text to show whether or not the AR system has initialized yet, see ViroARScene's onTrackingInitialized */}
-        <ViroText text={this.state.text} scale={[.5, .5, .5]} position={[0, 0, -1]} style={styles.helloWorldTextStyle} />
-
-        <ViroBox
-          position={[0, -.5, -1]}
-          animation={{ name: "rotate", run: true, loop: true }}
-          scale={[.3, .3, .1]}
-          materials={["grid"]}
-        />
-
-        <ViroAmbientLight color="#aaaaaa" influenceBitMask={1} />
-        {spotLigth()}
-        <ViroNode position={[-.5, -.5, -.5]} dragType="FixedToWorld" onDrag={() => { }}>
-          {emoji()}
-        </ViroNode>
-        <ViroNode position={[.5, -.5, -.5]} dragType="FixedToWorld" onDrag={() => { }}>
-          {football()}
-        </ViroNode>
-
-      </ViroARScene>
-    );
-  },
-  _onTrackingUpdated(state, reason) {
-    // if the state changes to "TRACKING_NORMAL" for the first time, then
-    // that means the AR session has initialized!
-    if (!this.state.hasARInitialized && state == ViroTrackingStateConstants.TRACKING_NORMAL) {
-      this.setState({
-        hasARInitialized: true,
-        text: "Hello World!"
-      });
-    }
-  }
-});
-
 // eslint-disable-next-line react/prefer-es6-class
 const ARPosterDemo = createReactClass({
   getInitialState() {
@@ -264,6 +194,35 @@ const ARPosterDemo = createReactClass({
       pauseUpdates: false,
       playAnim: false,
     };
+  },
+
+  _onFinish() {
+    this.setState({
+      playAnim: false,
+      pauseUpdates: true,
+    })
+  },
+
+  _onAnchorFound() {
+    this.setState({
+      pauseUpdates: false,
+      playAnim: true,
+    })
+  },
+
+  _onAnchorUpdate() {
+    this.setState({
+      pauseUpdates: true,
+      playAnim: true,
+    })
+  },
+
+  _onModelLoad() {
+    setTimeout(() => {
+      this.setState({
+
+      })
+    }, 3000);
   },
 
   render() {
@@ -343,56 +302,22 @@ const ARPosterDemo = createReactClass({
       </ViroARScene>
     );
   },
-
-  _onFinish() {
-    this.setState({
-      animationName: "02",
-      loopState: false,
-    })
-  },
-
-  _onAnchorFound() {
-    this.setState({
-      pauseUpdates: false,
-      playAnim: true,
-      modelAnim: true,
-    })
-  },
-
-  _onAnchorUpdate() {
-    this.setState({
-      animationName: "02",
-      loopState: false,
-      pauseUpdates: true,
-      playAnim: true,
-      modelAnim: true,
-    })
-    console.log('detenido')
-  },
-
-  _onModelLoad() {
-    setTimeout(() => {
-      this.setState({
-
-      })
-    }, 3000);
-  },
 });
 ViroARTrackingTargets.createTargets({
   Botran12: {
     source: No12Etiqueta,
     orientation: "Up",
-    physicalWidth: 0.6096 // real world width in meters
+    physicalWidth: 0.082 // real world width in meters
   },
   Botran15: {
     source: No12Etiqueta,
     orientation: "Up",
-    physicalWidth: 0.6096 // real world width in meters
+    physicalWidth: 0.082 // real world width in meters
   },
   Botran18: {
     source: No12Etiqueta,
     orientation: "Up",
-    physicalWidth: 0.6096 // real world width in meters
+    physicalWidth: 0.082 // real world width in meters
   }
 });
 
