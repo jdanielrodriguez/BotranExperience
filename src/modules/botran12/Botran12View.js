@@ -12,7 +12,7 @@ import { Text } from '../../components/StyledText';
 
 
 
-export default function Botran12Screen({ isExtended, setIsExtended }) {
+export default function Botran12Screen() {
   // const rnsUrl = 'https://reactnativestarter.com';
   // const handleClick = () => {
   //   Linking.canOpenURL(rnsUrl).then(supported => {
@@ -51,30 +51,72 @@ export default function Botran12Screen({ isExtended, setIsExtended }) {
           <View style={styles.priceContainer}>
             <View style={{ flexDirection: 'row' }}>
               <ScrollView style={styles.scrollView}>
-                <Text white size={12} style={styles.instructions}>
-                  Each of our blends shows you diferent side of Guatemala.
-                  Each of our blends shows you diferent side of Guatemala.
-                  Each of our blends shows you diferent side of Guatemala.
-                  Each of our blends shows you diferent side of Guatemala.
-                  Each of our blends shows you diferent side of Guatemala.
-                  Each of our blends shows you diferent side of Guatemala.
-                  Each of our blends shows you diferent side of Guatemala.
-                  Each of our blends shows you diferent side of Guatemala.
-                  Each of our blends shows you diferent side of Guatemala.
-                  Each of our blends shows you diferent side of Guatemala.
-                  Each of our blends shows you diferent side of Guatemala.
-                  Each of our blends shows you diferent side of Guatemala.
-                  Each of our blends shows you diferent side of Guatemala.
-                  Each of our blends shows you diferent side of Guatemala.
-                  Each of our blends shows you diferent side of Guatemala.
-                  Each of our blends shows you diferent side of Guatemala.
-                  Each of our blends shows you diferent side of Guatemala.
-                  Each of our blends shows you diferent side of Guatemala.
+                <Text size={12} style={styles.instructions}>
+                  BOTRAN 12
+                </Text>
+                <Text size={12} style={styles.instructions}>
+                  CAPTIVATING
+                </Text>
+                <Text size={12} style={styles.instructions}>
+                  -Dynamic Ageing (Solera adapted).
+                </Text>
+                <Text size={12} style={styles.instructions}>
+                  -Blend of 5-12-year-old rums.
+                </Text>
+                <Text size={12} style={styles.instructions}>
+                  -American whiskey.
+                </Text>
+                <Text size={12} style={styles.instructions}>
+                  -Medium toasted American whiskey.
+                </Text>
+                <Text size={12} style={styles.instructions}>
+                  -Sherry wines. (Oloroso)
+                </Text>
+                <Text size={12} style={styles.instructions}>
+                  COLOUR
+                </Text>
+                <Text size={12} style={styles.instructions}>
+                  Mahogany with golden highlights.
+                </Text>
+                <Text size={12} style={styles.instructions}>
+                  NOSE
+                </Text>
+                <Text size={12} style={styles.instructions}>
+                  Delicious notes of vanilla, toasted
+                </Text>
+                <Text size={12} style={styles.instructions}>
+                  oak and dried fruits (like nuts and almonds)
+                </Text>
+                <Text size={12} style={styles.instructions}>
+                  PALATE
+                </Text>
+                <Text size={12} style={styles.instructions}>
+                  Dried fruits and Oak notes.
+                </Text>
+                <Text size={12} style={styles.instructions}>
+                  FINISH
+                </Text>
+                <Text size={12} style={styles.instructions}>
+                  Toasted oak and vanilla notes.
+                </Text>
+                <Text size={12} style={styles.instructions}>
+                  PERFECT SERVE
+                </Text>
+                <Text size={12} style={styles.instructions}>
+                  Perfect for uplifting any cocktail.
+                </Text>
+                <Text size={12} style={styles.instructions}>
+                  Ideal with citrus, salty, bitter and sweet flavours.
                 </Text>
               </ScrollView>
             </View>
           </View>
         </View>
+        <Image
+          source={require('../../../assets/images/barra-abajo.png')}
+          style={styles.barra}
+          resizeMode="stretch"
+        />
       </ImageBackground>
     </View>
   );
@@ -97,6 +139,7 @@ const styles = StyleSheet.create({
   },
   scrollView: {
     width: '100%',
+    paddingBottom: 3
   },
   bottles: {
     width: '50%',
@@ -167,5 +210,11 @@ const styles = StyleSheet.create({
   priceLink: {
     borderBottomWidth: 1,
     borderBottomColor: colors.primary,
+  },
+  barra: {
+    position: 'absolute',
+    bottom: 0,
+    width: '184%',
+    height: 28
   },
 });

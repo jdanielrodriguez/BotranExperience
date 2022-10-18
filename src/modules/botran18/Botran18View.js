@@ -12,7 +12,7 @@ import { Text } from '../../components/StyledText';
 
 
 
-export default function Botran18Screen({ isExtended, setIsExtended }) {
+export default function Botran18Screen() {
   // const rnsUrl = 'https://reactnativestarter.com';
   // const handleClick = () => {
   //   Linking.canOpenURL(rnsUrl).then(supported => {
@@ -50,88 +50,98 @@ export default function Botran18Screen({ isExtended, setIsExtended }) {
           <View style={styles.priceContainer}>
             <View style={{ flexDirection: 'row' }}>
               <ScrollView style={styles.scrollView}>
-                <Text white size={12} style={styles.instructions}>
-                  Each of our blends shows you diferent side of Guatemala.
+                <Text size={12} style={styles.instructions}>
+                  ELEGANT.
                 </Text>
-                <Text white size={12} style={styles.instructions}>
-                  Each of our blends shows you diferent side of Guatemala.
+                <Text size={12} style={styles.instructions}>
+                  BOTRAN 18
                 </Text>
-                <Text white size={12} style={styles.instructions}>
-                  Each of our blends shows you diferent side of Guatemala.
+
+                <Text size={12} style={styles.instructions}>
+                  PERFECT SERVE
                 </Text>
-                <Text white size={12} style={styles.instructions}>
-                  Each of our blends shows you diferent side of Guatemala.
+                <Text size={12} style={styles.instructions}>
+                  Enjoy neat or on the rocks for a journey into
                 </Text>
-                <Text white size={12} style={styles.instructions}>
-                  Each of our blends shows you diferent side of Guatemala.
+                <Text size={12} style={styles.instructions}>
+                  Guatemalan flavour.
                 </Text>
-                <Text white size={12} style={styles.instructions}>
-                  Each of our blends shows you diferent side of Guatemala.
+                <Text size={12} style={styles.instructions}>
+                  Born in 1893, Don Venancio was the first Botran Merino brother
+                  to be inspired by glorious Guatemala.
                 </Text>
-                <Text white size={12} style={styles.instructions}>
-                  Each of our blends shows you diferent side of Guatemala.
+                <Text size={12} style={styles.instructions}>
+                  Botran 18 is a blend for him. His passion, fire and determination
                 </Text>
-                <Text white size={12} style={styles.instructions}>
-                  Each of our blends shows you diferent side of Guatemala.
+                <Text size={12} style={styles.instructions}>
+                  – in one bottle.
                 </Text>
-                <Text white size={12} style={styles.instructions}>
-                  Each of our blends shows you diferent side of Guatemala.
+                <Text size={12} style={styles.instructions}>
+                  -Dynamic Ageing (Solera adapted).
                 </Text>
-                <Text white size={12} style={styles.instructions}>
-                  Each of our blends shows you diferent side of Guatemala.
+                <Text size={12} style={styles.instructions}>
+                  -Blend of 5-18-year-old rums.
                 </Text>
-                <Text white size={12} style={styles.instructions}>
-                  Each of our blends shows you diferent side of Guatemala.
+
+                <Text size={12} style={styles.instructions}>
+                  -American whiskey.
                 </Text>
-                <Text white size={12} style={styles.instructions}>
-                  Each of our blends shows you diferent side of Guatemala.
+                <Text size={12} style={styles.instructions}>
+                  -Medium toasted American whiskey.
                 </Text>
-                <Text white size={12} style={styles.instructions}>
-                  Each of our blends shows you diferent side of Guatemala.
+                <Text size={12} style={styles.instructions}>
+                  -Sherry wines. (Oloroso)
                 </Text>
-                <Text white size={12} style={styles.instructions}>
-                  Each of our blends shows you diferent side of Guatemala.
+                <Text size={12} style={styles.instructions}>
+                  -Port wines. (Tawny)
                 </Text>
-                <Text white size={12} style={styles.instructions}>
-                  Each of our blends shows you diferent side of Guatemala.
+                <Text size={12} style={styles.instructions}>
+                  COLOUR
                 </Text>
-                <Text white size={12} style={styles.instructions}>
-                  Each of our blends shows you diferent side of Guatemala.
+                <Text size={12} style={styles.instructions}>
+                  Deep mahogany with beams of
+                  reddish light.
                 </Text>
-                <Text white size={12} style={styles.instructions}>
-                  Each of our blends shows you diferent side of Guatemala.
+                <Text size={12} style={styles.instructions}>
+                  NOSE
                 </Text>
-                <Text white size={12} style={styles.instructions}>
-                  Each of our blends shows you diferent side of Guatemala.
+                <Text size={12} style={styles.instructions}>
+                  Initial notes of maple syrup and
+                  caramelised aromas.
                 </Text>
-                <Text white size={12} style={styles.instructions}>
-                  Each of our blends shows you diferent side of Guatemala.
+                <Text size={12} style={styles.instructions}>
+                  Dark chocolate notes emerge as
+                  the rum evolves in the glass.
                 </Text>
-                <Text white size={12} style={styles.instructions}>
-                  Each of our blends shows you diferent side of Guatemala.
+                <Text size={12} style={styles.instructions}>
+                  PALATE
                 </Text>
-                <Text white size={12} style={styles.instructions}>
-                  Each of our blends shows you diferent side of Guatemala.
+                <Text size={12} style={styles.instructions}>
+                  Dry with notes of dried plum and
+                  dark chocolate.
                 </Text>
-                <Text white size={12} style={styles.instructions}>
-                  Each of our blends shows you diferent side of Guatemala.
+                <Text size={12} style={styles.instructions}>
+                  FINISH
                 </Text>
-                <Text white size={12} style={styles.instructions}>
-                  Each of our blends shows you diferent side of Guatemala.
+                <Text size={12} style={styles.instructions}>
+                  Toasted oak and dark chocolate notes.
                 </Text>
-                <Text white size={12} style={styles.instructions}>
-                  Each of our blends shows you diferent side of Guatemala.
+                <Text size={12} style={styles.instructions}>
+                  PERFECT SERVE
                 </Text>
-                <Text white size={12} style={styles.instructions}>
-                  Each of our blends shows you diferent side of Guatemala.
-                </Text>
-                <Text white size={12} style={styles.instructions}>
-                  Each of our blends shows you diferent side of Guatemala.
+                <Text size={12} style={styles.instructions}>
+                  Enjoy neat or on the rocks for a journey into
+                  Guatemalan flavour.
                 </Text>
               </ScrollView>
             </View>
           </View>
         </View>
+        <Image
+          source={require('../../../assets/images/barra-abajo.png')}
+          style={styles.barra}
+          resizeMode="stretch"
+        />
       </ImageBackground>
     </View>
   );
@@ -213,6 +223,7 @@ const styles = StyleSheet.create({
     marginBottom: 5,
     textAlign: 'center',
     fontFamily: fonts.primaryRegular,
+    borderBottomColor: colors.primary,
   },
   title: {
     textAlign: 'center',
@@ -222,5 +233,11 @@ const styles = StyleSheet.create({
   priceLink: {
     borderBottomWidth: 1,
     borderBottomColor: colors.primary,
+  },
+  barra: {
+    position: 'absolute',
+    bottom: 0,
+    width: '184%',
+    height: 28
   },
 });

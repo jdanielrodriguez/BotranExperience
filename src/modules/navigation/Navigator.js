@@ -45,10 +45,10 @@ function CustomDrawerContent(props) {
         }}
       >
         <Image
-          source={require('../../../assets/images/menu.png')}
+          source={require('../../../assets/images/Cerrar.png')}
           resizeMode="contain"
           style={{
-            marginLeft: 190,
+            marginLeft: 210,
             height: 50,
             position: 'absolute'
           }}

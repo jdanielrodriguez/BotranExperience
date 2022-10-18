@@ -53,25 +53,59 @@ ViroAnimations.registerAnimations({
     duration: 2500, // .25 seconds
   },
 });
-const botran = () => {
-  const prueba5b = {
-    src: require("./../../assets/images/materiales/COL3-12-TEST-PureAnim-Emb-05b.vrx"),
+const botran = (objIndex) => {
+  const prueba12BFlaten = {
+    src: require("./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12b.vrx"),
     materials: [
-      require('./../../assets/images/materiales/COL3-12-TEST-PureAnim-Emb-05b/BOTRAN-No12Etiqueta3.png'),
-      require('./../../assets/images/materiales/COL3-12-TEST-PureAnim-Emb-05b/Col3-AroundTheWorld_Uvmap.png'),
-      require('./../../assets/images/materiales/COL3-12-TEST-PureAnim-Emb-05b/Col3-Distribucion_Uvmap.png'),
-      require('./../../assets/images/materiales/COL3-12-TEST-PureAnim-Emb-05b/Col3-Embotellado_Uvmap.png'),
-      require('./../../assets/images/materiales/COL3-12-TEST-PureAnim-Emb-05b/EMBOTELLADO-PISO.png'),
-      require('./../../assets/images/materiales/COL3-12-TEST-PureAnim-Emb-05b/intro---AROUND-THE-WORLD_0004_NAVIERA.png'),
+      require('./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12b/BOTRAN-No12EtiquetaLOW.png'),
+      require('./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12b/Col0-INTRO_Uvmap.png'),
+      require('./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12b/Col0-Zoom-Mapa_Uvmap.png'),
+      require('./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12b/LANDING_0002_MIXCO-MAP.png'),
+      require('./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12b/LANDING_0004_REU-MAP.png'),
+      require('./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12b/LANDING_0006_XELA-MAP.png'),
+      require('./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12b/ZOOM_Fondo.jpg'),
     ]
   }
-  const prueba5 = {
-    src: require("./../../assets/images/materiales/COL3-12-TEST-PureAnim-Emb-05.vrx"),
+  const prueba12AFlaten = {
+    src: require("./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12a.vrx"),
     materials: [
-      require('./../../assets/images/materiales/MODULOS-COLUMNA_3_12-OPTIMIZADO1/BOTRAN-No12Etiqueta.png'),
-      require('./../../assets/images/materiales/MODULOS-COLUMNA_3_12-OPTIMIZADO1/Col3-AroundTheWorld_Uvmap.png'),
-      require('./../../assets/images/materiales/MODULOS-COLUMNA_3_12-OPTIMIZADO1/Col3-Distribucion_Uvmap.png'),
-      require('./../../assets/images/materiales/MODULOS-COLUMNA_3_12-OPTIMIZADO1/Col3-Embotellado_Uvmap.png'),
+      require('./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12a/BOTRAN-No12EtiquetaLOW.png'),
+      require('./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12a/Col0-INTRO_Uvmap.png'),
+      require('./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12a/Col0-Zoom-Mapa_Uvmap.png'),
+      require('./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12a/LANDING_0002_MIXCO-MAP.png'),
+      require('./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12a/LANDING_0004_REU-MAP.png'),
+      require('./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12a/LANDING_0006_XELA-MAP.png'),
+      require('./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12a/ZOOM_Fondo.jpg'),
+    ]
+  }
+  const prueba12CFlaten = {
+    src: require("./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12c.vrx"),
+    materials: [
+      require('./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12a/BOTRAN-No12EtiquetaLOW.png'),
+      require('./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12a/Col0-INTRO_Uvmap.png'),
+      require('./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12a/Col0-Zoom-Mapa_Uvmap.png'),
+      require('./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12a/LANDING_0002_MIXCO-MAP.png'),
+      require('./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12a/LANDING_0004_REU-MAP.png'),
+      require('./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12a/LANDING_0006_XELA-MAP.png'),
+      require('./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12a/ZOOM_Fondo.jpg'),
+    ]
+  }
+  const prueba12B = {
+    src: require("./../../assets/images/materiales/01-MODULOS-Col3_FLATTEN-12b.vrx"),
+    materials: [
+      require('./../../assets/images/materiales/01-MODULOS-Col3_FLATTEN-12b/BOTRAN-No12Etiqueta3.png'),
+      require('./../../assets/images/materiales/01-MODULOS-Col3_FLATTEN-12b/Col3-AroundTheWorld_Uvmap.png'),
+      require('./../../assets/images/materiales/01-MODULOS-Col3_FLATTEN-12b/Col3-Distribucion_Uvmap.png'),
+      require('./../../assets/images/materiales/01-MODULOS-Col3_FLATTEN-12b/Col3-Embotellado_Uvmap.png'),
+    ]
+  }
+  const prueba12A = {
+    src: require("./../../assets/images/materiales/01-MODULOS-Col3_FLATTEN-12a.vrx"),
+    materials: [
+      require('./../../assets/images/materiales/01-MODULOS-Col3_FLATTEN-12a/BOTRAN-No12Etiqueta3.png'),
+      require('./../../assets/images/materiales/01-MODULOS-Col3_FLATTEN-12a/Col3-AroundTheWorld_Uvmap.png'),
+      require('./../../assets/images/materiales/01-MODULOS-Col3_FLATTEN-12a/Col3-Distribucion_Uvmap.png'),
+      require('./../../assets/images/materiales/01-MODULOS-Col3_FLATTEN-12a/Col3-Embotellado_Uvmap.png'),
     ]
   }
   const prueba6 = {
@@ -83,11 +117,23 @@ const botran = () => {
       require('./../../assets/images/materiales/COL3-12-TEST-Nothing-Emb-06/Col3-Embotellado_Uvmap.png'),
     ]
   }
+
+  const objects = [
+    prueba12BFlaten,
+    prueba12AFlaten,
+    prueba12CFlaten,
+    prueba12B,
+    prueba12A,
+    prueba6
+  ]
+  let contador = 0;
+  let selected = objects[objIndex || contador];
+
   return (
     <>
       {spotLigth()}
       <Viro3DObject
-        source={prueba6.src}
+        source={selected.src}
         position={[0, -50, -100]}
         scale={[.4, .4, .4]}
         rotation={[0, 0, -2]}
@@ -95,7 +141,7 @@ const botran = () => {
         animation={{ name: this.state.animationName, run: this.state.modelAnim, loop: this.state.loopState, onFinish: this._onFinish, }}
         shadowCastingBitMask={4}
         type="VRX"
-        resources={prueba6.materials}
+        resources={selected.materials}
         onLoadStart={_onLoadStart}
         onLoadEnd={_onLoadEnd}
         onError={_onError}
@@ -115,12 +161,12 @@ const spotLigth = () => (
     <ViroSpotLight
       innerAngle={5}
       outerAngle={45}
-      direction={[0, -1, -.2]}
-      position={[0, 3, 0]}
+      direction={[0, 0, 0]}
+      position={[0, 0, 0]}
       color="#ffffff"
       castsShadow
       influenceBitMask={4}
-      shadowMapSize={2048}
+      shadowMapSize={1024}
       shadowNearZ={2}
       shadowFarZ={5}
       shadowOpacity={.7}
@@ -193,6 +239,7 @@ const ARPosterDemo = createReactClass({
     return {
       pauseUpdates: false,
       playAnim: false,
+      object: 1,
     };
   },
 
@@ -228,7 +275,7 @@ const ARPosterDemo = createReactClass({
   render() {
     return (
       <ViroARScene>
-        <ViroAmbientLight color="#ffffff" intensity={200} />
+        <ViroAmbientLight color="#ffffff" intensity={1000} />
         <ViroARCamera
           position={[0, 0, 0]}
           rotation={[0, 0, 0]}
@@ -238,12 +285,13 @@ const ARPosterDemo = createReactClass({
         {botran18Obj()} */}
         <ViroARImageMarker key="Botran12Mkt" target="Botran12" onAnchorFound={this._onAnchorFound} onAnchorRemoved={this._onAnchorUpdate} pauseUpdates={this.state.pauseUpdates}>
           <ViroNode
+            onClick={() => { this.state.object += 1 }}
             position={[0, -.1, 0]}
             scale={[0, 0, 0]}
             rotation={[-90, 0, 0]}
             animation={{ name: "scaleModel", run: this.state.playAnim, }}
           >
-            {botran()}
+            {botran(2)}
           </ViroNode>
         </ViroARImageMarker>
 

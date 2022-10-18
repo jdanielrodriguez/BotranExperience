@@ -9,7 +9,7 @@ import Botran12Screen from '../botran12/Botran12ViewContainer';
 import HomeScreen from '../home/HomeViewContainer';
 import InstructionsScreen from '../instructions/InstructionsViewContainer';
 import AboutScreen from '../about/AboutViewContainer';
-import AvailableInFullVersion from "../availableInFullVersion/AvailableInFullVersionViewContainer";
+import AvailableInFullVersion from '../availableInFullVersion/AvailableInFullVersionViewContainer';
 
 // import CalendarScreen from '../calendar/CalendarViewContainer';
 // import GridsScreen from '../grids/GridsViewContainer';

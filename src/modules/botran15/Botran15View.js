@@ -12,7 +12,7 @@ import { Text } from '../../components/StyledText';
 
 
 
-export default function Botran15Screen({ isExtended, setIsExtended }) {
+export default function Botran15Screen() {
   // const rnsUrl = 'https://reactnativestarter.com';
   // const handleClick = () => {
   //   Linking.canOpenURL(rnsUrl).then(supported => {
@@ -51,36 +51,77 @@ export default function Botran15Screen({ isExtended, setIsExtended }) {
           <View style={styles.priceContainer}>
             <View style={{ flexDirection: 'row' }}>
               <ScrollView style={styles.scrollView}>
-                <Text white size={12} style={styles.instructions}>
-                  Each of our blends shows you diferent side of Guatemala.
-                  Each of our blends shows you diferent side of Guatemala.
-                  Each of our blends shows you diferent side of Guatemala.
-                  Each of our blends shows you diferent side of Guatemala.
-                  Each of our blends shows you diferent side of Guatemala.
-                  Each of our blends shows you diferent side of Guatemala.
-                  Each of our blends shows you diferent side of Guatemala.
-                  Each of our blends shows you diferent side of Guatemala.
-                  Each of our blends shows you diferent side of Guatemala.
-                  Each of our blends shows you diferent side of Guatemala.
-                  Each of our blends shows you diferent side of Guatemala.
-                  Each of our blends shows you diferent side of Guatemala.
-                  Each of our blends shows you diferent side of Guatemala.
-                  Each of our blends shows you diferent side of Guatemala.
-                  Each of our blends shows you diferent side of Guatemala.
-                  Each of our blends shows you diferent side of Guatemala.
-                  Each of our blends shows you diferent side of Guatemala.
-                  Each of our blends shows you diferent side of Guatemala.
-                  Each of our blends shows you diferent side of Guatemala.
-                  Each of our blends shows you diferent side of Guatemala.
-                  Each of our blends shows you diferent side of Guatemala.
-                  Each of our blends shows you diferent side of Guatemala.
-                  Each of our blends shows you diferent side of Guatemala.
-                  Each of our blends shows you diferent side of Guatemala.
+                <Text size={12} style={styles.instructions}>
+                  EXPRESSIVE
+                </Text>
+                <Text size={12} style={styles.instructions}>
+                  BOTRAN
+                </Text>
+                <Text size={12} style={styles.instructions}>
+                  -Dynamic Ageing (Solera adapted).
+                </Text>
+                <Text size={12} style={styles.instructions}>
+                  -Blend of 5-15-year-old rums.
+                </Text>
+
+                <Text size={12} style={styles.instructions}>
+                  -American whiskey.
+                </Text>
+                <Text size={12} style={styles.instructions}>
+                  -Medium toasted American whiskey.
+                </Text>
+                <Text size={12} style={styles.instructions}>
+                  -Sherry wines. (Oloroso)
+                </Text>
+                <Text size={12} style={styles.instructions}>
+                  -Port wines. (Tawny)
+                </Text>
+                <Text size={12} style={styles.instructions}>
+                  COLOUR
+                </Text>
+                <Text size={12} style={styles.instructions}>
+                  Polished mahogany with reddish
+                  reflecting sparkles.
+                </Text>
+                <Text size={12} style={styles.instructions}>
+                  NOSE
+                </Text>
+                <Text size={12} style={styles.instructions}>
+                  Notes of ripe fruits and citric & spicy
+                  aromas.
+                </Text>
+                <Text size={12} style={styles.instructions}>
+                  PALATE
+                </Text>
+                <Text size={12} style={styles.instructions}>
+                  Notes of apricot, orange peel, and
+                  Spices (like clove and cinnamon)
+                </Text>
+
+                <Text size={12} style={styles.instructions}>
+                  FINISH
+                </Text>
+                <Text size={12} style={styles.instructions}>
+                  Toasted oak and spicy notes.
+                </Text>
+
+                <Text size={12} style={styles.instructions}>
+                  PERFECT SERVE
+                </Text>
+                <Text size={12} style={styles.instructions}>
+                  The best rum to freshen up an Old Fashioned, or
+                  enjoy alone for a tongue-tingling taste experience.
+
                 </Text>
               </ScrollView>
             </View>
           </View>
         </View>
+        <Image
+          source={require('../../../assets/images/barra-abajo.png')}
+          style={styles.barra}
+          resizeMode="stretch"
+        />
       </ImageBackground>
     </View>
   );
@@ -162,7 +203,8 @@ const styles = StyleSheet.create({
     marginBottom: 5,
     textAlign: 'center',
     fontFamily: fonts.primaryRegular,
-    paddingHorizontal: '10%'
+    paddingHorizontal: '10%',
+    color: 'white'
   },
   title: {
     textAlign: 'center',
@@ -173,5 +215,11 @@ const styles = StyleSheet.create({
   priceLink: {
     borderBottomWidth: 1,
     borderBottomColor: colors.primary,
+  },
+  barra: {
+    position: 'absolute',
+    bottom: 0,
+    width: '184%',
+    height: 28
   },
 });
