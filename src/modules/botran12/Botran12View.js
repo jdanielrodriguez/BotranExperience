@@ -27,7 +27,7 @@ export default function Botran12Screen() {
   return (
     <View style={styles.container}>
       <ImageBackground
-        source={require('../../../assets/images/background-mapa-pie.png')}
+        source={require('../../../assets/images/background-mapa.png')}
         style={styles.bgImage}
         resizeMode="stretch"
       >
