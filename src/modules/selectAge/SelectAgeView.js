@@ -34,6 +34,7 @@ export default function SelectAgeScreen({ firstTime, setFirstTime, date, setDate
           <Button
             title="accept"
             loading={false}
+            size='lg'
             loadingProps={{ size: 'large', color: 'white' }}
             buttonStyle={{
               backgroundColor: 'rgba(111, 202, 186, 1)',
@@ -42,9 +43,8 @@ export default function SelectAgeScreen({ firstTime, setFirstTime, date, setDate
             }}
             titleStyle={{ fontWeight: 'bold', fontSize: 23 }}
             containerStyle={{
-              marginHorizontal: 50,
+              paddingHorizontal: 50,
               height: 50,
-              width: 2000,
               marginVertical: 10,
             }}
             disabled={!firstTime}
