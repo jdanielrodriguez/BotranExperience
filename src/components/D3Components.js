@@ -53,81 +53,69 @@ ViroAnimations.registerAnimations({
     duration: 2500, // .25 seconds
   },
 });
-const botran = (objIndex) => {
-  const prueba12BFlaten = {
-    src: require("./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12b.vrx"),
-    materials: [
-      require('./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12b/BOTRAN-No12EtiquetaLOW.png'),
-      require('./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12b/Col0-INTRO_Uvmap.png'),
-      require('./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12b/Col0-Zoom-Mapa_Uvmap.png'),
-      require('./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12b/LANDING_0002_MIXCO-MAP.png'),
-      require('./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12b/LANDING_0004_REU-MAP.png'),
-      require('./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12b/LANDING_0006_XELA-MAP.png'),
-      require('./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12b/ZOOM_Fondo.jpg'),
-    ]
-  }
+const MakeObject = (props) => {
   const prueba12AFlaten = {
     src: require("./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12a.vrx"),
     materials: [
-      require('./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12a/BOTRAN-No12EtiquetaLOW.png'),
-      require('./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12a/Col0-INTRO_Uvmap.png'),
-      require('./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12a/Col0-Zoom-Mapa_Uvmap.png'),
-      require('./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12a/LANDING_0002_MIXCO-MAP.png'),
-      require('./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12a/LANDING_0004_REU-MAP.png'),
-      require('./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12a/LANDING_0006_XELA-MAP.png'),
-      require('./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12a/ZOOM_Fondo.jpg'),
+      require('./../../assets/images/materiales/BOTRAN-No12EtiquetaLOW.png'),
+      require('./../../assets/images/materiales/Col0-INTRO_Uvmap.png'),
+      require('./../../assets/images/materiales/Col0-Zoom-Mapa_Uvmap.png'),
+      require('./../../assets/images/materiales/LANDING_0002_MIXCO-MAP.png'),
+      require('./../../assets/images/materiales/LANDING_0004_REU-MAP.png'),
+      require('./../../assets/images/materiales/LANDING_0006_XELA-MAP.png'),
+      require('./../../assets/images/materiales/ZOOM_Fondo.jpg'),
     ]
   }
   const prueba12CFlaten = {
     src: require("./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12c.vrx"),
     materials: [
-      require('./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12a/BOTRAN-No12EtiquetaLOW.png'),
-      require('./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12a/Col0-INTRO_Uvmap.png'),
-      require('./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12a/Col0-Zoom-Mapa_Uvmap.png'),
-      require('./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12a/LANDING_0002_MIXCO-MAP.png'),
-      require('./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12a/LANDING_0004_REU-MAP.png'),
-      require('./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12a/LANDING_0006_XELA-MAP.png'),
-      require('./../../assets/images/materiales/01-MODULOS-Intro_Completa-FLATTEN-12a/ZOOM_Fondo.jpg'),
-    ]
-  }
-  const prueba12B = {
-    src: require("./../../assets/images/materiales/01-MODULOS-Col3_FLATTEN-12b.vrx"),
-    materials: [
-      require('./../../assets/images/materiales/01-MODULOS-Col3_FLATTEN-12b/BOTRAN-No12Etiqueta3.png'),
-      require('./../../assets/images/materiales/01-MODULOS-Col3_FLATTEN-12b/Col3-AroundTheWorld_Uvmap.png'),
-      require('./../../assets/images/materiales/01-MODULOS-Col3_FLATTEN-12b/Col3-Distribucion_Uvmap.png'),
-      require('./../../assets/images/materiales/01-MODULOS-Col3_FLATTEN-12b/Col3-Embotellado_Uvmap.png'),
+      require('./../../assets/images/materiales/BOTRAN-No12EtiquetaLOW.png'),
+      require('./../../assets/images/materiales/Col0-INTRO_Uvmap.png'),
+      require('./../../assets/images/materiales/Col0-Zoom-Mapa_Uvmap.png'),
+      require('./../../assets/images/materiales/LANDING_0002_MIXCO-MAP.png'),
+      require('./../../assets/images/materiales/LANDING_0004_REU-MAP.png'),
+      require('./../../assets/images/materiales/LANDING_0006_XELA-MAP.png'),
+      require('./../../assets/images/materiales/ZOOM_Fondo.jpg'),
     ]
   }
   const prueba12A = {
     src: require("./../../assets/images/materiales/01-MODULOS-Col3_FLATTEN-12a.vrx"),
     materials: [
-      require('./../../assets/images/materiales/01-MODULOS-Col3_FLATTEN-12a/BOTRAN-No12Etiqueta3.png'),
-      require('./../../assets/images/materiales/01-MODULOS-Col3_FLATTEN-12a/Col3-AroundTheWorld_Uvmap.png'),
-      require('./../../assets/images/materiales/01-MODULOS-Col3_FLATTEN-12a/Col3-Distribucion_Uvmap.png'),
-      require('./../../assets/images/materiales/01-MODULOS-Col3_FLATTEN-12a/Col3-Embotellado_Uvmap.png'),
+      require('./../../assets/images/materiales/BOTRAN-No12Etiqueta3.png'),
+      require('./../../assets/images/materiales/Col3-AroundTheWorld_Uvmap.png'),
+      require('./../../assets/images/materiales/Col3-Distribucion_Uvmap.png'),
+      require('./../../assets/images/materiales/Col3-Embotellado_Uvmap.png'),
     ]
   }
   const prueba6 = {
     src: require("./../../assets/images/materiales/COL3-12-TEST-Nothing-Emb-06.vrx"),
     materials: [
-      require('./../../assets/images/materiales/COL3-12-TEST-Nothing-Emb-06/BOTRAN-No12Etiqueta3.png'),
-      require('./../../assets/images/materiales/COL3-12-TEST-Nothing-Emb-06/Col3-AroundTheWorld_Uvmap.png'),
-      require('./../../assets/images/materiales/COL3-12-TEST-Nothing-Emb-06/Col3-Distribucion_Uvmap.png'),
-      require('./../../assets/images/materiales/COL3-12-TEST-Nothing-Emb-06/Col3-Embotellado_Uvmap.png'),
+      require('./../../assets/images/materiales/BOTRAN-No12Etiqueta3.png'),
+      require('./../../assets/images/materiales/Col3-AroundTheWorld_Uvmap.png'),
+      require('./../../assets/images/materiales/Col3-Distribucion_Uvmap.png'),
+      require('./../../assets/images/materiales/Col3-Embotellado_Uvmap.png'),
     ]
+  }
+  
+  const football = {
+    src: require("./../../assets/images/materiales/object_soccer_ball.vrx"),
+    materials: [
+      require('./../../assets/images/materiales/object_soccer_ball_diffuse.png'),
+      require('./../../assets/images/materiales/object_soccer_ball_normal.png'),
+      require('./../../assets/images/materiales/object_soccer_ball_specular.png'),
+    ],
+    scale: [.9,.9,.9]
   }
 
   const objects = [
-    prueba12BFlaten,
     prueba12AFlaten,
     prueba12CFlaten,
-    prueba12B,
     prueba12A,
-    prueba6
+    prueba6,
+    football
   ]
-  let contador = 0;
-  let selected = objects[objIndex || contador];
+  const contador = props.objIndex || 0;
+  const selected = objects[contador];
 
   return (
     <>
@@ -135,10 +123,10 @@ const botran = (objIndex) => {
       <Viro3DObject
         source={selected.src}
         position={[0, -50, -100]}
-        scale={[.4, .4, .4]}
+        scale={selected.scale || [.4, .4, .4]}
         rotation={[0, 0, -2]}
         lightReceivingBitMask={5}
-        animation={{ name: this.state.animationName, run: this.state.modelAnim, loop: this.state.loopState, onFinish: this._onFinish, }}
+        animation={{ name: props.animationName, run: props.modelAnim, loop: props.loopState, onFinish: props._onFinish, }}
         shadowCastingBitMask={4}
         type="VRX"
         resources={selected.materials}
@@ -174,72 +162,13 @@ const spotLigth = () => (
   </>
 )
 
-const football = () => (
-  <>
-    {spotLigth()}
-    <Viro3DObject
-      source={require('./../../assets/images/materiales/object_soccer_ball.vrx')}
-      position={[0, -0.45, 0]}
-      scale={[.9, .9, .9]}
-      animation={{ name: this.state.animationName, run: this.state.modelAnim, loop: this.state.loopState, onFinish: this._onFinish, }}
-      type="VRX"
-      lightReceivingBitMask={5}
-      shadowCastingBitMask={4}
-      transformBehaviors={['billboardY']}
-      resources={[require('./../../assets/images/materiales/object_soccer_ball_diffuse.png'),
-      require('./../../assets/images/materiales/object_soccer_ball_normal.png'),
-      require('./../../assets/images/materiales/object_soccer_ball_specular.png')]}
-      onLoadStart={_onLoadStart}
-      onLoadEnd={_onLoadEnd}
-      onError={_onError}
-    />
-    <ViroQuad
-      rotation={[-90, 0, 0]}
-      width={.5}
-      height={.5}
-      arShadowReceiver
-      lightReceivingBitMask={4}
-    />
-  </>
-)
-
-const emoji = () => (
-  <>
-    {spotLigth()}
-    <Viro3DObject
-      source={require('./../../assets/images/materiales/emoji_smile.vrx')}
-      position={[0, -0.45, 0]}
-      onLoadEnd={_onLoadEnd}
-      scale={[.2, .2, .2]}
-      animation={{ name: this.state.animationName, run: this.state.modelAnim, loop: this.state.loopState, onFinish: this._onFinish, }}
-      type="VRX"
-      lightReceivingBitMask={3}
-      shadowCastingBitMask={2}
-      transformBehaviors={['billboardY']}
-      resources={[require('./../../assets/images/materiales/emoji_smile_diffuse.png'),
-      require('./../../assets/images/materiales/emoji_smile_specular.png'),
-      require('./../../assets/images/materiales/emoji_smile_normal.png')]}
-      onLoadStart={_onLoadStart}
-      onError={_onError}
-    />
-
-    <ViroQuad
-      rotation={[-90, 0, 0]}
-      width={.5}
-      height={.5}
-      arShadowReceiver
-      lightReceivingBitMask={2}
-    />
-  </>
-)
-
 // eslint-disable-next-line react/prefer-es6-class
 const ARPosterDemo = createReactClass({
   getInitialState() {
     return {
       pauseUpdates: false,
       playAnim: false,
-      object: 1,
+      objIndex: 1,
     };
   },
 
@@ -285,13 +214,12 @@ const ARPosterDemo = createReactClass({
         {botran18Obj()} */}
         <ViroARImageMarker key="Botran12Mkt" target="Botran12" onAnchorFound={this._onAnchorFound} onAnchorRemoved={this._onAnchorUpdate} pauseUpdates={this.state.pauseUpdates}>
           <ViroNode
-            onClick={() => { this.state.object += 1 }}
             position={[0, -.1, 0]}
             scale={[0, 0, 0]}
             rotation={[-90, 0, 0]}
             animation={{ name: "scaleModel", run: this.state.playAnim, }}
           >
-            {botran(2)}
+            <MakeObject {...this.state} />
           </ViroNode>
         </ViroARImageMarker>
 

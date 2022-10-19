@@ -1,18 +1,17 @@
-import { Provider } from 'react-redux';
-import React from 'react';
-import { View, ActivityIndicator, StyleSheet, LogBox } from 'react-native';
-import { PersistGate } from 'redux-persist/integration/react';
 import { NavigationContainer } from '@react-navigation/native';
+import React from 'react';
+import { ActivityIndicator, LogBox, StyleSheet, View } from 'react-native';
 import RNBootSplash from "react-native-bootsplash";
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
 import { colors } from './src/styles';
 
-import { store, persistor } from './src/redux/store';
+import { persistor, store } from './src/redux/store';
 
 import AppView from './src/modules/AppViewContainer';
 
 export default function App() {
   LogBox.ignoreLogs(['Warning: Async Storage has been extracted from react-native core']);
-
   return (
     <Provider store={store}>
       <NavigationContainer onReady={() => RNBootSplash.hide()}>

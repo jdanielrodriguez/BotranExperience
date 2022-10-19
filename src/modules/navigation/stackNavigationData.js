@@ -120,7 +120,7 @@ const StackNavigationData = [
     },
   },
   {
-    name: 'Messages',
+    name: 'calendar',
     component: AvailableInFullVersion,
     headerLeft: headerLeftComponent,
     headerBackground: { source: headerBackground },

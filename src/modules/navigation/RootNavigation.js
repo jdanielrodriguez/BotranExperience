@@ -8,10 +8,7 @@ import StackNavigationData from './stackNavigationData';
 const Stack = createStackNavigator();
 
 export default function NavigatorView(props) {
-  // if (authState.isLoggedIn || authState.hasSkippedLogin) {
-  //     return <AppNavigator />;
-  // }
-  // return <AuthScreen />;
+  
 
   const headerLeftComponentMenu = () => (
     <TouchableOpacity
