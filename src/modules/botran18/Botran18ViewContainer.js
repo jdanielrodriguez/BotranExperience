@@ -1,7 +1,7 @@
-import { compose, withState } from 'recompose';
+import { compose } from 'recompose';
 
 import Botran18Screen from './Botran18View';
 
-export default compose(withState('isExtended', 'setIsExtended', false))(
+export default compose()(
   Botran18Screen,
 );

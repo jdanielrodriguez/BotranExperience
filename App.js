@@ -12,16 +12,16 @@ import AppView from './src/modules/AppViewContainer';
 
 export default function App() {
   LogBox.ignoreLogs(['Warning: Async Storage has been extracted from react-native core']);
+
   return (
     <Provider store={store}>
       <NavigationContainer onReady={() => RNBootSplash.hide()}>
         <PersistGate
-          loading={
-            // eslint-disable-next-line react/jsx-wrap-multilines
+          loading={(
             <View style={styles.container}>
               <ActivityIndicator color={colors.red} />
             </View>
-          }
+          )}
           persistor={persistor}
         >
           <AppView />

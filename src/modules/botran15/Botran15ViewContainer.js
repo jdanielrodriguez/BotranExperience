@@ -1,7 +1,7 @@
-import { compose, withState } from 'recompose';
+import { compose } from 'recompose';
 
 import Botran15Screen from './Botran15View';
 
-export default compose(withState('isExtended', 'setIsExtended', false))(
+export default compose()(
   Botran15Screen,
 );

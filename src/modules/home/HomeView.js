@@ -1,29 +1,16 @@
 import React from 'react';
 import {
   StyleSheet,
-  View,
-  TouchableOpacity,
-  ImageBackground,
+  View
 } from 'react-native';
 
-import { fonts, colors } from '../../styles';
-import { Text } from '../../components/StyledText';
+import { colors, fonts } from '../../styles';
+// import { Text } from '../../components/StyledText';
 import D3Components from '../../components/D3Components';
 
 
 
-export default function HomeScreen({ isExtended, setIsExtended }) {
-  // const rnsUrl = 'https://reactnativestarter.com';
-  // const handleClick = () => {
-  //   Linking.canOpenURL(rnsUrl).then(supported => {
-  //     if (supported) {
-  //       Linking.openURL(rnsUrl);
-  //     } else {
-  //       console.log(`Don't know how to open URI: ${rnsUrl}`);
-  //     }
-  //   });
-  // };
-
+export default function HomeScreen() {
   return (
     <View style={styles.container}>
       <D3Components />
