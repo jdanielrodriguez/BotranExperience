@@ -15,7 +15,7 @@ const drawerData = [
     name: 'START THE EXPERIENCE',
   },
   {
-    name: 'ABOUT RON BOTRAN',
+    name: 'ABOUT \nRON BOTRAN',
   },
   {
     name: 'BOTRAN NO.12',

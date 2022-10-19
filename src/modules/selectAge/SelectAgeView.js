@@ -20,7 +20,7 @@ export default function SelectAgeScreen({ firstTime, setFirstTime, date, setDate
         style={styles.bgImage}
         resizeMode="stretch"
       >
-        <Text style={{ ...styles.text, marginTop: 'auto' }}>THERE IS AN AGE TO ENJOY THE RUNTASTIC LIFE</Text>
+        <Text style={{ ...styles.text, marginTop: 'auto' }}>THERE IS AN AGE TO ENJOY THE RONTASTIC LIFE</Text>
         <Text style={{ ...styles.text }}>WHAT'S YOURS?</Text>
         <DatePicker
           date={date}
@@ -37,7 +37,7 @@ export default function SelectAgeScreen({ firstTime, setFirstTime, date, setDate
             size='lg'
             loadingProps={{ size: 'large', color: 'white' }}
             buttonStyle={{
-              backgroundColor: 'rgba(111, 202, 186, 1)',
+              backgroundColor: '#19E7F7',
               borderRadius: 5,
               ...styles.button
             }}
@@ -89,7 +89,9 @@ const styles = StyleSheet.create({
     marginLeft: 'auto',
     marginRight: 'auto',
     width: '100%',
-    padding: 5
+    padding: 5,
+    fontFamily: fonts.primarySemiBold,
+    borderBottomColor: colors.white,
   },
   instructions: {
     marginBottom: 5,

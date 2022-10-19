@@ -77,13 +77,13 @@ const styles = StyleSheet.create({
     marginTop: 15,
   },
   bottles: {
-    width: '90%',
+    width: '100%',
     height: '50%',
     marginTop: 150,
     marginBottom: -100,
   },
   aboutTitle: {
-    width: '70%',
+    width: '80%',
     height: '20%',
     position: 'absolute',
     zIndex:9999,

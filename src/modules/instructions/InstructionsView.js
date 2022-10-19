@@ -87,11 +87,11 @@ const styles = StyleSheet.create({
   },
   gotIt: {
     width: 100,
-    height: 50,
+    height: 40,
     marginTop: 15,
   },
   bottles: {
-    width: '90%',
+    width: '100%',
     height: '50%',
   },
   section: {

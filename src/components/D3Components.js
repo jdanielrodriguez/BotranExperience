@@ -122,7 +122,7 @@ const MakeObject = (props) => {
       {spotLigth()}
       <Viro3DObject
         source={selected.src}
-        position={[0, -50, -100]}
+        position={[-2, -50, -100]}
         scale={selected.scale || [.4, .4, .4]}
         rotation={[0, 0, -2]}
         lightReceivingBitMask={5}
