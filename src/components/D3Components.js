@@ -6,8 +6,7 @@ import {
 
 import {
   Viro3DObject, ViroAmbientLight, ViroAnimations,
-  ViroARCamera, ViroARImageMarker, ViroARScene, ViroARSceneNavigator, ViroARTrackingTargets, ViroBox,
-  ViroMaterials, ViroNode, ViroOmniLight, ViroQuad, ViroSpotLight, Text, TouchableHighlight, ViroText, View
+  ViroARCamera, ViroARImageMarker, ViroARScene, ViroARSceneNavigator, ViroARTrackingTargets, ViroBox, ViroButton, ViroMaterials, ViroNode, ViroOmniLight, ViroQuad, ViroSpotLight, ViroText
 } from '@viro-community/react-viro';
 
 const createReactClass = require('create-react-class');
@@ -15,21 +14,6 @@ const No12Etiqueta = require('./../../assets/images/materiales/BOTRAN-No12Etique
 const No15Etiqueta = require('./../../assets/images/materiales/BOTRAN-No15-Etiqueta.png')
 const No18Etiqueta = require('./../../assets/images/materiales/BOTRAN-No18-Etiqueta.png')
 
-state = {
-  initialized: false,
-};
-
-const _onLoadStart = (event) => {
-  console.log("loading has started", event.nativeEvent);
-};
-
-const _onLoadEnd = (event) => {
-  console.log("loading has finished", event.nativeEvent);
-};
-
-const _onError = (event) => {
-  console.log("Error cargando el modelo", event.nativeEvent);
-};
 ViroMaterials.createMaterials({
   white_sphere: {
     lightingModel: "PBR",
@@ -160,9 +144,9 @@ const MakeObject = (props) => {
       <Viro3DObject
         key={`${props.key}Obj`}
         source={selected.src}
-        position={positions || [1, -40, -100]}
-        scale={scale || (selected.scale || [.4, .4, .4])}
-        rotation={[5, 0, 0]}
+        position={[1, -40, -100]}
+        scale={(selected.scale || [.4, .4, .4])}
+        rotation={[5, 0, -1]}
         lightReceivingBitMask={5}
         animation={{ name: props.animationName, run: props.playAnim, loop: props.loopState, onFinish: props._onFinish, }}
         shadowCastingBitMask={4}
@@ -175,6 +159,7 @@ const MakeObject = (props) => {
       />
       <ViroQuad
         rotation={[-90, 0, 0]}
+        position={[1, -60, -100]}
         key={`${props.key}Quad`}
         width={250}
         height={250}
@@ -199,6 +184,47 @@ const SpotLigth = (props) => (
       shadowNearZ={2}
       shadowFarZ={5}
       shadowOpacity={.7}
+    />
+  </>
+)
+
+const ViroButtons = (props) => (
+  <>
+    <ViroButton
+      source={require("./../../assets/images/guatemala-origin-button.png")}
+      gazeSource={require("./../../assets/images/guatemala-origin-button.png")}
+      tapSource={require("./../../assets/images/guatemala-origin-button.png")}
+      position={[-21, -50, -100]}
+      height={10}
+      width={20}
+      onTap={props._onTapped}
+    />
+    <ViroButton
+      source={require("./../../assets/images/dynamic-ageing-button.png")}
+      gazeSource={require("./../../assets/images/dynamic-ageing-button.png")}
+      tapSource={require("./../../assets/images/dynamic-ageing-button.png")}
+      position={[1, -50, -100]}
+      height={10}
+      width={20}
+      onTap={props._onTapped}
+    />
+    <ViroButton
+      source={require("./../../assets/images/around-the-world-button.png")}
+      gazeSource={require("./../../assets/images/around-the-world-button.png")}
+      tapSource={require("./../../assets/images/around-the-world-button.png")}
+      position={[21, -50, -100]}
+      height={10}
+      width={20}
+      onTap={props._onTapped}
+    />
+    <ViroButton
+      source={require("./../../assets/images/sustainable-button.png")}
+      gazeSource={require("./../../assets/images/sustainable-button.png")}
+      tapSource={require("./../../assets/images/sustainable-button.png")}
+      position={[1, -60, -100]}
+      height={10}
+      width={70}
+      onTap={props._onTapped}
     />
   </>
 )
@@ -353,6 +379,7 @@ const Escena3D = createReactClass({
                     position={[0, 0, 0]}
                   />
                   <MakeObject {...this.state} />
+                  <ViroButtons {...this.state} />
                 </ViroARCamera>
               </ViroNode>
             )}
