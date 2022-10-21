@@ -27,11 +27,11 @@ export default function Botran18Screen() {
   return (
     <View style={styles.container}>
       <ImageBackground
-        source={require('../../../assets/images/background-mapa.png')}
+        source={require('../../../assets/images/botran-18-full.png')}
         style={styles.bgImage}
         resizeMode="stretch"
       >
-        <View style={[styles.section, styles.sectionLarge]}>
+        {/* <View style={[styles.section, styles.sectionLarge]}>
           <Image
             source={require('../../../assets/images/about-blends.png')}
             style={styles.aboutBlend}
@@ -136,12 +136,12 @@ export default function Botran18Screen() {
               </ScrollView>
             </View>
           </View>
-        </View>
-        <Image
+        </View> */}
+        {/* <Image
           source={require('../../../assets/images/barra-abajo.png')}
           style={styles.barra}
           resizeMode="stretch"
-        />
+        /> */}
       </ImageBackground>
     </View>
   );
@@ -155,6 +155,8 @@ const styles = StyleSheet.create({
   },
   bgImage: {
     flex: 1,
+    width: '100%',
+    height: '100%',
     marginHorizontal: 0,
   },
   gotIt: {
