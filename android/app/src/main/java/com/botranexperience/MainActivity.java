@@ -1,4 +1,4 @@
-package com.reactnativestarter;
+package com.botranexperience;
 
 import android.os.Bundle;
 import com.facebook.react.ReactActivity;
