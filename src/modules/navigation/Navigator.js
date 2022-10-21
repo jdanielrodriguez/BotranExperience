@@ -64,7 +64,7 @@ function CustomDrawerContent(props) {
                   <Text style={styles.menuTitle}>{item.name}</Text>
                 </View>
               )}
-              onPress={() => props.navigation.navigate(item.name)}
+              onPress={() => props.navigation.navigate(item.name.replace('\n',''))}
             />
             <View style={styles.divider} key={`view-image_item-${idx + 1}`}>
               <Image
