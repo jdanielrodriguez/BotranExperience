@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-import { ViroSpotLight } from '@viro-community/react-viro';
+import { ViroSpotLight, ViroOmniLight } from '@viro-community/react-viro';
 
 export default class ARSpotLigth extends React.Component {
    constructor(props) {
@@ -36,4 +36,54 @@ export default class ARSpotLigth extends React.Component {
         </>
       )
    }
+}
+
+export function OmniLigth() {
+   return (
+     <>
+       <ViroOmniLight
+         intensity={300}
+         position={[-10, 10, 1]}
+         color="#FFFFFF"
+         attenuationStartDistance={20}
+         attenuationEndDistance={30}
+       />
+
+       <ViroOmniLight
+         intensity={300}
+         position={[10, 10, 1]}
+         color="#FFFFFF"
+         attenuationStartDistance={20}
+         attenuationEndDistance={30}
+       />
+
+       <ViroOmniLight
+         intensity={300}
+         position={[-10, -10, 1]}
+         color="#FFFFFF"
+         attenuationStartDistance={20}
+         attenuationEndDistance={30}
+       />
+
+       <ViroOmniLight
+         intensity={300}
+         position={[10, -10, 1]}
+         color="#FFFFFF"
+         attenuationStartDistance={20}
+         attenuationEndDistance={30}
+       />
+
+       <ViroSpotLight
+         position={[0, 8, -2]}
+         color="#ffffff"
+         direction={[0, -1, 0]}
+         intensity={50}
+         attenuationStartDistance={5}
+         attenuationEndDistance={10}
+         innerAngle={5}
+         outerAngle={20}
+         castsShadow
+       />
+     </>
+   )
 }

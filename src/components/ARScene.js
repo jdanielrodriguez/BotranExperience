@@ -1,23 +1,23 @@
-/* eslint-disable eqeqeq */
 import React from 'react';
 import {
   StyleSheet
 } from 'react-native';
 
 import {
-  ViroAmbientLight, ViroAnimations,
-  ViroARCamera, ViroARImageMarker, ViroARScene, ViroARSceneNavigator, ViroARTrackingTargets, ViroBox, ViroMaterials, ViroNode, ViroOmniLight, ViroQuad, ViroSpotLight
+  ViroAmbientLight, ViroAnimations, ViroARCamera, ViroARImageMarker,
+  ViroARScene, ViroARSceneNavigator, ViroARTrackingTargets, ViroBox, ViroNode
 } from '@viro-community/react-viro';
 
 import ARButtons from './ARComponents/ARButtons';
 import ARMakeObject from './ARComponents/ARMakeObject';
 import ARObjects from './ARComponents/ARObjects';
+import { OmniLigth } from './ARComponents/ARSpotLigth';
 
 const No12Etiqueta = require('./../../assets/images/materiales/BOTRAN-No12Etiqueta.png')
 const No15Etiqueta = require('./../../assets/images/materiales/BOTRAN-No15-Etiqueta.png')
 const No18Etiqueta = require('./../../assets/images/materiales/BOTRAN-No18-Etiqueta.png')
 
-class Escena3D extends React.Component {
+class BotranExperience extends React.Component {
   constructor(props) {
     super(props);
 
@@ -56,7 +56,7 @@ class Escena3D extends React.Component {
   _toggleButtons() {
     const animeName = this.state.animName;
     this.setState({
-      animName: (animeName == "scaleUp" ? "scaleDown" : "scaleUp"),
+      animName: (animeName === "scaleUp" ? "scaleDown" : "scaleUp"),
       playAnim: true
     })
   }
@@ -64,7 +64,7 @@ class Escena3D extends React.Component {
   _onTapped() {
     const animate = this.state.playAnim;
     const { objIndex, objects } = this.state;
-    const index = objIndex == 0 ? 1 : 0
+    const index = objIndex === 0 ? 1 : 0
     this.setState({
       playAnim: !animate,
       objIndex: index,
@@ -89,7 +89,7 @@ class Escena3D extends React.Component {
       pauseUpdates: true,
       playAnim: true,
       foundAnchor: anchor,
-      anchorId: anchorId != anchor.anchorId ? anchor.anchorId : anchorId
+      anchorId: anchorId !== anchor.anchorId ? anchor.anchorId : anchorId
     })
   }
 
@@ -97,7 +97,6 @@ class Escena3D extends React.Component {
     return (
       <ViroARScene>
         {this.state.targets.map((target) => (
-
           <ViroARImageMarker
             key={`${target}MKt`}
             target={target}
@@ -125,7 +124,7 @@ class Escena3D extends React.Component {
                     key={`${target}box`}
                     position={[0, 0, 0]}
                   />
-                  <ARMakeObject _onTapped={this._onTapped} {...this.state} />
+                  <ARMakeObject {...this.state} />
                   <ARButtons {...this.state} />
                 </ViroARCamera>
               </ViroNode>
@@ -133,58 +132,7 @@ class Escena3D extends React.Component {
           </ViroARImageMarker>
         ))
         }
-        <ViroOmniLight
-          intensity={300}
-          position={[-10, 10, 1]}
-          color="#FFFFFF"
-          attenuationStartDistance={20}
-          attenuationEndDistance={30}
-        />
-
-        <ViroOmniLight
-          intensity={300}
-          position={[10, 10, 1]}
-          color="#FFFFFF"
-          attenuationStartDistance={20}
-          attenuationEndDistance={30}
-        />
-
-        <ViroOmniLight
-          intensity={300}
-          position={[-10, -10, 1]}
-          color="#FFFFFF"
-          attenuationStartDistance={20}
-          attenuationEndDistance={30}
-        />
-
-        <ViroOmniLight
-          intensity={300}
-          position={[10, -10, 1]}
-          color="#FFFFFF"
-          attenuationStartDistance={20}
-          attenuationEndDistance={30}
-        />
-
-        <ViroSpotLight
-          position={[0, 8, -2]}
-          color="#ffffff"
-          direction={[0, -1, 0]}
-          intensity={50}
-          attenuationStartDistance={5}
-          attenuationEndDistance={10}
-          innerAngle={5}
-          outerAngle={20}
-          castsShadow
-        />
-
-        <ViroQuad
-          rotation={[-90, 0, 0]}
-          position={[0, -1.6, 0]}
-          width={5}
-          height={5}
-          arShadowReceiver
-        />
-
+        <OmniLigth />
       </ViroARScene>
     );
   }
@@ -220,10 +168,6 @@ ViroAnimations.registerAnimations({
     properties: { scaleX: 0, scaleY: 0, scaleZ: 0, },
     duration: 200,
   },
-  scaleCar: {
-    properties: { scaleX: .09, scaleY: .09, scaleZ: .09, },
-    duration: 500, easing: "bounce"
-  },
   scaleSphereUp: {
     properties: { scaleX: .8, scaleY: .8, scaleZ: .8, },
     duration: 50, easing: "easeineaseout"
@@ -238,28 +182,6 @@ ViroAnimations.registerAnimations({
       rotateY: "+=90"
     },
     duration: 2500, // .25 seconds
-  },
-});
-ViroMaterials.createMaterials({
-  white_sphere: {
-    lightingModel: "PBR",
-    diffuseColor: "rgb(231,231,231)",
-  },
-  blue_sphere: {
-    lightingModel: "PBR",
-    diffuseColor: "rgb(19,42,143)",
-  },
-  grey_sphere: {
-    lightingModel: "PBR",
-    diffuseColor: "rgb(75,76,79)",
-  },
-  red_sphere: {
-    lightingModel: "PBR",
-    diffuseColor: "rgb(168,0,0)",
-  },
-  yellow_sphere: {
-    lightingModel: "PBR",
-    diffuseColor: "rgb(200,142,31)",
   },
 });
 
@@ -281,7 +203,7 @@ export default function ARScene() {
       <ViroARSceneNavigator
         autofocus
         initialScene={{
-          scene: Escena3D,
+          scene: BotranExperience,
         }}
         style={styles.f1}
       />
