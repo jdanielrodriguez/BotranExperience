@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-import { ViroButton, ViroNode } from '@viro-community/react-viro';
+import { ViroButton } from '@viro-community/react-viro';
 
 export default class ARButtons extends React.Component {
   constructor(props) {
@@ -30,7 +30,7 @@ export default class ARButtons extends React.Component {
   }
 
   render() {
-    const { column, key } = this.state
+    const { column } = this.state
     const btnOrigin = require("./../../../assets/images/guatemala-origin-button.png");
     const btnDynamic = require("./../../../assets/images/dynamic-ageing-button.png");
     const btnAroundWorld = require("./../../../assets/images/around-the-world-button.png");
