@@ -9,7 +9,6 @@ import {
   ViroARCamera, ViroARImageMarker, ViroARScene, ViroARSceneNavigator, ViroARTrackingTargets, ViroBox, ViroButton, ViroMaterials, ViroNode, ViroOmniLight, ViroQuad, ViroSpotLight, ViroText
 } from '@viro-community/react-viro';
 
-const createReactClass = require('create-react-class');
 const No12Etiqueta = require('./../../assets/images/materiales/BOTRAN-No12Etiqueta.png')
 const No15Etiqueta = require('./../../assets/images/materiales/BOTRAN-No15-Etiqueta.png')
 const No18Etiqueta = require('./../../assets/images/materiales/BOTRAN-No18-Etiqueta.png')
@@ -229,10 +228,12 @@ const ViroButtons = (props) => (
   </>
 )
 
-// eslint-disable-next-line react/prefer-es6-class
-const Escena3D = createReactClass({
-  getInitialState() {
-    return {
+class Escena3D extends React.Component {
+  constructor(props) {
+    super(props);
+
+    // Set up initial state
+    this.state = {
       pauseUpdates: false,
       playAnim: false,
       objIndex: 2,
@@ -248,7 +249,23 @@ const Escena3D = createReactClass({
       tapRed: false,
       tapYellow: false,
     };
-  },
+
+    // Functions must be bound manually with ES6 classes
+    this._onFinish = this._onFinish.bind(this);
+    this._toggleButtons = this._toggleButtons.bind(this);
+    this._onTapped = this._onTapped.bind(this);
+    this._selectWhite = this._selectWhite.bind(this);
+    this._selectBlue = this._selectBlue.bind(this);
+    this._selectGrey = this._selectGrey.bind(this);
+    this._selectRed = this._selectRed.bind(this);
+    this._selectYellow = this._selectYellow.bind(this);
+    this._animateFinished = this._animateFinished.bind(this);
+    this._onAnchorFound = this._onAnchorFound.bind(this);
+    this._onAnchorUpdate = this._onAnchorUpdate.bind(this);
+    this._onModelLoad = this._onModelLoad.bind(this);
+    
+  }
+  
   getNoTrackingUI() {
     const { isTracking, initialized } = this.state;
     return (
@@ -258,20 +275,23 @@ const Escena3D = createReactClass({
       }
       />
     )
-  },
+  }
+
   _onFinish() {
     this.setState({
       playAnim: false,
       pauseUpdates: true,
     })
-  },
+  }
+
   _toggleButtons() {
     const animeName = this.state.animName;
     this.setState({
       animName: (animeName == "scaleUp" ? "scaleDown" : "scaleUp"),
       playAnim: true
     })
-  },
+  }
+
   _onTapped() {
     const animate = this.state.playAnim;
     const { objIndex } = this.state;
@@ -280,37 +300,43 @@ const Escena3D = createReactClass({
       playAnim: !animate,
       objIndex: objIndex == 0 ? 1 : 0,
     })
-  },
+  }
+
   _selectWhite() {
     this.setState({
       texture: "white",
       tapWhite: true
     })
-  },
+  }
+
   _selectBlue() {
     this.setState({
       texture: "blue",
       tapBlue: true
     })
-  },
+  }
+
   _selectGrey() {
     this.setState({
       texture: "grey",
       tapGrey: true
     })
-  },
+  }
+
   _selectRed() {
     this.setState({
       texture: "red",
       tapRed: true
     })
-  },
+  }
+
   _selectYellow() {
     this.setState({
       texture: "yellow",
       tapYellow: true
     })
-  },
+  }
+
   _animateFinished() {
     this.setState({
       tapWhite: false,
@@ -319,7 +345,8 @@ const Escena3D = createReactClass({
       tapRed: false,
       tapYellow: false,
     })
-  },
+  }
+
   _onAnchorFound(anchor) {
     console.log('ANCHOR********:', anchor)
     this.setState({
@@ -328,7 +355,8 @@ const Escena3D = createReactClass({
       foundAnchor: anchor,
       anchorId: anchor.anchorId
     })
-  },
+  }
+
   _onAnchorUpdate(anchor) {
     console.log('ANCHORUPDATE********:', anchor)
     const { anchorId } = this.state;
@@ -338,14 +366,16 @@ const Escena3D = createReactClass({
       foundAnchor: anchor,
       anchorId: anchorId != anchor.anchorId ? anchor.anchorId : anchorId
     })
-  },
+  }
+
   _onModelLoad() {
     setTimeout(() => {
       this.setState({
 
       })
     }, 3000);
-  },
+  }
+
   render() {
     return (
       <ViroARScene>
@@ -440,8 +470,8 @@ const Escena3D = createReactClass({
 
       </ViroARScene>
     );
-  },
-});
+  }
+};
 ViroARTrackingTargets.createTargets({
   Botran12: {
     source: No12Etiqueta,
