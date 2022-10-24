@@ -27,13 +27,13 @@ export default function Botran12Screen() {
   return (
     <View style={styles.container}>
       <ImageBackground
-        source={require('../../../assets/images/botran-12-full.png')}
+        source={require('../../../assets/images/Botran12-background.png')}
         style={styles.bgImage}
         resizeMode="stretch"
       >
 
-        {/* <View style={[styles.section, styles.sectionLarge]}>
-          <Image
+        <View style={[styles.section, styles.sectionLarge]}>
+          {/* <Image
             source={require('../../../assets/images/about-blends.png')}
             style={styles.aboutBlend}
             resizeMode="stretch"
@@ -42,13 +42,13 @@ export default function Botran12Screen() {
             source={require('../../../assets/images/title-ron-12.png')}
             style={styles.title12}
             resizeMode="stretch"
-          />
+          /> */}
           <Image
             source={require('../../../assets/images/botella-botran-12.png')}
             style={styles.bottles}
             resizeMode="stretch"
           />
-          <View style={styles.priceContainer}>
+          {/* <View style={styles.priceContainer}>
             <View style={{ flexDirection: 'row' }}>
               <ScrollView style={styles.scrollView}>
                 <Text size={12} style={styles.instructions}>
@@ -110,8 +110,8 @@ export default function Botran12Screen() {
                 </Text>
               </ScrollView>
             </View>
-          </View>
-        </View> */}
+          </View> */}
+        </View>
         {/* <Image
           source={require('../../../assets/images/barra-abajo.png')}
           style={styles.barra}
@@ -126,12 +126,14 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
+    width: '100%',
     justifyContent: 'space-around',
   },
   bgImage: {
     flex: 1,
     width: '100%',
     height: '100%',
+    right: 0,
     marginHorizontal: 0,
   },
   gotIt: {
@@ -144,9 +146,10 @@ const styles = StyleSheet.create({
     paddingBottom: 3
   },
   bottles: {
-    width: '50%',
-    height: '70%',
-    marginLeft: -50
+    width: '27%',
+    height: '40%',
+    marginLeft: 93,
+    marginTop:270
   },
   aboutBlend: {
     width: '30%',

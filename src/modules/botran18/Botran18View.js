@@ -27,12 +27,12 @@ export default function Botran18Screen() {
   return (
     <View style={styles.container}>
       <ImageBackground
-        source={require('../../../assets/images/botran-18-full.png')}
+        source={require('../../../assets/images/Botran15-background.png')}
         style={styles.bgImage}
         resizeMode="stretch"
       >
-        {/* <View style={[styles.section, styles.sectionLarge]}>
-          <Image
+        <View style={[styles.section, styles.sectionLarge]}>
+          {/* <Image
             source={require('../../../assets/images/about-blends.png')}
             style={styles.aboutBlend}
             resizeMode="stretch"
@@ -41,13 +41,13 @@ export default function Botran18Screen() {
             source={require('../../../assets/images/title-ron-18.png')}
             style={styles.title18}
             resizeMode="stretch"
-          />
+          /> */}
           <Image
             source={require('../../../assets/images/botella-botran-18.png')}
             style={styles.bottles}
             resizeMode="stretch"
           />
-          <View style={styles.priceContainer}>
+          {/* <View style={styles.priceContainer}>
             <View style={{ flexDirection: 'row' }}>
               <ScrollView style={styles.scrollView}>
                 <Text size={12} style={styles.instructions}>
@@ -135,8 +135,8 @@ export default function Botran18Screen() {
                 </Text>
               </ScrollView>
             </View>
-          </View>
-        </View> */}
+          </View> */}
+        </View>
         {/* <Image
           source={require('../../../assets/images/barra-abajo.png')}
           style={styles.barra}
@@ -168,9 +168,10 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   bottles: {
-    width: '70%',
-    height: '70%',
-    marginLeft: -70
+    width: '30%',
+    height: '30%',
+    marginLeft: 97,
+    marginTop:350
   },
   aboutBlend: {
     width: '30%',

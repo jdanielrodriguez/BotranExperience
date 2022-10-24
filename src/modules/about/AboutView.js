@@ -26,12 +26,12 @@ export default function AboutScreen({ isExtended, setIsExtended }) {
   return (
     <View style={styles.container}>
       <ImageBackground
-        source={require('../../../assets/images/background-mapa-pie.png')}
+        source={require('../../../assets/images/about-us-full.png')}
         style={styles.bgImage}
         resizeMode="stretch"
       >
 
-        <View style={[styles.section, styles.sectionLarge]}>
+        {/* <View style={[styles.section, styles.sectionLarge]}>
           <Image
             source={require('../../../assets/images/about-button.png')}
             style={styles.aboutTitle}
@@ -55,7 +55,7 @@ export default function AboutScreen({ isExtended, setIsExtended }) {
               </Text>
             </View>
           </View>
-        </View>
+        </View> */}
       </ImageBackground>
     </View>
   );
@@ -69,6 +69,8 @@ const styles = StyleSheet.create({
   },
   bgImage: {
     flex: 1,
+    width: '100%',
+    height: '100%',
     marginHorizontal: 0,
   },
   gotIt: {
