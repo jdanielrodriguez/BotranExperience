@@ -6,8 +6,10 @@ import {
 
 import {
   Viro3DObject, ViroAmbientLight, ViroAnimations,
-  ViroARCamera, ViroARImageMarker, ViroARScene, ViroARSceneNavigator, ViroARTrackingTargets, ViroBox, ViroButton, ViroMaterials, ViroNode, ViroOmniLight, ViroQuad, ViroSpotLight, ViroText
+  ViroARCamera, ViroARImageMarker, ViroARScene, ViroARSceneNavigator, ViroARTrackingTargets, ViroBox, ViroMaterials, ViroNode, ViroOmniLight, ViroQuad, ViroSpotLight, ViroText
 } from '@viro-community/react-viro';
+
+import ARButtons from './ARComponents/ARButtons';
 
 const No12Etiqueta = require('./../../assets/images/materiales/BOTRAN-No12Etiqueta.png')
 const No15Etiqueta = require('./../../assets/images/materiales/BOTRAN-No15-Etiqueta.png')
@@ -187,47 +189,6 @@ const SpotLigth = (props) => (
   </>
 )
 
-const ViroButtons = (props) => (
-  <>
-    <ViroButton
-      source={require("./../../assets/images/guatemala-origin-button.png")}
-      gazeSource={require("./../../assets/images/guatemala-origin-button.png")}
-      tapSource={require("./../../assets/images/guatemala-origin-button.png")}
-      position={[-21, -50, -100]}
-      height={10}
-      width={20}
-      onTap={props._onTapped}
-    />
-    <ViroButton
-      source={require("./../../assets/images/dynamic-ageing-button.png")}
-      gazeSource={require("./../../assets/images/dynamic-ageing-button.png")}
-      tapSource={require("./../../assets/images/dynamic-ageing-button.png")}
-      position={[1, -50, -100]}
-      height={10}
-      width={20}
-      onTap={props._onTapped}
-    />
-    <ViroButton
-      source={require("./../../assets/images/around-the-world-button.png")}
-      gazeSource={require("./../../assets/images/around-the-world-button.png")}
-      tapSource={require("./../../assets/images/around-the-world-button.png")}
-      position={[21, -50, -100]}
-      height={10}
-      width={20}
-      onTap={props._onTapped}
-    />
-    <ViroButton
-      source={require("./../../assets/images/sustainable-button.png")}
-      gazeSource={require("./../../assets/images/sustainable-button.png")}
-      tapSource={require("./../../assets/images/sustainable-button.png")}
-      position={[1, -60, -100]}
-      height={10}
-      width={70}
-      onTap={props._onTapped}
-    />
-  </>
-)
-
 class Escena3D extends React.Component {
   constructor(props) {
     super(props);
@@ -263,9 +224,9 @@ class Escena3D extends React.Component {
     this._onAnchorFound = this._onAnchorFound.bind(this);
     this._onAnchorUpdate = this._onAnchorUpdate.bind(this);
     this._onModelLoad = this._onModelLoad.bind(this);
-    
+
   }
-  
+
   getNoTrackingUI() {
     const { isTracking, initialized } = this.state;
     return (
@@ -409,7 +370,7 @@ class Escena3D extends React.Component {
                     position={[0, 0, 0]}
                   />
                   <MakeObject {...this.state} />
-                  <ViroButtons {...this.state} />
+                  <ARButtons {...this.state} />
                 </ViroARCamera>
               </ViroNode>
             )}
