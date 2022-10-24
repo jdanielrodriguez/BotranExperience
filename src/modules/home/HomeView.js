@@ -6,14 +6,14 @@ import {
 
 import { colors, fonts } from '../../styles';
 // import { Text } from '../../components/StyledText';
-import D3Components from '../../components/D3Components';
+import ARScene from '../../components/ARScene';
 
 
 
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
-      <D3Components />
+      <ARScene />
       {/* <ImageBackground
         source={require('../../../assets/images/background.png')}
         style={styles.bgImage}
