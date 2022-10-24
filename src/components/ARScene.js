@@ -22,25 +22,27 @@ class BotranExperience extends React.Component {
     super(props);
 
     const objects = ARObjects();
-    const index = 2;
+    const index = 0;
+    const column = 4;
     // Set up initial state
     this.state = {
       pauseUpdates: false,
       playAnim: false,
       objIndex: index,
+      column,
       targets: ['Botran12'],
       animationName: '02',
       foundAnchor: null,
       anchorId: null,
       show3D: false,
-      selected: objects[index],
+      selected: objects[column][index],
       objects
     };
 
     // Functions must be bound manually with ES6 classes
     this._onFinish = this._onFinish.bind(this);
     this._toggleButtons = this._toggleButtons.bind(this);
-    this._onTapped = this._onTapped.bind(this);
+    this._changeObject = this._changeObject.bind(this);
     this._onAnchorFound = this._onAnchorFound.bind(this);
     this._onAnchorUpdate = this._onAnchorUpdate.bind(this);
 
@@ -61,14 +63,26 @@ class BotranExperience extends React.Component {
     })
   }
 
-  _onTapped() {
+  _changeObject() {
     const animate = this.state.playAnim;
-    const { objIndex, objects } = this.state;
-    const index = objIndex === 0 ? 1 : 0
+    const { objIndex, objects, column } = this.state;
+    let index = objIndex < objects[column].length ? objIndex + 1 : 0
+    let currentColumn = column
+    if(!objects[column][index]){
+      index = 0;
+      currentColumn = column < objects.length ? column + 1 : 0
+      if(!objects[currentColumn]){
+        currentColumn = 0;
+      }
+    }
+    const selected = objects[column][index]
+    console.log('Column********:', column)
+    console.log('file********:', index)
     this.setState({
       playAnim: !animate,
       objIndex: index,
-      selected: objects[index]
+      selected,
+      column: currentColumn
     })
   }
 
@@ -111,7 +125,7 @@ class BotranExperience extends React.Component {
                 scale={[0, 0, 0]}
                 rotation={[-90, 0, 0]}
                 dragType="FixedToWorld"
-                onClick={this._onTapped}
+                onClick={this._changeObject}
                 animation={{ name: "scaleModel", run: this.state.playAnim, }}
               >
                 <ViroAmbientLight color="#f0f0f0" intensity={1000} />
