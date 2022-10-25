@@ -9,25 +9,15 @@ export default class ARButtons extends React.Component {
 
     // Set up initial state
     this.state = {
-      playAnim: props.playAnim,
-      objects: props.objects,
+      _changeColumn: props._changeColumn,
       column: props.column,
     };
 
     // Functions must be bound manually with ES6 classes
     // this.handleChange = this.handleChange.bind(this);
-    this._changeColumn = this._changeColumn.bind(this);
   }
 
-  _changeColumn(columnNew) {
-    const animate = this.state.playAnim;
-    const { objects } = this.state;
-    const column = columnNew <= objects.length ? columnNew : 0
-    this.setState({
-      playAnim: !animate,
-      column
-    })
-  }
+
 
   render() {
     const { column } = this.state
@@ -44,7 +34,7 @@ export default class ARButtons extends React.Component {
           position={[-15, -30, -68]}
           height={7.5}
           width={15}
-          onTap={() => { this._changeColumn(1) }}
+          onClick={() => { this.state._changeColumn(1) }}
         />
         <ViroButton
           source={column === 1 ? btnDynamic : btnDynamic}
@@ -53,7 +43,7 @@ export default class ARButtons extends React.Component {
           position={[0, -30, -68]}
           height={7.5}
           width={15}
-          onTap={() => { this._changeColumn(2) }}
+          onClick={() => { this.state._changeColumn(2) }}
         />
         <ViroButton
           source={column === 1 ? btnAroundWorld : btnAroundWorld}
@@ -62,7 +52,7 @@ export default class ARButtons extends React.Component {
           position={[15, -30, -68]}
           height={7.5}
           width={15}
-          onTap={() => { this._changeColumn(3) }}
+          onClick={() => { this.state._changeColumn(3) }}
         />
         <ViroButton
           source={btnSustainable}
@@ -71,7 +61,7 @@ export default class ARButtons extends React.Component {
           position={[0, -38, -68]}
           height={7.5}
           width={45}
-          onTap={() => { this._changeColumn(4) }}
+          onClick={() => { this.state._changeColumn(4) }}
         />
       </>
     )

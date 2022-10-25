@@ -23,7 +23,7 @@ class BotranExperience extends React.Component {
 
     const objects = ARObjects();
     const index = 0;
-    const column = 4;
+    const column = 0;
     // Set up initial state
     this.state = {
       pauseUpdates: false,
@@ -43,6 +43,7 @@ class BotranExperience extends React.Component {
     this._onFinish = this._onFinish.bind(this);
     this._toggleButtons = this._toggleButtons.bind(this);
     this._changeObject = this._changeObject.bind(this);
+    this._changeColumn = this._changeColumn.bind(this);
     this._onAnchorFound = this._onAnchorFound.bind(this);
     this._onAnchorUpdate = this._onAnchorUpdate.bind(this);
 
@@ -68,16 +69,32 @@ class BotranExperience extends React.Component {
     const { objIndex, objects, column } = this.state;
     let index = objIndex < objects[column].length ? objIndex + 1 : 0
     let currentColumn = column
-    if(!objects[column][index]){
+    if (!objects[column][index]) {
       index = 0;
-      currentColumn = column < objects.length ? column + 1 : 0
-      if(!objects[currentColumn]){
-        currentColumn = 0;
-      }
+      currentColumn = 0;
     }
     const selected = objects[column][index]
-    console.log('Column********:', column)
-    console.log('file********:', index)
+    this.setState({
+      playAnim: !animate,
+      objIndex: index,
+      selected,
+      column: currentColumn
+    })
+  }
+
+  _changeColumn(columnNew) {
+    const animate = this.state.playAnim;
+    const { objects } = this.state;
+    let currentColumn = columnNew <= objects.length ? columnNew : 0
+    let index = 0;
+    if (!objects[currentColumn]) {
+      currentColumn = 0;
+    }
+
+    if (!objects[currentColumn][index]) {
+      index = 0;
+    }
+    const selected = objects[currentColumn][index]
     this.setState({
       playAnim: !animate,
       objIndex: index,
@@ -120,9 +137,9 @@ class BotranExperience extends React.Component {
           >
             {this.state.foundAnchor?.trackingMethod === 'tracking' && (
               <ViroNode
-                position={[0, -.1, 0]}
+                position={[1, -40, -100]}
                 key={`${target}Node`}
-                scale={[0, 0, 0]}
+                scale={[1, 1, 1]}
                 rotation={[-90, 0, 0]}
                 dragType="FixedToWorld"
                 onClick={this._changeObject}
@@ -136,10 +153,10 @@ class BotranExperience extends React.Component {
                 >
                   <ViroBox
                     key={`${target}box`}
-                    position={[0, 0, 0]}
+                    position={[1, -40, -100]}
                   />
                   <ARMakeObject {...this.state} />
-                  <ARButtons {...this.state} />
+                  <ARButtons _changeColumn={this._changeColumn} {...this.state} />
                 </ViroARCamera>
               </ViroNode>
             )}
