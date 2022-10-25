@@ -1,7 +1,7 @@
-import { compose, withState } from 'recompose';
+import { compose } from 'recompose';
 
 import AboutScreen from './AboutView';
 
-export default compose(withState('isExtended', 'setIsExtended', false))(
+export default compose()(
   AboutScreen,
 );

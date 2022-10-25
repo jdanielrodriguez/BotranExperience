@@ -3,26 +3,13 @@ import {
   StyleSheet,
   View,
   ImageBackground,
-  Image,
 } from 'react-native';
 
 import { fonts, colors } from '../../styles';
-import { Text } from '../../components/StyledText';
 
 
 
-export default function AboutScreen({ isExtended, setIsExtended }) {
-  // const rnsUrl = 'https://reactnativestarter.com';
-  // const handleClick = () => {
-  //   Linking.canOpenURL(rnsUrl).then(supported => {
-  //     if (supported) {
-  //       Linking.openURL(rnsUrl);
-  //     } else {
-  //       console.log(`Don't know how to open URI: ${rnsUrl}`);
-  //     }
-  //   });
-  // };
-
+export default function AboutScreen() {
   return (
     <View style={styles.container}>
       <ImageBackground
@@ -30,7 +17,6 @@ export default function AboutScreen({ isExtended, setIsExtended }) {
         style={styles.bgImage}
         resizeMode="stretch"
       >
-
         {/* <View style={[styles.section, styles.sectionLarge]}>
           <Image
             source={require('../../../assets/images/about-button.png')}
@@ -88,7 +74,7 @@ const styles = StyleSheet.create({
     width: '80%',
     height: '20%',
     position: 'absolute',
-    zIndex:9999,
+    zIndex: 9999,
   },
   section: {
     flex: 1,
