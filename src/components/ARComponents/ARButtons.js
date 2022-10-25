@@ -6,18 +6,11 @@ import { ViroButton } from '@viro-community/react-viro';
 export default class ARButtons extends React.Component {
   constructor(props) {
     super(props);
-
-    // Set up initial state
     this.state = {
       _changeColumn: props._changeColumn,
       column: props.column,
     };
-
-    // Functions must be bound manually with ES6 classes
-    // this.handleChange = this.handleChange.bind(this);
   }
-
-
 
   render() {
     const { column } = this.state
