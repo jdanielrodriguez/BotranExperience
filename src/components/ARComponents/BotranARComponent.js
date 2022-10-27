@@ -15,6 +15,7 @@ const No18Etiqueta = require('./../../../assets/images/materiales/BOTRAN-No18-Et
 export default class BotranARComponent extends React.Component {
    constructor(props) {
       super(props);
+
       const { objects, selected } = props;
       const index = 0;
       const column = 0;
@@ -28,7 +29,7 @@ export default class BotranARComponent extends React.Component {
          animationName: '',
          foundAnchor: null,
          anchorId: null,
-         show3D: false,
+         show3D: props.show3D,
          selected,
          objects
       };
@@ -37,6 +38,7 @@ export default class BotranARComponent extends React.Component {
       this._onFinish = this._onFinish.bind(this);
       this._toggleButtons = this._toggleButtons.bind(this);
       this._changeObject = this._changeObject.bind(this);
+      this._changeColumn = this._changeColumn.bind(this);
       this._onAnchorFound = this._onAnchorFound.bind(this);
       this._onAnchorUpdate = this._onAnchorUpdate.bind(this);
 
@@ -60,7 +62,6 @@ export default class BotranARComponent extends React.Component {
    _changeObject() {
       const animate = this.state.playAnim;
       const { objIndex, objects, column } = this.state;
-      console.log(objects)
       let index = objIndex < objects[column].length ? objIndex + 1 : 0
       let currentColumn = column
       if (!objects[column][index]) {
@@ -68,6 +69,27 @@ export default class BotranARComponent extends React.Component {
          currentColumn = 0;
       }
       const selected = objects[column][index]
+      this.setState({
+         playAnim: !animate,
+         objIndex: index,
+         selected,
+         column: currentColumn
+      })
+   }
+
+   _changeColumn(columnNew) {
+      const animate = this.state.playAnim;
+      const { objects } = this.state;
+      let currentColumn = columnNew <= objects.length ? columnNew : 0
+      let index = 0;
+      if (!objects[currentColumn]) {
+         currentColumn = 0;
+      }
+
+      if (!objects[currentColumn][index]) {
+         index = 0;
+      }
+      const selected = objects[currentColumn][index]
       this.setState({
          playAnim: !animate,
          objIndex: index,
@@ -100,7 +122,7 @@ export default class BotranARComponent extends React.Component {
    render() {
       return (
         <ViroARScene>
-          {this.state.targets.map((target) => (
+          {this.state.show3D && this.state.targets.map((target) => (
             <ViroARImageMarker
               key={`${target}MKt`}
               target={target}
@@ -119,11 +141,11 @@ export default class BotranARComponent extends React.Component {
               >
                 <ViroAmbientLight color="#f0f0f0" intensity={1000} />
                 <ViroARCamera
-                  position={[0, 170, 210]}
-                  rotation={[-20, -5, 0]}
+                  position={[8, 170, 210]}
+                  rotation={[-20, -3, 0]}
                   active
                 >
-                  <ARMakeObject _changeObject={this._changeObject} {...this.state} />
+                  <ARMakeObject _changeObject={this._changeObject} {...this.state} selected={this.state.selected} />
                 </ViroARCamera>
               </ViroNode>
                   )}
@@ -139,17 +161,17 @@ ViroARTrackingTargets.createTargets({
    Botran12: {
       source: No12Etiqueta,
       orientation: "Up",
-      physicalWidth: 0.400 // real world width in meters
+      physicalWidth: 0.250 // real world width in meters
    },
    Botran15: {
       source: No15Etiqueta,
       orientation: "Up",
-      physicalWidth: 0.400 // real world width in meters
+      physicalWidth: 0.250 // real world width in meters
    },
    Botran18: {
       source: No18Etiqueta,
       orientation: "Up",
-      physicalWidth: 0.400 // real world width in meters
+      physicalWidth: 0.250 // real world width in meters
    }
 });
 

@@ -10,6 +10,7 @@ import { colors, fonts } from '../../styles';
 import ARScene from '../../components/ARScene';
 import ARObjects from '../../components/ARComponents/ARObjects';
 
+import BotranARComponent from '../../components/ARComponents/BotranARComponent';
 
 
 export default function HomeScreen() {
@@ -18,36 +19,66 @@ export default function HomeScreen() {
   const btnAroundWorld = require("./../../../assets/images/around-the-world-button.png");
   const btnSustainable = require("./../../../assets/images/sustainable-button.png");
   const objects = ARObjects();
-
+  let index = 0;
+  const column = 0;
   const [state, setState] = useState({
     selected: objects[0][0],
+    show3D: true,
+    updatedKey: 1,
     objects,
-    playAnim: true
+    pauseUpdates: true,
+    playAnim: true,
+    objIndex: index,
+    component: BotranARComponent,
+    column,
+    targets: ['Botran12'],
+    animationName: '',
+    foundAnchor: null,
+    anchorId: null
   })
 
   const _changeColumn = (columnNew) => {
     const animate = state.playAnim;
+    const { updatedKey } = state;
     let currentColumn = (columnNew <= objects.length) ? columnNew : 0
-    let index = 0;
+    index = 0;
     if (!objects[currentColumn]) {
       currentColumn = 0;
     }
-
     if (!objects[currentColumn][index]) {
       index = 0;
     }
-    const selected = objects[currentColumn][index]
+    let selectedNew = objects[currentColumn][index]
+    if (!selectedNew) {
+      currentColumn = 0;
+      index = 0;
+      selectedNew = objects[currentColumn][index]
+    }
     setState({
+      animationName: '01',
       playAnim: !animate,
       objIndex: index,
-      selected,
-      column: currentColumn
+      loop: false,
+      selected: null,
+      column: currentColumn,
+      updatedKey: updatedKey + 1,
+      show3D: false
     })
+    setTimeout(() => {
+      setState({
+        selected: selectedNew,
+        loop: true,
+        animationName: '',
+        playAnim: animate,
+        show3D: true
+      })
+    }, 100);
   }
 
   return (
     <View style={styles.container}>
-      <ARScene {...state} />
+      {state.show3D && <ARScene {...state} selected={state.selected} />}
+      {/* {!state.show3D && <ARScene {...state} selected={state.selected} />} */}
       <View style={styles.section2}>
         <TouchableOpacity onPress={() => { _changeColumn(4) }} style={styles.btn1}>
           <Image source={btnSustainable} style={styles.img2} />

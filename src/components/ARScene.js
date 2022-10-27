@@ -20,7 +20,7 @@ export default function ARScene(props) {
       <ViroARSceneNavigator
         autofocus
         initialScene={{
-          scene: BotranARComponent,
+          scene: props.component || BotranARComponent,
           passProps:{...props}
         }}
         style={styles.f1}
