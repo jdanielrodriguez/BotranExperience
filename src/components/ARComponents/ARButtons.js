@@ -24,7 +24,8 @@ export default class ARButtons extends React.Component {
           source={column === 1 ? btnOrigin : btnOrigin}
           gazeSource={column === 1 ? btnOrigin : btnOrigin}
           tapSource={column === 1 ? btnOrigin : btnOrigin}
-          position={[-15, -30, -68]}
+          position={[-15, 80, 100]}
+          rotation={[-20, 0, 15]}
           height={7.5}
           width={15}
           onClick={() => { this.state._changeColumn(1) }}
@@ -33,7 +34,8 @@ export default class ARButtons extends React.Component {
           source={column === 1 ? btnDynamic : btnDynamic}
           gazeSource={column === 1 ? btnDynamic : btnDynamic}
           tapSource={column === 1 ? btnDynamic : btnDynamic}
-          position={[0, -30, -68]}
+          position={[0, 80, 100]}
+          rotation={[-20, 0, 15]}
           height={7.5}
           width={15}
           onClick={() => { this.state._changeColumn(2) }}
@@ -42,7 +44,8 @@ export default class ARButtons extends React.Component {
           source={column === 1 ? btnAroundWorld : btnAroundWorld}
           gazeSource={column === 1 ? btnAroundWorld : btnAroundWorld}
           tapSource={column === 1 ? btnAroundWorld : btnAroundWorld}
-          position={[15, -30, -68]}
+          position={[15, 80, 100]}
+          rotation={[-20, 0, 15]}
           height={7.5}
           width={15}
           onClick={() => { this.state._changeColumn(3) }}
@@ -51,7 +54,8 @@ export default class ARButtons extends React.Component {
           source={btnSustainable}
           gazeSource={btnSustainable}
           tapSource={btnSustainable}
-          position={[0, -38, -68]}
+          position={[0, 140, 100]}
+          rotation={[0, 0, 15]}
           height={7.5}
           width={45}
           onClick={() => { this.state._changeColumn(4) }}

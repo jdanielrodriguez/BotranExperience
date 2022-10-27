@@ -10,7 +10,7 @@ export default function AppView() {
   const handleDate = (e) => {
     setDate(e);
   };
-  const [firstTime, setFirstTime] = useState(true);
+  const [firstTime, setFirstTime] = useState(false);
   const tempDate = new Date();
   const dd = String(tempDate.getDate()).padStart(2, '0');
   const mm = String(tempDate.getMonth() + 1).padStart(2, '0');
@@ -19,5 +19,5 @@ export default function AppView() {
   if (firstTime) {
     return <SelectAgeScreen setFirstTime={handleState} firstTime={firstTime} setDate={handleDate} date={date} />;
   }
-  return <Navigator onNavigationStateChange={() => { }} uriPrefix="/app" />;
+  return <Navigator onNavigationStateChange={() => { console.log('changeds')}} uriPrefix="/app" />;
 }
