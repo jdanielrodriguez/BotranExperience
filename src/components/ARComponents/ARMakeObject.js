@@ -14,9 +14,9 @@ export default function ARMakeObject(props) {
         <Viro3DObject
           key={`${key}Obj`}
           source={selected.src}
-          position={[10, -50, 0]}
-          scale={(selected.scale || [1, 1, 1])}
-          rotation={[0, 0, -2]}
+          scale={([1, 1, 1])}
+          dragType="FixedToWorld"
+          rotation={[0, 0, 0]}
           onClick={_changeObject}
           lightReceivingBitMask={5}
           animation={{ name: animationName, run: playAnim, loop: true, onFinish: _onFinish, }}
@@ -28,15 +28,6 @@ export default function ARMakeObject(props) {
           onError={_onError}
         />
       )}
-      <ViroQuad
-        rotation={[-90, 0, 0]}
-        position={[1, -60, -100]}
-        key={`${key}Quad`}
-        width={250}
-        height={250}
-        arShadowReceiver
-        lightReceivingBitMask={4}
-      />
     </>
   )
 }

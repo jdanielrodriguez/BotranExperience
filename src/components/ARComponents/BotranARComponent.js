@@ -41,12 +41,14 @@ export default class BotranARComponent extends React.Component {
       this._changeColumn = this._changeColumn.bind(this);
       this._onAnchorFound = this._onAnchorFound.bind(this);
       this._onAnchorUpdate = this._onAnchorUpdate.bind(this);
+      this._onAnchorLost = this._onAnchorLost.bind(this);
 
    }
 
    _onFinish() {
       this.setState({
-         playAnim: false,
+         animationName: '01',
+         playAnim: true,
          pauseUpdates: true,
       })
    }
@@ -61,26 +63,26 @@ export default class BotranARComponent extends React.Component {
 
    _changeObject() {
       const animate = this.state.playAnim;
-      const { objIndex, objects, column } = this.state;
-      let index = objIndex < objects[column].length ? objIndex + 1 : 0
+      const { objIndex, objects, column, selected } = this.state;
+      let index = (objects && objIndex < objects[column].length) ? objIndex + 1 : 0
       let currentColumn = column
-      if (!objects[column][index]) {
+      if (!objects || !objects[column][index]) {
          index = 0;
          currentColumn = 0;
       }
-      const selected = objects[column][index]
+      const newSelected = objects[currentColumn][index] || selected
       this.setState({
          playAnim: !animate,
          objIndex: index,
-         selected,
+         selected: newSelected,
          column: currentColumn
       })
    }
 
    _changeColumn(columnNew) {
       const animate = this.state.playAnim;
-      const { objects } = this.state;
-      let currentColumn = columnNew <= objects.length ? columnNew : 0
+      const { objects, selected } = this.state;
+      let currentColumn = (objects && columnNew <= objects.length) ? columnNew : 0
       let index = 0;
       if (!objects[currentColumn]) {
          currentColumn = 0;
@@ -89,18 +91,19 @@ export default class BotranARComponent extends React.Component {
       if (!objects[currentColumn][index]) {
          index = 0;
       }
-      const selected = objects[currentColumn][index]
+      const newSelected = objects[currentColumn][index] || selected
       this.setState({
          playAnim: !animate,
          objIndex: index,
-         selected,
+         selected: newSelected,
          column: currentColumn
       })
    }
 
    _onAnchorFound(anchor) {
-      // console.log('ANCHOR********:', anchor)
+      console.log('ANCHOR********:', anchor)
       this.setState({
+         animationName: '',
          pauseUpdates: false,
          playAnim: true,
          foundAnchor: anchor,
@@ -108,12 +111,25 @@ export default class BotranARComponent extends React.Component {
       })
    }
 
+   _onAnchorLost(anchor) {
+      console.log('ANCHORLost********:', anchor)
+      this.setState({
+         pauseUpdates: false,
+         animationName: '01',
+         playAnim: false,
+         foundAnchor: null,
+         anchorId: null,
+         show3D: false
+      })
+   }
+
    _onAnchorUpdate(anchor) {
-      // console.log('ANCHORUPDATE********:', anchor)
+      console.log('ANCHORUPDATE********:', anchor)
       const { anchorId } = this.state;
       this.setState({
          pauseUpdates: true,
-         playAnim: true,
+         animationName: '01',
+         playAnim: false,
          foundAnchor: anchor,
          anchorId: anchorId !== anchor.anchorId ? anchor.anchorId : anchorId
       })
@@ -122,17 +138,19 @@ export default class BotranARComponent extends React.Component {
    render() {
       return (
         <ViroARScene>
-          {this.state.show3D && this.state.targets.map((target) => (
+          {this.state.targets.map((target) => (
             <ViroARImageMarker
               key={`${target}MKt`}
               target={target}
               onAnchorFound={this._onAnchorFound}
               onAnchorUpdate={this._onAnchorUpdate}
+              onAnchorRemoved={this._onAnchorLost}
               pauseUpdates={this.state.pauseUpdates}
             >
               {this.state.foundAnchor?.trackingMethod === 'tracking' && (
               <ViroNode
-                position={[0, 0, 0]}
+                position={[0, -150, 0]}
+                onClick={this._changeObject}
                 key={`${target}Node`}
                 scale={[10, 10, 10]}
                 rotation={[-90, 0, 0]}
@@ -141,11 +159,11 @@ export default class BotranARComponent extends React.Component {
               >
                 <ViroAmbientLight color="#f0f0f0" intensity={1000} />
                 <ViroARCamera
-                  position={[8, 170, 210]}
-                  rotation={[-20, -3, 0]}
+                  position={[25, 210, 215]}
+                  rotation={[-20, 0, 0]}
                   active
                 >
-                  <ARMakeObject _changeObject={this._changeObject} {...this.state} selected={this.state.selected} />
+                  {this.state.show3D &&  <ARMakeObject _changeObject={this._changeObject} {...this.state} selected={this.state.selected} />}
                 </ViroARCamera>
               </ViroNode>
                   )}
@@ -161,7 +179,7 @@ ViroARTrackingTargets.createTargets({
    Botran12: {
       source: No12Etiqueta,
       orientation: "Up",
-      physicalWidth: 0.250 // real world width in meters
+      physicalWidth: 0.100 // real world width in meters
    },
    Botran15: {
       source: No15Etiqueta,

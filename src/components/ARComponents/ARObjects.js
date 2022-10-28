@@ -1,35 +1,32 @@
 
 export default function ARObjects() {
    const introTexture = [
-      require('./../../../assets/vrx/01-FBX-INTRO/BOTRAN-No12EtiquetaLOW.png'),
       require('./../../../assets/vrx/01-FBX-INTRO/Col0-INTRO_Uvmap.png'),
       require('./../../../assets/vrx/01-FBX-INTRO/Col0-Zoom-Mapa_Uvmap.png'),
       require('./../../../assets/vrx/01-FBX-INTRO/LANDING_0002_MIXCO-MAP.png'),
       require('./../../../assets/vrx/01-FBX-INTRO/LANDING_0004_REU-MAP.png'),
       require('./../../../assets/vrx/01-FBX-INTRO/LANDING_0006_XELA-MAP.png'),
-      require('./../../../assets/vrx/01-FBX-INTRO/ZOOM_Fondo.jpg'),
    ]
 
    const intro = [
       {
-         src: require("./../../../assets/vrx/01-FBX-INTRO/01-MODULOS-Intro_Completa-FLATTEN-12-SINBOTELLA-2.vrx"),
+         src: require("./../../../assets/vrx/01-FBX-INTRO/01-MODULOS-Intro_Completa-FLATTEN-SINBOTELLA.vrx"),
          materials: introTexture,
          scale: [1, 1, 1]
       },
    ]
 
    const col1Texture = [
-      require('./../../../assets/vrx/02-Columna1/BOTRAN-No12EtiquetaLOW.png'),
-      require('./../../../assets/vrx/02-Columna1/Col2-Cultivo_Uvmap.png'),
-      require('./../../../assets/vrx/02-Columna1/Col2-Destilacion_Uvmap.png'),
-      require('./../../../assets/vrx/02-Columna1/Col2-Fermentacion_Uvmap.png'),
-      require('./../../../assets/vrx/02-Columna1/Col2-MielVirgen_Uvmap.png'),
+      require('./../../../assets/vrx/02-Columna1/Col1-Cultivo_Uvmap.png'),
+      require('./../../../assets/vrx/02-Columna1/Col1-Destilacion_Uvmap.png'),
+      require('./../../../assets/vrx/02-Columna1/Col1-Fermentacion_Uvmap.png'),
+      require('./../../../assets/vrx/02-Columna1/Col1-MielVirgen_Uvmap.png'),
       
    ]
 
    const col1 = [
       {
-         src: require("./../../../assets/vrx/02-Columna1/01-MODULOS-Intro_Completa-FLATTEN-12-SINBOTELLA.vrx"),
+         src: require("./../../../assets/vrx/02-Columna1/columna_1-FLATTEN-sin_botella.vrx"),
          materials: col1Texture,
          scale: [1, 1, 1]
       },

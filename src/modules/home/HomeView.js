@@ -32,13 +32,13 @@ export default function HomeScreen() {
     component: BotranARComponent,
     column,
     targets: ['Botran12'],
+    // animationName: 'INTRO_PrimerPlanoAction',
     animationName: '',
     foundAnchor: null,
     anchorId: null
   })
 
   const _changeColumn = (columnNew) => {
-    const animate = state.playAnim;
     const { updatedKey } = state;
     let currentColumn = (columnNew <= objects.length) ? columnNew : 0
     index = 0;
@@ -56,7 +56,7 @@ export default function HomeScreen() {
     }
     setState({
       animationName: '01',
-      playAnim: !animate,
+      playAnim: false,
       objIndex: index,
       loop: false,
       selected: null,
@@ -69,7 +69,7 @@ export default function HomeScreen() {
         selected: selectedNew,
         loop: true,
         animationName: '',
-        playAnim: animate,
+        playAnim: true,
         show3D: true
       })
     }, 100);
@@ -77,6 +77,7 @@ export default function HomeScreen() {
 
   return (
     <View style={styles.container}>
+      {/* <ARScene {...state} selected={state.selected} /> */}
       {state.show3D && <ARScene {...state} selected={state.selected} />}
       {/* {!state.show3D && <ARScene {...state} selected={state.selected} />} */}
       <View style={styles.section2}>
@@ -85,13 +86,13 @@ export default function HomeScreen() {
         </TouchableOpacity>
       </View>
       <View style={styles.section}>
-        <TouchableOpacity onPress={() => { _changeColumn(1) }} style={styles.btn}>
+        <TouchableOpacity onPress={() => { _changeColumn(1) }} style={{...styles.btn, marginLeft: 'auto'}}>
           <Image source={btnOrigin} style={styles.img} />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => { _changeColumn(2) }} style={styles.btn}>
           <Image source={btnDynamic} style={styles.img} />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => { _changeColumn(3) }} style={styles.btn}>
+        <TouchableOpacity onPress={() => { _changeColumn(3) }} style={{...styles.btn, marginRight: 'auto'}}>
           <Image source={btnAroundWorld} style={styles.img} />
         </TouchableOpacity>
       </View>
@@ -113,7 +114,9 @@ const styles = StyleSheet.create({
     marginTop: 50,
     flexDirection: 'row',
     flexWrap: 'wrap',
-    width: '100%'
+    width: '100%',
+    marginLeft: 'auto',
+    marginRight: 'auto'
   },
   section2: {
     flex: 2,
@@ -125,20 +128,21 @@ const styles = StyleSheet.create({
     width: '100%'
   },
   img2: {
-    width: 362,
-    height: 42
+    width: 280,
+    height: 32
   },
   img: {
-    width: 115,
-    height: 55
+    width: 90,
+    height: 45
   },
   btn: {
-    marginTop: 620,
+    marginTop: 580,
     marginLeft: 9
   },
   btn1: {
-    marginTop: 670,
-    marginLeft: 9
+    marginTop: 630,
+    marginLeft: 'auto',
+    marginRight: 'auto'
   },
   absoluteView: {
     flex: 1,
