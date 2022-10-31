@@ -189,7 +189,7 @@ export default function HomeScreen() {
         />
       )}
       <View style={styles.section}>
-        <TouchableOpacity onPress={() => { _changeColumn(2) }} style={{ ...styles.btn, marginLeft: '10%' }}>
+        <TouchableOpacity onPress={() => { _changeColumn(2) }} style={{ ...styles.btn, marginLeft: '14%' }}>
           <Image source={btnOrigin} style={styles.img} />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => { _changeColumn(3) }} style={styles.btn}>
@@ -209,6 +209,7 @@ const { width } = Dimensions.get('window');
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    width
   },
   bgImage: {
     flex: 1,
@@ -218,21 +219,21 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 90,
     flexWrap: 'wrap',
-    width,
+    width: '90%',
     marginLeft: 'auto',
     marginRight: 'auto',
     height: 85,
   },
   imgSustentable: {
-    maxWidth: 310,
-    maxHeight: 36,
+    maxWidth: 300,
+    maxHeight: 32,
     marginLeft: 'auto',
     marginRight: 'auto',
   },
   btnSustentable: {
     position: 'absolute',
     zIndex: 99,
-    marginLeft: '10%',
+    marginLeft: '13%',
     marginTop: '13%',
     width: '70%'
   },
