@@ -21,9 +21,9 @@ export default function ARScene(props) {
         autofocus
         initialScene={{
           scene: props.component || BotranARComponent,
-          passProps:{...props, show32D: props.show32D}
+          passProps:{...props}
         }}
-        viroAppProps={{show32D: props.show32D, selected: props.selected}}
+        viroAppProps={{show32D: props.show32D, selected: props.selected, playAnim: props.playAnim}}
         style={styles.f1}
       />
     </>

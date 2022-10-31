@@ -6,7 +6,7 @@ import ARSpotLigth from './ARSpotLigth';
 
 export default function ARMakeObject(props) {
 
-  const { selected, animationName, playAnim, _onFinish, _onLoadStart, _onLoadEnd, _onError, key, _changeObject, show32D, style } = props;
+  const { selected, animationName, playAnim, _onFinish, _onLoadStart, _onLoadEnd, _onError, key, _changeObject, show32D, show3D, style } = props;
   if(!show32D){
     <>
     </>
@@ -14,7 +14,7 @@ export default function ARMakeObject(props) {
   return (
     <>
       <ARSpotLigth />
-      {show32D && (
+      {(show3D && playAnim) && (
         <Viro3DObject
           key={`${key}Obj`}
           source={selected.src}

@@ -13,36 +13,36 @@ const No15Etiqueta = require('./../../../assets/images/materiales/BOTRAN-No15-Et
 const No18Etiqueta = require('./../../../assets/images/materiales/BOTRAN-No18-Etiqueta.png')
 
 export default function BotranARComponent(props) {
-   const { pauseUpdates, playAnim, targets, style, _changeObject, show3D, _onAnchorFound, _onAnchorUpdate, _onAnchorLost } = props
-   const { show32D, selected } = props.sceneNavigator.viroAppProps;
-   return (
-     <ViroARScene>
-       {true && targets.map((target) => (
-         <ViroARImageMarker
-           key={`${target}MKt`}
-           target={target}
-           onAnchorFound={(anchor) => {_onAnchorFound(anchor)}}
-           onAnchorUpdate={(anchor) => {_onAnchorUpdate(anchor)}}
-           onAnchorRemoved={(anchor) => {_onAnchorLost(anchor)}}
-           pauseUpdates={pauseUpdates}
-         >
-           <ViroNode
-             position={[0, 0, 0]}
+   const { pauseUpdates, targets, style, _changeObject, show3D, _onAnchorFound, _onAnchorUpdate, _onAnchorLost } = props
+   const { show32D, selected, playAnim } = props.sceneNavigator.viroAppProps;
+  return (
+    <ViroARScene>
+      {show3D && targets.map((target) => (
+        <ViroARImageMarker
+          key={`${target}MKt`}
+          target={target}
+          onAnchorFound={(anchor) => {_onAnchorFound(anchor)}}
+          onAnchorUpdate={(anchor) => {_onAnchorUpdate(anchor)}}
+          onAnchorRemoved={(anchor) => {_onAnchorLost(anchor)}}
+          pauseUpdates={pauseUpdates}
+        >
+          <ViroNode
+            position={[0, 0, 0]}
             //  onClick={() => {_changeObject()}}
-             key={`${target}Node`}
-             scale={[100, 100, 100]}
-             rotation={[0, 0, 0]}
-             dragType="FixedToWorld"
-             animation={{ name: "scaleModel", run: playAnim, }}
-           >
-             <ViroAmbientLight color="#f0f0f0" intensity={1000} />
-             <ARMakeObject style={style} _changeObject={_changeObject} {...props} show3D={show3D} show32D={show32D} selected={selected} />
-           </ViroNode>
-         </ViroARImageMarker>
+            key={`${target}Node`}
+            scale={[100, 100, 100]}
+            rotation={[0, 0, 0]}
+            dragType="FixedToWorld"
+            animation={{ name: "scaleModel", run: playAnim, }}
+          >
+            <ViroAmbientLight color="#f0f0f0" intensity={1000} />
+            <ARMakeObject {...props} style={style} _changeObject={_changeObject} playAnim={playAnim} show3D={show3D} show32D={show32D} selected={selected} />
+          </ViroNode>
+        </ViroARImageMarker>
          ))
          }
-       <OmniLigth />
-     </ViroARScene>
+      <OmniLigth />
+    </ViroARScene>
    );
 }
 ViroARTrackingTargets.createTargets({

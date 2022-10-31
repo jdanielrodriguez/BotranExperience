@@ -23,11 +23,10 @@ export default function HomeScreen() {
   const [state, setState] = useState({
     selected: objects[1][index],
     show3D: true,
-    show32D: true,
-    updatedKey: 1,
+    show32D: false,
     objects,
     pauseUpdates: true,
-    playAnim: true,
+    playAnim: false,
     objIndex: index,
     component: BotranARComponent,
     column: 1,
@@ -36,7 +35,7 @@ export default function HomeScreen() {
     foundAnchor: null,
     anchorId: null
   })
-  const { updatedKey, column } = state;
+  const { column } = state;
 
   const _changeColumn = (columnNew) => {
     let currentColumn = (columnNew === (objects.length)) ? 1 : columnNew;
@@ -55,7 +54,6 @@ export default function HomeScreen() {
     temp.loop = false;
     temp.selected = null;
     temp.column = currentColumn;
-    temp.updatedKey = updatedKey + 1;
     temp.show3D = false;
     temp.show32D = false;
     setState({ ...temp });
@@ -67,13 +65,13 @@ export default function HomeScreen() {
       temp.show32D = true;
       temp.show3D = true;
       setState({ ...temp });
-    }, 10);
+    }, 0);
   }
 
   const _onFinish = () => {
     const temp = state;
     temp.animationName = '';
-    temp.playAnim = false;
+    temp.playAnim = true;
     temp.column = column;
     setState({ ...temp });
 
@@ -119,10 +117,11 @@ export default function HomeScreen() {
   const _onAnchorFound = (anchor) => {
     console.log('ANCHOR********:', anchor)
     const temp = state;
-    temp.animationName = '';
+    temp.animationName = '01';
     temp.pauseUpdates = false;
     temp.playAnim = true;
     temp.show32D = true;
+    temp.show3D = true;
     temp.foundAnchor = anchor;
     temp.anchorId = anchor.anchorId
     setState({ ...temp });
@@ -133,7 +132,7 @@ export default function HomeScreen() {
     const temp = state;
     temp.animationName = '01';
     temp.pauseUpdates = true;
-    temp.playAnim = false;
+    temp.playAnim = true;
     temp.show32D = false;
     temp.column = 1;
     temp.foundAnchor = anchor;
@@ -147,14 +146,13 @@ export default function HomeScreen() {
     const temp = state;
     temp.animationName = '01';
     temp.pauseUpdates = true;
-    temp.playAnim = false;
-    temp.show32D = false;
+    temp.playAnim = true;
+    temp.show32D = true;
     temp.column = 1;
     temp.foundAnchor = anchor;
     temp.anchorId = anchorId !== anchor.anchorId ? anchor.anchorId : anchorId
     setState({ ...temp });
   }
-
   return (
     <View style={styles.container}>
       {state.show3D && (
