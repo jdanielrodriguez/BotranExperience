@@ -32,15 +32,13 @@ export default function HomeScreen() {
     component: BotranARComponent,
     column: 1,
     targets: ['Botran12'],
-    // animationName: 'INTRO_PrimerPlanoAction',
     animationName: '',
     foundAnchor: null,
     anchorId: null
   })
-  const { updatedKey, selected, column } = state;
+  const { updatedKey, column } = state;
 
   const _changeColumn = (columnNew) => {
-    console.log(objects.length);
     let currentColumn = (columnNew === (objects.length)) ? 1 : columnNew;
     index = 0;
     if (!objects[currentColumn]) {
@@ -79,10 +77,6 @@ export default function HomeScreen() {
     temp.column = column;
     setState({ ...temp });
 
-    console.log('changedcolumn222********:', temp.column)
-    console.log('changedIndex222********:', temp.objIndex)
-    console.log('changedObject222********:', temp.selected)
-    console.log('changedObject222********:', selected)
     // setTimeout(() => {
     //   console.log('cambio!!!!')
     //   _changeObject()
@@ -112,10 +106,6 @@ export default function HomeScreen() {
     temp.objIndex = index;
     temp.column = currentColumn;
     temp.selected = newSelected;
-    console.log('changedcolumn********:', currentColumn)
-    console.log('changedIndex********:', index)
-    console.log('changedObject********:', newSelected)
-    console.log('changedObject1********:', selected)
     setState({ ...temp });
     setTimeout(() => {
       temp.playAnim = true;
