@@ -1,7 +1,13 @@
 
 export default function ARObjects() {
    const introTexture = [
+      require('./../../../assets/vrx/01-FBX-INTRO/BOTRAN-No12EtiquetaLOW.png'),
+      require('./../../../assets/vrx/01-FBX-INTRO/casa-xela-Barriles-uvmap.png'),
+      require('./../../../assets/vrx/01-FBX-INTRO/casa-xela-frente-uvmap.png'),
       require('./../../../assets/vrx/01-FBX-INTRO/Col0-INTRO_Uvmap.png'),
+      require('./../../../assets/vrx/01-FBX-INTRO/Col0-mapa-casa-reu-puerto_uvmap.png'),
+      require('./../../../assets/vrx/01-FBX-INTRO/Col0-mapa-casa-xela_uvmap.png'),
+      require('./../../../assets/vrx/01-FBX-INTRO/Col0-MAPA-XELA-Mixco_Uvmap.png'),
       require('./../../../assets/vrx/01-FBX-INTRO/Col0-Zoom-Mapa_Uvmap.png'),
       require('./../../../assets/vrx/01-FBX-INTRO/LANDING_0002_MIXCO-MAP.png'),
       require('./../../../assets/vrx/01-FBX-INTRO/LANDING_0004_REU-MAP.png'),
@@ -10,13 +16,24 @@ export default function ARObjects() {
 
    const intro = [
       {
-         src: require("./../../../assets/vrx/01-FBX-INTRO/01-MODULOS-Intro_Completa-FLATTEN-SINBOTELLA.vrx"),
+         src: require("./../../../assets/vrx/01-FBX-INTRO/Intro_Completa-conBotella-12-parte1.vrx"),
          materials: introTexture,
          scale: [1, 1, 1]
       },
+      {
+         src: require("./../../../assets/vrx/01-FBX-INTRO/Intro_Completa-conBotella-12-parte2.vrx"),
+         materials: introTexture,
+         scale: [1, 1, 1]
+      },
+      // {
+      //    src: require("./../../../assets/vrx/01-FBX-INTRO/01-MODULOS-Intro_Completa-FLATTEN-SINBOTELLA.vrx"),
+      //    materials: introTexture,
+      //    scale: [1, 1, 1]
+      // },
    ]
 
    const col1Texture = [
+      require('./../../../assets/vrx/02-Columna1/BOTRAN-No12EtiquetaLOW.png'),
       require('./../../../assets/vrx/02-Columna1/Col1-Cultivo_Uvmap.png'),
       require('./../../../assets/vrx/02-Columna1/Col1-Destilacion_Uvmap.png'),
       require('./../../../assets/vrx/02-Columna1/Col1-Fermentacion_Uvmap.png'),
@@ -25,11 +42,41 @@ export default function ARObjects() {
    ]
 
    const col1 = [
+      // {
+      //    src: require("./../../../assets/vrx/02-Columna1/col01-conBotella-12-parte1.vrx"),
+      //    materials: col1Texture,
+      //    scale: [1, 1, 1]
+      // },
       {
-         src: require("./../../../assets/vrx/02-Columna1/columna_1-FLATTEN-sin_botella.vrx"),
+         src: require("./../../../assets/vrx/02-Columna1/col01-conBotella-12-parte2.vrx"),
          materials: col1Texture,
          scale: [1, 1, 1]
       },
+      {
+         src: require("./../../../assets/vrx/02-Columna1/col01-conBotella-12-parte3.vrx"),
+         materials: col1Texture,
+         scale: [1, 1, 1]
+      },
+      {
+         src: require("./../../../assets/vrx/02-Columna1/col01-conBotella-12-parte4.vrx"),
+         materials: col1Texture,
+         scale: [1, 1, 1]
+      },
+      {
+         src: require("./../../../assets/vrx/02-Columna1/col01-conBotella-12-parte5.vrx"),
+         materials: col1Texture,
+         scale: [1, 1, 1]
+      },
+      {
+         src: require("./../../../assets/vrx/02-Columna1/col01-conBotella-12-parte6.vrx"),
+         materials: col1Texture,
+         scale: [1, 1, 1]
+      },
+      // {
+      //    src: require("./../../../assets/vrx/02-Columna1/columna_1-FLATTEN-sin_botella.vrx"),
+      //    materials: col1Texture,
+      //    scale: [1, 1, 1]
+      // },
    ]
 
    const col2Texture = [
@@ -88,5 +135,5 @@ export default function ARObjects() {
       },
    ]
 
-   return [intro, col1, col2, col3, col4];
+   return [intro, intro, col1, col2, col3, col4];
 }

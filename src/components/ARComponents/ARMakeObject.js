@@ -1,27 +1,34 @@
 
 import React from 'react';
 
-import { Viro3DObject, ViroQuad } from '@viro-community/react-viro';
+import { Viro3DObject } from '@viro-community/react-viro';
 import ARSpotLigth from './ARSpotLigth';
 
 export default function ARMakeObject(props) {
 
-  const { selected, animationName, playAnim, _onFinish, _onLoadStart, _onLoadEnd, _onError, key, _changeObject, show3D } = props;
+  const { selected, animationName, playAnim, _onFinish, _onLoadStart, _onLoadEnd, _onError, key, _changeObject, show32D, style } = props;
+  if(!show32D){
+    <>
+    </>
+  }
   return (
     <>
       <ARSpotLigth />
-      {show3D && (
+      {show32D && (
         <Viro3DObject
           key={`${key}Obj`}
           source={selected.src}
           scale={([1, 1, 1])}
-          dragType="FixedToWorld"
-          rotation={[0, 0, 0]}
+          position={[0, -150, -220]}
+          rotation={[0, 0, -1]}
+          onPress={_changeObject}
           onClick={_changeObject}
+          onTouch={_changeObject}
           lightReceivingBitMask={5}
-          animation={{ name: animationName, run: playAnim, loop: true, onFinish: _onFinish, }}
+          animation={{ name: animationName, run: playAnim, loop: false, onFinish: _onFinish, }}
           shadowCastingBitMask={4}
           type="VRX"
+          style={style}
           resources={selected.materials}
           onLoadStart={_onLoadStart}
           onLoadEnd={_onLoadEnd}
