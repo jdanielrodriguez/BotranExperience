@@ -27,11 +27,9 @@ export default function BotranARComponent(props) {
           pauseUpdates={pauseUpdates}
         >
           <ViroNode
-            position={[0, 0, 0]}
-            //  onClick={() => {_changeObject()}}
             key={`${target}Node`}
             scale={[100, 100, 100]}
-            rotation={[0, 0, 0]}
+            rotation={[-10, 0, 0]}
             dragType="FixedToWorld"
             animation={{ name: "scaleModel", run: playAnim, }}
           >

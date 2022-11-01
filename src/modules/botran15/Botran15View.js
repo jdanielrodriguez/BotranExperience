@@ -138,6 +138,7 @@ const styles = StyleSheet.create({
   },
   bgImage: {
     width,
+    minWidth: width,
   },
   gotIt: {
     width: 100,
@@ -146,7 +147,9 @@ const styles = StyleSheet.create({
   },
   scrollView: {
     width,
-    height
+    height,
+    minWidth: width,
+    minHeight: height,
   },
   bottles: {
     width: '30%',

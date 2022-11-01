@@ -18,11 +18,13 @@ export default function ARObjects() {
       {
          src: require("./../../../assets/vrx/01-FBX-INTRO/Intro_Completa-conBotella-12-parte1.vrx"),
          materials: introTexture,
+         sound: require("./../../../assets/mp3/narracion/BOTRAN_MUSIC.mp3"),
          scale: [1, 1, 1]
       },
       {
          src: require("./../../../assets/vrx/01-FBX-INTRO/Intro_Completa-conBotella-12-parte2.vrx"),
          materials: introTexture,
+         sound: require("./../../../assets/mp3/narracion/BOTRAN_NATURE.mp3"),
          scale: [1, 1, 1]
       },
       // {
@@ -50,26 +52,31 @@ export default function ARObjects() {
       {
          src: require("./../../../assets/vrx/02-Columna1/col01-conBotella-12-parte2.vrx"),
          materials: col1Texture,
+         sound: require("./../../../assets/mp3/narracion/1_GUATEMALAN_ORIGIN.mp3"),
          scale: [1, 1, 1]
       },
       {
          src: require("./../../../assets/vrx/02-Columna1/col01-conBotella-12-parte3.vrx"),
          materials: col1Texture,
+         sound: require("./../../../assets/mp3/narracion/2_CULTIVO.mp3"),
          scale: [1, 1, 1]
       },
       {
          src: require("./../../../assets/vrx/02-Columna1/col01-conBotella-12-parte4.vrx"),
          materials: col1Texture,
+         sound: require("./../../../assets/mp3/narracion/3_MIEL_VIRGEN.mp3"),
          scale: [1, 1, 1]
       },
       {
          src: require("./../../../assets/vrx/02-Columna1/col01-conBotella-12-parte5.vrx"),
          materials: col1Texture,
+         sound: require("./../../../assets/mp3/narracion/4_FERMENTACIÓN.mp3"),
          scale: [1, 1, 1]
       },
       {
          src: require("./../../../assets/vrx/02-Columna1/col01-conBotella-12-parte6.vrx"),
          materials: col1Texture,
+         sound: require("./../../../assets/mp3/narracion/5_DESTILACIÓN.mp3"),
          scale: [1, 1, 1]
       },
       // {
@@ -93,6 +100,7 @@ export default function ARObjects() {
       {
          src: require("./../../../assets/vrx/03-Columna2/01-MODULOS-COLUMNA_2-12-FLATTEN-SINBOTELLA.vrx"),
          materials: col2Texture,
+         sound: require("./../../../assets/mp3/narracion/6_DYNAMIC_AGEING_PROCESS.mp3"),
          scale: [1, 1, 1]
       },
    ]
@@ -110,6 +118,7 @@ export default function ARObjects() {
       {
          src: require("./../../../assets/vrx/04-Columna3/01-MODULOS-Col3_FLATTEN-12-SINBOTELLA.vrx"),
          materials: col3Texture,
+         sound: require("./../../../assets/mp3/narracion/7_ANEJAMIENTO.mp3"),
          scale: [1, 1, 1]
       },
    ]
@@ -131,6 +140,7 @@ export default function ARObjects() {
       {
          src: require("./../../../assets/vrx/05-Columna4/01-MODULOS-COLUMNA_4-12-FLATTEN-SINBOTELLA.vrx"),
          materials: col4Texture,
+         sound: require("./../../../assets/mp3/narracion/14_CADENA_SUSTENTABLE.mp3"),
          scale: [1, 1, 1]
       },
    ]

@@ -81,6 +81,12 @@ export default function HomeScreen() {
     // }, 1000);
   }
 
+
+
+  const onFinishSound = () => {
+    console.log('sonido acabado')
+  }
+
   const _changeObject = () => {
     let currentColumn = column;
     if (objects) {
@@ -136,7 +142,7 @@ export default function HomeScreen() {
     temp.show32D = false;
     temp.column = 1;
     temp.foundAnchor = anchor;
-    temp.anchorId = anchor.anchorId
+    temp.anchorId = anchor? anchor.anchorId : null;
     setState({ ...temp });
   }
 
@@ -146,13 +152,24 @@ export default function HomeScreen() {
     const temp = state;
     temp.animationName = '01';
     temp.pauseUpdates = true;
-    temp.playAnim = true;
-    temp.show32D = true;
+    temp.playAnim = false;
+    temp.show32D = false;
     temp.column = 1;
-    temp.foundAnchor = anchor;
-    temp.anchorId = anchorId !== anchor.anchorId ? anchor.anchorId : anchorId
     setState({ ...temp });
+    if(anchorId !== anchor.anchorId){
+      temp.anchorId = anchorId
+      temp.foundAnchor = anchor;
+      temp.show3D = false;
+      setTimeout(() => {
+        temp.playAnim = true;
+        temp.show32D = true;
+        temp.animName = '';
+        temp.show3D = true;
+        setState({ ...temp });
+      }, 10);
+    }
   }
+
   return (
     <View style={styles.container}>
       {state.show3D && (
@@ -167,6 +184,7 @@ export default function HomeScreen() {
           _onAnchorFound={_onAnchorFound}
           _onAnchorLost={_onAnchorLost}
           _onAnchorUpdate={_onAnchorUpdate}
+          onFinishSound={onFinishSound}
           pauseUpdates
           playAnim={state.playAnim}
           targets={['Botran12']}

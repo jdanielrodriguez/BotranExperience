@@ -1,13 +1,13 @@
 
 import React from 'react';
 
-import { Viro3DObject } from '@viro-community/react-viro';
+import { Viro3DObject, ViroSound } from '@viro-community/react-viro';
 import ARSpotLigth from './ARSpotLigth';
 
 export default function ARMakeObject(props) {
 
-  const { selected, animationName, playAnim, _onFinish, _onLoadStart, _onLoadEnd, _onError, key, _changeObject, show32D, show3D, style } = props;
-  if(!show32D){
+  const { selected, animationName, playAnim, _onFinish, _onLoadStart, _onLoadEnd, _onError, key, _changeObject, show32D, show3D, style, onFinishSound } = props;
+  if (!show32D) {
     <>
     </>
   }
@@ -15,7 +15,7 @@ export default function ARMakeObject(props) {
     <>
       <ARSpotLigth />
       {(show3D && playAnim) && (
-        <Viro3DObject
+        <><Viro3DObject
           key={`${key}Obj`}
           source={selected.src}
           scale={([1, 1, 1])}
@@ -34,6 +34,14 @@ export default function ARMakeObject(props) {
           onLoadEnd={_onLoadEnd}
           onError={_onError}
         />
+          {selected.sound && (
+            <ViroSound
+              key={`${key}Sound`}
+              source={selected.sound}
+              onFinish={onFinishSound}
+            />
+          )}
+        </>
       )}
     </>
   )

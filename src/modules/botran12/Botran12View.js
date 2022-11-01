@@ -25,7 +25,7 @@ export default function Botran12Screen() {
   // };
 
   return (
-    <ScrollView>
+    <ScrollView style={styles.scrollView}>
       <Image
         source={require('../../../assets/images/Botran-12-sales-sheets.jpg')}
         style={styles.bgImage}
@@ -132,6 +132,7 @@ const styles = StyleSheet.create({
   },
   bgImage: {
     width,
+    minWidth: width,
   },
   gotIt: {
     width: 100,
@@ -140,7 +141,9 @@ const styles = StyleSheet.create({
   },
   scrollView: {
     width,
-    height
+    height,
+    minWidth: width,
+    minHeight: height,
   },
   bottles: {
     width: '27%',
