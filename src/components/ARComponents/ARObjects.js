@@ -140,7 +140,7 @@ export default function ARObjects() {
       {
          src: require("./../../../assets/vrx/05-Columna4/01-MODULOS-COLUMNA_4-12-FLATTEN-SINBOTELLA.vrx"),
          materials: col4Texture,
-         sound: require("./../../../assets/mp3/narracion/14_CADENA_SUSTENTABLE.mp3"),
+         sound: require("./../../../assets/mp3/narracion/11__1ST_SUSTAINABLE_RUM_IN_THE_WORLD.mp3"),
          scale: [1, 1, 1]
       },
    ]
