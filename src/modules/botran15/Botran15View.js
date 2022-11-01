@@ -4,7 +4,7 @@ import {
   View,
   ImageBackground,
   Image,
-  ScrollView,
+  ScrollView,Dimensions
 } from 'react-native';
 
 import { fonts, colors } from '../../styles';
@@ -25,15 +25,15 @@ export default function Botran15Screen() {
   // };
 
   return (
-    <View style={styles.container}>
-      <ImageBackground
-        source={require('../../../assets/images/Botran15-background.png')}
+    <ScrollView style={styles.scrollView}>
+      <Image
+        source={require('../../../assets/images/Botran-15-sales-sheets.jpg')}
         style={styles.bgImage}
         resizeMode="stretch"
       >
 
-        <View style={[styles.section, styles.sectionLarge]}>
-          {/* <Image
+        {/* <View style={[styles.section, styles.sectionLarge]}> */}
+        {/* <Image
             source={require('../../../assets/images/about-blends.png')}
             style={styles.aboutBlend}
             resizeMode="stretch"
@@ -43,12 +43,12 @@ export default function Botran15Screen() {
             style={styles.title15}
             resizeMode="stretch"
           /> */}
-          <Image
+        {/* <Image
             source={require('../../../assets/images/botella-botran-15.png')}
             style={styles.bottles}
             resizeMode="stretch"
-          />
-          {/* <View style={styles.priceContainer}>
+          /> */}
+        {/* <View style={styles.priceContainer}>
             <View style={{ flexDirection: 'row' }}>
               <ScrollView style={styles.scrollView}>
                 <Text size={12} style={styles.instructions}>
@@ -116,36 +116,37 @@ export default function Botran15Screen() {
               </ScrollView>
             </View>
           </View> */}
-        </View>
+        {/* </View> */}
         {/* <Image
           source={require('../../../assets/images/barra-abajo.png')}
           style={styles.barra}
           resizeMode="stretch"
         /> */}
-      </ImageBackground>
-    </View>
+      </Image>
+    </ScrollView>
   );
 }
+
+const { height, width } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
+    width: '100%',
     justifyContent: 'space-around',
   },
   bgImage: {
-    flex: 1,
-    width: '100%',
-    height: '100%',
-    marginHorizontal: 0,
-  },
-  scrollView: {
-    width: '100%',
+    width,
   },
   gotIt: {
     width: 100,
     height: 50,
     marginTop: 15,
+  },
+  scrollView: {
+    width,
+    height
   },
   bottles: {
     width: '30%',
