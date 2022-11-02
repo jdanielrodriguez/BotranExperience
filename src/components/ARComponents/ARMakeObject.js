@@ -6,7 +6,7 @@ import { Viro3DObject, ViroSound } from '@viro-community/react-viro';
 
 export default function ARMakeObject(props) {
 
-  const { selected, animationName, playAnim, _onFinish, _onLoadStart, _onLoadEnd, _onError, key, _changeObject, show32D, show3D, style, onFinishSound } = props;
+  const { selected, animationName, playAnim, _onFinish, _onLoadStart, _onLoadEnd, _onError, key, _changeObject, foundAnchor, show3D, style, onFinishSound } = props;
   // if (!show32D) {
   //   <>
   //   </>
@@ -19,7 +19,7 @@ export default function ARMakeObject(props) {
           key={`${key}Obj`}
           source={selected.src}
           scale={([1, 1, 1])}
-          position={[0, -150, -220]}
+          position={foundAnchor ? [foundAnchor.position[0], foundAnchor.position[0] - 150, foundAnchor.position[0] - 220] : [0, -150, -220]}
           rotation={[0, 0, -1]}
           onPress={_changeObject}
           onClick={_changeObject}

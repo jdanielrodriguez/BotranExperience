@@ -13,8 +13,7 @@ const No15Etiqueta = require('./../../../assets/images/materiales/BOTRAN-No15-Et
 const No18Etiqueta = require('./../../../assets/images/materiales/BOTRAN-No18-Etiqueta.png')
 
 export default function BotranARComponent(props) {
-   const { pauseUpdates, targets, style, _changeObject, show3D, _onAnchorFound, _onAnchorUpdate, _onAnchorLost } = props
-   const { show32D, selected, playAnim } = props.sceneNavigator.viroAppProps;
+   const { show32D, selected, playAnim, pauseUpdates, targets, style, _changeObject, show3D, _onAnchorFound, _onAnchorUpdate, _onAnchorLost } = props.sceneNavigator.viroAppProps;
   return (
     <ViroARScene>
       {show3D && targets.map((target) => (

@@ -122,6 +122,7 @@ export default function HomeScreen() {
 
   const _onAnchorFound = (anchor) => {
     console.log('ANCHOR********:', anchor)
+    const { anchorId } = state;
     const temp = state;
     temp.animationName = '01';
     temp.pauseUpdates = false;
@@ -130,6 +131,10 @@ export default function HomeScreen() {
     temp.show3D = true;
     temp.foundAnchor = anchor || null;
     temp.anchorId = anchor? anchor.anchorId : null;
+    if(anchorId !== anchor.anchorId){
+      temp.foundAnchor = anchor || null;
+      temp.anchorId = anchor? anchor.anchorId : null;
+    }
     setState({ ...temp });
   }
 
@@ -187,7 +192,7 @@ export default function HomeScreen() {
           onFinishSound={onFinishSound}
           pauseUpdates
           playAnim={state.playAnim}
-          targets={['Botran12','Botran15','Botran18']}
+          targets={['Botran12']}
           foundAnchor={state.foundAnchor}
           _changeObject={_changeObject}
           show3D={state.show3D}
