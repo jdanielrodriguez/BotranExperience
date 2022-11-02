@@ -28,10 +28,8 @@ export default function BotranARComponent(props) {
         >
           <ViroNode
             key={`${target}Node`}
-            scale={[100, 100, 100]}
-            rotation={[-10, 0, 0]}
-            dragType="FixedToWorld"
-            animation={{ name: "scaleModel", run: playAnim, }}
+            scale={[1, 1, 1]}
+            rotation={[5, 0, 0]}
           >
             <ViroAmbientLight color="#f0f0f0" intensity={1000} />
             <ARMakeObject {...props} style={style} _changeObject={_changeObject} playAnim={playAnim} show3D={show3D} show32D={show32D} selected={selected} />
@@ -52,12 +50,12 @@ ViroARTrackingTargets.createTargets({
    Botran15: {
       source: No15Etiqueta,
       orientation: "Up",
-      physicalWidth: 0.250 // real world width in meters
+      physicalWidth: 0.100 // real world width in meters
    },
    Botran18: {
       source: No18Etiqueta,
       orientation: "Up",
-      physicalWidth: 0.250 // real world width in meters
+      physicalWidth: 0.100 // real world width in meters
    }
 });
 

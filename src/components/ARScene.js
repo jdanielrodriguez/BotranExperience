@@ -19,6 +19,7 @@ export default function ARScene(props) {
       <ViroAmbientLight color="#ffffff" intensity={1000} />
       <ViroARSceneNavigator
         autofocus
+        numberOfTrackedImages={1}
         initialScene={{
           scene: props.component || BotranARComponent,
           passProps:{...props}

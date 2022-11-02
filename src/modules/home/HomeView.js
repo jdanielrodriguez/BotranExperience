@@ -187,7 +187,7 @@ export default function HomeScreen() {
           onFinishSound={onFinishSound}
           pauseUpdates
           playAnim={state.playAnim}
-          targets={['Botran12']}
+          targets={['Botran12','Botran15','Botran18']}
           foundAnchor={state.foundAnchor}
           _changeObject={_changeObject}
           show3D={state.show3D}
@@ -195,7 +195,7 @@ export default function HomeScreen() {
         />
       )}
       <View style={styles.section}>
-        <TouchableOpacity onPress={() => { _changeColumn(2) }} style={{ ...styles.btn, marginLeft: '14%' }}>
+        <TouchableOpacity onPress={() => { _changeColumn(2) }} style={{ ...styles.btn, marginLeft: '10%' }}>
           <Image source={btnOrigin} style={styles.img} />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => { _changeColumn(3) }} style={styles.btn}>
@@ -204,7 +204,7 @@ export default function HomeScreen() {
         <TouchableOpacity onPress={() => { _changeColumn(4) }} style={{ ...styles.btn, marginRight: 'auto' }}>
           <Image source={btnAroundWorld} style={styles.img} />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => { _changeColumn(5) }} style={styles.btnSustentable}>
+        <TouchableOpacity onPress={() => { _changeColumn(5) }} style={{...styles.btnSustentable, marginLeft: '10%'}}>
           <Image source={btnSustainable} style={styles.imgSustentable} />
         </TouchableOpacity>
       </View>
@@ -231,7 +231,7 @@ const styles = StyleSheet.create({
     height: 85,
   },
   imgSustentable: {
-    maxWidth: 300,
+    maxWidth: 335,
     maxHeight: 32,
     marginLeft: 'auto',
     marginRight: 'auto',
@@ -240,11 +240,11 @@ const styles = StyleSheet.create({
     position: 'absolute',
     zIndex: 99,
     marginLeft: '13%',
-    marginTop: '13%',
+    marginTop: '15%',
     width: '70%'
   },
   img: {
-    maxWidth: 110,
+    maxWidth: 100,
     maxHeight: 45,
     width: '100%',
     height: '100%'
@@ -256,7 +256,7 @@ const styles = StyleSheet.create({
     height: '100%'
   },
   btn: {
-    width: '27%'
+    width: '33%'
 
   },
   absoluteView: {

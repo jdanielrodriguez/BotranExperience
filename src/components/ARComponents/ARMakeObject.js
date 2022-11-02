@@ -20,6 +20,7 @@ export default function ARMakeObject(props) {
           source={selected.src}
           scale={([1, 1, 1])}
           position={[0, -150, -220]}
+          dragType="FixedToWorld"
           rotation={[0, 0, -1]}
           onPress={_changeObject}
           onClick={_changeObject}
