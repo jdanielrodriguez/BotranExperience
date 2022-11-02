@@ -1,14 +1,10 @@
 import React from 'react';
 import {
-  StyleSheet,
-  View,
-  ImageBackground,
-  Image,
-  ScrollView,Dimensions
+  Dimensions, Image,
+  ScrollView, StyleSheet
 } from 'react-native';
 
-import { fonts, colors } from '../../styles';
-import { Text } from '../../components/StyledText';
+import { colors, fonts } from '../../styles';
 
 
 

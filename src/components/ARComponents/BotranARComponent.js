@@ -2,7 +2,7 @@ import React from 'react';
 
 import {
    ViroAmbientLight, ViroAnimations, ViroARImageMarker,
-   ViroARScene, ViroARTrackingTargets, ViroNode
+   ViroARScene, ViroARTrackingTargets
 } from '@viro-community/react-viro';
 
 import ARMakeObject from './ARMakeObject';
@@ -26,14 +26,9 @@ export default function BotranARComponent(props) {
           onAnchorRemoved={(anchor) => {_onAnchorLost(anchor)}}
           pauseUpdates={pauseUpdates}
         >
-          <ViroNode
-            key={`${target}Node`}
-            scale={[1, 1, 1]}
-            rotation={[5, 0, 0]}
-          >
-            <ViroAmbientLight color="#f0f0f0" intensity={1000} />
-            <ARMakeObject {...props} style={style} _changeObject={_changeObject} playAnim={playAnim} show3D={show3D} show32D={show32D} selected={selected} />
-          </ViroNode>
+        
+          <ViroAmbientLight color="#f0f0f0" intensity={1000} />
+          <ARMakeObject {...props} style={style} _changeObject={_changeObject} playAnim={playAnim} show3D={show3D} show32D={show32D} selected={selected} />
         </ViroARImageMarker>
          ))
          }

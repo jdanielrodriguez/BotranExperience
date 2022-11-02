@@ -144,7 +144,7 @@ export default function ARObjects() {
       {
          src: require("./../../../assets/vrx/04-Columna3/col03-conBotella-12-parte3.vrx"),
          materials: col3Texture,
-         sound: require("./../../../assets/mp3/narracion/11__1ST_SUSTAINABLE_RUM_IN_THE_WORLD.mp3"),
+         sound: require("./../../../assets/mp3/narracion/BOTRAN_NATURE.mp3"),
          scale: [1, 1, 1]
       },
       {
@@ -170,9 +170,39 @@ export default function ARObjects() {
 
    const col4 = [
       {
-         src: require("./../../../assets/vrx/05-Columna4/01-MODULOS-COLUMNA_4-12-FLATTEN-SINBOTELLA.vrx"),
+         src: require("./../../../assets/vrx/05-Columna4/col04-conBotella-12-parte1.vrx"),
          materials: col4Texture,
          sound: require("./../../../assets/mp3/narracion/11__1ST_SUSTAINABLE_RUM_IN_THE_WORLD.mp3"),
+         scale: [1, 1, 1]
+      },
+      {
+         src: require("./../../../assets/vrx/05-Columna4/col04-conBotella-12-parte2.vrx"),
+         materials: col4Texture,
+         sound: require("./../../../assets/mp3/narracion/BOTRAN_NATURE.mp3"),
+         scale: [1, 1, 1]
+      },
+      {
+         src: require("./../../../assets/vrx/05-Columna4/col04-conBotella-12-parte3.vrx"),
+         materials: col4Texture,
+         sound: require("./../../../assets/mp3/narracion/12_COMPROMISO_CON_LA_TIERRA.mp3"),
+         scale: [1, 1, 1]
+      },
+      {
+         src: require("./../../../assets/vrx/05-Columna4/col04-conBotella-12-parte4.vrx"),
+         materials: col4Texture,
+         sound: require("./../../../assets/mp3/narracion/13_SELLO_ISCC_PLUS.mp3"),
+         scale: [1, 1, 1]
+      },
+      {
+         src: require("./../../../assets/vrx/05-Columna4/col04-conBotella-12-parte5.vrx"),
+         materials: col4Texture,
+         sound: require("./../../../assets/mp3/narracion/14_CADENA_SUSTENTABLE.mp3"),
+         scale: [1, 1, 1]
+      },
+      {
+         src: require("./../../../assets/vrx/05-Columna4/col04-conBotella-12-parte6.vrx"),
+         materials: col4Texture,
+         sound: null,
          scale: [1, 1, 1]
       },
    ]

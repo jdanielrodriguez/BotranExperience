@@ -57,7 +57,7 @@ export default function HomeScreen() {
     temp.show3D = false;
     temp.show32D = false;
     setState({ ...temp });
-    setTimeout(() => {
+    // setTimeout(() => {
       temp.selected = selectedNew;
       temp.loop = true;
       temp.animationName = '';
@@ -65,7 +65,7 @@ export default function HomeScreen() {
       temp.show32D = true;
       temp.show3D = true;
       setState({ ...temp });
-    }, 0);
+    // }, 0);
   }
 
   const _onFinish = () => {
@@ -231,7 +231,7 @@ const styles = StyleSheet.create({
     height: 85,
   },
   imgSustentable: {
-    maxWidth: 335,
+    maxWidth: 325,
     maxHeight: 32,
     marginLeft: 'auto',
     marginRight: 'auto',
@@ -256,7 +256,7 @@ const styles = StyleSheet.create({
     height: '100%'
   },
   btn: {
-    width: '33%'
+    width: '34%'
 
   },
   absoluteView: {
