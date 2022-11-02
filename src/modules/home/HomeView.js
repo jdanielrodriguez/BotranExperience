@@ -57,7 +57,7 @@ export default function HomeScreen() {
     temp.show3D = false;
     temp.show32D = false;
     setState({ ...temp });
-    // setTimeout(() => {
+    setTimeout(() => {
       temp.selected = selectedNew;
       temp.loop = true;
       temp.animationName = '';
@@ -65,7 +65,7 @@ export default function HomeScreen() {
       temp.show32D = true;
       temp.show3D = true;
       setState({ ...temp });
-    // }, 0);
+    }, 0);
   }
 
   const _onFinish = () => {
@@ -128,46 +128,46 @@ export default function HomeScreen() {
     temp.playAnim = true;
     temp.show32D = true;
     temp.show3D = true;
-    temp.foundAnchor = anchor;
-    temp.anchorId = anchor.anchorId
+    temp.foundAnchor = anchor || null;
+    temp.anchorId = anchor? anchor.anchorId : null;
     setState({ ...temp });
   }
 
   const _onAnchorLost = (anchor) => {
     console.log('ANCHORLost********:', anchor)
-    const temp = state;
-    temp.animationName = '01';
-    temp.pauseUpdates = true;
-    temp.playAnim = true;
-    temp.show32D = false;
-    temp.column = 1;
-    temp.foundAnchor = anchor;
-    temp.anchorId = anchor? anchor.anchorId : null;
-    setState({ ...temp });
+    // const temp = state;
+    // temp.animationName = '01';
+    // temp.pauseUpdates = true;
+    // temp.playAnim = true;
+    // temp.show32D = false;
+    // temp.column = 1;
+    // temp.foundAnchor = anchor;
+    // temp.anchorId = anchor? anchor.anchorId : null;
+    // setState({ ...temp });
   }
 
   const _onAnchorUpdate = (anchor) => {
     console.log('ANCHORUPDATE********:', anchor)
-    const { anchorId } = state;
-    const temp = state;
-    temp.animationName = '01';
-    temp.pauseUpdates = true;
-    temp.playAnim = false;
-    temp.show32D = false;
-    temp.column = 1;
-    setState({ ...temp });
-    if(anchorId !== anchor.anchorId){
-      temp.anchorId = anchorId
-      temp.foundAnchor = anchor;
-      temp.show3D = false;
-      setTimeout(() => {
-        temp.playAnim = true;
-        temp.show32D = true;
-        temp.animName = '';
-        temp.show3D = true;
-        setState({ ...temp });
-      }, 10);
-    }
+    // const { anchorId } = state;
+    // const temp = state;
+    // temp.animationName = '01';
+    // temp.pauseUpdates = true;
+    // temp.playAnim = false;
+    // temp.show32D = false;
+    // temp.column = 1;
+    // // setState({ ...temp });
+    // if(anchorId !== anchor.anchorId){
+    //   temp.anchorId = anchorId
+    //   temp.foundAnchor = anchor;
+    //   temp.show3D = false;
+      // setTimeout(() => {
+      //   temp.playAnim = true;
+      //   temp.show32D = true;
+      //   temp.animName = '';
+      //   temp.show3D = true;
+      //   setState({ ...temp });
+      // }, 10);
+    // }
   }
 
   return (

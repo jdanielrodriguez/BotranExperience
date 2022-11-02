@@ -51,7 +51,7 @@ export default function ARObjects() {
          scale: [1, 1, 1]
       },
       {
-         src: require("./../../../assets/vrx/02-Columna1/col01-conBotella-12-parte1B.vrx"),
+         src: require("./../../../assets/vrx/02-Columna1/col01-conBotella-12-parte2.vrx"),
          materials: col1Texture,
          sound: require("./../../../assets/mp3/narracion/2_CULTIVO.mp3"),
          scale: [1, 1, 1]
@@ -120,7 +120,6 @@ export default function ARObjects() {
    ]
 
    const col3Texture = [
-      require('./../../../assets/vrx/04-Columna3/BOTRAN-No12Etiqueta3.png'),
       require('./../../../assets/vrx/04-Columna3/BOTRAN-No12EtiquetaLOW.png'),
       require('./../../../assets/vrx/04-Columna3/Col3-AroundTheWorld_Uvmap.png'),
       require('./../../../assets/vrx/04-Columna3/Col3-Distribucion_Uvmap.png'),
