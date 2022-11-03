@@ -18,9 +18,6 @@ export default function ARMakeObject(props) {
         <><Viro3DObject
           key={`${key}Obj`}
           source={selected.src}
-          scale={([1, 1, 1])}
-          position={foundAnchor ? [foundAnchor.position[0], foundAnchor.position[0] - 150, foundAnchor.position[0] - 220] : [0, -150, -220]}
-          rotation={[0, 0, -1]}
           onPress={_changeObject}
           onClick={_changeObject}
           onTouch={_changeObject}

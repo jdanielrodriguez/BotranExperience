@@ -71,9 +71,9 @@ export default function HomeScreen() {
   const _onFinish = () => {
     const temp = state;
     temp.animationName = '';
-    temp.playAnim = true;
-    temp.column = column;
-    setState({ ...temp });
+    // temp.playAnim = false;
+    // temp.column = column;
+    // setState({ ...temp });
 
     // setTimeout(() => {
     //   console.log('cambio!!!!')
@@ -88,7 +88,7 @@ export default function HomeScreen() {
   }
 
   const _changeObject = () => {
-    let currentColumn = column;
+    let currentColumn = state.column;
     if (objects) {
       if (currentColumn === (objects.length)) {
         currentColumn = 1;
@@ -119,13 +119,12 @@ export default function HomeScreen() {
       setState({ ...temp });
     }, 0);
   }
-
   const _onAnchorFound = (anchor) => {
     console.log('ANCHOR********:', anchor)
     const { anchorId } = state;
     const temp = state;
     temp.animationName = '01';
-    temp.pauseUpdates = false;
+    temp.pauseUpdates = true;
     temp.playAnim = true;
     temp.show32D = true;
     temp.show3D = true;
@@ -153,26 +152,23 @@ export default function HomeScreen() {
 
   const _onAnchorUpdate = (anchor) => {
     console.log('ANCHORUPDATE********:', anchor)
-    // const { anchorId } = state;
-    // const temp = state;
-    // temp.animationName = '01';
-    // temp.pauseUpdates = true;
-    // temp.playAnim = false;
-    // temp.show32D = false;
-    // temp.column = 1;
-    // // setState({ ...temp });
-    // if(anchorId !== anchor.anchorId){
-    //   temp.anchorId = anchorId
-    //   temp.foundAnchor = anchor;
-    //   temp.show3D = false;
-      // setTimeout(() => {
-      //   temp.playAnim = true;
-      //   temp.show32D = true;
-      //   temp.animName = '';
-      //   temp.show3D = true;
-      //   setState({ ...temp });
-      // }, 10);
-    // }
+    const { anchorId } = state;
+    const temp = state;
+    temp.animationName = '01';
+    temp.pauseUpdates = false;
+    temp.playAnim = false;
+    setState({ ...temp });
+    if(anchorId !== anchor.anchorId){
+      temp.show32D = false;
+      temp.anchorId = anchorId
+      temp.foundAnchor = anchor;
+      setTimeout(() => {
+        temp.playAnim = true;
+        temp.show32D = true;
+        temp.animName = '';
+        setState({ ...temp });
+      }, 0);
+    }
   }
 
   return (

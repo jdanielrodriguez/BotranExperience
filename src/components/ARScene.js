@@ -24,7 +24,7 @@ export default function ARScene(props) {
           scene: props.component || BotranARComponent,
           passProps:{...props}
         }}
-        viroAppProps={{...props, show32D: props.show32D, selected: props.selected, playAnim: props.playAnim, pauseUpdates: props.pauseUpdates}}
+        viroAppProps={{...props, show32D: props.show32D, selected: props.selected, playAnim: props.playAnim, pauseUpdates: props.pauseUpdates, foundAnchor: props.foundAnchor}}
         style={styles.f1}
       />
     </>

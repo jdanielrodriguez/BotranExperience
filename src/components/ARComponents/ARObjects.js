@@ -15,6 +15,15 @@ export default function ARObjects() {
    ]
 
    const intro = [
+      // {
+      //    src: require("./../../../assets/images/materiales/emoji_smile.vrx"),
+      //    materials: [
+      //       require("./../../../assets/images/materiales/emoji_smile_diffuse.png"),
+      //       require("./../../../assets/images/materiales/emoji_smile_normal.png"),
+      //       require("./../../../assets/images/materiales/emoji_smile_specular.png"),
+      //    ],
+      //    scale: [10, 10, 10]
+      // },
       {
          src: require("./../../../assets/vrx/01-FBX-INTRO/Intro_Completa-conBotella-12-parte1.vrx"),
          materials: introTexture,
@@ -27,11 +36,7 @@ export default function ARObjects() {
          sound: require("./../../../assets/mp3/narracion/BOTRAN_NATURE.mp3"),
          scale: [1, 1, 1]
       },
-      // {
-      //    src: require("./../../../assets/vrx/01-FBX-INTRO/01-MODULOS-Intro_Completa-FLATTEN-SINBOTELLA.vrx"),
-      //    materials: introTexture,
-      //    scale: [1, 1, 1]
-      // },
+      
    ]
 
    const col1Texture = [

@@ -2,37 +2,42 @@ import React from 'react';
 
 import {
    ViroAmbientLight, ViroAnimations, ViroARImageMarker,
-   ViroARScene, ViroARTrackingTargets
+   ViroARScene, ViroARTrackingTargets, ViroARCamera, ViroARPlane
 } from '@viro-community/react-viro';
 
 import ARMakeObject from './ARMakeObject';
 import { OmniLigth } from './ARSpotLigth';
 
-const No12Etiqueta = require('./../../../assets/images/materiales/BOTRAN-No12Etiqueta.png')
+const No12Etiqueta = require('./../../../assets/images/materiales/BOTRAN-No12Etiqueta.jpg')
 const No15Etiqueta = require('./../../../assets/images/materiales/BOTRAN-No15-Etiqueta.png')
 const No18Etiqueta = require('./../../../assets/images/materiales/BOTRAN-No18-Etiqueta.png')
 
 export default function BotranARComponent(props) {
    const { show32D, selected, playAnim, pauseUpdates, targets, style, _changeObject, show3D, _onAnchorFound, _onAnchorUpdate, _onAnchorLost } = props.sceneNavigator.viroAppProps;
-  return (
-    <ViroARScene>
-      {show3D && targets.map((target) => (
-        <ViroARImageMarker
-          key={`${target}MKt`}
-          target={target}
-          onAnchorFound={(anchor) => {_onAnchorFound(anchor)}}
-          onAnchorUpdate={(anchor) => {_onAnchorUpdate(anchor)}}
-          onAnchorRemoved={(anchor) => {_onAnchorLost(anchor)}}
-          pauseUpdates={pauseUpdates}
-        >
-        
-          <ViroAmbientLight color="#f0f0f0" intensity={1000} />
-          <ARMakeObject {...props} style={style} _changeObject={_changeObject} playAnim={playAnim} show3D={show3D} show32D={show32D} selected={selected} />
-        </ViroARImageMarker>
+   return (
+     <ViroARScene
+       onAnchorFound={(anchor) => { _onAnchorFound(anchor) }}
+       onTrackingUpdated={(anchor) => { _onAnchorUpdate(anchor) }}
+       onAnchorRemoved={(anchor) => { _onAnchorLost(anchor) }}
+     >
+       {show3D && targets.map((target) => (
+         <ViroARImageMarker
+           key={`${target}MKt`}
+           target={target}
+           pauseUpdates={pauseUpdates}
+         >
+           <ViroARCamera
+             position={[0, 150, 220]}
+             rotation={[0, 0, 0]}
+             active
+           />
+           <ViroAmbientLight color="#f0f0f0" intensity={1000} />
+           <ARMakeObject {...props} style={style} _changeObject={_changeObject} playAnim={playAnim} show3D={show3D} show32D={show32D} selected={selected} />
+         </ViroARImageMarker>
          ))
          }
-      <OmniLigth />
-    </ViroARScene>
+       <OmniLigth />
+     </ViroARScene>
    );
 }
 ViroARTrackingTargets.createTargets({
