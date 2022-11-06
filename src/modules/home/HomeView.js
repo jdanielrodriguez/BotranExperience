@@ -6,6 +6,8 @@ import {
   Image, Dimensions
 } from 'react-native';
 
+import { ViroTrackingStateConstants } from '@viro-community/react-viro';
+
 import { colors, fonts } from '../../styles';
 import ARScene from '../../components/ARScene';
 import ARObjects from '../../components/ARComponents/ARObjects';
@@ -26,6 +28,7 @@ export default function HomeScreen() {
     show32D: false,
     objects,
     pauseUpdates: true,
+    isTracking: false,
     playAnim: false,
     objIndex: index,
     component: BotranARComponent,
@@ -33,9 +36,9 @@ export default function HomeScreen() {
     targets: ['Botran12'],
     animationName: '',
     foundAnchor: null,
+    position: [0, 0, 0],
     anchorId: null
   })
-  const { column } = state;
 
   const _changeColumn = (columnNew) => {
     let currentColumn = (columnNew === (objects.length)) ? 1 : columnNew;
@@ -93,7 +96,7 @@ export default function HomeScreen() {
       if (currentColumn === (objects.length)) {
         currentColumn = 1;
       }
-      index = (index === (objects[currentColumn].length)) ? 0 : index + 1
+      index = (state.objIndex === (objects[currentColumn].length - 1)) ? 0 : state.objIndex + 1
       if (!objects[currentColumn][index]) {
         index = 0;
       }
@@ -127,12 +130,13 @@ export default function HomeScreen() {
     temp.pauseUpdates = true;
     temp.playAnim = true;
     temp.show32D = true;
+    temp.isTracking = false;
     temp.show3D = true;
     temp.foundAnchor = anchor || null;
-    temp.anchorId = anchor? anchor.anchorId : null;
-    if(anchorId !== anchor.anchorId){
+    temp.anchorId = anchor ? anchor.anchorId : null;
+    if (anchorId !== anchor.anchorId) {
       temp.foundAnchor = anchor || null;
-      temp.anchorId = anchor? anchor.anchorId : null;
+      temp.anchorId = anchor ? anchor.anchorId : null;
     }
     setState({ ...temp });
   }
@@ -152,22 +156,41 @@ export default function HomeScreen() {
 
   const _onAnchorUpdate = (anchor) => {
     console.log('ANCHORUPDATE********:', anchor)
-    const { anchorId } = state;
+    // const { anchorId } = state;
     const temp = state;
-    temp.animationName = '01';
-    temp.pauseUpdates = false;
-    temp.playAnim = false;
+    // temp.animationName = '01';
+    // temp.pauseUpdates = false;
+    // temp.playAnim = false;
+    if (state === ViroTrackingStateConstants.TRACKING_NORMAL) {
+      temp.isTracking = false;
+
+    } else if (state === ViroTrackingStateConstants.TRACKING_UNAVAILABLE) {
+      console.log('ANCHORUPDATE********:', anchor)
+      temp.isTracking = true;
+    }
     setState({ ...temp });
-    if(anchorId !== anchor.anchorId){
+    // if(anchorId !== anchor.anchorId){
       temp.show32D = false;
-      temp.anchorId = anchorId
-      temp.foundAnchor = anchor;
-      setTimeout(() => {
-        temp.playAnim = true;
-        temp.show32D = true;
-        temp.animName = '';
-        setState({ ...temp });
-      }, 0);
+    //   temp.anchorId = anchorId
+    //   temp.foundAnchor = anchor;
+    //   setTimeout(() => {
+    //     temp.playAnim = true;
+    //     temp.show32D = true;
+    //     temp.animName = '';
+    //     setState({ ...temp });
+    //   }, 0);
+    // }
+  }
+
+
+
+  const _onCameraTransformUpdate = (anchor) => {
+    const { position } = state;
+    if (position && (position[0] !== anchor.position[0] || position[1] !== anchor.position[1] || position[2] !== anchor.position[2])) {
+      const temp = state;
+      temp.position = anchor.position;
+      setState({ ...temp });
+      console.log('CameraUpdate********:', position)
     }
   }
 
@@ -186,6 +209,8 @@ export default function HomeScreen() {
           _onAnchorLost={_onAnchorLost}
           _onAnchorUpdate={_onAnchorUpdate}
           onFinishSound={onFinishSound}
+          setState={setState}
+          _onCameraTransformUpdate={_onCameraTransformUpdate}
           pauseUpdates
           playAnim={state.playAnim}
           targets={['Botran12']}
@@ -205,7 +230,7 @@ export default function HomeScreen() {
         <TouchableOpacity onPress={() => { _changeColumn(4) }} style={{ ...styles.btn, marginRight: 'auto' }}>
           <Image source={btnAroundWorld} style={styles.img} />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => { _changeColumn(5) }} style={{...styles.btnSustentable, marginLeft: '10%'}}>
+        <TouchableOpacity onPress={() => { _changeColumn(5) }} style={{ ...styles.btnSustentable, marginLeft: '10%' }}>
           <Image source={btnSustainable} style={styles.imgSustentable} />
         </TouchableOpacity>
       </View>

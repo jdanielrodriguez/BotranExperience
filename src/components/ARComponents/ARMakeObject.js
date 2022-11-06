@@ -21,6 +21,7 @@ export default function ARMakeObject(props) {
           onPress={_changeObject}
           onClick={_changeObject}
           onTouch={_changeObject}
+          scale={[0.001, 0.001, 0.001]}
           lightReceivingBitMask={5}
           animation={{ name: animationName, run: playAnim, loop: false, onFinish: _onFinish, }}
           shadowCastingBitMask={4}

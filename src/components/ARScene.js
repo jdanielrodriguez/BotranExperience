@@ -21,10 +21,11 @@ export default function ARScene(props) {
         autofocus
         numberOfTrackedImages={1}
         initialScene={{
+          // scene: ARCarDemo,
           scene: props.component || BotranARComponent,
           passProps:{...props}
         }}
-        viroAppProps={{...props, show32D: props.show32D, selected: props.selected, playAnim: props.playAnim, pauseUpdates: props.pauseUpdates, foundAnchor: props.foundAnchor}}
+        viroAppProps={{...props, show32D: props.show32D, selected: props.selected, playAnim: props.playAnim, pauseUpdates: props.pauseUpdates, foundAnchor: props.foundAncho, isTracking: props.isTracking}}
         style={styles.f1}
       />
     </>

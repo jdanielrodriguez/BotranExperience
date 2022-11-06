@@ -15,15 +15,7 @@ export default function ARObjects() {
    ]
 
    const intro = [
-      // {
-      //    src: require("./../../../assets/images/materiales/emoji_smile.vrx"),
-      //    materials: [
-      //       require("./../../../assets/images/materiales/emoji_smile_diffuse.png"),
-      //       require("./../../../assets/images/materiales/emoji_smile_normal.png"),
-      //       require("./../../../assets/images/materiales/emoji_smile_specular.png"),
-      //    ],
-      //    scale: [10, 10, 10]
-      // },
+      
       {
          src: require("./../../../assets/vrx/01-FBX-INTRO/Intro_Completa-conBotella-12-parte1.vrx"),
          materials: introTexture,
