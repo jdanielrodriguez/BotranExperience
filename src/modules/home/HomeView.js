@@ -168,9 +168,9 @@ export default function HomeScreen() {
       console.log('ANCHORUPDATE********:', anchor)
       temp.isTracking = true;
     }
-    setState({ ...temp });
+    // setState({ ...temp });
     // if(anchorId !== anchor.anchorId){
-      temp.show32D = false;
+      // temp.show32D = false;
     //   temp.anchorId = anchorId
     //   temp.foundAnchor = anchor;
     //   setTimeout(() => {
@@ -213,7 +213,7 @@ export default function HomeScreen() {
           _onCameraTransformUpdate={_onCameraTransformUpdate}
           pauseUpdates
           playAnim={state.playAnim}
-          targets={['Botran12']}
+          targets={['Botran12','Botran15','Botran18']}
           foundAnchor={state.foundAnchor}
           _changeObject={_changeObject}
           show3D={state.show3D}

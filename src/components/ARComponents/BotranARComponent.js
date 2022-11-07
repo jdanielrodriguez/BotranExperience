@@ -24,7 +24,7 @@ export default function BotranARComponent(props) {
       )
 
    const renderScene = () => targets.map((target) => (
-     <ViroNode position={[0, -0.09, 0]} key={`${target}cardmain`}>
+     <ViroNode position={[0, 0, 0]} key={`${target}cardmain`}>
        <ViroARImageMarker
          key={`${target}MKt`}
          target={target}
@@ -53,17 +53,17 @@ ViroARTrackingTargets.createTargets({
    Botran12: {
       source: No12Etiqueta,
       orientation: "Up",
-      physicalWidth: 0.100 // real world width in meters
+      physicalWidth: 0.82 // real world width in meters
    },
    Botran15: {
       source: No15Etiqueta,
       orientation: "Up",
-      physicalWidth: 0.100 // real world width in meters
+      physicalWidth: 0.092 // real world width in meters
    },
    Botran18: {
       source: No18Etiqueta,
       orientation: "Up",
-      physicalWidth: 0.100 // real world width in meters
+      physicalWidth: 0.115 // real world width in meters
    }
 });
 
