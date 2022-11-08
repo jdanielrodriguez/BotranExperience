@@ -221,18 +221,22 @@ export default function HomeScreen() {
         show32D={state.show32D}
       />
       <View style={styles.section}>
-        <TouchableOpacity onPress={() => { _changeColumn(2) }} style={{ ...styles.btn, marginLeft: '10%' }}>
-          <Image source={btnOrigin} style={styles.img} />
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => { _changeColumn(3) }} style={styles.btn}>
-          <Image source={btnDynamic} style={styles.img} />
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => { _changeColumn(4) }} style={{ ...styles.btn, marginRight: 'auto' }}>
-          <Image source={btnAroundWorld} style={styles.img} />
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => { _changeColumn(5) }} style={{ ...styles.btnSustentable, marginLeft: '10%' }}>
-          <Image source={btnSustainable} style={styles.imgSustentable} />
-        </TouchableOpacity>
+        <View style={{...styles.container2, marginLeft: 'auto'}}>
+          <TouchableOpacity onPress={() => { _changeColumn(2) }} style={{ ...styles.btn }}>
+            <Image source={btnOrigin} style={styles.img} />
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => { _changeColumn(3) }} style={styles.btn}>
+            <Image source={btnDynamic} style={styles.img} />
+          </TouchableOpacity>
+        </View>
+        <View style={{...styles.container2, marginLeft: 'auto'}}>
+          <TouchableOpacity onPress={() => { _changeColumn(4) }} style={{ ...styles.btn }}>
+            <Image source={btnAroundWorld} style={styles.img} />
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => { _changeColumn(5) }} style={{ ...styles.btn }}>
+            <Image source={btnSustainable} style={styles.img} />
+          </TouchableOpacity>
+        </View>
       </View>
     </View>
   );
@@ -243,79 +247,27 @@ const styles = StyleSheet.create({
     flex: 1,
     width
   },
-  bgImage: {
+  container2: {
     flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between'
   },
   section: {
     backfaceVisibility: 'hidden',
     position: 'absolute',
     bottom: 90,
-    flexWrap: 'wrap',
     width: '90%',
     marginLeft: 'auto',
     marginRight: 'auto',
-    height: 85,
-  },
-  imgSustentable: {
-    maxWidth: 325,
-    maxHeight: 32,
-    marginLeft: 'auto',
-    marginRight: 'auto',
-  },
-  btnSustentable: {
-    position: 'absolute',
-    zIndex: 99,
-    marginLeft: '13%',
-    marginTop: '15%',
-    width: '70%'
+    height: 120,
   },
   img: {
-    maxWidth: 100,
-    maxHeight: 45,
+    maxWidth: 125,
+    maxHeight: 50,
     width: '100%',
     height: '100%'
   },
-  img1: {
-    maxWidth: 90,
-    maxHeight: 45,
-    width: '50%',
-    height: '100%'
-  },
   btn: {
-    width: '34%'
-
-  },
-  absoluteView: {
-    flex: 1,
-    position: 'absolute',
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'transparent'
-  },
-  sectionHeader: {
-    marginBottom: 8,
-  },
-  priceContainer: {
-    alignItems: 'center',
-  },
-  description: {
-    padding: 15,
-    lineHeight: 25,
-  },
-  titleDescription: {
-    color: '#19e7f7',
-    textAlign: 'center',
-    fontFamily: fonts.primaryRegular,
-    fontSize: 15,
-  },
-  title: {
-    marginTop: 30,
-  },
-  price: {
-    marginBottom: 5,
-  },
-  priceLink: {
-    borderBottomWidth: 1,
-    borderBottomColor: colors.primary,
+    width: '40%'
   },
 });
