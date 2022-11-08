@@ -45,7 +45,7 @@ export default function BotranARComponent(props) {
 
    return (
      <ViroARScene onTrackingUpdated={(anchor) => { _onAnchorUpdate(anchor) }}>
-       {isTracking ? getNoTrackingUI() : (show3D && renderScene())}
+       {(isTracking && !show3D) ? getNoTrackingUI() : renderScene()}
      </ViroARScene>
    );
 }
@@ -53,17 +53,17 @@ ViroARTrackingTargets.createTargets({
    Botran12: {
       source: No12Etiqueta,
       orientation: "Up",
-      physicalWidth: 0.082 // real world width in meters
+      physicalWidth: 0.080 // real world width in meters
    },
    Botran15: {
       source: No15Etiqueta,
       orientation: "Up",
-      physicalWidth: 0.092 // real world width in meters
+      physicalWidth: 0.080 // real world width in meters
    },
    Botran18: {
       source: No18Etiqueta,
       orientation: "Up",
-      physicalWidth: 0.115 // real world width in meters
+      physicalWidth: 0.105 // real world width in meters
    }
 });
 

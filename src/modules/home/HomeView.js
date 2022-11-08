@@ -163,14 +163,16 @@ export default function HomeScreen() {
     // temp.playAnim = false;
     if (anchor === ViroTrackingStateConstants.TRACKING_NORMAL) {
       temp.isTracking = false;
+      temp.show3D = true;
 
     } else if (anchor === ViroTrackingStateConstants.TRACKING_UNAVAILABLE) {
       console.log('ANCHORUPDATE********:', anchor)
       temp.isTracking = true;
+      temp.show3D = false;
     }
     setState({ ...temp });
     // if(anchorId !== anchor.anchorId){
-      // temp.show32D = false;
+    // temp.show32D = false;
     //   temp.anchorId = anchorId
     //   temp.foundAnchor = anchor;
     //   setTimeout(() => {
@@ -196,30 +198,28 @@ export default function HomeScreen() {
 
   return (
     <View style={styles.container}>
-      {state.show3D && (
-        <ARScene
-          {...state}
-          style={{ zIndex: 1 }}
-          column={state.column}
-          objIndex={state.objIndex}
-          selected={state.selected}
-          objects={objects}
-          _onFinish={_onFinish}
-          _onAnchorFound={_onAnchorFound}
-          _onAnchorLost={_onAnchorLost}
-          _onAnchorUpdate={_onAnchorUpdate}
-          onFinishSound={onFinishSound}
-          setState={setState}
-          _onCameraTransformUpdate={_onCameraTransformUpdate}
-          pauseUpdates
-          playAnim={state.playAnim}
-          targets={['Botran12','Botran15','Botran18']}
-          foundAnchor={state.foundAnchor}
-          _changeObject={_changeObject}
-          show3D={state.show3D}
-          show32D={state.show32D}
-        />
-      )}
+      <ARScene
+        {...state}
+        style={{ zIndex: 1 }}
+        column={state.column}
+        objIndex={state.objIndex}
+        selected={state.selected}
+        objects={objects}
+        _onFinish={_onFinish}
+        _onAnchorFound={_onAnchorFound}
+        _onAnchorLost={_onAnchorLost}
+        _onAnchorUpdate={_onAnchorUpdate}
+        onFinishSound={onFinishSound}
+        setState={setState}
+        _onCameraTransformUpdate={_onCameraTransformUpdate}
+        pauseUpdates
+        playAnim={state.playAnim}
+        targets={['Botran12', 'Botran15', 'Botran18']}
+        foundAnchor={state.foundAnchor}
+        _changeObject={_changeObject}
+        show3D={state.show3D}
+        show32D={state.show32D}
+      />
       <View style={styles.section}>
         <TouchableOpacity onPress={() => { _changeColumn(2) }} style={{ ...styles.btn, marginLeft: '10%' }}>
           <Image source={btnOrigin} style={styles.img} />

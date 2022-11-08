@@ -30,6 +30,7 @@ export default function ARMakeObject(props) {
           resources={selected.materials}
           onLoadStart={_onLoadStart}
           onLoadEnd={_onLoadEnd}
+          position={[0, -0.1, 0]}
           onError={_onError}
         />
           {selected.sound && (
