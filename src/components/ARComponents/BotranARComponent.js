@@ -6,7 +6,7 @@ import {
 
 import ARMakeObject from './ARMakeObject';
 
-const No12Etiqueta = require('./../../../assets/images/materiales/BOTRAN-No12Etiqueta.png')
+const No12Etiqueta = require('./../../../assets/images/materiales/BOTRAN-No12Etiqueta.jpg')
 const No15Etiqueta = require('./../../../assets/images/materiales/BOTRAN-No15-Etiqueta.png')
 const No18Etiqueta = require('./../../../assets/images/materiales/BOTRAN-No18-Etiqueta.png')
 
@@ -53,7 +53,7 @@ ViroARTrackingTargets.createTargets({
    Botran12: {
       source: No12Etiqueta,
       orientation: "Up",
-      physicalWidth: 0.82 // real world width in meters
+      physicalWidth: 0.082 // real world width in meters
    },
    Botran15: {
       source: No15Etiqueta,

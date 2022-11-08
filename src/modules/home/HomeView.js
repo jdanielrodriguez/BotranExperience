@@ -155,20 +155,20 @@ export default function HomeScreen() {
   }
 
   const _onAnchorUpdate = (anchor) => {
-    console.log('ANCHORUPDATE********:', anchor)
+    // console.log('ANCHORUPDATE********:', anchor)
     // const { anchorId } = state;
     const temp = state;
     // temp.animationName = '01';
     // temp.pauseUpdates = false;
     // temp.playAnim = false;
-    if (state === ViroTrackingStateConstants.TRACKING_NORMAL) {
+    if (anchor === ViroTrackingStateConstants.TRACKING_NORMAL) {
       temp.isTracking = false;
 
-    } else if (state === ViroTrackingStateConstants.TRACKING_UNAVAILABLE) {
+    } else if (anchor === ViroTrackingStateConstants.TRACKING_UNAVAILABLE) {
       console.log('ANCHORUPDATE********:', anchor)
       temp.isTracking = true;
     }
-    // setState({ ...temp });
+    setState({ ...temp });
     // if(anchorId !== anchor.anchorId){
       // temp.show32D = false;
     //   temp.anchorId = anchorId
