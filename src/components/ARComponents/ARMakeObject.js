@@ -21,7 +21,7 @@ export default function ARMakeObject(props) {
           onPress={_changeObject}
           onClick={_changeObject}
           onTouch={_changeObject}
-          scale={[0.001, 0.001, 0.001]}
+          scale={[0.0012, 0.001, 0.001]}
           lightReceivingBitMask={5}
           animation={{ name: animationName, run: playAnim, loop: false, onFinish: _onFinish, }}
           shadowCastingBitMask={4}
@@ -30,7 +30,7 @@ export default function ARMakeObject(props) {
           resources={selected.materials}
           onLoadStart={_onLoadStart}
           onLoadEnd={_onLoadEnd}
-          position={[0, -0.1, 0]}
+          position={[0, -0.080, 0]}
           onError={_onError}
         />
           {selected.sound && (
