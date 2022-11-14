@@ -170,7 +170,7 @@ export default function HomeScreen() {
       temp.isTracking = true;
       temp.show3D = false;
     }
-    setState({ ...temp });
+    // setState({ ...temp });
     // if(anchorId !== anchor.anchorId){
     // temp.show32D = false;
     //   temp.anchorId = anchorId
@@ -214,7 +214,7 @@ export default function HomeScreen() {
         _onCameraTransformUpdate={_onCameraTransformUpdate}
         pauseUpdates
         playAnim={state.playAnim}
-        targets={['Botran12', 'Botran15', 'Botran18']}
+        targets={['Botran12']}
         foundAnchor={state.foundAnchor}
         _changeObject={_changeObject}
         show3D={state.show3D}
