@@ -3,14 +3,35 @@ import React from 'react';
 
 import { Viro3DObject, ViroSound } from '@viro-community/react-viro';
 // import ARSpotLigth from './ARSpotLigth';
-
 export default function ARMakeObject(props) {
-
+  const quetzal = {
+    src: require('./../../../assets/vrx/quetzal/01-MODULOS-QUETZAL-FLATTEN.vrx'),
+    materials: [
+      require('./../../../assets/vrx/quetzal/QUETZAL VOLANDO0000.png'),
+      require('./../../../assets/vrx/quetzal/QUETZAL_VOLANDO_1.avi')
+    ]
+  }
   const { selected, animationName, playAnim, _onFinish, _onLoadStart, _onLoadEnd, _onError, key, _changeObject, foundAnchor, show3D, style, onFinishSound } = props;
-  // if (!show32D) {
-  //   <>
-  //   </>
-  // }
+  if (!show3D) {
+    return (
+      <>
+        <Viro3DObject
+          key={`${key}quetzal`}
+          source={quetzal.src}
+          scale={[0.001, 0.001, 0.001]}
+          animation={{ name: animationName, run: !show3D, loop: true, onFinish: _onFinish, }}
+          shadowCastingBitMask={4}
+          type="VRX"
+          resources={quetzal.materials}
+          // onLoadStart={_onLoadStart}
+          // onLoadEnd={_onLoadEnd}
+          position={[0, 0, 0]}
+        // onError={_onError}
+        />
+      </>
+    )
+  }
+
   return (
     <>
       {/* <ARSpotLigth /> */}
@@ -44,4 +65,5 @@ export default function ARMakeObject(props) {
       )}
     </>
   )
+
 }
