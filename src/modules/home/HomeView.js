@@ -23,7 +23,7 @@ export default function HomeScreen() {
   const objects = ARObjects();
   let index = 0;
   const [state, setState] = useState({
-    selected: objects[1][index],
+    selected: objects[0][index],
     show3D: true,
     show32D: false,
     objects,
@@ -165,7 +165,7 @@ export default function HomeScreen() {
       temp.isTracking = false;
       temp.show3D = true;
 
-    } else if (anchor === ViroTrackingStateConstants.TRACKING_UNAVAILABLE) {
+    } else if (anchor === ViroTrackingStateConstants.TRACKING_UNAVAILABLE) {                                                    
       console.log('ANCHORUPDATE********:', anchor)
       temp.isTracking = true;
       temp.show3D = false;
