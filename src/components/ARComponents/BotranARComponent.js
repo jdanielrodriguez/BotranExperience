@@ -11,7 +11,7 @@ const No15Etiqueta = require('./../../../assets/images/materiales/BOTRAN-No15-Et
 const No18Etiqueta = require('./../../../assets/images/materiales/BOTRAN-No18-Etiqueta.png')
 
 export default function BotranARComponent(props) {
-   const { show32D, selected, playAnim, targets, style, _changeObject, show3D, _onAnchorFound, _onAnchorUpdate,_onCameraTransformUpdate, isTracking } = props.sceneNavigator.viroAppProps;
+   const { show32D, selected, playAnim, targets, style, _changeObject, show3D, _onAnchorFound, _onAnchorUpdate,_onCameraTransformUpdate, isTracking, column, objIndex } = props.sceneNavigator.viroAppProps;
 
    const getNoTrackingUI = () => (
      <ViroText
@@ -36,7 +36,7 @@ export default function BotranARComponent(props) {
              key={`${target}cardnode`}
            >
              <ViroAmbientLight color="#f0f0f0" intensity={1000} />
-             <ARMakeObject {...props} style={style} _changeObject={_changeObject} playAnim={playAnim} show3D={show3D} show32D={show32D} selected={selected} />
+             <ARMakeObject {...props} style={style} _changeObject={_changeObject} playAnim={playAnim} show3D={show3D} show32D={show32D} selected={selected} column={column} objIndex={objIndex} />
            </ViroNode>
          </ViroNode>
        </ViroARImageMarker>

@@ -22,8 +22,9 @@ export default function HomeScreen() {
   const btnSustainable = require("./../../../assets/images/sustainable-button.png");
   const objects = ARObjects();
   let index = 0;
+  let column = 0;
   const [state, setState] = useState({
-    selected: objects[0][index],
+    selected: objects[column][index],
     show3D: true,
     show32D: false,
     objects,
@@ -32,7 +33,7 @@ export default function HomeScreen() {
     playAnim: false,
     objIndex: index,
     component: BotranARComponent,
-    column: 1,
+    column,
     targets: ['Botran12'],
     animationName: '',
     foundAnchor: null,
@@ -41,6 +42,57 @@ export default function HomeScreen() {
   })
 
   const _changeColumn = (columnNew) => {
+    let currentColumn = (columnNew === (objects.length)) ? 1 : columnNew;
+    index = 0;
+    if (!objects[currentColumn]) {
+      currentColumn = 1;
+    }
+    if (!objects[currentColumn][index]) {
+      index = 0;
+    }
+    const selectedNew = objects[currentColumn][index]
+    const temp = state;
+    column = currentColumn;
+    
+    temp.animationName = '01';
+    temp.playAnim = false;
+    temp.objIndex = index;
+    temp.loop = false;
+    temp.selected = null;
+    temp.column = currentColumn;
+    temp.show3D = false;
+    temp.show32D = false;
+    temp.selected = selectedNew;
+    setState({ ...temp });
+    console.log('Column: ',state.column)
+    console.log('Column: ',column)
+    console.log('Row', state.objIndex)
+    // setTimeout(() => {
+      // temp.selected = selectedNew;
+      // temp.loop = true;
+      // temp.animationName = '';
+      // temp.playAnim = true;
+      // temp.show32D = true;
+      // temp.show3D = true;
+      // setState({ ...temp });
+    // }, 100);
+  }
+
+  const _onFinish = () => {
+    const temp = state;
+    temp.animationName = '';
+    // temp.playAnim = false;
+    // temp.column = column;
+    // setState({ ...temp });
+
+    // setTimeout(() => {
+    //   console.log('cambio!!!!')
+    //   _changeObject()
+    // }, 1000);
+  }
+
+
+  const _onFinishQuetzal = (columnNew) => {
     let currentColumn = (columnNew === (objects.length)) ? 1 : columnNew;
     index = 0;
     if (!objects[currentColumn]) {
@@ -60,7 +112,7 @@ export default function HomeScreen() {
     temp.show3D = false;
     temp.show32D = false;
     setState({ ...temp });
-    setTimeout(() => {
+    // setTimeout(() => {
       temp.selected = selectedNew;
       temp.loop = true;
       temp.animationName = '';
@@ -68,20 +120,7 @@ export default function HomeScreen() {
       temp.show32D = true;
       temp.show3D = true;
       setState({ ...temp });
-    }, 0);
-  }
-
-  const _onFinish = () => {
-    const temp = state;
-    temp.animationName = '';
-    // temp.playAnim = false;
-    // temp.column = column;
-    // setState({ ...temp });
-
-    // setTimeout(() => {
-    //   console.log('cambio!!!!')
-    //   _changeObject()
-    // }, 1000);
+    // }, 0);
   }
 
 
@@ -206,6 +245,7 @@ export default function HomeScreen() {
         selected={state.selected}
         objects={objects}
         _onFinish={_onFinish}
+        _onFinishQuetzal={_onFinishQuetzal}
         _onAnchorFound={_onAnchorFound}
         _onAnchorLost={_onAnchorLost}
         _onAnchorUpdate={_onAnchorUpdate}
@@ -259,15 +299,15 @@ const styles = StyleSheet.create({
     width: '90%',
     marginLeft: 'auto',
     marginRight: 'auto',
-    height: 120,
+    height: 150,
   },
   img: {
-    maxWidth: 125,
-    maxHeight: 50,
+    maxWidth: 150,
+    maxHeight: 62,
     width: '100%',
     height: '100%'
   },
   btn: {
-    width: '40%'
+    width: '45%'
   },
 });
