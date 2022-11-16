@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 import { Viro3DObject, ViroSound } from '@viro-community/react-viro';
@@ -29,34 +28,43 @@ export default function ARMakeObject(props) {
           // onLoadStart={_onLoadStart}
           // onLoadEnd={_onLoadEnd}
           position={[0, 0, 0]}
-        // onError={_onError}
+          // onError={_onError}
         />
       </>
-    )
+    );
   }
 
   return (
     <>
       {/* <ARSpotLigth /> */}
-      {(show3D && playAnim) && (
-        <><Viro3DObject
-          key={`${key}Obj`}
-          source={selected.src}
-          onPress={_changeObject}
-          onClick={_changeObject}
-          onTouch={_changeObject}
-          scale={selected.scale ? selected.scale : [0.00095, 0.001, 0.001]}
-          lightReceivingBitMask={5}
-          animation={{ name: animationName, run: playAnim, loop: false, onFinish: _onFinish, }}
-          shadowCastingBitMask={4}
-          type="VRX"
-          style={style}
-          resources={selected.materials}
-          onLoadStart={_onLoadStart}
-          onLoadEnd={_onLoadEnd}
-          position={selected.position ? selected.position : [-0.001, -0.101, 0]}
-          onError={_onError}
-        />
+      {show3D && playAnim && (
+        <>
+          <Viro3DObject
+            key={`${key}Obj`}
+            source={selected.src}
+            onPress={_changeObject}
+            onClick={_changeObject}
+            onTouch={_changeObject}
+            scale={selected.scale ? selected.scale : [0.00095, 0.001, 0.001]}
+            lightReceivingBitMask={5}
+            animation={{
+              name: animationName,
+              run: playAnim,
+              loop: false,
+              onFinish: _onFinish,
+            }}
+            shadowCastingBitMask={4}
+            type="VRX"
+            style={style}
+            resources={selected.materials}
+            onLoadStart={_onLoadStart}
+            onLoadEnd={_onLoadEnd}
+            position={
+              selected.position ? selected.position : [-0.001, -0.101, 0]
+            }
+            onError={_onError}
+            visible={playAnim}
+          />
           {selected.sound && (
             <ViroSound
               key={`${key}Sound`}
@@ -67,6 +75,5 @@ export default function ARMakeObject(props) {
         </>
       )}
     </>
-  )
-
+  );
 }
