@@ -1,6 +1,6 @@
 {
   "name": "botran-experience",
-  "version": "2.1.0",
+  "version": "0.0.1",
   "private": false,
   "resolutions": {
     "deprecated-react-native-listview": "0.0.6"

@@ -6,8 +6,10 @@ import { Viro3DObject, ViroSound } from '@viro-community/react-viro';
 export default function ARMakeObject(props) {
   const quetzal = {
     src: require('./../../../assets/vrx/quetzal/01-MODULOS-QUETZAL-FLATTEN.vrx'),
+    src1: require('./../../../assets/vrx/quetzal/01-MODULOS-QUETZAL-FLATTEN2.vrx'),
+    src2: require('./../../../assets/vrx/quetzal/01-MODULOS-QUETZAL-FLATTEN2B.vrx'),
     materials: [
-      require('./../../../assets/vrx/quetzal/QUETZAL VOLANDO0000.png'),
+      require('./../../../assets/vrx/quetzal/QUETZAL%20VOLANDO0000.png'),
       require('./../../../assets/vrx/quetzal/QUETZAL_VOLANDO_1.avi')
     ]
   }
@@ -17,8 +19,8 @@ export default function ARMakeObject(props) {
       <>
         <Viro3DObject
           key={`${key}quetzal`}
-          source={quetzal.src}
-          scale={[0.001, 0.001, 0.001]}
+          source={quetzal.src2}
+          scale={[0.0004, 0.0004, 0.0004]}
           animation={{ name: animationName, run: !show3D, loop: true, onFinish: _onFinish, }}
           shadowCastingBitMask={4}
           type="VRX"
