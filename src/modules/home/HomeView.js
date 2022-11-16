@@ -3,7 +3,8 @@ import {
   StyleSheet,
   View,
   TouchableOpacity,
-  Image, Dimensions
+  Image,
+  Dimensions,
 } from 'react-native';
 
 import { ViroTrackingStateConstants } from '@viro-community/react-viro';
@@ -14,12 +15,11 @@ import ARObjects from '../../components/ARComponents/ARObjects';
 
 import BotranARComponent from '../../components/ARComponents/BotranARComponent';
 
-
 export default function HomeScreen() {
-  const btnOrigin = require("./../../../assets/images/guatemala-origin-button.png");
-  const btnDynamic = require("./../../../assets/images/dynamic-ageing-button.png");
-  const btnAroundWorld = require("./../../../assets/images/around-the-world-button.png");
-  const btnSustainable = require("./../../../assets/images/sustainable-button.png");
+  const btnOrigin = require('./../../../assets/images/guatemala-origin-button.png');
+  const btnDynamic = require('./../../../assets/images/dynamic-ageing-button.png');
+  const btnAroundWorld = require('./../../../assets/images/around-the-world-button.png');
+  const btnSustainable = require('./../../../assets/images/sustainable-button.png');
   const objects = ARObjects();
   let index = 0;
   const [state, setState] = useState({
@@ -37,11 +37,11 @@ export default function HomeScreen() {
     animationName: '',
     foundAnchor: null,
     position: [0, 0, 0],
-    anchorId: null
-  })
+    anchorId: null,
+  });
 
-  const _changeColumn = (columnNew) => {
-    let currentColumn = (columnNew === (objects.length)) ? 1 : columnNew;
+  const _changeColumn = columnNew => {
+    let currentColumn = columnNew === objects.length ? 1 : columnNew;
     index = 0;
     if (!objects[currentColumn]) {
       currentColumn = 1;
@@ -49,7 +49,7 @@ export default function HomeScreen() {
     if (!objects[currentColumn][index]) {
       index = 0;
     }
-    const selectedNew = objects[currentColumn][index]
+    const selectedNew = objects[currentColumn][index];
     const temp = state;
     temp.animationName = '01';
     temp.playAnim = false;
@@ -69,7 +69,7 @@ export default function HomeScreen() {
       temp.show3D = true;
       setState({ ...temp });
     }, 0);
-  }
+  };
 
   const _onFinish = () => {
     const temp = state;
@@ -82,21 +82,22 @@ export default function HomeScreen() {
     //   console.log('cambio!!!!')
     //   _changeObject()
     // }, 1000);
-  }
-
-
+  };
 
   const onFinishSound = () => {
-    console.log('sonido acabado')
-  }
+    console.log('sonido acabado');
+  };
 
   const _changeObject = () => {
     let currentColumn = state.column;
     if (objects) {
-      if (currentColumn === (objects.length)) {
+      if (currentColumn === objects.length) {
         currentColumn = 1;
       }
-      index = (state.objIndex === (objects[currentColumn].length - 1)) ? 0 : state.objIndex + 1
+      index =
+        state.objIndex === objects[currentColumn].length - 1
+          ? 0
+          : state.objIndex + 1;
       if (!objects[currentColumn][index]) {
         index = 0;
       }
@@ -104,7 +105,7 @@ export default function HomeScreen() {
       //   currentColumn += 1;
       // }
     }
-    const newSelected = objects[currentColumn][index]
+    const newSelected = objects[currentColumn][index];
     const temp = state;
     temp.playAnim = false;
     temp.show32D = false;
@@ -121,28 +122,31 @@ export default function HomeScreen() {
       temp.show3D = true;
       setState({ ...temp });
     }, 0);
-  }
-  const _onAnchorFound = (anchor) => {
-    console.log('ANCHOR********:', anchor)
+  };
+  const _onAnchorFound = anchor => {
     const { anchorId } = state;
     const temp = state;
-    temp.animationName = '01';
-    temp.pauseUpdates = true;
-    temp.playAnim = true;
-    temp.show32D = true;
-    temp.isTracking = false;
-    temp.show3D = true;
-    temp.foundAnchor = anchor || null;
-    temp.anchorId = anchor ? anchor.anchorId : null;
-    if (anchorId !== anchor.anchorId) {
+
+    if (!temp.playAnim) {
+      temp.animationName = '01';
+      temp.pauseUpdates = true;
+      temp.playAnim = true;
+      temp.show32D = true;
+      temp.isTracking = false;
+      temp.show3D = true;
       temp.foundAnchor = anchor || null;
       temp.anchorId = anchor ? anchor.anchorId : null;
+      if (anchorId !== anchor.anchorId) {
+        temp.foundAnchor = anchor || null;
+        temp.anchorId = anchor ? anchor.anchorId : null;
+      }
     }
-    setState({ ...temp });
-  }
 
-  const _onAnchorLost = (anchor) => {
-    console.log('ANCHORLost********:', anchor)
+    setState({ ...temp });
+  };
+
+  const _onAnchorLost = anchor => {
+    console.log('ANCHORLost********:', anchor);
     // const temp = state;
     // temp.animationName = '01';
     // temp.pauseUpdates = true;
@@ -152,49 +156,41 @@ export default function HomeScreen() {
     // temp.foundAnchor = anchor;
     // temp.anchorId = anchor? anchor.anchorId : null;
     // setState({ ...temp });
-  }
+  };
 
-  const _onAnchorUpdate = (anchor) => {
-    // console.log('ANCHORUPDATE********:', anchor)
-    // const { anchorId } = state;
+  const _onAnchorUpdate = anchor => {
     const temp = state;
-    // temp.animationName = '01';
-    // temp.pauseUpdates = false;
-    // temp.playAnim = false;
-    if (anchor === ViroTrackingStateConstants.TRACKING_NORMAL) {
+
+    if (anchor.trackingMethod === 'lastKnownPose') {
       temp.isTracking = false;
-      temp.show3D = true;
-
-    } else if (anchor === ViroTrackingStateConstants.TRACKING_UNAVAILABLE) {                                                    
-      console.log('ANCHORUPDATE********:', anchor)
-      temp.isTracking = true;
+      temp.playAnim = false;
       temp.show3D = false;
+      temp.show32D = false;
+      temp.anchorId = null;
+      temp.foundAnchor = null;
+      temp.animationName = 'NoAnimation';
+      setState({ ...temp });
+    } else if (anchor.trackingMethod === 'tracking') {
+      _onAnchorFound(anchor);
     }
-    // setState({ ...temp });
-    // if(anchorId !== anchor.anchorId){
-    // temp.show32D = false;
-    //   temp.anchorId = anchorId
-    //   temp.foundAnchor = anchor;
-    //   setTimeout(() => {
-    //     temp.playAnim = true;
-    //     temp.show32D = true;
-    //     temp.animName = '';
-    //     setState({ ...temp });
-    //   }, 0);
-    // }
-  }
 
+    console.log('STATE: ', temp);
+  };
 
-
-  const _onCameraTransformUpdate = (anchor) => {
+  const _onCameraTransformUpdate = anchor => {
     const { position } = state;
-    if (position && (position[0] !== anchor.position[0] || position[1] !== anchor.position[1] || position[2] !== anchor.position[2])) {
+    if (
+      position &&
+      (position[0] !== anchor.position[0] ||
+        position[1] !== anchor.position[1] ||
+        position[2] !== anchor.position[2])
+    ) {
       const temp = state;
       temp.position = anchor.position;
       setState({ ...temp });
-      console.log('CameraUpdate********:', position)
+      console.log('CameraUpdate********:', position);
     }
-  }
+  };
 
   return (
     <View style={styles.container}>
@@ -221,19 +217,39 @@ export default function HomeScreen() {
         show32D={state.show32D}
       />
       <View style={styles.section}>
-        <View style={{...styles.container2, marginLeft: 'auto'}}>
-          <TouchableOpacity onPress={() => { _changeColumn(2) }} style={{ ...styles.btn }}>
+        <View style={{ ...styles.container2, marginLeft: 'auto' }}>
+          <TouchableOpacity
+            onPress={() => {
+              _changeColumn(2);
+            }}
+            style={{ ...styles.btn }}
+          >
             <Image source={btnOrigin} style={styles.img} />
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => { _changeColumn(3) }} style={styles.btn}>
+          <TouchableOpacity
+            onPress={() => {
+              _changeColumn(3);
+            }}
+            style={styles.btn}
+          >
             <Image source={btnDynamic} style={styles.img} />
           </TouchableOpacity>
         </View>
-        <View style={{...styles.container2, marginLeft: 'auto'}}>
-          <TouchableOpacity onPress={() => { _changeColumn(4) }} style={{ ...styles.btn }}>
+        <View style={{ ...styles.container2, marginLeft: 'auto' }}>
+          <TouchableOpacity
+            onPress={() => {
+              _changeColumn(4);
+            }}
+            style={{ ...styles.btn }}
+          >
             <Image source={btnAroundWorld} style={styles.img} />
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => { _changeColumn(5) }} style={{ ...styles.btn }}>
+          <TouchableOpacity
+            onPress={() => {
+              _changeColumn(5);
+            }}
+            style={{ ...styles.btn }}
+          >
             <Image source={btnSustainable} style={styles.img} />
           </TouchableOpacity>
         </View>
@@ -245,12 +261,12 @@ const { width } = Dimensions.get('window');
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    width
+    width,
   },
   container2: {
     flex: 1,
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   section: {
     backfaceVisibility: 'hidden',
@@ -265,9 +281,9 @@ const styles = StyleSheet.create({
     maxWidth: 125,
     maxHeight: 50,
     width: '100%',
-    height: '100%'
+    height: '100%',
   },
   btn: {
-    width: '40%'
+    width: '40%',
   },
 });
