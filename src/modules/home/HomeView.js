@@ -28,7 +28,7 @@ export default function HomeScreen() {
     show3D: true,
     show32D: false,
     objects,
-    pauseUpdates: true,
+    pauseUpdates: false,
     isTracking: false,
     playAnim: false,
     objIndex: index,
@@ -177,7 +177,6 @@ export default function HomeScreen() {
         temp.show3D = true;
         temp.isTracking = true;
         temp.show32D = true;
-        setState({ ...temp });
       }
       setState({ ...temp });
     }
@@ -209,7 +208,7 @@ export default function HomeScreen() {
       temp.show3D = true;
       temp.show32D = true;
       setState({ ...temp });
-      console.log('anchor: ', anchor);
+      // console.log('anchor: ', anchor);
     } else if(anchor.trackingMethod === 'lastKnownPose') {
       temp.isTracking = false;
       temp.playAnim = false;
@@ -220,23 +219,36 @@ export default function HomeScreen() {
       temp.foundAnchor = null;
       temp.animationName = 'NoAnimation';
       setState({ ...temp });
-      console.log('STATE: ', state);
+      // console.log('STATE: ', state);
     }
 
   };
 
   const _onCameraTransformUpdate = anchor => {
-    const { position } = state;
-    if (
-      position &&
-      (position[0] !== anchor.position[0] ||
-        position[1] !== anchor.position[1] ||
-        position[2] !== anchor.position[2])
-    ) {
-      const temp = state;
-      temp.position = anchor.position;
+    const temp = state;
+
+    if (anchor.trackingMethod === 'tracking') {
+      temp.anchorId = anchor.anchorId;
+      temp.foundAnchor = anchor;
+      temp.animationName = '';
+      temp.pauseUpdates = false;
+      temp.isTracking = true;
+      temp.playAnim = true;
+      temp.show3D = true;
+      temp.show32D = true;
       setState({ ...temp });
-      console.log('CameraUpdate********:', position);
+      // console.log('anchor: ', anchor);
+    } else if(anchor.trackingMethod === 'lastKnownPose') {
+      temp.isTracking = false;
+      temp.playAnim = false;
+      temp.pauseUpdates = true;
+      temp.show3D = false;
+      temp.show32D = false;
+      temp.anchorId = null;
+      temp.foundAnchor = null;
+      temp.animationName = 'NoAnimation';
+      setState({ ...temp });
+      // console.log('STATE: ', state);
     }
   };
 
@@ -325,6 +337,7 @@ const styles = StyleSheet.create({
     marginLeft: 'auto',
     marginRight: 'auto',
     height: 150,
+    zIndex: 9
   },
   img: {
     maxWidth: 150,
