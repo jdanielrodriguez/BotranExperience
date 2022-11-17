@@ -53,7 +53,7 @@ export default function HomeScreen() {
     const selectedNew = objects[currentColumn][index];
     const temp = state;
     column = currentColumn;
-    
+
     temp.animationName = '01';
     temp.playAnim = false;
     temp.objIndex = index;
@@ -65,15 +65,15 @@ export default function HomeScreen() {
     temp.selected = selectedNew;
     setState({ ...temp });
     // setTimeout(() => {
-      temp.selected = selectedNew;
-      temp.loop = true;
-      temp.animationName = '';
-      temp.playAnim = true;
-      temp.show32D = true;
-      temp.show3D = true;
-      setState({ ...temp });
+    temp.selected = selectedNew;
+    temp.loop = true;
+    temp.animationName = '';
+    temp.playAnim = true;
+    temp.show32D = true;
+    temp.show3D = true;
+    setState({ ...temp });
     // }, 100);
-  }
+  };
 
   const _onFinish = () => {
     const temp = state;
@@ -86,11 +86,10 @@ export default function HomeScreen() {
     //   console.log('cambio!!!!')
     //   _changeObject()
     // }, 1000);
-  }
+  };
 
-
-  const _onFinishQuetzal = (columnNew) => {
-    let currentColumn = (columnNew === (objects.length)) ? 1 : columnNew;
+  const _onFinishQuetzal = columnNew => {
+    let currentColumn = columnNew === objects.length ? 1 : columnNew;
     index = 0;
     if (!objects[currentColumn]) {
       currentColumn = 1;
@@ -98,7 +97,7 @@ export default function HomeScreen() {
     if (!objects[currentColumn][index]) {
       index = 0;
     }
-    const selectedNew = objects[currentColumn][index]
+    const selectedNew = objects[currentColumn][index];
     const temp = state;
     temp.animationName = '01';
     temp.playAnim = false;
@@ -110,17 +109,15 @@ export default function HomeScreen() {
     temp.show32D = false;
     setState({ ...temp });
     // setTimeout(() => {
-      temp.selected = selectedNew;
-      temp.loop = true;
-      temp.animationName = '';
-      temp.playAnim = true;
-      temp.show32D = true;
-      temp.show3D = true;
-      setState({ ...temp });
+    temp.selected = selectedNew;
+    temp.loop = true;
+    temp.animationName = '';
+    temp.playAnim = true;
+    temp.show32D = true;
+    temp.show3D = true;
+    setState({ ...temp });
     // }, 0);
-  }
-
-
+  };
 
   const onFinishSound = () => {
     console.log('sonido acabado');
@@ -154,11 +151,11 @@ export default function HomeScreen() {
     temp.selected = newSelected;
     setState({ ...temp });
     // setTimeout(() => {
-      temp.playAnim = true;
-      temp.show32D = true;
-      temp.animName = '';
-      temp.show3D = true;
-      setState({ ...temp });
+    temp.playAnim = true;
+    temp.show32D = true;
+    temp.animName = '';
+    temp.show3D = true;
+    setState({ ...temp });
     // }, 0);
   };
   const _onAnchorFound = anchor => {
@@ -201,7 +198,7 @@ export default function HomeScreen() {
     if (anchor.trackingMethod === 'tracking') {
       _onAnchorFound(anchor);
       // console.log('anchor: ', anchor);
-    } else if(anchor.trackingMethod === 'lastKnownPose') {
+    } else {
       temp.isTracking = false;
       temp.playAnim = false;
       temp.pauseUpdates = true;
@@ -213,7 +210,6 @@ export default function HomeScreen() {
       setState({ ...temp });
       // console.log('STATE: ', state);
     }
-
   };
 
   const _onCameraTransformUpdate = anchor => {
@@ -230,7 +226,7 @@ export default function HomeScreen() {
       temp.show32D = true;
       setState({ ...temp });
       // console.log('anchor: ', anchor);
-    } else if(anchor.trackingMethod === 'lastKnownPose') {
+    } else if (anchor.trackingMethod === 'lastKnownPose') {
       temp.isTracking = false;
       temp.playAnim = false;
       temp.pauseUpdates = true;
@@ -329,7 +325,7 @@ const styles = StyleSheet.create({
     marginLeft: 'auto',
     marginRight: 'auto',
     height: 150,
-    zIndex: 9
+    zIndex: 9,
   },
   img: {
     maxWidth: 150,
@@ -338,6 +334,6 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   btn: {
-    width: '45%'
+    width: '45%',
   },
 });
