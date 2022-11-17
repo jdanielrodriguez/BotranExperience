@@ -37,7 +37,7 @@ export default function ARMakeObject(props) {
   return (
     <>
       {/* <ARSpotLigth /> */}
-      {show3D && playAnim && (
+      {(show3D && playAnim) && (
         <>
           <Viro3DObject
             key={`${key}Obj`}

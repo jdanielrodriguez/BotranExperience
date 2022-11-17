@@ -64,17 +64,14 @@ export default function HomeScreen() {
     temp.show32D = false;
     temp.selected = selectedNew;
     setState({ ...temp });
-    console.log('Column: ',state.column)
-    console.log('Column: ',column)
-    console.log('Row', state.objIndex)
     // setTimeout(() => {
-      // temp.selected = selectedNew;
-      // temp.loop = true;
-      // temp.animationName = '';
-      // temp.playAnim = true;
-      // temp.show32D = true;
-      // temp.show3D = true;
-      // setState({ ...temp });
+      temp.selected = selectedNew;
+      temp.loop = true;
+      temp.animationName = '';
+      temp.playAnim = true;
+      temp.show32D = true;
+      temp.show3D = true;
+      setState({ ...temp });
     // }, 100);
   }
 
@@ -156,34 +153,34 @@ export default function HomeScreen() {
     temp.column = currentColumn;
     temp.selected = newSelected;
     setState({ ...temp });
-    setTimeout(() => {
+    // setTimeout(() => {
       temp.playAnim = true;
       temp.show32D = true;
       temp.animName = '';
       temp.show3D = true;
       setState({ ...temp });
-    }, 0);
+    // }, 0);
   };
   const _onAnchorFound = anchor => {
     const { anchorId } = state;
     const temp = state;
-
     if (!temp.playAnim) {
-      temp.animationName = '01';
+      temp.animationName = '';
       temp.pauseUpdates = true;
       temp.playAnim = true;
       temp.show32D = true;
-      temp.isTracking = false;
+      temp.isTracking = true;
       temp.show3D = true;
-      temp.foundAnchor = anchor || null;
-      temp.anchorId = anchor ? anchor.anchorId : null;
       if (anchorId !== anchor.anchorId) {
         temp.foundAnchor = anchor || null;
         temp.anchorId = anchor ? anchor.anchorId : null;
+        temp.show3D = true;
+        temp.isTracking = true;
+        temp.show32D = true;
+        setState({ ...temp });
       }
+      setState({ ...temp });
     }
-
-    setState({ ...temp });
   };
 
   const _onAnchorLost = anchor => {
@@ -203,19 +200,29 @@ export default function HomeScreen() {
     const temp = state;
 
     if (anchor.trackingMethod === 'tracking') {
-      _onAnchorFound(anchor);
-    } else {
+      temp.anchorId = anchor.anchorId;
+      temp.foundAnchor = anchor;
+      temp.animationName = '';
+      temp.pauseUpdates = false;
+      temp.isTracking = true;
+      temp.playAnim = true;
+      temp.show3D = true;
+      temp.show32D = true;
+      setState({ ...temp });
+      console.log('anchor: ', anchor);
+    } else if(anchor.trackingMethod === 'lastKnownPose') {
       temp.isTracking = false;
       temp.playAnim = false;
+      temp.pauseUpdates = true;
       temp.show3D = false;
       temp.show32D = false;
       temp.anchorId = null;
       temp.foundAnchor = null;
       temp.animationName = 'NoAnimation';
       setState({ ...temp });
+      console.log('STATE: ', state);
     }
 
-    console.log('STATE: ', temp);
   };
 
   const _onCameraTransformUpdate = anchor => {
