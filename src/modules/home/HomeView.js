@@ -199,15 +199,7 @@ export default function HomeScreen() {
     const temp = state;
 
     if (anchor.trackingMethod === 'tracking') {
-      temp.anchorId = anchor.anchorId;
-      temp.foundAnchor = anchor;
-      temp.animationName = '';
-      temp.pauseUpdates = false;
-      temp.isTracking = true;
-      temp.playAnim = true;
-      temp.show3D = true;
-      temp.show32D = true;
-      setState({ ...temp });
+      _onAnchorFound(anchor);
       // console.log('anchor: ', anchor);
     } else if(anchor.trackingMethod === 'lastKnownPose') {
       temp.isTracking = false;
