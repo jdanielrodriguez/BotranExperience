@@ -22,17 +22,18 @@ export default function HomeScreen() {
   const btnSustainable = require('./../../../assets/images/sustainable-button.png');
   const objects = ARObjects();
   let index = 0;
+  let column = 0;
   const [state, setState] = useState({
-    selected: objects[0][index],
+    selected: objects[column][index],
     show3D: true,
     show32D: false,
     objects,
-    pauseUpdates: true,
+    pauseUpdates: false,
     isTracking: false,
     playAnim: false,
     objIndex: index,
     component: BotranARComponent,
-    column: 1,
+    column,
     targets: ['Botran12'],
     animationName: '',
     foundAnchor: null,
@@ -41,6 +42,53 @@ export default function HomeScreen() {
   });
 
   const _changeColumn = columnNew => {
+    let currentColumn = columnNew === objects.length ? 1 : columnNew;
+    index = 0;
+    if (!objects[currentColumn]) {
+      currentColumn = 1;
+    }
+    if (!objects[currentColumn][index]) {
+      index = 0;
+    }
+    const selectedNew = objects[currentColumn][index];
+    const temp = state;
+    column = currentColumn;
+
+    temp.animationName = '01';
+    temp.playAnim = false;
+    temp.objIndex = index;
+    temp.loop = false;
+    temp.selected = null;
+    temp.column = currentColumn;
+    temp.show3D = false;
+    temp.show32D = false;
+    temp.selected = selectedNew;
+    setState({ ...temp });
+    // setTimeout(() => {
+    temp.selected = selectedNew;
+    temp.loop = true;
+    temp.animationName = '';
+    temp.playAnim = true;
+    temp.show32D = true;
+    temp.show3D = true;
+    setState({ ...temp });
+    // }, 100);
+  };
+
+  const _onFinish = () => {
+    const temp = state;
+    temp.animationName = '';
+    // temp.playAnim = false;
+    // temp.column = column;
+    // setState({ ...temp });
+
+    // setTimeout(() => {
+    //   console.log('cambio!!!!')
+    //   _changeObject()
+    // }, 1000);
+  };
+
+  const _onFinishQuetzal = columnNew => {
     let currentColumn = columnNew === objects.length ? 1 : columnNew;
     index = 0;
     if (!objects[currentColumn]) {
@@ -60,28 +108,15 @@ export default function HomeScreen() {
     temp.show3D = false;
     temp.show32D = false;
     setState({ ...temp });
-    setTimeout(() => {
-      temp.selected = selectedNew;
-      temp.loop = true;
-      temp.animationName = '';
-      temp.playAnim = true;
-      temp.show32D = true;
-      temp.show3D = true;
-      setState({ ...temp });
-    }, 0);
-  };
-
-  const _onFinish = () => {
-    const temp = state;
-    temp.animationName = '';
-    // temp.playAnim = false;
-    // temp.column = column;
-    // setState({ ...temp });
-
     // setTimeout(() => {
-    //   console.log('cambio!!!!')
-    //   _changeObject()
-    // }, 1000);
+    temp.selected = selectedNew;
+    temp.loop = true;
+    temp.animationName = '';
+    temp.playAnim = true;
+    temp.show32D = true;
+    temp.show3D = true;
+    setState({ ...temp });
+    // }, 0);
   };
 
   const onFinishSound = () => {
@@ -115,34 +150,33 @@ export default function HomeScreen() {
     temp.column = currentColumn;
     temp.selected = newSelected;
     setState({ ...temp });
-    setTimeout(() => {
-      temp.playAnim = true;
-      temp.show32D = true;
-      temp.animName = '';
-      temp.show3D = true;
-      setState({ ...temp });
-    }, 0);
+    // setTimeout(() => {
+    temp.playAnim = true;
+    temp.show32D = true;
+    temp.animName = '';
+    temp.show3D = true;
+    setState({ ...temp });
+    // }, 0);
   };
   const _onAnchorFound = anchor => {
     const { anchorId } = state;
     const temp = state;
-
     if (!temp.playAnim) {
-      temp.animationName = '01';
+      temp.animationName = '';
       temp.pauseUpdates = true;
       temp.playAnim = true;
       temp.show32D = true;
-      temp.isTracking = false;
+      temp.isTracking = true;
       temp.show3D = true;
-      temp.foundAnchor = anchor || null;
-      temp.anchorId = anchor ? anchor.anchorId : null;
       if (anchorId !== anchor.anchorId) {
         temp.foundAnchor = anchor || null;
         temp.anchorId = anchor ? anchor.anchorId : null;
+        temp.show3D = true;
+        temp.isTracking = true;
+        temp.show32D = true;
       }
+      setState({ ...temp });
     }
-
-    setState({ ...temp });
   };
 
   const _onAnchorLost = anchor => {
@@ -163,32 +197,46 @@ export default function HomeScreen() {
 
     if (anchor.trackingMethod === 'tracking') {
       _onAnchorFound(anchor);
+      // console.log('anchor: ', anchor);
     } else {
       temp.isTracking = false;
       temp.playAnim = false;
+      temp.pauseUpdates = true;
       temp.show3D = false;
       temp.show32D = false;
       temp.anchorId = null;
       temp.foundAnchor = null;
       temp.animationName = 'NoAnimation';
       setState({ ...temp });
+      // console.log('STATE: ', state);
     }
-
-    console.log('STATE: ', temp);
   };
 
   const _onCameraTransformUpdate = anchor => {
-    const { position } = state;
-    if (
-      position &&
-      (position[0] !== anchor.position[0] ||
-        position[1] !== anchor.position[1] ||
-        position[2] !== anchor.position[2])
-    ) {
-      const temp = state;
-      temp.position = anchor.position;
+    const temp = state;
+
+    if (anchor.trackingMethod === 'tracking') {
+      temp.anchorId = anchor.anchorId;
+      temp.foundAnchor = anchor;
+      temp.animationName = '';
+      temp.pauseUpdates = false;
+      temp.isTracking = true;
+      temp.playAnim = true;
+      temp.show3D = true;
+      temp.show32D = true;
       setState({ ...temp });
-      console.log('CameraUpdate********:', position);
+      // console.log('anchor: ', anchor);
+    } else if (anchor.trackingMethod === 'lastKnownPose') {
+      temp.isTracking = false;
+      temp.playAnim = false;
+      temp.pauseUpdates = true;
+      temp.show3D = false;
+      temp.show32D = false;
+      temp.anchorId = null;
+      temp.foundAnchor = null;
+      temp.animationName = 'NoAnimation';
+      setState({ ...temp });
+      // console.log('STATE: ', state);
     }
   };
 
@@ -202,6 +250,7 @@ export default function HomeScreen() {
         selected={state.selected}
         objects={objects}
         _onFinish={_onFinish}
+        _onFinishQuetzal={_onFinishQuetzal}
         _onAnchorFound={_onAnchorFound}
         _onAnchorLost={_onAnchorLost}
         _onAnchorUpdate={_onAnchorUpdate}
@@ -275,15 +324,16 @@ const styles = StyleSheet.create({
     width: '90%',
     marginLeft: 'auto',
     marginRight: 'auto',
-    height: 120,
+    height: 150,
+    zIndex: 9,
   },
   img: {
-    maxWidth: 125,
-    maxHeight: 50,
+    maxWidth: 150,
+    maxHeight: 62,
     width: '100%',
     height: '100%',
   },
   btn: {
-    width: '40%',
+    width: '45%',
   },
 });

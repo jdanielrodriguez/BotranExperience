@@ -7,6 +7,7 @@ export default function ARMakeObject(props) {
     src: require('./../../../assets/vrx/quetzal/01-MODULOS-QUETZAL-FLATTEN.vrx'),
     src1: require('./../../../assets/vrx/quetzal/01-MODULOS-QUETZAL-FLATTEN2.vrx'),
     src2: require('./../../../assets/vrx/quetzal/01-MODULOS-QUETZAL-FLATTEN2B.vrx'),
+    srcc: require('./../../../assets/vrx/quetzal/01-MODULOS-QUETZAL-FLATTEN-C.vrx'),
     materials: [
       require('./../../../assets/vrx/quetzal/QUETZAL%20VOLANDO0000.png'),
       require('./../../../assets/vrx/quetzal/QUETZAL_VOLANDO_1.avi'),
@@ -17,6 +18,7 @@ export default function ARMakeObject(props) {
     animationName,
     playAnim,
     _onFinish,
+    _onFinishQuetzal,
     _onLoadStart,
     _onLoadEnd,
     _onError,
@@ -26,21 +28,24 @@ export default function ARMakeObject(props) {
     show3D,
     style,
     onFinishSound,
+    column,
   } = props;
+
   if (!show3D) {
     return (
       <>
         <Viro3DObject
           key={`${key}quetzal`}
-          source={quetzal.src2}
+          source={quetzal.srcc}
           scale={[0.0004, 0.0004, 0.0004]}
           animation={{
-            name: animationName,
+            name: '',
             run: !show3D,
             loop: true,
-            onFinish: _onFinish,
+            onFinish: () => {
+              _onFinishQuetzal(column);
+            },
           }}
-          shadowCastingBitMask={4}
           type="VRX"
           resources={quetzal.materials}
           // onLoadStart={_onLoadStart}

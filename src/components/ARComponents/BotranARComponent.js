@@ -7,7 +7,6 @@ import {
   ViroARScene,
   ViroARTrackingTargets,
   ViroNode,
-  ViroText,
 } from '@viro-community/react-viro';
 
 import ARMakeObject from './ARMakeObject';
@@ -29,16 +28,12 @@ export default function BotranARComponent(props) {
     _onAnchorUpdate,
     _onCameraTransformUpdate,
     isTracking,
+    column,
+    objIndex,
+    pauseUpdates,
   } = props.sceneNavigator.viroAppProps;
 
-  const getNoTrackingUI = () => (
-    <ViroText
-      text={isTracking ? 'Initializing AR...' : 'No Tracking'}
-      scale={[0.05, 0.05, 0.05]}
-    />
-  );
-
-  const renderScene = () =>
+  const renderScene = nowTracking =>
     targets.map(target => (
       <ViroNode position={[0, 0, 0]} key={`${target}cardmain`}>
         <ViroARImageMarker
@@ -47,19 +42,24 @@ export default function BotranARComponent(props) {
           onAnchorFound={anchor => {
             _onAnchorFound(anchor);
           }}
+          // _onAnchorUpdate={(anchor) => { _onAnchorUpdate(anchor) }}
         >
           <ViroNode key={`${target}card`}>
             <ViroNode rotation={[-90, 0, 0]} key={`${target}cardnode`}>
               <ViroAmbientLight color="#f0f0f0" intensity={1000} />
-              <ARMakeObject
-                {...props}
-                style={style}
-                _changeObject={_changeObject}
-                playAnim={playAnim}
-                show3D={show3D}
-                show32D={show32D}
-                selected={selected}
-              />
+              {nowTracking && (
+                <ARMakeObject
+                  {...props}
+                  style={style}
+                  _changeObject={_changeObject}
+                  playAnim={playAnim}
+                  show3D={show3D}
+                  show32D={show32D}
+                  selected={selected}
+                  column={column}
+                  objIndex={objIndex}
+                />
+              )}
             </ViroNode>
           </ViroNode>
         </ViroARImageMarker>
@@ -71,8 +71,9 @@ export default function BotranARComponent(props) {
       onAnchorUpdated={anchor => {
         _onAnchorUpdate(anchor);
       }}
+      pauseUpdates={pauseUpdates}
     >
-      {isTracking && !show3D ? getNoTrackingUI() : renderScene()}
+      {renderScene(isTracking)}
     </ViroARScene>
   );
 }
