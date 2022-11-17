@@ -65,9 +65,7 @@ export default function ARMakeObject(props) {
           <Viro3DObject
             key={`${key}Obj`}
             source={selected.src}
-            onPress={_changeObject}
             onClick={_changeObject}
-            onTouch={_changeObject}
             scale={selected.scale ? selected.scale : [0.00095, 0.001, 0.001]}
             lightReceivingBitMask={5}
             animation={{
