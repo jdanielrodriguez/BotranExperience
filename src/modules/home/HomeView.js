@@ -199,6 +199,7 @@ export default function HomeScreen() {
       _onAnchorFound(anchor);
       // console.log('anchor: ', anchor);
     } else {
+      const newSelected = objects[0][0];
       temp.isTracking = false;
       temp.playAnim = false;
       temp.pauseUpdates = true;
@@ -207,6 +208,9 @@ export default function HomeScreen() {
       temp.anchorId = null;
       temp.foundAnchor = null;
       temp.animationName = 'NoAnimation';
+      temp.column = 0;
+      temp.objIndex = 0;
+      temp.selected = newSelected;
       setState({ ...temp });
       // console.log('STATE: ', state);
     }
