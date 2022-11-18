@@ -263,7 +263,7 @@ export default function HomeScreen() {
         _onCameraTransformUpdate={_onCameraTransformUpdate}
         pauseUpdates
         playAnim={state.playAnim}
-        targets={['Botran12']}
+        targets={['Botran12','Botran15','Botran18']}
         foundAnchor={state.foundAnchor}
         _changeObject={_changeObject}
         show3D={state.show3D}
