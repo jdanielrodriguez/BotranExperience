@@ -33,7 +33,7 @@ export default function InstructionsScreen({ isExtended, setIsExtended }) {
       >
 
         <View style={[styles.section, styles.sectionLarge]}>
-          <Text color="#19e7f7" hCenter size={15} style={styles.description}>
+          <Text color="#00B8B0" hCenter size={15} style={styles.description}>
             {' '}
           </Text>
           <Image
@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
     lineHeight: 25,
   },
   titleDescription: {
-    color: '#19e7f7',
+    color: '#00B8B0',
     textAlign: 'center',
     fontFamily: fonts.primarySemiBold,
     fontSize: 15,

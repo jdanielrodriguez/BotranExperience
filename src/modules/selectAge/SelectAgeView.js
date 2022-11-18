@@ -37,7 +37,7 @@ export default function SelectAgeScreen({ firstTime, setFirstTime, date, setDate
             size='lg'
             loadingProps={{ size: 'large', color: 'white' }}
             buttonStyle={{
-              backgroundColor: '#19E7F7',
+              backgroundColor: '#00B8B0',
               borderRadius: 5,
               ...styles.button
             }}

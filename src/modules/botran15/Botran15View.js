@@ -190,7 +190,7 @@ const styles = StyleSheet.create({
     minWidth: width,
   },
   fondo_color: {
-    backgroundColor: '#19e7f7',
+    backgroundColor: '#00B8B0',
   },
   fondo: {
     width,
@@ -304,7 +304,7 @@ const styles = StyleSheet.create({
     lineHeight: 25,
   },
   titleDescription: {
-    color: '#19e7f7',
+    color: '#00B8B0',
     textAlign: 'center',
     fontFamily: fonts.primarySemiBold,
     fontSize: 15,
