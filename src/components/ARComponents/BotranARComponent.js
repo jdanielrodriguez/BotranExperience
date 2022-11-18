@@ -42,7 +42,7 @@ export default function BotranARComponent(props) {
           onAnchorFound={anchor => {
             _onAnchorFound(anchor);
           }}
-          // _onAnchorUpdate={(anchor) => { _onAnchorUpdate(anchor) }}
+          _onAnchorUpdate={(anchor) => { _onAnchorUpdate(anchor) }}
         >
           <ViroNode key={`${target}card`}>
             <ViroNode rotation={[-90, 0, 0]} key={`${target}cardnode`}>
@@ -69,7 +69,7 @@ export default function BotranARComponent(props) {
   return (
     <ViroARScene
       onAnchorUpdated={anchor => {
-        _onAnchorUpdate(anchor);
+        // _onAnchorUpdate(anchor);
       }}
       pauseUpdates={pauseUpdates}
     >

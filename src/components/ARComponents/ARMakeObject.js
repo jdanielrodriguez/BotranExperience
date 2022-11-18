@@ -4,14 +4,14 @@ import { Viro3DObject, ViroSound } from '@viro-community/react-viro';
 // import ARSpotLigth from './ARSpotLigth';
 export default function ARMakeObject(props) {
   const quetzal = {
-    src: require('./../../../assets/vrx/quetzal/01-MODULOS-QUETZAL-FLATTEN.vrx'),
-    src1: require('./../../../assets/vrx/quetzal/01-MODULOS-QUETZAL-FLATTEN2.vrx'),
-    src2: require('./../../../assets/vrx/quetzal/01-MODULOS-QUETZAL-FLATTEN2B.vrx'),
-    srcc: require('./../../../assets/vrx/quetzal/01-MODULOS-QUETZAL-FLATTEN-C.vrx'),
+    srcc: require('./../../../assets/vrx/quetzal/01-MODULOS-QUETZAL-VER2-FLATTEN.vrx'),
     materials: [
       require('./../../../assets/vrx/quetzal/QUETZAL%20VOLANDO0000.png'),
-      require('./../../../assets/vrx/quetzal/QUETZAL_VOLANDO_1.avi'),
+      require('./../../../assets/vrx/quetzal/QUETZAL_VOLando02_0001_Layer-1.png'),
+      require('./../../../assets/vrx/quetzal/QUETZAL_VOLando02_0000_Layer-2.png'),
+      require('./../../../assets/vrx/quetzal/QUETZAL_VOLando02_0002_Layer-3.png'),
     ],
+    sound: require("./../../../assets/mp3/narracion/BOTRAN_NATURE.mp3"),
   };
   const {
     selected,
@@ -31,17 +31,18 @@ export default function ARMakeObject(props) {
     column,
   } = props;
 
-  if (!show3D) {
+  if (!show3D && !playAnim) {
     return (
       <>
         <Viro3DObject
           key={`${key}quetzal`}
           source={quetzal.srcc}
           scale={[0.0004, 0.0004, 0.0004]}
+          rotation={[0, -90, 0]}
           animation={{
             name: '',
-            run: !show3D,
-            loop: true,
+            run: !playAnim,
+            loop: false,
             onFinish: () => {
               _onFinishQuetzal(column);
             },
@@ -53,6 +54,13 @@ export default function ARMakeObject(props) {
           position={[0, 0, 0]}
           // onError={_onError}
         />
+        {quetzal.sound && (
+        <ViroSound
+          key={`${key}SoundQuetzal`}
+          source={quetzal.sound}
+          onFinish={onFinishSound}
+        />
+        )}
       </>
     );
   }

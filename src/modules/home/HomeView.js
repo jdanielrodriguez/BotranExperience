@@ -65,13 +65,13 @@ export default function HomeScreen() {
     temp.selected = selectedNew;
     setState({ ...temp });
     // setTimeout(() => {
-    temp.selected = selectedNew;
-    temp.loop = true;
-    temp.animationName = '';
-    temp.playAnim = true;
-    temp.show32D = true;
-    temp.show3D = true;
-    setState({ ...temp });
+    // temp.selected = selectedNew;
+    // temp.loop = true;
+    // temp.animationName = '';
+    // temp.playAnim = true;
+    // temp.show32D = true;
+    // temp.show3D = true;
+    // setState({ ...temp });
     // }, 100);
   };
 
@@ -99,15 +99,15 @@ export default function HomeScreen() {
     }
     const selectedNew = objects[currentColumn][index];
     const temp = state;
-    temp.animationName = '01';
-    temp.playAnim = false;
+    // temp.animationName = '01';
+    // temp.playAnim = false;
     temp.objIndex = index;
-    temp.loop = false;
-    temp.selected = null;
+    // temp.loop = false;
+    // temp.selected = null;
     temp.column = currentColumn;
-    temp.show3D = false;
-    temp.show32D = false;
-    setState({ ...temp });
+    // temp.show3D = false;
+    // temp.show32D = false;
+    // setState({ ...temp });
     // setTimeout(() => {
     temp.selected = selectedNew;
     temp.loop = true;
@@ -199,18 +199,18 @@ export default function HomeScreen() {
       _onAnchorFound(anchor);
       // console.log('anchor: ', anchor);
     } else {
-      const newSelected = objects[0][0];
+      // const newSelected = objects[0][0];
       temp.isTracking = false;
       temp.playAnim = false;
-      temp.pauseUpdates = true;
+      temp.pauseUpdates = false;
       temp.show3D = false;
       temp.show32D = false;
       temp.anchorId = null;
       temp.foundAnchor = null;
       temp.animationName = 'NoAnimation';
-      temp.column = 0;
-      temp.objIndex = 0;
-      temp.selected = newSelected;
+      // temp.column = 0;
+      // temp.objIndex = 0;
+      // temp.selected = newSelected;
       setState({ ...temp });
       // console.log('STATE: ', state);
     }
