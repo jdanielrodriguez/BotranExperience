@@ -39,10 +39,12 @@ export default function BotranARComponent(props) {
         <ViroARImageMarker
           key={`${target}MKt`}
           target={target}
-          onAnchorFound={anchor => {
-            _onAnchorFound(anchor);
+          // onAnchorFound={anchor => {
+          //   _onAnchorFound(anchor);
+          // }}
+          onAnchorUpdated={anchor => {
+            _onAnchorUpdate(anchor);
           }}
-          _onAnchorUpdate={(anchor) => { _onAnchorUpdate(anchor) }}
         >
           <ViroNode key={`${target}card`}>
             <ViroNode rotation={[-90, 0, 0]} key={`${target}cardnode`}>
@@ -68,9 +70,9 @@ export default function BotranARComponent(props) {
 
   return (
     <ViroARScene
-      onAnchorUpdated={anchor => {
-        // _onAnchorUpdate(anchor);
-      }}
+      // onAnchorUpdated={anchor => {
+      //   _onAnchorUpdate(anchor);
+      // }}
       pauseUpdates={pauseUpdates}
     >
       {renderScene(isTracking)}

@@ -23,6 +23,8 @@ export default function HomeScreen() {
   const objects = ARObjects();
   let index = 0;
   let column = 0;
+  let isPlaying = false;
+
   const [state, setState] = useState({
     selected: objects[column][index],
     show3D: true,
@@ -159,8 +161,11 @@ export default function HomeScreen() {
     // }, 0);
   };
   const _onAnchorFound = anchor => {
-    const { anchorId } = state;
+    console.log(`FOUND************* ${anchor.trackingMethod}`);
+
     const temp = state;
+    const { anchorId } = state;
+
     if (!temp.playAnim) {
       temp.animationName = '';
       temp.pauseUpdates = true;
@@ -168,6 +173,7 @@ export default function HomeScreen() {
       temp.show32D = true;
       temp.isTracking = true;
       temp.show3D = true;
+
       if (anchorId !== anchor.anchorId) {
         temp.foundAnchor = anchor || null;
         temp.anchorId = anchor ? anchor.anchorId : null;
@@ -175,6 +181,7 @@ export default function HomeScreen() {
         temp.isTracking = true;
         temp.show32D = true;
       }
+
       setState({ ...temp });
     }
   };
@@ -193,13 +200,16 @@ export default function HomeScreen() {
   };
 
   const _onAnchorUpdate = anchor => {
-    const temp = state;
-    // if (anchor.trackingMethod === 'tracking') {
-    //   if (!temp.playAnim) {
-    //     _onAnchorFound(anchor);
-    //   }
-    // } else
-    if (temp.playAnim && anchor.trackingMethod !== 'tracking') {
+    console.log(
+      `UPDATE******************* ${anchor.trackingMethod} - ${isPlaying}`,
+    );
+
+    if (!isPlaying && anchor.trackingMethod === 'tracking') {
+      isPlaying = true;
+      _onAnchorFound(anchor);
+    } else if (isPlaying && anchor.trackingMethod === 'lastKnownPose') {
+      const temp = state;
+
       temp.isTracking = false;
       temp.playAnim = false;
       temp.pauseUpdates = false;
@@ -208,6 +218,7 @@ export default function HomeScreen() {
       temp.anchorId = null;
       temp.foundAnchor = null;
       temp.animationName = 'NoAnimation';
+
       setState({ ...temp });
     }
   };
