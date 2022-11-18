@@ -194,12 +194,12 @@ export default function HomeScreen() {
 
   const _onAnchorUpdate = anchor => {
     const temp = state;
-
-    if (anchor.trackingMethod === 'tracking') {
-      _onAnchorFound(anchor);
-      // console.log('anchor: ', anchor);
-    } else {
-      // const newSelected = objects[0][0];
+    // if (anchor.trackingMethod === 'tracking') {
+    //   if (!temp.playAnim) {
+    //     _onAnchorFound(anchor);
+    //   }
+    // } else
+    if (temp.playAnim && anchor.trackingMethod !== 'tracking') {
       temp.isTracking = false;
       temp.playAnim = false;
       temp.pauseUpdates = false;
@@ -208,11 +208,7 @@ export default function HomeScreen() {
       temp.anchorId = null;
       temp.foundAnchor = null;
       temp.animationName = 'NoAnimation';
-      // temp.column = 0;
-      // temp.objIndex = 0;
-      // temp.selected = newSelected;
       setState({ ...temp });
-      // console.log('STATE: ', state);
     }
   };
 
@@ -263,7 +259,7 @@ export default function HomeScreen() {
         _onCameraTransformUpdate={_onCameraTransformUpdate}
         pauseUpdates
         playAnim={state.playAnim}
-        targets={['Botran12','Botran15','Botran18']}
+        targets={['Botran12', 'Botran15', 'Botran18']}
         foundAnchor={state.foundAnchor}
         _changeObject={_changeObject}
         show3D={state.show3D}
