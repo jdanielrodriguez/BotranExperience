@@ -27,11 +27,6 @@ export default function Botran12Screen() {
         style={styles.fondo}
         resizeMode="stretch"
       />
-      <Image
-        source={require('../../../assets/images/botellas/12/cover.png')}
-        style={styles.cover}
-        resizeMode="stretch"
-      />
       {/* <Image
         source={require('../../../assets/images/Botran-18-sales-sheets.jpg')}
         style={styles.bgImage}
@@ -40,8 +35,8 @@ export default function Botran12Screen() {
       <View style={[styles.sectionLarge]}>
         <View style={{ ...styles.section, height: '10%' }}>
           <Image
-            source={require('../../../assets/images/botellas/18/logo.png')}
-            style={styles.logo}
+            source={require('../../../assets/images/botellas/12/logo.png')}
+            style={{ ...styles.logo, marginTop: 40 }}
             resizeMode="stretch"
           />
         </View>
@@ -51,100 +46,99 @@ export default function Botran12Screen() {
             style={styles.blend}
             resizeMode="stretch"
           />
-          <Text size={12} style={styles.instructions}>
+          <Text size={10} style={styles.titulo}>
             Born in 1893, Don venancio was the first Botran Merino Brother to be inspired by glorious Guatemala.
           </Text>
-          <Text size={12} style={styles.instructions}>
+          <Text size={10} style={styles.titulo1}>
             Botran 18 is a blend for him, His passion, fire and determination in one bottle.
           </Text>
         </View>
         <View style={{ ...styles.section, height: '40%' }}>
           <View style={{ ...styles.container2 }}>
-            <View style={{ ...styles.item, height: '100%', width: '30%' }}>
+            <View style={{ display: 'flex', height: '100%', width: '30%' }}>
               <Image
                 source={require('../../../assets/images/botellas/12/icono_botella.png')}
-                style={styles.icono}
+                style={{ ...styles.icono, marginTop: 'auto', marginBottom: 'auto' }}
                 resizeMode="stretch"
               />
             </View>
-            <View style={{ ...styles.item, height: '100%', width: '70%', borderColor: '#000' }}>
-              <Text size={12} style={{ width: '100%', height: 'auto' }}>
+            <View style={{ display: 'flex', height: '100%', width: '70%' }}>
+              <Text size={12} style={{ ...styles.option, marginTop: 'auto' }}>
                 -Dinamic Ageing (Solera Adapted).
               </Text>
-              <Text size={12} style={{ width: '100%', height: 'auto' }}>
-                -Blend of 5-18-year old rums.
+              <Text size={12} style={{ ...styles.option, marginBottom: 'auto' }}>
+                -Blend of 5-12-year old rums.
               </Text>
             </View>
           </View>
           <View style={{ ...styles.container2 }}>
-            <View style={{ ...styles.item, height: '100%', width: '30%' }}>
+            <View style={{ display: 'flex', height: '100%', width: '30%' }}>
               <Image
                 source={require('../../../assets/images/botellas/12/icono_barril.png')}
-                style={styles.icono}
+                style={{ ...styles.icono, marginTop: 'auto', marginBottom: 'auto' }}
                 resizeMode="stretch"
               />
             </View>
-            <View style={{ ...styles.item, height: '100%', width: '70%', borderColor: '#000' }}>
-              <Text size={12} style={{ width: '100%', height: 'auto' }}>
+            <View style={{ display: 'flex', height: '100%', width: '70%' }}>
+              <Text size={12} style={{ ...styles.option, marginTop: 'auto' }}>
                 -American whiskey.
               </Text>
-              <Text size={12} style={{ width: '100%', height: 'auto' }}>
+              <Text size={12} style={{ ...styles.option }}>
                 -Medium toasted American whiskey.
               </Text>
-              <Text size={12} style={{ width: '100%', height: 'auto' }}>
+              <Text size={12} style={{ ...styles.option, marginBottom: 'auto' }}>
                 -Sherry wines. (Oloroso)
-              </Text>
-              <Text size={12} style={{ width: '100%', height: 'auto' }}>
-                -Port wines. (tawny)
               </Text>
             </View>
           </View>
           <View style={{ ...styles.container2 }}>
-            <View style={{ ...styles.item, height: '100%', width: '30%' }}>
+            <View style={{ display: 'flex', height: '100%', width: '30%' }}>
               <Image
                 source={require('../../../assets/images/botellas/12/icono_flor.png')}
-                style={styles.icono}
+                style={{ ...styles.icono, marginTop: 10, marginBottom: 'auto' }}
                 resizeMode="stretch"
               />
             </View>
-            <View style={{ ...styles.item, height: '100%', width: '70%', borderColor: '#000' }}>
-              <Text size={12} style={{ width: '100%', height: 'auto' }}>
+            <View style={{ display: 'flex', height: '100%', width: '70%' }}>
+              <Text size={12} style={{ ...styles.tituloOption }}>
                 COLOUR
               </Text>
-              <Text size={12} style={{ width: '100%', height: 'auto' }}>
-                Deep mahogany with beams of reddish light.
+              <Text size={12} style={{ ...styles.textoOption }}>
+                Mahogany with golden highlights.
               </Text>
-              <Text size={12} style={{ width: '100%', height: 'auto' }}>
+              <Text size={12} style={{ ...styles.tituloOption }}>
                 NOSE
               </Text>
-              <Text size={12} style={{ width: '100%', height: 'auto' }}>
-                Initial notes of maple syrup and caramelises aromas.
+              <Text size={12} style={{ ...styles.textoOption }}>
+                Delicious notes of vanilla, toasted
               </Text>
-              <Text size={12} style={{ width: '100%', height: 'auto' }}>
-                Dark Chocolate notes emerge as the rum evolves in the glass.
+              <Text size={12} style={{ ...styles.textoOption }}>
+                oak and dried fruits (like nuts and almonds)
               </Text>
-              <Text size={12} style={{ width: '100%', height: 'auto' }}>
+              <Text size={12} style={{ ...styles.tituloOption }}>
                 PALATE
               </Text>
-              <Text size={12} style={{ width: '100%', height: 'auto' }}>
-                Dry with notes of dried plum and dark chocolate.
+              <Text size={12} style={{ ...styles.textoOption }}>
+                Dried fruits and Oak notes.
               </Text>
-              <Text size={12} style={{ width: '100%', height: 'auto' }}>
+              <Text size={12} style={{ ...styles.tituloOption }}>
                 FINISH
               </Text>
-              <Text size={12} style={{ width: '100%', height: 'auto' }}>
-                Toasted oak and dark chocolate notes.
+              <Text size={12} style={{ ...styles.textoOption }}>
+                Toasted oak and vanilla notes.
               </Text>
             </View>
           </View>
         </View>
         <View style={{ ...styles.section, height: '30%' }}>
-          <Text size={12} style={styles.instructions}>
+          <Text size={12} style={styles.footer_title}>
             PERFECT SERVE
           </Text>
-          <Text size={12} style={styles.instructions}>
-            Enjoy neat or on the rocks for a journey into
-            Guatemalan flavour.
+          <Text size={12} style={styles.footer}>
+            Perfect for uplifting any cocktail.
+          </Text>
+          <Text size={12} style={styles.footer}>
+            Ideal with citrus, salty, bitter and sweet flavours.
           </Text>
         </View>
       </View>
@@ -163,7 +157,7 @@ export default function Botran12Screen() {
         </View>
         <View style={styles.hashtag_container}>
           <Image
-            source={require('../../../assets/images/botellas/18/hashtag.png')}
+            source={require('../../../assets/images/botellas/12/hashtag.png')}
             style={styles.hashtag}
             resizeMode="stretch"
           />
@@ -186,10 +180,10 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     flexWrap: 'wrap',
+    width: '80%',
+    marginLeft: 'auto',
+    marginRight: 'auto',
     alignItems: 'flex-start' // if you want to fill rows left to right
-  },
-  item: {
-    width: '50%' // is 50% of container width
   },
   bgImage: {
     width,
@@ -225,14 +219,15 @@ const styles = StyleSheet.create({
     marginTop: 350
   },
   logo: {
-    width: '30%',
+    width: '40%',
     height: '100%',
     marginLeft: 'auto',
     marginRight: 'auto',
   },
   blend: {
-    width: '70%',
-    height: '50%',
+    width: '50%',
+    height: '30%',
+    marginTop: 50,
     marginLeft: 'auto',
     marginRight: 'auto',
   },
@@ -258,8 +253,10 @@ const styles = StyleSheet.create({
     flexWrap: "wrap",
   },
   icono: {
-    width: '100%',
-    height: '100%'
+    width: 50,
+    height: 50,
+    marginLeft: 'auto',
+    marginRight: 'auto',
   },
   sectionLarge: {
     flex: 1,
@@ -269,6 +266,8 @@ const styles = StyleSheet.create({
     height: '100%',
     minWidth: width,
     minHeight: height + 150,
+    marginLeft: 'auto',
+    marginRight: 'auto'
   },
   trago: {
     width,
@@ -278,7 +277,7 @@ const styles = StyleSheet.create({
     width: '90%',
     marginLeft: 'auto',
     marginRight: 'auto',
-    height: '90%',
+    height: '80%',
   },
   botella_container: {
     width,
@@ -317,6 +316,68 @@ const styles = StyleSheet.create({
     fontFamily: fonts.primaryRegular,
     borderBottomColor: colors.primary,
   },
+  option: {
+    fontFamily: fonts.primaryRegular,
+    color: colors.black,
+    marginTop: 5,
+    marginBottom: 5,
+    fontSize: 11,
+    width: '100%',
+    height: 'auto'
+  },
+  titulo: {
+    textAlign: 'center',
+    fontFamily: fonts.primaryRegular,
+    color: colors.black,
+    marginTop: 10,
+    fontSize: 10,
+    width: '80%',
+    marginLeft: 'auto',
+    marginRight: 'auto'
+  },
+  titulo1: {
+    textAlign: 'center',
+    fontFamily: fonts.primaryRegular,
+    color: colors.black,
+    fontSize: 10,
+    marginTop: 15,
+    width: '80%',
+    marginLeft: 'auto',
+    marginRight: 'auto'
+  },
+  tituloOption: {
+    fontFamily: fonts.primaryRegular,
+    color: colors.primaryLight,
+    marginTop: 10,
+    fontSize: 12,
+    width: '80%',
+  },
+  textoOption: {
+    fontFamily: fonts.primaryRegular,
+    color: colors.black,
+    fontSize: 10,
+    width: '80%',
+  },
+  footer_title: {
+    fontFamily: fonts.primaryRegular,
+    color: colors.primaryLight,
+    marginTop: 10,
+    marginBottom: 10,
+    fontSize: 13,
+    textAlign: 'center',
+    width: '80%',
+    marginLeft: 'auto',
+    marginRight: 'auto'
+  },
+  footer: {
+    fontFamily: fonts.primaryRegular,
+    color: colors.black,
+    textAlign: 'center',
+    fontSize: 12,
+    width: '80%',
+    marginLeft: 'auto',
+    marginRight: 'auto'
+  },
   title: {
     textAlign: 'center',
     fontWeight: 'normal',
@@ -333,3 +394,4 @@ const styles = StyleSheet.create({
     height: 28
   },
 });
+
