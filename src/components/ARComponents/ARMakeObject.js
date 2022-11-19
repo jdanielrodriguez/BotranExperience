@@ -11,7 +11,7 @@ export default function ARMakeObject(props) {
       require('./../../../assets/vrx/quetzal/QUETZAL_VOLando02_0000_Layer-2.png'),
       require('./../../../assets/vrx/quetzal/QUETZAL_VOLando02_0002_Layer-3.png'),
     ],
-    sound: require("./../../../assets/mp3/narracion/BOTRAN_NATURE.mp3"),
+    sound: require('./../../../assets/mp3/narracion/BOTRAN_NATURE.mp3'),
   };
   const {
     selected,
@@ -22,20 +22,22 @@ export default function ARMakeObject(props) {
     _onLoadStart,
     _onLoadEnd,
     _onError,
-    key,
+    _key,
     _changeObject,
     foundAnchor,
     show3D,
     style,
     onFinishSound,
     column,
+    _target,
   } = props;
 
+  // Return quetzal when anchor is not available
   if (!show3D && !playAnim) {
     return (
       <>
         <Viro3DObject
-          key={`${key}quetzal`}
+          key={`${_key}quetzal`}
           source={quetzal.srcc}
           scale={[0.0004, 0.0004, 0.0004]}
           rotation={[0, -90, 0]}
@@ -55,14 +57,21 @@ export default function ARMakeObject(props) {
           // onError={_onError}
         />
         {quetzal.sound && (
-        <ViroSound
-          key={`${key}SoundQuetzal`}
-          source={quetzal.sound}
-          onFinish={onFinishSound}
-        />
+          <ViroSound
+            key={`${key}SoundQuetzal`}
+            source={quetzal.sound}
+            onFinish={onFinishSound}
+          />
         )}
       </>
     );
+  }
+
+  console.log(`${_target} ******************** ${_key}`);
+
+  // Return null element in case is not the current anchor element
+  if (_target !== _key) {
+    return null;
   }
 
   return (
@@ -71,7 +80,7 @@ export default function ARMakeObject(props) {
       {show3D && playAnim && (
         <>
           <Viro3DObject
-            key={`${key}Obj`}
+            key={`${_key}Obj`}
             source={selected.src}
             onClick={_changeObject}
             scale={selected.scale ? selected.scale : [0.00095, 0.001, 0.001]}
@@ -96,7 +105,7 @@ export default function ARMakeObject(props) {
           />
           {selected.sound && (
             <ViroSound
-              key={`${key}Sound`}
+              key={`${_key}Sound`}
               source={selected.sound}
               onFinish={onFinishSound}
             />

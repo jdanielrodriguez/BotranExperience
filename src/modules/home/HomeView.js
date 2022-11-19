@@ -41,6 +41,7 @@ export default function HomeScreen() {
     foundAnchor: null,
     position: [0, 0, 0],
     anchorId: null,
+    target: '',
   });
 
   const _changeColumn = columnNew => {
@@ -199,26 +200,35 @@ export default function HomeScreen() {
     // setState({ ...temp });
   };
 
-  const _onAnchorUpdate = anchor => {
+  const _onAnchorUpdate = (anchor, target) => {
+    const temp = state;
+
     console.log(
-      `UPDATE******************* ${anchor.trackingMethod} - ${isPlaying}`,
+      `UPDATE******************* ${anchor.trackingMethod} - ${isPlaying} - ${target} - ${temp.target}`,
     );
 
-    if (!isPlaying && anchor.trackingMethod === 'tracking') {
-      isPlaying = true;
-      _onAnchorFound(anchor);
-    } else if (isPlaying && anchor.trackingMethod === 'lastKnownPose') {
-      const temp = state;
+    // Change status only if target is the same as selected
+    if (temp.target === target) {
+      if (!isPlaying && anchor.trackingMethod === 'tracking') {
+        isPlaying = true;
+        _onAnchorFound(anchor);
+      } else if (isPlaying && anchor.trackingMethod === 'lastKnownPose') {
+        temp.isTracking = false;
+        temp.playAnim = false;
+        temp.pauseUpdates = false;
+        temp.show3D = false;
+        temp.show32D = false;
+        temp.anchorId = null;
+        temp.foundAnchor = null;
+        temp.animationName = 'NoAnimation';
 
-      temp.isTracking = false;
-      temp.playAnim = false;
-      temp.pauseUpdates = false;
-      temp.show3D = false;
-      temp.show32D = false;
-      temp.anchorId = null;
-      temp.foundAnchor = null;
-      temp.animationName = 'NoAnimation';
+        setState({ ...temp });
+      }
+    }
 
+    // Set target when status is tracking and is another element
+    if (anchor.trackingMethod === 'tracking' && temp.target !== target) {
+      temp.target = target;
       setState({ ...temp });
     }
   };
@@ -275,6 +285,7 @@ export default function HomeScreen() {
         _changeObject={_changeObject}
         show3D={state.show3D}
         show32D={state.show32D}
+        _target={state.target}
       />
       <View style={styles.section}>
         <View style={{ ...styles.container2, marginLeft: 'auto' }}>

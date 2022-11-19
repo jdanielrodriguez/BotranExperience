@@ -31,6 +31,7 @@ export default function BotranARComponent(props) {
     column,
     objIndex,
     pauseUpdates,
+    _target,
   } = props.sceneNavigator.viroAppProps;
 
   const renderScene = nowTracking =>
@@ -43,7 +44,7 @@ export default function BotranARComponent(props) {
           //   _onAnchorFound(anchor);
           // }}
           onAnchorUpdated={anchor => {
-            _onAnchorUpdate(anchor);
+            _onAnchorUpdate(anchor, target);
           }}
         >
           <ViroNode key={`${target}card`}>
@@ -52,6 +53,8 @@ export default function BotranARComponent(props) {
               {nowTracking && (
                 <ARMakeObject
                   {...props}
+                  _key={target}
+                  _target={_target}
                   style={style}
                   _changeObject={_changeObject}
                   playAnim={playAnim}
