@@ -58,7 +58,7 @@ export default function ARMakeObject(props) {
         />
         {quetzal.sound && (
           <ViroSound
-            key={`${key}SoundQuetzal`}
+            key={`${_key}SoundQuetzal`}
             source={quetzal.sound}
             onFinish={onFinishSound}
           />

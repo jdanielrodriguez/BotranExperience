@@ -33,6 +33,7 @@ export default function HomeScreen() {
     pauseUpdates: false,
     isTracking: false,
     playAnim: false,
+    quetzal: false,
     objIndex: index,
     component: BotranARComponent,
     column,
@@ -65,6 +66,8 @@ export default function HomeScreen() {
     temp.column = currentColumn;
     temp.show3D = false;
     temp.show32D = false;
+    temp.quetzal = true;
+    isPlaying = true;
     temp.selected = selectedNew;
     setState({ ...temp });
     // setTimeout(() => {
@@ -102,22 +105,24 @@ export default function HomeScreen() {
     }
     const selectedNew = objects[currentColumn][index];
     const temp = state;
-    // temp.animationName = '01';
-    // temp.playAnim = false;
+    temp.animationName = '01';
+    temp.playAnim = false;
     temp.objIndex = index;
-    // temp.loop = false;
-    // temp.selected = null;
+    temp.loop = false;
+    temp.selected = null;
     temp.column = currentColumn;
-    // temp.show3D = false;
-    // temp.show32D = false;
-    // setState({ ...temp });
+    temp.show3D = false;
+    temp.show32D = false;
+    setState({ ...temp });
     // setTimeout(() => {
     temp.selected = selectedNew;
     temp.loop = true;
     temp.animationName = '';
     temp.playAnim = true;
     temp.show32D = true;
+    temp.quetzal = false;
     temp.show3D = true;
+    isPlaying = false;
     setState({ ...temp });
     // }, 0);
   };
@@ -209,10 +214,10 @@ export default function HomeScreen() {
 
     // Change status only if target is the same as selected
     if (temp.target === target) {
-      if (!isPlaying && anchor.trackingMethod === 'tracking') {
+      if (!state.quetzal && !isPlaying && anchor.trackingMethod === 'tracking') {
         isPlaying = true;
         _onAnchorFound(anchor);
-      } else if (isPlaying && anchor.trackingMethod === 'lastKnownPose') {
+      } else if (!state.quetzal && isPlaying && anchor.trackingMethod === 'lastKnownPose') {
         temp.isTracking = false;
         temp.playAnim = false;
         temp.pauseUpdates = false;
