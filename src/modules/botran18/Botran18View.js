@@ -58,6 +58,11 @@ export default function Botran18Screen() {
             Botran 18 is a blend for him, His passion, fire and determination in one bottle.
           </Text>
         </View>
+        <Image
+          source={require('../../../assets/images/botellas/12/divider.png')}
+          style={styles.divider}
+          resizeMode="stretch"
+        />
         <View style={{ ...styles.section, height: '40%' }}>
           <View style={{ ...styles.container2 }}>
             <View style={{ display: 'flex', height: '100%', width: '30%' }}>
@@ -138,6 +143,11 @@ export default function Botran18Screen() {
             </View>
           </View>
         </View>
+        <Image
+          source={require('../../../assets/images/botellas/12/divider.png')}
+          style={styles.divider2}
+          resizeMode="stretch"
+        />
         <View style={{ ...styles.section, height: '30%' }}>
           <Text size={12} style={styles.footer_title}>
             PERFECT SERVE
@@ -235,6 +245,19 @@ const styles = StyleSheet.create({
     marginLeft: 'auto',
     marginRight: 'auto',
   },
+  divider: {
+    width: '70%',
+    height: '0.5%',
+    marginTop: '5%',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  },
+  divider2: {
+    width: '70%',
+    height: '0.5%',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  },
   title18: {
     width: '60%',
     height: '15%',
@@ -276,7 +299,7 @@ const styles = StyleSheet.create({
     height: '50%'
   },
   botella: {
-    width: '90%',
+    width: '100%',
     marginLeft: 'auto',
     marginRight: 'auto',
     height: '90%',
