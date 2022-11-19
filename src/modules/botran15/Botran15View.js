@@ -58,6 +58,11 @@ export default function Botran15Screen() {
             Botran 15 is aged in port casks for a dry rum with real pizzazz.
           </Text>
         </View>
+        <Image
+          source={require('../../../assets/images/botellas/15/divider.png')}
+          style={styles.divider}
+          resizeMode="stretch"
+        />
         <View style={{ ...styles.section, height: '40%' }}>
           <View style={{ ...styles.container2 }}>
             <View style={{ display: 'flex', height: '100%', width: '30%' }}>
@@ -135,6 +140,11 @@ export default function Botran15Screen() {
             </View>
           </View>
         </View>
+        <Image
+          source={require('../../../assets/images/botellas/15/divider.png')}
+          style={styles.divider}
+          resizeMode="stretch"
+        />
         <View style={{ ...styles.section, height: '30%' }}>
           <Text size={12} style={styles.footer_title}>
             PERFECT SERVE
@@ -401,5 +411,19 @@ const styles = StyleSheet.create({
     bottom: 0,
     width: '184%',
     height: 28
+  },
+  divider: {
+    width: '70%',
+    height: '0.5%',
+    marginTop: '5%',
+    marginBottom: '-10%',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  },
+  divider2: {
+    width: '70%',
+    height: '0.5%',
+    marginLeft: 'auto',
+    marginRight: 'auto',
   },
 });
