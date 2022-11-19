@@ -27,33 +27,43 @@ export default function Botran12Screen() {
         style={styles.fondo}
         resizeMode="stretch"
       />
+      <Image
+        source={require('../../../assets/images/botellas/12/cover.png')}
+        style={styles.cover}
+        resizeMode="stretch"
+      />
       {/* <Image
         source={require('../../../assets/images/Botran-18-sales-sheets.jpg')}
         style={styles.bgImage}
         resizeMode="stretch"
       /> */}
       <View style={[styles.sectionLarge]}>
-        <View style={{ ...styles.section, height: '10%' }}>
+        <View style={{ ...styles.section, height: '10%', marginTop: '25%' }}>
           <Image
             source={require('../../../assets/images/botellas/12/logo.png')}
-            style={{ ...styles.logo, marginTop: 40 }}
+            style={{ ...styles.logo }}
             resizeMode="stretch"
           />
         </View>
-        <View style={{ ...styles.section, height: '20%' }}>
+        <View style={{ ...styles.section, height: '30%', marginTop: '-20%' }}>
           <Image
             source={require('../../../assets/images/botellas/12/blend.png')}
             style={styles.blend}
             resizeMode="stretch"
           />
           <Text size={10} style={styles.titulo}>
-            Born in 1893, Don venancio was the first Botran Merino Brother to be inspired by glorious Guatemala.
+            The top-selling run in Guatemala, you won't experience our
           </Text>
           <Text size={10} style={styles.titulo1}>
-            Botran 18 is a blend for him, His passion, fire and determination in one bottle.
+            energy until you've tried Botran 12
           </Text>
         </View>
-        <View style={{ ...styles.section, height: '40%' }}>
+        <Image
+          source={require('../../../assets/images/botellas/12/divider.png')}
+          style={styles.divider}
+          resizeMode="stretch"
+        />
+        <View style={{ ...styles.section, height: '40%', marginTop: '10%' }}>
           <View style={{ ...styles.container2 }}>
             <View style={{ display: 'flex', height: '100%', width: '30%' }}>
               <Image
@@ -130,7 +140,12 @@ export default function Botran12Screen() {
             </View>
           </View>
         </View>
-        <View style={{ ...styles.section, height: '30%' }}>
+        <Image
+          source={require('../../../assets/images/botellas/12/divider.png')}
+          style={styles.divider2}
+          resizeMode="stretch"
+        />
+        <View style={{ ...styles.section, height: '30%', marginBottom: '-10%' }}>
           <Text size={12} style={styles.footer_title}>
             PERFECT SERVE
           </Text>
@@ -155,7 +170,7 @@ export default function Botran12Screen() {
             resizeMode="stretch"
           />
         </View>
-        <View style={styles.hashtag_container}>
+        <View style={{ ...styles.hashtag_container, ...styles.fondo_color2 }}>
           <Image
             source={require('../../../assets/images/botellas/12/hashtag.png')}
             style={styles.hashtag}
@@ -192,13 +207,18 @@ const styles = StyleSheet.create({
   fondo_color: {
     backgroundColor: '#00B8B0',
   },
+  fondo_color2: {
+    backgroundColor: '#fff',
+  },
   fondo: {
     width,
     minWidth: width,
+    marginTop: '40%',
     position: 'absolute'
   },
   cover: {
     width,
+    height: '10%',
     position: 'absolute'
   },
   gotIt: {
@@ -225,9 +245,23 @@ const styles = StyleSheet.create({
     marginRight: 'auto',
   },
   blend: {
-    width: '50%',
+    width: '60%',
     height: '30%',
-    marginTop: 50,
+    marginTop: '35%',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  },
+  divider: {
+    width: '70%',
+    height: '0.5%',
+    marginTop: '5%',
+    marginBottom: '-10%',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  },
+  divider2: {
+    width: '70%',
+    height: '0.5%',
     marginLeft: 'auto',
     marginRight: 'auto',
   },
@@ -265,34 +299,36 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     minWidth: width,
-    minHeight: height + 150,
+    minHeight: height + 70,
     marginLeft: 'auto',
     marginRight: 'auto'
   },
   trago: {
     width,
-    height: '50%'
+    height: '40%'
   },
   botella: {
-    width: '90%',
+    width: '80%',
     marginLeft: 'auto',
     marginRight: 'auto',
-    height: '80%',
+    height: '100%',
   },
   botella_container: {
     width,
-    height: '70%',
+    height: '60%',
+    padding: 30,
   },
   hashtag_container: {
-    height: '10%',
+    height: '15%',
+    backgroundColor: '#fff',
+    paddingTop: '5%',
     width: '100%',
   },
   hashtag: {
     width: '70%',
     marginLeft: 'auto',
     marginRight: 'auto',
-    top: -125,
-    height: '30%',
+    height: '25%',
   },
   sectionHeader: {
     marginBottom: 8,
@@ -329,9 +365,9 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontFamily: fonts.primaryRegular,
     color: colors.black,
-    marginTop: 10,
-    fontSize: 10,
-    width: '80%',
+    fontSize: 12,
+    marginTop: 15,
+    width: '90%',
     marginLeft: 'auto',
     marginRight: 'auto'
   },
@@ -339,8 +375,8 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontFamily: fonts.primaryRegular,
     color: colors.black,
-    fontSize: 10,
-    marginTop: 15,
+    fontSize: 12,
+    marginTop: 10,
     width: '80%',
     marginLeft: 'auto',
     marginRight: 'auto'

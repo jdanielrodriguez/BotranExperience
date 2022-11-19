@@ -284,6 +284,8 @@ const styles = StyleSheet.create({
   botella_container: {
     width,
     height: '70%',
+    paddingTop: 50,
+    paddingBottom: 50,
   },
   hashtag_container: {
     height: '10%',

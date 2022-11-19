@@ -199,12 +199,12 @@ const styles = StyleSheet.create({
   },
   logo2: {
     width: '20%',
-    height: '60%',
+    height: '50%',
     marginLeft: 10,
   },
   logo3: {
     width: '20%',
-    height: '60%',
+    height: '50%',
     marginLeft: 10,
   },
   logo4: {

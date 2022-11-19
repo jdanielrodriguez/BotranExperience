@@ -144,7 +144,8 @@ export default function Botran15Screen() {
           </Text>
         </View>
       </View>
-      <View style={[styles.sectionLarge, styles.fondo_color]}>
+      <View style={[styles.sectionLarge]}>
+
         <Image
           source={require('../../../assets/images/botellas/15/trago.png')}
           style={styles.trago}
@@ -195,7 +196,16 @@ const styles = StyleSheet.create({
   fondo: {
     width,
     minWidth: width,
-    position: 'absolute'
+    position: 'absolute',
+    marginTop: 165,
+    overflow:'hidden',
+    height: '95%'
+  },
+  fondo2: {
+    width,
+    minWidth: width,
+    position: 'absolute',
+    overflow:'hidden',
   },
   cover: {
     width,
@@ -280,17 +290,18 @@ const styles = StyleSheet.create({
   botella_container: {
     width,
     height: '70%',
+    padding: 30,
   },
   hashtag_container: {
-    height: '10%',
+    height: '20%',
     width: '100%',
   },
   hashtag: {
     width: '70%',
     marginLeft: 'auto',
     marginRight: 'auto',
-    top: -125,
-    height: '30%',
+    top: -50,
+    height: '15%',
   },
   sectionHeader: {
     marginBottom: 8,
