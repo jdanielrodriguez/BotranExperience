@@ -100,14 +100,14 @@ export default function AboutScreen() {
               </Text>
             </View>
           </View>
-          <View style={{ ...styles.etiqueta_container, height: '25%' }}>
+          <View style={{ ...styles.etiqueta_container, height: '20%' }}>
             <Image
               source={require('../../../assets/images/botellas/instructions/etiqueta.png')}
               style={styles.etiqueta}
               resizeMode="stretch"
             />
           </View>
-          <View style={{ ...styles.container2, height: '10%' }}>
+          <View style={{ ...styles.container2, height: '20%' }}>
             <Image
               source={require('../../../assets/images/botellas/instructions/logo_1.png')}
               style={styles.logo1}
@@ -194,23 +194,26 @@ const styles = StyleSheet.create({
   },
   logo1: {
     width: '30%',
-    height: '60%',
+    height: '70%',
     marginLeft: 'auto',
   },
   logo2: {
     width: '20%',
-    height: '50%',
+    height: '60%',
     marginLeft: 10,
+    marginTop: 5,
   },
   logo3: {
     width: '20%',
-    height: '50%',
+    height: '60%',
     marginLeft: 10,
+    marginTop: 5,
   },
   logo4: {
     width: '10%',
-    height: '60%',
-    marginLeft: 20,
+    height: '45%',
+    marginLeft: 25,
+    marginTop: 12,
     marginRight: 'auto',
   },
   blend: {
@@ -267,10 +270,11 @@ const styles = StyleSheet.create({
     height: '50%'
   },
   etiqueta: {
-    width: '90%',
+    width: '85%',
     marginLeft: 'auto',
     marginRight: 'auto',
-    height: '100%',
+    height: '130%',
+    marginTop: '-15%'
   },
   etiqueta_container: {
     width,
