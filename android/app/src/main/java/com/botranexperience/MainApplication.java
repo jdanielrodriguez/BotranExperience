@@ -12,7 +12,6 @@ import com.oblador.vectoricons.VectorIconsPackage;
 import com.reactcommunity.rnlocalize.RNLocalizePackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 import com.viromedia.bridge.ReactViroPackage;
-import com.zoontek.rnbootsplash.RNBootSplashPackage;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 

@@ -2,13 +2,13 @@ package com.botranexperience;
 
 import android.os.Bundle;
 import com.facebook.react.ReactActivity;
-import com.zoontek.rnbootsplash.RNBootSplash;
+import org.devio.rn.splashscreen.SplashScreen;
 
 public class MainActivity extends ReactActivity {
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
-    RNBootSplash.init(this); // <- initialize the splash screen
+    SplashScreen.show(this);
     super.onCreate(savedInstanceState); // or super.onCreate(null) with react-native-screens
   }
 
