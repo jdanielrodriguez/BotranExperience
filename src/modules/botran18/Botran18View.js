@@ -45,7 +45,7 @@ export default function Botran18Screen() {
             resizeMode="stretch"
           />
         </View>
-        <View style={{ ...styles.section, height: '20%' }}>
+        <View style={{ ...styles.section, height: '18%' }}>
           <Image
             source={require('../../../assets/images/botellas/18/blend.png')}
             style={styles.blend}
@@ -148,7 +148,7 @@ export default function Botran18Screen() {
           style={styles.divider2}
           resizeMode="stretch"
         />
-        <View style={{ ...styles.section, height: '30%' }}>
+        <View style={{ ...styles.section, height: '20%' }}>
           <Text size={12} style={styles.footer_title}>
             PERFECT SERVE
           </Text>
@@ -249,6 +249,7 @@ const styles = StyleSheet.create({
     width: '70%',
     height: '0.5%',
     marginTop: '5%',
+    marginBottom: '5%',
     marginLeft: 'auto',
     marginRight: 'auto',
   },
@@ -257,6 +258,7 @@ const styles = StyleSheet.create({
     height: '0.5%',
     marginLeft: 'auto',
     marginRight: 'auto',
+    marginTop: '5%',
   },
   title18: {
     width: '60%',
@@ -346,7 +348,7 @@ const styles = StyleSheet.create({
   option: {
     fontFamily: fonts.primaryRegular,
     color: colors.white,
-    fontSize: 11,
+    fontSize: 12,
     marginTop: 5,
     marginBottom: 5,
     width: '100%',
@@ -376,13 +378,13 @@ const styles = StyleSheet.create({
     fontFamily: fonts.primaryRegular,
     color: colors.primaryLight,
     marginTop: 10,
-    fontSize: 12,
+    fontSize: 14,
     width: '80%',
   },
   textoOption: {
     fontFamily: fonts.primaryRegular,
     color: colors.white,
-    fontSize: 10,
+    fontSize: 12,
     width: '80%',
   },
   footer_title: {

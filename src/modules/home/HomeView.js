@@ -1,17 +1,10 @@
 import React, { useState } from 'react';
 import {
-  StyleSheet,
-  View,
-  TouchableOpacity,
-  Image,
-  Dimensions,
+  Dimensions, Image, StyleSheet, TouchableOpacity, View
 } from 'react-native';
 
-import { ViroTrackingStateConstants } from '@viro-community/react-viro';
-
-import { colors, fonts } from '../../styles';
-import ARScene from '../../components/ARScene';
 import ARObjects from '../../components/ARComponents/ARObjects';
+import ARScene from '../../components/ARScene';
 
 import BotranARComponent from '../../components/ARComponents/BotranARComponent';
 
@@ -208,16 +201,15 @@ export default function HomeScreen() {
   const _onAnchorUpdate = (anchor, target) => {
     const temp = state;
 
-    console.log(
-      `UPDATE******************* ${anchor.trackingMethod} - ${isPlaying} - ${target} - ${temp.target}`,
-    );
-
     // Change status only if target is the same as selected
     if (temp.target === target) {
-      if (!state.quetzal && !isPlaying && anchor.trackingMethod === 'tracking') {
+      console.log(
+        `UPDATE******************* ${anchor.trackingMethod} - ${isPlaying} - ${target} - ${temp.target}`,
+      );
+      if (!temp.quetzal && !isPlaying && anchor.trackingMethod === 'tracking') {
         isPlaying = true;
         _onAnchorFound(anchor);
-      } else if (!state.quetzal && isPlaying && anchor.trackingMethod === 'lastKnownPose') {
+      } else if (!temp.quetzal && isPlaying && anchor.trackingMethod === 'lastKnownPose') {
         temp.isTracking = false;
         temp.playAnim = false;
         temp.pauseUpdates = false;

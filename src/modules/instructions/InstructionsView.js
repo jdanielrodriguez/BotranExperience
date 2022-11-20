@@ -1,29 +1,17 @@
 import React from 'react';
 import {
-  StyleSheet,
-  View,
-  TouchableOpacity,
-  ImageBackground,
-  Image,
+  Image, ImageBackground, StyleSheet, TouchableOpacity, View
 } from 'react-native';
 
-import { fonts, colors } from '../../styles';
 import { Text } from '../../components/StyledText';
+import { colors, fonts } from '../../styles';
 
 
 
-export default function InstructionsScreen({ isExtended, setIsExtended }) {
-  // const rnsUrl = 'https://reactnativestarter.com';
-  // const handleClick = () => {
-  //   Linking.canOpenURL(rnsUrl).then(supported => {
-  //     if (supported) {
-  //       Linking.openURL(rnsUrl);
-  //     } else {
-  //       console.log(`Don't know how to open URI: ${rnsUrl}`);
-  //     }
-  //   });
-  // };
-
+export default function InstructionsScreen(props) {
+  const goBack = () => {
+    props.navigation.goBack();
+  }
   return (
     <View style={styles.container}>
       <ImageBackground
@@ -61,6 +49,7 @@ export default function InstructionsScreen({ isExtended, setIsExtended }) {
             </View>
             <TouchableOpacity
               style={styles.priceLink}
+              onPress={goBack}
             >
               <Image
                 source={require('../../../assets/images/go-it-button.png')}

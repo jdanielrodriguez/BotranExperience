@@ -155,7 +155,6 @@ export default function Botran15Screen() {
         </View>
       </View>
       <View style={[styles.sectionLarge]}>
-
         <Image
           source={require('../../../assets/images/botellas/15/trago.png')}
           style={styles.trago}
@@ -169,11 +168,9 @@ export default function Botran15Screen() {
           />
         </View>
         <View style={styles.hashtag_container}>
-          <Image
-            source={require('../../../assets/images/botellas/18/hashtag.png')}
-            style={styles.hashtag}
-            resizeMode="stretch"
-          />
+          <Text size={10} style={styles.hashtag_titulo}>
+            #MAKE<Text size={10} style={styles.hashtag_medium}>IT</Text>RONTASTIC
+          </Text>
         </View>
       </View>
     </ScrollView>
@@ -208,14 +205,14 @@ const styles = StyleSheet.create({
     minWidth: width,
     position: 'absolute',
     marginTop: 165,
-    overflow:'hidden',
-    height: '95%'
+    overflow: 'hidden',
+    height: '93%'
   },
   fondo2: {
     width,
     minWidth: width,
     position: 'absolute',
-    overflow:'hidden',
+    overflow: 'hidden',
   },
   cover: {
     width,
@@ -285,7 +282,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     minWidth: width,
-    minHeight: height + 150,
+    minHeight: height + 200,
   },
   trago: {
     width,
@@ -312,6 +309,20 @@ const styles = StyleSheet.create({
     marginRight: 'auto',
     top: -50,
     height: '15%',
+  },
+  hashtag_titulo: {
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    fontFamily: fonts.primarySemiBold,
+    fontSize: 22,
+    fontWeight: "bold",
+    top: -40,
+    color: '#00B8B0'
+  },
+  hashtag_medium: {
+    fontFamily: fonts.primarySemiBold,
+    fontSize: 14,
+    color: '#00B8B0'
   },
   sectionHeader: {
     marginBottom: 8,

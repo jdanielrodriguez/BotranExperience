@@ -73,7 +73,7 @@ export default function BotranARComponent(props) {
 
   return (
     <ViroARScene
-      // onAnchorUpdated={anchor => {
+      // onTrackingUpdated={anchor => {
       //   _onAnchorUpdate(anchor);
       // }}
       pauseUpdates={pauseUpdates}

@@ -60,8 +60,8 @@ export default function AboutScreen() {
           resizeMode="stretch"
         />
         <View style={{ ...styles.section, height: '100%' }}>
-          <View style={{ ...styles.container2, height: '60%' }}>
-            <View style={{ height: '100%', width: '70%', marginRight: 'auto', marginLeft: 'auto', marginTop: '10%' }}>
+          <View style={{ ...styles.container2, height: '50%' }}>
+            <View style={{ height: '100%', width: '70%', marginRight: 'auto', marginLeft: 'auto', marginTop: '5%' }}>
               <Text size={12} style={{ ...styles.tituloOption, marginTop: '10%' }}>
                 SUGARCANE
               </Text>
@@ -147,9 +147,7 @@ const styles = StyleSheet.create({
   container2: {
     flex: 1,
     flexDirection: 'row',
-    flexWrap: 'wrap',
     width,
-    alignItems: 'flex-start' // if you want to fill rows left to right
   },
   bgImage: {
     width,
@@ -195,25 +193,28 @@ const styles = StyleSheet.create({
   logo1: {
     width: '30%',
     height: '70%',
+    marginTop: '2%',
+    bottom: 0,
     marginLeft: 'auto',
   },
   logo2: {
     width: '20%',
     height: '60%',
     marginLeft: 10,
-    marginTop: 5,
+    marginBottom: 0,
+    marginTop: '5%',
   },
   logo3: {
     width: '20%',
     height: '60%',
     marginLeft: 10,
-    marginTop: 5,
+    marginTop: '5%',
   },
   logo4: {
-    width: '10%',
-    height: '45%',
-    marginLeft: 25,
-    marginTop: 12,
+    width: '15%',
+    height: '55%',
+    marginLeft: 15,
+    marginTop: '6%',
     marginRight: 'auto',
   },
   blend: {
@@ -274,11 +275,10 @@ const styles = StyleSheet.create({
     marginLeft: 'auto',
     marginRight: 'auto',
     height: '130%',
-    marginTop: '-15%'
+    marginTop: '-5%'
   },
   etiqueta_container: {
     width,
-    height: '25%',
   },
   hashtag_container: {
     height: '10%',

@@ -63,7 +63,7 @@ export default function Botran12Screen() {
           style={styles.divider}
           resizeMode="stretch"
         />
-        <View style={{ ...styles.section, height: '40%', marginTop: '10%' }}>
+        <View style={{ ...styles.section, height: '40%' }}>
           <View style={{ ...styles.container2 }}>
             <View style={{ display: 'flex', height: '100%', width: '30%' }}>
               <Image
@@ -171,11 +171,9 @@ export default function Botran12Screen() {
           />
         </View>
         <View style={{ ...styles.hashtag_container, ...styles.fondo_color2 }}>
-          <Image
-            source={require('../../../assets/images/botellas/12/hashtag.png')}
-            style={styles.hashtag}
-            resizeMode="stretch"
-          />
+          <Text size={10} style={styles.hashtag_titulo}>
+            #MAKE<Text size={10} style={styles.hashtag_medium}>IT</Text>RONTASTIC
+          </Text>
         </View>
       </View>
     </ScrollView>
@@ -255,13 +253,14 @@ const styles = StyleSheet.create({
     width: '70%',
     height: '0.5%',
     marginTop: '5%',
-    marginBottom: '-10%',
+    marginBottom: '5%',
     marginLeft: 'auto',
     marginRight: 'auto',
   },
   divider2: {
     width: '70%',
     height: '0.5%',
+    marginTop: '5%',
     marginLeft: 'auto',
     marginRight: 'auto',
   },
@@ -329,6 +328,19 @@ const styles = StyleSheet.create({
     marginLeft: 'auto',
     marginRight: 'auto',
     height: '25%',
+  },
+  hashtag_titulo: {
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    fontFamily: fonts.primarySemiBold,
+    fontSize: 22,
+    fontWeight: "bold",
+    color: '#000000'
+  },
+  hashtag_medium: {
+    fontFamily: fonts.primarySemiBold,
+    fontSize: 14,
+    color: '#000000'
   },
   sectionHeader: {
     marginBottom: 8,
