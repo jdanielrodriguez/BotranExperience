@@ -172,11 +172,9 @@ export default function Botran18Screen() {
           />
         </View>
         <View style={styles.hashtag_container}>
-          <Image
-            source={require('../../../assets/images/botellas/18/hashtag.png')}
-            style={styles.hashtag}
-            resizeMode="stretch"
-          />
+          <Text size={10} style={styles.hashtag_titulo}>
+            #MAKE<Text size={10} style={styles.hashtag_medium}>IT</Text>RONTASTIC
+          </Text>
         </View>
       </View>
     </ScrollView>
@@ -304,7 +302,7 @@ const styles = StyleSheet.create({
     width: '100%',
     marginLeft: 'auto',
     marginRight: 'auto',
-    height: '90%',
+    height: '85%',
   },
   botella_container: {
     width,
@@ -322,6 +320,20 @@ const styles = StyleSheet.create({
     marginRight: 'auto',
     top: -125,
     height: '30%',
+  },
+  hashtag_titulo: {
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    fontFamily: fonts.primarySemiBold,
+    fontSize: 26,
+    fontWeight: "normal",
+    top: -150,
+    color: '#ffffff'
+  },
+  hashtag_medium: {
+    fontFamily: fonts.primarySemiBold,
+    fontSize: 18,
+    color: '#ffffff'
   },
   sectionHeader: {
     marginBottom: 8,

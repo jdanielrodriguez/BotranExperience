@@ -63,7 +63,7 @@ export default function Botran15Screen() {
           style={styles.divider}
           resizeMode="stretch"
         />
-        <View style={{ ...styles.section, height: '40%' }}>
+        <View style={{ ...styles.section, height: '35%' }}>
           <View style={{ ...styles.container2 }}>
             <View style={{ display: 'flex', height: '100%', width: '30%' }}>
               <Image
@@ -142,7 +142,7 @@ export default function Botran15Screen() {
         </View>
         <Image
           source={require('../../../assets/images/botellas/15/divider.png')}
-          style={styles.divider}
+          style={styles.divider2}
           resizeMode="stretch"
         />
         <View style={{ ...styles.section, height: '30%' }}>
@@ -426,14 +426,14 @@ const styles = StyleSheet.create({
   divider: {
     width: '70%',
     height: '0.5%',
-    marginTop: '5%',
-    marginBottom: '-10%',
+    marginBottom: '3%',
     marginLeft: 'auto',
     marginRight: 'auto',
   },
   divider2: {
     width: '70%',
     height: '0.5%',
+    marginTop: '3%',
     marginLeft: 'auto',
     marginRight: 'auto',
   },
