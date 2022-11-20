@@ -334,7 +334,7 @@ const styles = StyleSheet.create({
     marginRight: 'auto',
     fontFamily: fonts.primarySemiBold,
     fontSize: 22,
-    fontWeight: "bold",
+    fontWeight: "normal",
     color: '#000000'
   },
   hashtag_medium: {

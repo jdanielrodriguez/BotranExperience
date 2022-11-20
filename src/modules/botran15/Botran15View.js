@@ -315,7 +315,7 @@ const styles = StyleSheet.create({
     marginRight: 'auto',
     fontFamily: fonts.primarySemiBold,
     fontSize: 22,
-    fontWeight: "bold",
+    fontWeight: "normal",
     top: -40,
     color: '#00B8B0'
   },
