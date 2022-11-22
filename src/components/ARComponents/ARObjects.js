@@ -2,29 +2,46 @@
 export default function ARObjects() {
    const introTexture = [
       require('./../../../assets/vrx/01-FBX-INTRO/BOTRAN-No12EtiquetaLOW.png'),
+      require('./../../../assets/vrx/01-FBX-INTRO/BOTRAN-No12EtiquetaLOW(1).png'),
+      require('./../../../assets/vrx/01-FBX-INTRO/casa-xela-Barriles-uvmap(1).png'),
       require('./../../../assets/vrx/01-FBX-INTRO/casa-xela-Barriles-uvmap.png'),
+      require('./../../../assets/vrx/01-FBX-INTRO/casa-xela-frente-uvmap(1).png'),
       require('./../../../assets/vrx/01-FBX-INTRO/casa-xela-frente-uvmap.png'),
+      require('./../../../assets/vrx/01-FBX-INTRO/Col0-INTRO_Uvmap(1).png'),
       require('./../../../assets/vrx/01-FBX-INTRO/Col0-INTRO_Uvmap.png'),
+      require('./../../../assets/vrx/01-FBX-INTRO/Col0-mapa-casa-reu-puerto_uvmap(1).png'),
       require('./../../../assets/vrx/01-FBX-INTRO/Col0-mapa-casa-reu-puerto_uvmap.png'),
+      require('./../../../assets/vrx/01-FBX-INTRO/Col0-mapa-casa-xela_uvmap(1).png'),
       require('./../../../assets/vrx/01-FBX-INTRO/Col0-mapa-casa-xela_uvmap.png'),
+      require('./../../../assets/vrx/01-FBX-INTRO/Col0-MAPA-XELA-Mixco_Uvmap(1).png'),
       require('./../../../assets/vrx/01-FBX-INTRO/Col0-MAPA-XELA-Mixco_Uvmap.png'),
+      require('./../../../assets/vrx/01-FBX-INTRO/Col0-Zoom-Mapa_Uvmap(1).png'),
       require('./../../../assets/vrx/01-FBX-INTRO/Col0-Zoom-Mapa_Uvmap.png'),
       require('./../../../assets/vrx/01-FBX-INTRO/LANDING_0002_MIXCO-MAP.png'),
+      require('./../../../assets/vrx/01-FBX-INTRO/LANDING_0002_MIXCO-MAP(1).png'),
       require('./../../../assets/vrx/01-FBX-INTRO/LANDING_0004_REU-MAP.png'),
+      require('./../../../assets/vrx/01-FBX-INTRO/LANDING_0004_REU-MAP(1).png'),
+      require('./../../../assets/vrx/01-FBX-INTRO/LANDING_0006_XELA-MAP(1).png'),
       require('./../../../assets/vrx/01-FBX-INTRO/LANDING_0006_XELA-MAP.png'),
+      require('./../../../assets/vrx/01-FBX-INTRO/QUETZAL_VOLando02_0000_Layer-2.png'),
+      require('./../../../assets/vrx/01-FBX-INTRO/QUETZAL_VOLando02_0000_Layer-2(1).png'),
+      require('./../../../assets/vrx/01-FBX-INTRO/QUETZAL_VOLando02_0001_Layer-1.png'),
+      require('./../../../assets/vrx/01-FBX-INTRO/QUETZAL_VOLando02_0001_Layer-1(1).png'),
+      require('./../../../assets/vrx/01-FBX-INTRO/QUETZAL_VOLando02_0002_Layer-3(1).png'),
+      require('./../../../assets/vrx/01-FBX-INTRO/QUETZAL_VOLando02_0002_Layer-3.png'),
    ]
 
    const intro = [
       
       {
-         src: require("./../../../assets/vrx/01-FBX-INTRO/Intro_Completa-conBotella-12-parte1.vrx"),
+         src: require("./../../../assets/vrx/01-FBX-INTRO/col00-Intro_Completa-conBotella-12-parte1.vrx"),
          materials: introTexture,
          sound: require("./../../../assets/mp3/narracion/BOTRAN_MUSIC.mp3"),
          scale: [0.00115, 0.001, 0.001],
          position: [0.002,-0.1025,0]
       },
       {
-         src: require("./../../../assets/vrx/01-FBX-INTRO/Intro_Completa-conBotella-12-parte2.vrx"),
+         src: require("./../../../assets/vrx/01-FBX-INTRO/col00-Intro_Completa-conBotella-12-parte2.vrx"),
          materials: introTexture,
          sound: require("./../../../assets/mp3/narracion/BOTRAN_NATURE.mp3"),
          scale: [0.00115, 0.001, 0.001],
@@ -34,11 +51,13 @@ export default function ARObjects() {
    ]
 
    const col1Texture = [
-      require('./../../../assets/vrx/02-Columna1/BOTRAN-No12EtiquetaLOW.png'),
       require('./../../../assets/vrx/02-Columna1/Col1-Cultivo_Uvmap.png'),
       require('./../../../assets/vrx/02-Columna1/Col1-Destilacion_Uvmap.png'),
       require('./../../../assets/vrx/02-Columna1/Col1-Fermentacion_Uvmap.png'),
       require('./../../../assets/vrx/02-Columna1/Col1-MielVirgen_Uvmap.png'),
+      require('./../../../assets/vrx/02-Columna1/QUETZAL_VOLando02_0000_Layer-2.png'),
+      require('./../../../assets/vrx/02-Columna1/QUETZAL_VOLando02_0001_Layer-1.png'),
+      require('./../../../assets/vrx/02-Columna1/QUETZAL_VOLando02_0002_Layer-3.png'),
       
    ]
 

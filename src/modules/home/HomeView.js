@@ -60,7 +60,7 @@ export default function HomeScreen() {
     temp.column = currentColumn;
     temp.show3D = false;
     temp.show32D = false;
-    temp.quetzal = true;
+    // temp.quetzal = true;
     isPlaying = true;
     temp.selected = selectedNew;
     setState({ ...temp });
