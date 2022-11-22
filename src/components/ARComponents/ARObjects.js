@@ -94,11 +94,12 @@ export default function ARObjects() {
 
    const col2Texture = [
       require('./../../../assets/vrx/03-Columna2/BOTRAN-No12EtiquetaLOW.png'),
-      require('./../../../assets/vrx/03-Columna2/BOTRAN-No15-EtiquetaLOW.png'),
-      require('./../../../assets/vrx/03-Columna2/BOTRAN-No18-EtiquetaLOW.png'),
       require('./../../../assets/vrx/03-Columna2/Col2-Anejamiento_Dinamico_Uvmap.png'),
       require('./../../../assets/vrx/03-Columna2/Col2-Blending_Uvmap.png'),
       require('./../../../assets/vrx/03-Columna2/Col2-intro_DYNAMIC_AGING_Uvmap.png'),
+      require('./../../../assets/vrx/03-Columna2/QUETZAL_VOLando02_0000_Layer-2.png'),
+      require('./../../../assets/vrx/03-Columna2/QUETZAL_VOLando02_0001_Layer-1.png'),
+      require('./../../../assets/vrx/03-Columna2/QUETZAL_VOLando02_0002_Layer-3.png'),
       
    ]
 
@@ -138,6 +139,9 @@ export default function ARObjects() {
       require('./../../../assets/vrx/04-Columna3/Col3-AroundTheWorld_Uvmap.png'),
       require('./../../../assets/vrx/04-Columna3/Col3-Distribucion_Uvmap.png'),
       require('./../../../assets/vrx/04-Columna3/Col3-Embotellado_Uvmap.png'),
+      require('./../../../assets/vrx/04-Columna3/QUETZAL_VOLando02_0000_Layer-2.png'),
+      require('./../../../assets/vrx/04-Columna3/QUETZAL_VOLando02_0001_Layer-1.png'),
+      require('./../../../assets/vrx/04-Columna3/QUETZAL_VOLando02_0002_Layer-3.png'),
       
    ]
 
@@ -173,15 +177,15 @@ export default function ARObjects() {
    ]
 
    const col4Texture = [
-      require('./../../../assets/vrx/05-Columna4/BOTRAN-No12EtiquetaLOW.png'),
-      require('./../../../assets/vrx/05-Columna4/BOTRAN-No15-EtiquetaLOW.png'),
-      require('./../../../assets/vrx/05-Columna4/BOTRAN-No18-EtiquetaLOW.png'),
       require('./../../../assets/vrx/05-Columna4/02_COMPROMISO-TIERRA_0002_HOMBRE-DERECHO.png'),
       require('./../../../assets/vrx/05-Columna4/Col4-CADENA_SUSTENTABLE.png'),
       require('./../../../assets/vrx/05-Columna4/Col4-CARBON_NEUTRAL_Uvmap.png'),
       require('./../../../assets/vrx/05-Columna4/Col4-COMPROMISO-TIERRA_Uvmap.png'),
       require('./../../../assets/vrx/05-Columna4/Col4-intro_1sT_Sustainable_Uvmap.png'),
       require('./../../../assets/vrx/05-Columna4/Col4-ISCC-PLUS_Uvmap.png'),
+      require('./../../../assets/vrx/05-Columna4/QUETZAL_VOLando02_0000_Layer-2.png'),
+      require('./../../../assets/vrx/05-Columna4/QUETZAL_VOLando02_0001_Layer-1.png'),
+      require('./../../../assets/vrx/05-Columna4/QUETZAL_VOLando02_0002_Layer-3.png'),
       
    ]
 
