@@ -320,7 +320,6 @@ const styles = StyleSheet.create({
   hashtag_container: {
     height: '15%',
     backgroundColor: '#fff',
-    paddingTop: '5%',
     width: '100%',
   },
   hashtag: {

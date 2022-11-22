@@ -33,39 +33,39 @@ export default function ARMakeObject(props) {
   } = props;
 
   // Return quetzal when anchor is not available
-  if (!show3D && !playAnim) {
-    return (
-      <>
-        <Viro3DObject
-          key={`${_key}quetzal`}
-          source={quetzal.srcc}
-          scale={[0.0004, 0.0004, 0.0004]}
-          rotation={[0, -90, 0]}
-          animation={{
-            name: '',
-            run: !playAnim,
-            loop: false,
-            onFinish: () => {
-              _onFinishQuetzal(column);
-            },
-          }}
-          type="VRX"
-          resources={quetzal.materials}
-          // onLoadStart={_onLoadStart}
-          // onLoadEnd={_onLoadEnd}
-          position={[0, 0, 0]}
-          // onError={_onError}
-        />
-        {quetzal.sound && (
-          <ViroSound
-            key={`${_key}SoundQuetzal`}
-            source={quetzal.sound}
-            onFinish={onFinishSound}
-          />
-        )}
-      </>
-    );
-  }
+  // if (!show3D && !playAnim) {
+  //   return (
+  //     <>
+  //       <Viro3DObject
+  //         key={`${_key}quetzal`}
+  //         source={quetzal.srcc}
+  //         scale={[0.0004, 0.0004, 0.0004]}
+  //         rotation={[0, -90, 0]}
+  //         animation={{
+  //           name: '',
+  //           run: !playAnim,
+  //           loop: false,
+  //           onFinish: () => {
+  //             _onFinishQuetzal(column);
+  //           },
+  //         }}
+  //         type="VRX"
+  //         resources={quetzal.materials}
+  //         // onLoadStart={_onLoadStart}
+  //         // onLoadEnd={_onLoadEnd}
+  //         position={[0, 0, 0]}
+  //         // onError={_onError}
+  //       />
+  //       {quetzal.sound && (
+  //         <ViroSound
+  //           key={`${_key}SoundQuetzal`}
+  //           source={quetzal.sound}
+  //           onFinish={onFinishSound}
+  //         />
+  //       )}
+  //     </>
+  //   );
+  // }
 
   console.log(`${_target} ******************** ${_key}`);
 

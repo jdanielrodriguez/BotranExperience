@@ -316,7 +316,7 @@ const styles = StyleSheet.create({
     fontFamily: fonts.primarySemiBold,
     fontSize: 22,
     fontWeight: "normal",
-    top: -40,
+    top: -50,
     color: '#00B8B0'
   },
   hashtag_medium: {
