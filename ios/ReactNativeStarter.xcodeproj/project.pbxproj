@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* ReactNativeStarterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ReactNativeStarterTests.m */; };
+		00E356F31AD99517003FC87E /* BotranExperienceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* BotranExperienceTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -17,7 +17,7 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2D16E6881FA4F8E400B85C8A /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D16E6891FA4F8E400B85C8A /* libReact.a */; };
-		2DCD954D1E0B4F2C00145EB5 /* ReactNativeStarterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ReactNativeStarterTests.m */; };
+		2DCD954D1E0B4F2C00145EB5 /* BotranExperienceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* BotranExperienceTests.m */; };
 		38F9982229584B76A18AC230 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9BE56F6176C44163A8FC7956 /* Lato-Light.ttf */; };
 		391527F89E1C4B79A705DE04 /* Lato-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9BFC30A51FB94B4A881576AE /* Lato-Medium.ttf */; };
 		597692039F7D4A87B63BD89C /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 071D280AF6A542A8985DB20E /* Lato-LightItalic.ttf */; };
@@ -27,7 +27,7 @@
 		B251BFDD42C7E94085A34420 /* libPods-BotranExperience-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FF7E619989BFB8E0A343047 /* libPods-BotranExperience-tvOS.a */; };
 		BF4F054BE606D3ED9442B4BF /* libPods-BotranExperience-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4167C749FC532AAD9C56E7 /* libPods-BotranExperience-tvOSTests.a */; };
 		C27FBFDB12034472897F8CB9 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF871DC00C4A468BB043F632 /* Lato-Regular.ttf */; };
-		C6D62B3B5BF27C74509D9436 /* libPods-ReactNativeStarterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF2188BEA2EBFBBF74B7F7FD /* libPods-ReactNativeStarterTests.a */; };
+		C6D62B3B5BF27C74509D9436 /* libPods-BotranExperienceTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF2188BEA2EBFBBF74B7F7FD /* libPods-BotranExperienceTests.a */; };
 		CA5A7C8036FE47B0BDE01EA7 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC477E0AC8F54F1BBC658478 /* Lato-Bold.ttf */; };
 		E35BD30ADBBE43FB97FE667C /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A5B3ACF96CD341A8B1ED4CCB /* Lato-Italic.ttf */; };
 		EA799BC01B9A7A335FA3EEA9 /* libPods-BotranExperience.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C425F60B03E5671AF73E2FE /* libPods-BotranExperience.a */; };
@@ -55,9 +55,9 @@
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* ReactNativeStarterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactNativeStarterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* BotranExperienceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BotranExperienceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* ReactNativeStarterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReactNativeStarterTests.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* BotranExperienceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BotranExperienceTests.m; sourceTree = "<group>"; };
 		071D280AF6A542A8985DB20E /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-LightItalic.ttf"; path = "../assets/fonts/Lato-LightItalic.ttf"; sourceTree = "<group>"; };
 		132B6454729E49DD91A745D0 /* libRNLocalize.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNLocalize.a; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* BotranExperience.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BotranExperience.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,7 +79,7 @@
 		5C83D8577C1E4845AACD13FC /* libRNGestureHandler.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNGestureHandler.a; sourceTree = "<group>"; };
 		65C4209D7DE64233A6905E8B /* libRNLocalize-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNLocalize-tvOS.a"; sourceTree = "<group>"; };
 		77256A02D70CA211C5EE661E /* Pods-BotranExperience.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BotranExperience.release.xcconfig"; path = "Target Support Files/Pods-BotranExperience/Pods-BotranExperience.release.xcconfig"; sourceTree = "<group>"; };
-		853FBC22A7244AC389CCAA54 /* Pods-ReactNativeStarterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeStarterTests.release.xcconfig"; path = "Target Support Files/Pods-ReactNativeStarterTests/Pods-ReactNativeStarterTests.release.xcconfig"; sourceTree = "<group>"; };
+		853FBC22A7244AC389CCAA54 /* Pods-BotranExperienceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BotranExperienceTests.release.xcconfig"; path = "Target Support Files/Pods-BotranExperienceTests/Pods-BotranExperienceTests.release.xcconfig"; sourceTree = "<group>"; };
 		87FB191C0AA7A26886D28B0D /* Pods-BotranExperience-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BotranExperience-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-BotranExperience-tvOSTests/Pods-BotranExperience-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8FF7E619989BFB8E0A343047 /* libPods-BotranExperience-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BotranExperience-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9667F24B6A79AEE9F9CE8A09 /* Pods-BotranExperience-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BotranExperience-tvOS.release.xcconfig"; path = "Target Support Files/Pods-BotranExperience-tvOS/Pods-BotranExperience-tvOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -90,11 +90,11 @@
 		AAAA3F1906574E769036A7F7 /* libRNVectorIcons-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNVectorIcons-tvOS.a"; sourceTree = "<group>"; };
 		AD395013487C88B7B68FD1BC /* Pods-BotranExperience-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BotranExperience-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-BotranExperience-tvOSTests/Pods-BotranExperience-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		BB8E92CF67D67CDB581933D7 /* Pods-BotranExperience-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BotranExperience-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-BotranExperience-tvOS/Pods-BotranExperience-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		CA655BFBC14E6E469ADAED7F /* Pods-ReactNativeStarterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeStarterTests.debug.xcconfig"; path = "Target Support Files/Pods-ReactNativeStarterTests/Pods-ReactNativeStarterTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CA655BFBC14E6E469ADAED7F /* Pods-BotranExperienceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BotranExperienceTests.debug.xcconfig"; path = "Target Support Files/Pods-BotranExperienceTests/Pods-BotranExperienceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CF871DC00C4A468BB043F632 /* Lato-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Regular.ttf"; path = "../assets/fonts/Lato-Regular.ttf"; sourceTree = "<group>"; };
 		D11FA3534CDD4F18ACC10110 /* Pods-BotranExperience.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BotranExperience.debug.xcconfig"; path = "Target Support Files/Pods-BotranExperience/Pods-BotranExperience.debug.xcconfig"; sourceTree = "<group>"; };
 		DB47AE6058534E84A8C10F16 /* Lato-Semibold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Semibold.ttf"; path = "../assets/fonts/Lato-Semibold.ttf"; sourceTree = "<group>"; };
-		DF2188BEA2EBFBBF74B7F7FD /* libPods-ReactNativeStarterTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactNativeStarterTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF2188BEA2EBFBBF74B7F7FD /* libPods-BotranExperienceTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BotranExperienceTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		FC477E0AC8F54F1BBC658478 /* Lato-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Bold.ttf"; path = "../assets/fonts/Lato-Bold.ttf"; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6D62B3B5BF27C74509D9436 /* libPods-ReactNativeStarterTests.a in Frameworks */,
+				C6D62B3B5BF27C74509D9436 /* libPods-BotranExperienceTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,13 +141,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* ReactNativeStarterTests */ = {
+		00E356EF1AD99517003FC87E /* BotranExperienceTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* ReactNativeStarterTests.m */,
+				00E356F21AD99517003FC87E /* BotranExperienceTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = ReactNativeStarterTests;
+			path = BotranExperienceTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -196,7 +196,7 @@
 				2D16E6891FA4F8E400B85C8A /* libReact.a */,
 				3C425F60B03E5671AF73E2FE /* libPods-BotranExperience.a */,
 				4A4167C749FC532AAD9C56E7 /* libPods-BotranExperience-tvOSTests.a */,
-				DF2188BEA2EBFBBF74B7F7FD /* libPods-ReactNativeStarterTests.a */,
+				DF2188BEA2EBFBBF74B7F7FD /* libPods-BotranExperienceTests.a */,
 				8FF7E619989BFB8E0A343047 /* libPods-BotranExperience-tvOS.a */,
 			);
 			name = Frameworks;
@@ -214,7 +214,7 @@
 			children = (
 				13B07FAE1A68108700A75B9A /* BotranExperience */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* ReactNativeStarterTests */,
+				00E356EF1AD99517003FC87E /* BotranExperienceTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				1F0C21CDCEB64BC39FF5F603 /* Resources */,
@@ -230,7 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				13B07F961A680F5B00A75B9A /* BotranExperience.app */,
-				00E356EE1AD99517003FC87E /* ReactNativeStarterTests.xctest */,
+				00E356EE1AD99517003FC87E /* BotranExperienceTests.xctest */,
 				2D02E47B1E0B4A5D006451C7 /* BotranExperience-tvOS.app */,
 				2D02E4901E0B4A5D006451C7 /* BotranExperience-tvOSTests.xctest */,
 			);
@@ -244,8 +244,8 @@
 				77256A02D70CA211C5EE661E /* Pods-BotranExperience.release.xcconfig */,
 				87FB191C0AA7A26886D28B0D /* Pods-BotranExperience-tvOSTests.debug.xcconfig */,
 				AD395013487C88B7B68FD1BC /* Pods-BotranExperience-tvOSTests.release.xcconfig */,
-				CA655BFBC14E6E469ADAED7F /* Pods-ReactNativeStarterTests.debug.xcconfig */,
-				853FBC22A7244AC389CCAA54 /* Pods-ReactNativeStarterTests.release.xcconfig */,
+				CA655BFBC14E6E469ADAED7F /* Pods-BotranExperienceTests.debug.xcconfig */,
+				853FBC22A7244AC389CCAA54 /* Pods-BotranExperienceTests.release.xcconfig */,
 				BB8E92CF67D67CDB581933D7 /* Pods-BotranExperience-tvOS.debug.xcconfig */,
 				9667F24B6A79AEE9F9CE8A09 /* Pods-BotranExperience-tvOS.release.xcconfig */,
 			);
@@ -269,9 +269,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* ReactNativeStarterTests */ = {
+		00E356ED1AD99517003FC87E /* BotranExperienceTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ReactNativeStarterTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "BotranExperienceTests" */;
 			buildPhases = (
 				ABCE1372E3DD345A8912B195 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -283,9 +283,9 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = ReactNativeStarterTests;
-			productName = ReactNativeStarterTests;
-			productReference = 00E356EE1AD99517003FC87E /* ReactNativeStarterTests.xctest */;
+			name = BotranExperienceTests;
+			productName = BotranExperienceTests;
+			productReference = 00E356EE1AD99517003FC87E /* BotranExperienceTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		13B07F861A680F5B00A75B9A /* BotranExperience */ = {
@@ -385,7 +385,7 @@
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* BotranExperience */,
-				00E356ED1AD99517003FC87E /* ReactNativeStarterTests */,
+				00E356ED1AD99517003FC87E /* BotranExperienceTests */,
 				2D02E47A1E0B4A5D006451C7 /* BotranExperience-tvOS */,
 				2D02E48F1E0B4A5D006451C7 /* BotranExperience-tvOSTests */,
 			);
@@ -523,7 +523,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ReactNativeStarterTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-BotranExperienceTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -609,7 +609,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* ReactNativeStarterTests.m in Sources */,
+				00E356F31AD99517003FC87E /* BotranExperienceTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -635,7 +635,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DCD954D1E0B4F2C00145EB5 /* ReactNativeStarterTests.m in Sources */,
+				2DCD954D1E0B4F2C00145EB5 /* BotranExperienceTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -669,7 +669,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CA655BFBC14E6E469ADAED7F /* Pods-ReactNativeStarterTests.debug.xcconfig */;
+			baseConfigurationReference = CA655BFBC14E6E469ADAED7F /* Pods-BotranExperienceTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -684,7 +684,7 @@
 					"$(SRCROOT)/../node_modules/react-native-ui-lib/lib/ios/reactnativeuilib/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 				);
-				INFOPLIST_FILE = ReactNativeStarterTests/Info.plist;
+				INFOPLIST_FILE = BotranExperienceTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -709,7 +709,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 853FBC22A7244AC389CCAA54 /* Pods-ReactNativeStarterTests.release.xcconfig */;
+			baseConfigurationReference = 853FBC22A7244AC389CCAA54 /* Pods-BotranExperienceTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -721,7 +721,7 @@
 					"$(SRCROOT)/../node_modules/react-native-ui-lib/lib/ios/reactnativeuilib/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 				);
-				INFOPLIST_FILE = ReactNativeStarterTests/Info.plist;
+				INFOPLIST_FILE = BotranExperienceTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -1079,7 +1079,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ReactNativeStarterTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "BotranExperienceTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,

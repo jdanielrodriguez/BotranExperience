@@ -43,8 +43,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "ReactNativeStarterTests.xctest"
-               BlueprintName = "ReactNativeStarterTests"
+               BuildableName = "BotranExperienceTests.xctest"
+               BlueprintName = "BotranExperienceTests"
                ReferencedContainer = "container:BotranExperience.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -61,8 +61,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "ReactNativeStarterTests.xctest"
-               BlueprintName = "ReactNativeStarterTests"
+               BuildableName = "BotranExperienceTests.xctest"
+               BlueprintName = "BotranExperienceTests"
                ReferencedContainer = "container:BotranExperience.xcodeproj">
             </BuildableReference>
          </TestableReference>
