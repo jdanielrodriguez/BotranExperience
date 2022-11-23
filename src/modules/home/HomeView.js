@@ -138,6 +138,7 @@ export default function HomeScreen() {
             index = state.objIndex === objects[currentColumn].length - 1 ? 0 : state.objIndex + 1;
 
             if (!objects[currentColumn][index]) {
+                currentColumn = 1;
                 index = 0;
             }
 

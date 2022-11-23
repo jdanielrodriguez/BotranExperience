@@ -242,9 +242,9 @@ const styles = StyleSheet.create({
     marginRight: 'auto',
   },
   blend: {
-    width: '50%',
-    height: '30%',
-    marginTop: 50,
+    width: 171,
+    height: 46,
+    marginTop: '15%',
     marginLeft: 'auto',
     marginRight: 'auto',
   },
@@ -289,10 +289,10 @@ const styles = StyleSheet.create({
     height: '50%'
   },
   botella: {
-    width: '90%',
+    width: 224,
     marginLeft: 'auto',
     marginRight: 'auto',
-    height: '80%',
+    height: 464,
   },
   botella_container: {
     width,

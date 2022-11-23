@@ -60,8 +60,8 @@ export default function AboutScreen() {
           resizeMode="stretch"
         />
         <View style={{ ...styles.section, height: '100%' }}>
-          <View style={{ ...styles.container2, height: '50%' }}>
-            <View style={{ height: '100%', width: '70%', marginRight: 'auto', marginLeft: 'auto', marginTop: '5%' }}>
+          <View style={{ ...styles.container2, height: '80%' }}>
+            <View style={{ height: '100%', width: '70%', marginRight: 'auto', marginLeft: 'auto', marginTop: '10%' }}>
               <Text size={12} style={{ ...styles.tituloOption, marginTop: '10%' }}>
                 SUGARCANE
               </Text>
@@ -104,28 +104,6 @@ export default function AboutScreen() {
             <Image
               source={require('../../../assets/images/botellas/instructions/etiqueta.png')}
               style={styles.etiqueta}
-              resizeMode="stretch"
-            />
-          </View>
-          <View style={{ ...styles.container2, height: '20%' }}>
-            <Image
-              source={require('../../../assets/images/botellas/instructions/logo_1.png')}
-              style={styles.logo1}
-              resizeMode="stretch"
-            />
-            <Image
-              source={require('../../../assets/images/botellas/instructions/logo_2.png')}
-              style={styles.logo2}
-              resizeMode="stretch"
-            />
-            <Image
-              source={require('../../../assets/images/botellas/instructions/logo_3.png')}
-              style={styles.logo3}
-              resizeMode="stretch"
-            />
-            <Image
-              source={require('../../../assets/images/botellas/instructions/logo_4.png')}
-              style={styles.logo4}
               resizeMode="stretch"
             />
           </View>
@@ -275,7 +253,7 @@ const styles = StyleSheet.create({
     marginLeft: 'auto',
     marginRight: 'auto',
     height: '130%',
-    marginTop: '-5%'
+    marginTop: '-20%'
   },
   etiqueta_container: {
     width,
