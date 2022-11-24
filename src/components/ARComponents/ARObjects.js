@@ -23,15 +23,15 @@ export default function ARObjects() {
          src: require("./../../../assets/vrx/01-FBX-INTRO/col00-Intro_Completa-conBotella-12-parte1.vrx"),
          materials: introTexture,
          sound: require("./../../../assets/mp3/narracion/BOTRAN_MUSIC.mp3"),
-         scale: [0.00115, 0.001, 0.001],
-         position: [0.002,-0.1025,0]
+         scale:[0.00130, 0.001, 0.001],
+         position:[0.002,-0.0510,0]
       },
       {
          src: require("./../../../assets/vrx/01-FBX-INTRO/col00-Intro_Completa-conBotella-12-parte2.vrx"),
          materials: introTexture,
          sound: require("./../../../assets/mp3/narracion/BOTRAN_NATURE.mp3"),
-         scale: [0.00115, 0.001, 0.001],
-         position: [0.002,-0.1025,0]
+         scale:[0.00130, 0.001, 0.001],
+         position:[0.002,-0.0510,0]
       },
       
    ]
@@ -97,6 +97,7 @@ export default function ARObjects() {
       require('./../../../assets/vrx/03-Columna2/Col2-Anejamiento_Dinamico_Uvmap.png'),
       require('./../../../assets/vrx/03-Columna2/Col2-Blending_Uvmap.png'),
       require('./../../../assets/vrx/03-Columna2/Col2-intro_DYNAMIC_AGING_Uvmap.png'),
+      require('./../../../assets/vrx/03-Columna2/ANEJAMIENTO-DINAMICO-Plecas.png'),
       require('./../../../assets/vrx/03-Columna2/QUETZAL_VOLando02_0000_Layer-2.png'),
       require('./../../../assets/vrx/03-Columna2/QUETZAL_VOLando02_0001_Layer-1.png'),
       require('./../../../assets/vrx/03-Columna2/QUETZAL_VOLando02_0002_Layer-3.png'),

@@ -136,15 +136,15 @@ export default function HomeScreen() {
             }
 
             index = state.objIndex === objects[currentColumn].length - 1 ? 0 : state.objIndex + 1;
-
+            if (index === (objects[currentColumn].length)) {
+                currentColumn = 1;
+            }
             if (!objects[currentColumn][index]) {
                 currentColumn = 1;
                 index = 0;
             }
 
-            // if (index === (objects[currentColumn].length)) {
-            //   currentColumn += 1;
-            // }
+            
         }
 
         const newSelected = objects[currentColumn][index];
@@ -346,7 +346,7 @@ const styles = StyleSheet.create({
     section: {
         backfaceVisibility: 'hidden',
         position: 'absolute',
-        bottom: 90,
+        bottom: 20,
         width: '90%',
         marginLeft: 'auto',
         marginRight: 'auto',

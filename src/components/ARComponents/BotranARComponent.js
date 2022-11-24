@@ -91,7 +91,7 @@ ViroARTrackingTargets.createTargets({
   Botran15: {
     source: No15Etiqueta,
     orientation: 'Up',
-    physicalWidth: 0.075, // real world width in meters
+    physicalWidth: 0.085, // real world width in meters
   },
   Botran18: {
     source: No18Etiqueta,
