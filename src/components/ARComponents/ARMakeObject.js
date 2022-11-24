@@ -100,6 +100,8 @@ export default function ARMakeObject(props) {
             position={
               selected.position ? selected.position : [-0.001, -0.101, 0]
             }
+            // scale={[0.00130, 0.001, 0.001]}
+            // position={[0.002,-0.0530,0]}
             onError={_onError}
             visible={playAnim}
           />

@@ -24,14 +24,14 @@ export default function ARObjects() {
          materials: introTexture,
          sound: require("./../../../assets/mp3/narracion/BOTRAN_MUSIC.mp3"),
          scale:[0.00130, 0.001, 0.001],
-         position:[0.002,-0.0510,0]
+         position:[0.002,-0.0610,0]
       },
       {
          src: require("./../../../assets/vrx/01-FBX-INTRO/col00-Intro_Completa-conBotella-12-parte2.vrx"),
          materials: introTexture,
          sound: require("./../../../assets/mp3/narracion/BOTRAN_NATURE.mp3"),
          scale:[0.00130, 0.001, 0.001],
-         position:[0.002,-0.0510,0]
+         position:[0.002,-0.0610,0]
       },
       
    ]

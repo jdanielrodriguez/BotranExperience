@@ -136,11 +136,11 @@ export default function HomeScreen() {
             }
 
             index = state.objIndex === objects[currentColumn].length - 1 ? 0 : state.objIndex + 1;
-            if (index === (objects[currentColumn].length)) {
-                currentColumn = 1;
-            }
+            // if (index === (objects[currentColumn].length)) {
+            //     currentColumn = 1;
+            // }
             if (!objects[currentColumn][index]) {
-                currentColumn = 1;
+                currentColumn = 0;
                 index = 0;
             }
 
@@ -284,7 +284,7 @@ export default function HomeScreen() {
                 _onCameraTransformUpdate={_onCameraTransformUpdate}
                 pauseUpdates
                 playAnim={state.playAnim}
-                targets={['Botran12', 'Botran15', 'Botran18']}
+                targets={['Botran12', 'Botran15', 'Botran18','Botran121', 'Botran151', 'Botran181']}
                 foundAnchor={state.foundAnchor}
                 _changeObject={_changeObject}
                 show3D={state.show3D}

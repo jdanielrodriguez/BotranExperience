@@ -14,6 +14,9 @@ import ARMakeObject from './ARMakeObject';
 const No12Etiqueta = require('./../../../assets/images/materiales/BOTRAN-No12Etiqueta.png');
 const No15Etiqueta = require('./../../../assets/images/materiales/BOTRAN-No15-Etiqueta.png');
 const No18Etiqueta = require('./../../../assets/images/materiales/BOTRAN-No18-Etiqueta.png');
+const No12Etiqueta1 = require('./../../../assets/images/materiales/BOTRAN-No12Etiqueta1.png');
+const No15Etiqueta1 = require('./../../../assets/images/materiales/BOTRAN-No15-Etiqueta1.png');
+const No18Etiqueta1 = require('./../../../assets/images/materiales/BOTRAN-No18-Etiqueta1.png');
 
 export default function BotranARComponent(props) {
   const {
@@ -88,15 +91,30 @@ ViroARTrackingTargets.createTargets({
     orientation: 'Up',
     physicalWidth: 0.085, // real world width in meters
   },
+  Botran121: {
+    source: No12Etiqueta1,
+    orientation: 'Up',
+    physicalWidth: 0.095, // real world width in meters
+  },
   Botran15: {
     source: No15Etiqueta,
     orientation: 'Up',
     physicalWidth: 0.085, // real world width in meters
   },
+  Botran151: {
+    source: No15Etiqueta1,
+    orientation: 'Up',
+    physicalWidth: 0.095, // real world width in meters
+  },
   Botran18: {
     source: No18Etiqueta,
     orientation: 'Up',
     physicalWidth: 0.105, // real world width in meters
+  },
+  Botran181: {
+    source: No18Etiqueta1,
+    orientation: 'Up',
+    physicalWidth: 0.95, // real world width in meters
   },
 });
 
