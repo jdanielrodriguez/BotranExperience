@@ -87,34 +87,19 @@ export default function BotranARComponent(props) {
 }
 ViroARTrackingTargets.createTargets({
   Botran12: {
-    source: No12Etiqueta,
-    orientation: 'Up',
-    physicalWidth: 0.085, // real world width in meters
-  },
-  Botran121: {
     source: No12Etiqueta1,
     orientation: 'Up',
-    physicalWidth: 0.095, // real world width in meters
+    physicalWidth: 0.125, // real world width in meters
   },
   Botran15: {
-    source: No15Etiqueta,
-    orientation: 'Up',
-    physicalWidth: 0.085, // real world width in meters
-  },
-  Botran151: {
     source: No15Etiqueta1,
     orientation: 'Up',
-    physicalWidth: 0.095, // real world width in meters
+    physicalWidth: 0.125, // real world width in meters
   },
   Botran18: {
-    source: No18Etiqueta,
-    orientation: 'Up',
-    physicalWidth: 0.105, // real world width in meters
-  },
-  Botran181: {
     source: No18Etiqueta1,
     orientation: 'Up',
-    physicalWidth: 0.95, // real world width in meters
+    physicalWidth: 0.105, // real world width in meters
   },
 });
 
