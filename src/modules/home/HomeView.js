@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
     Dimensions, Image, StyleSheet, TouchableOpacity, View
 } from 'react-native';
@@ -13,6 +13,8 @@ export default function HomeScreen() {
     const btnDynamic = require('./../../../assets/images/dynamic-ageing-button.png');
     const btnAroundWorld = require('./../../../assets/images/around-the-world-button.png');
     const btnSustainable = require('./../../../assets/images/sustainable-button.png');
+    const bottle12 = require('./../../../assets/images/botellas/punteadas/botella-altainfinite.png');
+    const bottle18 = require('./../../../assets/images/botellas/punteadas/botella-baja-greyinfinite.png');
     const objects = ARObjects();
     let index = 0;
     let column = 0;
@@ -54,6 +56,8 @@ export default function HomeScreen() {
         target: '',
     });
 
+    let bottle = bottle12;
+
     const _changeColumn = columnNew => {
         let currentColumn = columnNew === objects.length ? 1 : columnNew;
 
@@ -82,7 +86,7 @@ export default function HomeScreen() {
         // tempState.quetzal = true;
         isPlaying = true;
         tempState.selected = selectedNew;
-        setState({...tempState});
+        setState({ ...tempState });
         // setTimeout(() => {
         // tempState.selected = selectedNew;
         // tempState.loop = true;
@@ -122,13 +126,13 @@ export default function HomeScreen() {
             index = 0;
         }
         const selectedNew = objects[currentColumn][index];
-        const temp = state;
+        // const temp = state;
 
         // Change resource online and indicate quetzal animation finish.
         tempState.selected = selectedNew;
         tempState.quetzal = false;
 
-        setState({...tempState});
+        setState({ ...tempState });
 
         // After 3 seconds fire new status to indicate tracking can continue
         setTimeout(() => {
@@ -174,7 +178,7 @@ export default function HomeScreen() {
         tempState.column = currentColumn;
         tempState.selected = newSelected;
 
-        setState({...tempState});
+        setState({ ...tempState });
 
         // After 3 seconds fire new status to indicate tracking can continue
         setTimeout(() => {
@@ -184,7 +188,7 @@ export default function HomeScreen() {
     };
     const _onAnchorFound = anchor => {
         tempState = state;
-        const {anchorId} = state;
+        const { anchorId } = state;
 
         if (!tempState.playAnim) {
             tempState.animationName = '';
@@ -202,7 +206,7 @@ export default function HomeScreen() {
                 tempState.show32D = true;
             }
 
-            setState({...tempState});
+            setState({ ...tempState });
         }
     };
 
@@ -233,7 +237,7 @@ export default function HomeScreen() {
                     tempState.foundAnchor = null;
                     tempState.animationName = 'NoAnimation';
 
-                    setState({...tempState});
+                    setState({ ...tempState });
                 }
             }
         }
@@ -241,7 +245,18 @@ export default function HomeScreen() {
         // Set target when status is tracking and is another element
         if (anchor.trackingMethod === 'tracking' && tempState.target !== target) {
             tempState.target = target;
-            setState({...tempState});
+            setState({ ...tempState });
+        }
+        if (anchor.trackingMethod !== 'tracking' && tempState.target !== target) {
+            if (target === targets[4] || target === targets[5]) {
+                bottle = bottle18;
+            }
+            if (target === targets[0] || target === targets[1]) {
+                bottle = bottle12;
+            }
+            if (target === targets[2] || target === targets[3]) {
+                bottle = bottle12;
+            }
         }
     };
 
@@ -257,7 +272,7 @@ export default function HomeScreen() {
             tempState.playAnim = true;
             tempState.show3D = true;
             tempState.show32D = true;
-            setState({...tempState});
+            setState({ ...tempState });
             // console.log('anchor: ', anchor);
         } else if (anchor.trackingMethod === 'lastKnownPose') {
             tempState.isTracking = false;
@@ -268,7 +283,7 @@ export default function HomeScreen() {
             tempState.anchorId = null;
             tempState.foundAnchor = null;
             tempState.animationName = 'NoAnimation';
-            setState({...tempState});
+            setState({ ...tempState });
             // console.log('STATE: ', state);
         }
     };
@@ -277,7 +292,7 @@ export default function HomeScreen() {
         <View style={styles.container}>
             <ARScene
                 {...state}
-                style={{zIndex: 1}}
+                style={{ zIndex: 1 }}
                 column={state.column}
                 objIndex={state.objIndex}
                 selected={state.selected}
@@ -299,15 +314,20 @@ export default function HomeScreen() {
                 show32D={state.show32D}
                 _target={state.target}
             />
+            {(((!state.show3D || !state.playAnim) && !pauseTracking) && (
+                <View style={styles.pointer_bottle_container}>
+                    <Image source={bottle} style={styles.pointer_bottle} />
+                </View>
+            ))}
             <View style={styles.section}>
-                <View style={{...styles.container2, marginLeft: 'auto'}}>
+                <View style={{ ...styles.container2, marginLeft: 'auto' }}>
                     <TouchableOpacity
                         onPress={() => {
                             _changeColumn(2);
                         }}
-                        style={{...styles.btn}}
+                        style={{ ...styles.btn }}
                     >
-                        <Image source={btnOrigin} style={styles.img}/>
+                        <Image source={btnOrigin} style={styles.img} />
                     </TouchableOpacity>
                     <TouchableOpacity
                         onPress={() => {
@@ -315,32 +335,32 @@ export default function HomeScreen() {
                         }}
                         style={styles.btn}
                     >
-                        <Image source={btnDynamic} style={styles.img}/>
+                        <Image source={btnDynamic} style={styles.img} />
                     </TouchableOpacity>
                 </View>
-                <View style={{...styles.container2, marginLeft: 'auto'}}>
+                <View style={{ ...styles.container2, marginLeft: 'auto' }}>
                     <TouchableOpacity
                         onPress={() => {
                             _changeColumn(4);
                         }}
-                        style={{...styles.btn}}
+                        style={{ ...styles.btn }}
                     >
-                        <Image source={btnAroundWorld} style={styles.img}/>
+                        <Image source={btnAroundWorld} style={styles.img} />
                     </TouchableOpacity>
                     <TouchableOpacity
                         onPress={() => {
                             _changeColumn(5);
                         }}
-                        style={{...styles.btn}}
+                        style={{ ...styles.btn }}
                     >
-                        <Image source={btnSustainable} style={styles.img}/>
+                        <Image source={btnSustainable} style={styles.img} />
                     </TouchableOpacity>
                 </View>
             </View>
         </View>
     );
 }
-const {width} = Dimensions.get('window');
+const { width, height } = Dimensions.get('window');
 const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -370,4 +390,21 @@ const styles = StyleSheet.create({
     btn: {
         width: '45%',
     },
+    pointer_bottle_container: {
+        backfaceVisibility: 'hidden',
+        position: 'absolute',
+        width,
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        height,
+        zIndex: 0,
+        marginTop: '21%'
+    },
+    pointer_bottle: {
+        width: '70%',
+        height: '80%',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        marginTop: -150
+    }
 });
