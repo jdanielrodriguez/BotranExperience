@@ -130,22 +130,27 @@ export default function HomeScreen() {
     const _changeObject = () => {
         let currentColumn = state.column;
 
+        index = state.objIndex;
+
+        console.log(`Position Before C - ${currentColumn} I - ${index}`)
+
         if (objects) {
+            // If the animation columns is the last one
             if (currentColumn === objects.length) {
                 currentColumn = 1;
-            }
-
-            index = state.objIndex === objects[currentColumn].length - 1 ? 0 : state.objIndex + 1;
-            // if (index === (objects[currentColumn].length)) {
-            //     currentColumn = 1;
-            // }
-            if (!objects[currentColumn][index]) {
-                currentColumn = 0;
                 index = 0;
             }
 
-            
+            // If the animation index is the last one
+            if (index === (objects[currentColumn].length - 1)) {
+                currentColumn = 1;
+                index = 0;
+            } else {
+                index += 1;
+            }
         }
+
+        console.log(`Position After C - ${currentColumn} I - ${index}`)
 
         const newSelected = objects[currentColumn][index];
 
@@ -164,8 +169,6 @@ export default function HomeScreen() {
         }, 500);
     };
     const _onAnchorFound = anchor => {
-        console.log(`FOUND************* ${anchor.trackingMethod}`);
-
         tempState = state;
         const {anchorId} = state;
 
@@ -191,23 +194,14 @@ export default function HomeScreen() {
 
     const _onAnchorLost = anchor => {
         console.log('ANCHORLost********:', anchor);
-        // tempState = state;
-        // tempState.animationName = '01';
-        // tempState.pauseUpdates = true;
-        // tempState.playAnim = true;
-        // tempState.show32D = false;
-        // tempState.column = 1;
-        // tempState.foundAnchor = anchor;
-        // tempState.anchorId = anchor? anchor.anchorId : null;
-        // setState({ ...tempState });
     };
 
     const _onAnchorUpdate = (anchor, target) => {
         tempState = state;
 
-        console.log(
-            `UPDATE* ${anchor.trackingMethod} - ${isPlaying} - ${target} - ${tempState.target} - Q: ${tempState.quetzal} - P ${pauseTracking}`,
-        );
+        // console.log(
+        //     `UPDATE* ${anchor.trackingMethod} - ${isPlaying} - ${target} - ${tempState.target} - Q: ${tempState.quetzal} - P ${pauseTracking}`,
+        // );
 
         if (!pauseTracking) {
             // Change status only if target is the same as selected
@@ -284,7 +278,7 @@ export default function HomeScreen() {
                 _onCameraTransformUpdate={_onCameraTransformUpdate}
                 pauseUpdates
                 playAnim={state.playAnim}
-                targets={['Botran12', 'Botran15', 'Botran18','Botran121', 'Botran151', 'Botran181']}
+                targets={['Botran12', 'Botran15', 'Botran18', 'Botran121', 'Botran151', 'Botran181']}
                 foundAnchor={state.foundAnchor}
                 _changeObject={_changeObject}
                 show3D={state.show3D}
