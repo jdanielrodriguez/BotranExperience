@@ -2,6 +2,8 @@ package com.botranexperience;
 
 import android.app.Application;
 import android.content.Context;
+import cl.json.RNSharePackage;
+import cl.json.ShareApplication;
 import com.BV.LinearGradient.LinearGradientPackage;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
@@ -28,7 +30,7 @@ public class MainApplication extends Application implements ReactApplication {
       List<ReactPackage> packages = new PackageList(this).getPackages();
 
       // Packages that cannot be autolinked yet can be added manually here, for example:
-      // packages.add(new MyReactNativePackage());
+      // packages.add(new RNSharePackage());
       packages.add(
         new ReactViroPackage(ReactViroPackage.ViroPlatform.valueOf("AR"))
       );

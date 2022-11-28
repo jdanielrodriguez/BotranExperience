@@ -3,6 +3,7 @@ import {
 } from '@react-navigation/drawer';
 import * as React from 'react';
 import { Image, ImageBackground, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import Share from 'react-native-share';
 import { fonts } from '../../styles';
 import NavigatorView from './RootNavigation';
 
@@ -29,7 +30,13 @@ const drawerData = [
 ];
 
 const Drawer = createDrawerNavigator();
-
+const compartir = () => {
+  const shareOptions = {
+    url: 'https://play.google.com/apps/internaltest/4701166991196422934',
+    message: 'Hey look this Botran AR Experience.'
+  };
+  Share.open(shareOptions);
+}
 function CustomDrawerContent(props) {
   return (
     <ImageBackground
@@ -64,7 +71,7 @@ function CustomDrawerContent(props) {
                   <Text style={styles.menuTitle}>{item.name}</Text>
                 </View>
               )}
-              onPress={() => props.navigation.navigate(item.name.replace('\n',''))}
+              onPress={() => props.navigation.navigate(item.name.replace('\n', ''))}
             />
             <View style={styles.divider} key={`view-image_item-${idx + 1}`}>
               <Image
@@ -92,7 +99,7 @@ function CustomDrawerContent(props) {
               />
             </View>
           )}
-          onPress={() => props.navigation.navigate('Calendar')}
+          onPress={() => compartir()}
         />
       </DrawerContentScrollView>
     </ImageBackground>

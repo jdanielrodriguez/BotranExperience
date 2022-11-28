@@ -14,7 +14,8 @@
     <!-- Usage of accelerometer and gyroscope -->
     <uses-feature android:name="android.hardware.sensor.accelerometer" android:required="false" tools:replace="required" />
     <uses-feature android:name="android.hardware.sensor.gyroscope" android:required="false" tools:replace="required" />
-
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    
     <application android:usesCleartextTraffic="true"
       android:name=".MainApplication"
       android:label="@string/app_name"
