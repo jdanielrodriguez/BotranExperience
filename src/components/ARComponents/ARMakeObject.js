@@ -24,7 +24,7 @@ export default function ARMakeObject(props) {
     _onError,
     _key,
     _changeObject,
-    foundAnchor,
+    objIndex,
     show3D,
     style,
     onFinishSound,
@@ -82,9 +82,9 @@ export default function ARMakeObject(props) {
           <Viro3DObject
             key={`${_key}Obj`}
             source={selected.src}
-            onClick={_changeObject}
             scale={selected.scale ? selected.scale : [0.00095, 0.001, 0.001]}
             lightReceivingBitMask={5}
+            onClick={_changeObject}
             animation={{
               name: animationName,
               run: playAnim,
@@ -109,7 +109,7 @@ export default function ARMakeObject(props) {
             <ViroSound
               key={`${_key}Sound`}
               source={selected.sound}
-              onFinish={onFinishSound}
+              onFinish={(column > 0 || objIndex > 0) ? _changeObject : onFinishSound}
             />
           )}
         </>

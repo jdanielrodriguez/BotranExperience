@@ -86,7 +86,7 @@ export default function ARObjects() {
       {
          src: require("./../../../assets/vrx/02-Columna1/col01-conBotella-12-parte6.vrx"),
          materials: col1Texture,
-         sound: null,
+         sound: require("./../../../assets/mp3/narracion/BOTRAN_12_SFX_04SFX.mp3"),
          scale: [0.0016, 0.0017, 0.001],
          position: [-0.002, -0.15, 0]
       },
@@ -129,7 +129,7 @@ export default function ARObjects() {
       {
          src: require("./../../../assets/vrx/03-Columna2/col02-conBotella-12-parte4.vrx"),
          materials: col2Texture,
-         sound: null,
+         sound: require("./../../../assets/mp3/narracion/BOTRAN_12_SFX_04SFX.mp3"),
          scale: [0.0017, 0.0016, 0.001],
          position: [0, -0.18, 0]
       },
@@ -171,7 +171,7 @@ export default function ARObjects() {
       {
          src: require("./../../../assets/vrx/04-Columna3/col03-conBotella-12-parte4.vrx"),
          materials: col3Texture,
-         sound: null,
+         sound: require("./../../../assets/mp3/narracion/BOTRAN_12_SFX_04SFX.mp3"),
          scale: [0.0015, 0.0015, 0.001],
          position: [0.01, -0.16, 0]
       },
@@ -229,7 +229,7 @@ export default function ARObjects() {
       {
          src: require("./../../../assets/vrx/05-Columna4/col04-conBotella-12-parte6.vrx"),
          materials: col4Texture,
-         sound: null,
+         sound: require("./../../../assets/mp3/narracion/BOTRAN_12_SFX_04SFX.mp3"),
          scale: [0.0015, 0.0015, 0.001],
          position: [-0.001, -0.14, 0]
       },
