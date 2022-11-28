@@ -204,7 +204,7 @@ const styles = StyleSheet.create({
     width,
     minWidth: width,
     position: 'absolute',
-    marginTop: 165,
+    marginTop: 100,
     overflow: 'hidden',
     height: '93%'
   },
@@ -228,6 +228,7 @@ const styles = StyleSheet.create({
     height,
     minWidth: width,
     minHeight: height,
+    backgroundColor: '#000000'
   },
   bottles: {
     width: '30%',
@@ -285,8 +286,8 @@ const styles = StyleSheet.create({
     minHeight: height + 200,
   },
   trago: {
-    width,
-    height: '50%'
+    width: 392,
+    height: 578,
   },
   botella: {
     width: 224,
@@ -316,7 +317,7 @@ const styles = StyleSheet.create({
     fontFamily: fonts.primarySemiBold,
     fontSize: 22,
     fontWeight: "normal",
-    top: -50,
+    top: -60,
     color: '#00B8B0'
   },
   hashtag_medium: {

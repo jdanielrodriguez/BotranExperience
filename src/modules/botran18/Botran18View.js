@@ -295,8 +295,9 @@ const styles = StyleSheet.create({
     minHeight: height + 150,
   },
   trago: {
-    width,
-    height: '50%'
+    width: 587,
+    height: 473,
+    marginLeft: -100
   },
   botella: {
     width: 240,

@@ -303,8 +303,8 @@ const styles = StyleSheet.create({
     marginRight: 'auto'
   },
   trago: {
-    width,
-    height: '40%'
+    width: 390,
+    height: 416,
   },
   botella: {
     width: 224,
