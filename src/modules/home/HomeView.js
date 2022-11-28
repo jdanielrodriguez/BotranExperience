@@ -19,6 +19,20 @@ export default function HomeScreen() {
     let isPlaying = false;
     let pauseTracking = false;
     let tempState = {};
+    const targets = [
+        'Botran12',
+        'Botran12Normal',
+        // 'Botran12Sombra',
+        // 'Botran12Luz',
+        'Botran15',
+        'Botran15Normal',
+        // 'Botran15Sombra',
+        // 'Botran15Luz',
+        'Botran18',
+        'Botran18Normal',
+        // 'Botran18Sombra',
+        // 'Botran18Luz',
+    ]
 
     const [state, setState] = useState({
         selected: objects[column][index],
@@ -278,7 +292,7 @@ export default function HomeScreen() {
                 _onCameraTransformUpdate={_onCameraTransformUpdate}
                 pauseUpdates
                 playAnim={state.playAnim}
-                targets={['Botran12', 'Botran15', 'Botran18','Botran121', 'Botran151', 'Botran181']}
+                targets={targets}
                 foundAnchor={state.foundAnchor}
                 _changeObject={_changeObject}
                 show3D={state.show3D}
