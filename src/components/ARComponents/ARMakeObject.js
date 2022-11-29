@@ -109,7 +109,7 @@ export default function ARMakeObject(props) {
             <ViroSound
               key={`${_key}Sound`}
               source={selected.sound}
-              onFinish={(column > 0 || objIndex > 0) ? _changeObject : onFinishSound}
+              onFinish={(column === 0 && objIndex === 0) ? onFinishSound : _changeObject}
             />
           )}
         </>

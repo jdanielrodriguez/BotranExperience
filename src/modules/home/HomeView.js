@@ -22,15 +22,15 @@ export default function HomeScreen() {
     let pauseTracking = false;
     let tempState = {};
     const targets = [
-        'Botran12',
+        // 'Botran12',
         'Botran12Normal',
         // 'Botran12Sombra',
         // 'Botran12Luz',
-        'Botran15',
+        // 'Botran15',
         'Botran15Normal',
         // 'Botran15Sombra',
         // 'Botran15Luz',
-        'Botran18',
+        // 'Botran18',
         'Botran18Normal',
         // 'Botran18Sombra',
         // 'Botran18Luz',
@@ -246,17 +246,6 @@ export default function HomeScreen() {
         if (anchor.trackingMethod === 'tracking' && tempState.target !== target) {
             tempState.target = target;
             setState({ ...tempState });
-        }
-        if (anchor.trackingMethod !== 'tracking' && tempState.target !== target) {
-            if (target === targets[4] || target === targets[5]) {
-                bottle = bottle18;
-            }
-            if (target === targets[0] || target === targets[1]) {
-                bottle = bottle12;
-            }
-            if (target === targets[2] || target === targets[3]) {
-                bottle = bottle12;
-            }
         }
     };
 
