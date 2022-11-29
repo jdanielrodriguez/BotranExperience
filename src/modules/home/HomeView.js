@@ -128,8 +128,8 @@ export default function HomeScreen() {
 
   const onFinishSound = () => {
     console.log('Sound finish');
-    
-    if ((state.column === 0 || state.column === 1) && state.objIndex === 0)){
+
+    if ((state.column === 0 || state.column === 1) && state.objIndex === 0) {
       _changeObject();
     }
   };
