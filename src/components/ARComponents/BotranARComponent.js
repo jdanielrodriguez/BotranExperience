@@ -16,21 +16,36 @@ const No12EtiquetaNormal = require('./../../../assets/images/botellas/marcadores
 const No12EtiquetaLuz = require('./../../../assets/images/botellas/marcadores/BOTRAN-No12EtiquetaLuz.png');
 const No12EtiquetaSombra = require('./../../../assets/images/botellas/marcadores/BOTRAN-No12EtiquetaSombra.png');
 
-const No12Etiqueta = [No12EtiquetaSimple, No12EtiquetaNormal, No12EtiquetaLuz, No12EtiquetaSombra];
+const No12Etiqueta = [
+  No12EtiquetaSimple,
+  No12EtiquetaNormal,
+  No12EtiquetaLuz,
+  No12EtiquetaSombra,
+];
 
 const No15EtiquetaSimple = require('./../../../assets/images/botellas/marcadores/BOTRAN-No15EtiquetaSimple.png');
 const No15EtiquetaNormal = require('./../../../assets/images/botellas/marcadores/BOTRAN-No15EtiquetaNormal.png');
 const No15EtiquetaLuz = require('./../../../assets/images/botellas/marcadores/BOTRAN-No15EtiquetaLuz.png');
 const No15EtiquetaSombra = require('./../../../assets/images/botellas/marcadores/BOTRAN-No15EtiquetaSombra.png');
 
-const No15Etiqueta = [No15EtiquetaSimple, No15EtiquetaNormal, No15EtiquetaLuz, No15EtiquetaSombra];
+const No15Etiqueta = [
+  No15EtiquetaSimple,
+  No15EtiquetaNormal,
+  No15EtiquetaLuz,
+  No15EtiquetaSombra,
+];
 
 const No18EtiquetaSimple = require('./../../../assets/images/botellas/marcadores/BOTRAN-No18EtiquetaSimple.png');
 const No18EtiquetaNormal = require('./../../../assets/images/botellas/marcadores/BOTRAN-No18EtiquetaNormal.png');
 const No18EtiquetaLuz = require('./../../../assets/images/botellas/marcadores/BOTRAN-No18EtiquetaLuz.png');
 const No18EtiquetaSombra = require('./../../../assets/images/botellas/marcadores/BOTRAN-No18EtiquetaSombra.png');
 
-const No18Etiqueta = [No18EtiquetaSimple, No18EtiquetaNormal, No18EtiquetaLuz, No18EtiquetaSombra];
+const No18Etiqueta = [
+  No18EtiquetaSimple,
+  No18EtiquetaNormal,
+  No18EtiquetaLuz,
+  No18EtiquetaSombra,
+];
 
 export default function BotranARComponent(props) {
   const {
@@ -103,62 +118,74 @@ ViroARTrackingTargets.createTargets({
   Botran12: {
     source: No12Etiqueta[0],
     orientation: 'Up',
-    physicalWidth: 0.150, // real world width in meters
+    physicalWidth: 0.15, // real world width in meters
+    type: 'Image',
   },
   Botran12Normal: {
     source: No12Etiqueta[1],
     orientation: 'Up',
-    physicalWidth: 0.150, // real world width in meters
+    physicalWidth: 0.15, // real world width in meters
+    type: 'Image',
   },
   Botran12Sombra: {
     source: No12Etiqueta[2],
     orientation: 'Up',
-    physicalWidth: 0.150, // real world width in meters
+    physicalWidth: 0.15, // real world width in meters
+    type: 'Image',
   },
   Botran12Luz: {
     source: No12Etiqueta[3],
     orientation: 'Up',
-    physicalWidth: 0.150, // real world width in meters
+    physicalWidth: 0.15, // real world width in meters
+    type: 'Image',
   },
   Botran15: {
     source: No15Etiqueta[0],
     orientation: 'Up',
-    physicalWidth: 0.170, // real world width in meters
+    physicalWidth: 0.17, // real world width in meters
+    type: 'Image',
   },
   Botran15Normal: {
     source: No15Etiqueta[1],
     orientation: 'Up',
-    physicalWidth: 0.170, // real world width in meters
+    physicalWidth: 0.17, // real world width in meters
+    type: 'Image',
   },
   Botran15Sombra: {
     source: No15Etiqueta[2],
     orientation: 'Up',
-    physicalWidth: 0.170, // real world width in meters
+    physicalWidth: 0.17, // real world width in meters
+    type: 'Image',
   },
   Botran15Luz: {
     source: No15Etiqueta[3],
     orientation: 'Up',
-    physicalWidth: 0.170, // real world width in meters
+    physicalWidth: 0.17, // real world width in meters
+    type: 'Image',
   },
   Botran18: {
     source: No18Etiqueta[0],
     orientation: 'Up',
-    physicalWidth: 0.200, // real world width in meters
+    physicalWidth: 0.2, // real world width in meters
+    type: 'Image',
   },
   Botran18Normal: {
     source: No18Etiqueta[1],
     orientation: 'Up',
-    physicalWidth: 0.200, // real world width in meters
+    physicalWidth: 0.2, // real world width in meters
+    type: 'Image',
   },
   Botran18Sombra: {
     source: No18Etiqueta[2],
     orientation: 'Up',
-    physicalWidth: 0.200, // real world width in meters
+    physicalWidth: 0.2, // real world width in meters
+    type: 'Image',
   },
   Botran18Luz: {
     source: No18Etiqueta[3],
     orientation: 'Up',
-    physicalWidth: 0.200, // real world width in meters
+    physicalWidth: 0.2, // real world width in meters
+    type: 'Image',
   },
 });
 
