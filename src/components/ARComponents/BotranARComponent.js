@@ -123,22 +123,22 @@ ViroARTrackingTargets.createTargets({
   Botran15: {
     source: No15Etiqueta[0],
     orientation: 'Up',
-    physicalWidth: 0.150, // real world width in meters
+    physicalWidth: 0.170, // real world width in meters
   },
   Botran15Normal: {
     source: No15Etiqueta[1],
     orientation: 'Up',
-    physicalWidth: 0.150, // real world width in meters
+    physicalWidth: 0.170, // real world width in meters
   },
   Botran15Sombra: {
     source: No15Etiqueta[2],
     orientation: 'Up',
-    physicalWidth: 0.150, // real world width in meters
+    physicalWidth: 0.170, // real world width in meters
   },
   Botran15Luz: {
     source: No15Etiqueta[3],
     orientation: 'Up',
-    physicalWidth: 0.150, // real world width in meters
+    physicalWidth: 0.170, // real world width in meters
   },
   Botran18: {
     source: No18Etiqueta[0],
