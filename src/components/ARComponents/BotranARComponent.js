@@ -67,41 +67,57 @@ export default function BotranARComponent(props) {
   } = props.sceneNavigator.viroAppProps;
 
   const renderScene = nowTracking =>
-    targets.map(target => (
-      <ViroNode position={[0, 0, 0]} key={`${target}cardmain`}>
-        <ViroARImageMarker
-          key={`${target}MKt`}
-          target={target}
-          // onAnchorFound={anchor => {
-          //   _onAnchorFound(anchor);
-          // }}
-          onAnchorUpdated={anchor => {
-            _onAnchorUpdate(anchor, target);
-          }}
-        >
-          <ViroNode key={`${target}card`}>
-            <ViroNode rotation={[-90, 0, 0]} key={`${target}cardnode`}>
-              <ViroAmbientLight color="#f0f0f0" intensity={400} />
-              {nowTracking && (
-                <ARMakeObject
-                  {...props}
-                  _key={target}
-                  _target={_target}
-                  style={style}
-                  _changeObject={_changeObject}
-                  playAnim={playAnim}
-                  show3D={show3D}
-                  show32D={show32D}
-                  selected={selected}
-                  column={column}
-                  objIndex={objIndex}
-                />
-              )}
-            </ViroNode>
+    targets.map(target => {
+      if (target === _target) {
+        return (
+          <ViroNode position={[0, 0, 0]} key={`${target}cardmain`}>
+            <ViroAmbientLight color="#f0f0f0" intensity={1000} />
+            <ViroARImageMarker
+              key={`${target}MKt`}
+              target={target}
+              // onAnchorFound={anchor => {
+              //   _onAnchorFound(anchor);
+              // }}
+              onAnchorUpdated={anchor => {
+                _onAnchorUpdate(anchor, target);
+              }}
+            >
+              <ViroNode key={`${target}card`}>
+                <ViroNode rotation={[-90, 0, 0]} key={`${target}cardnode`}>
+                  {nowTracking && (
+                    <ARMakeObject
+                      {...props}
+                      _key={target}
+                      _target={_target}
+                      style={style}
+                      _changeObject={_changeObject}
+                      playAnim={playAnim}
+                      show3D={show3D}
+                      show32D={show32D}
+                      selected={selected}
+                      column={column}
+                      objIndex={objIndex}
+                    />
+                  )}
+                </ViroNode>
+              </ViroNode>
+            </ViroARImageMarker>
           </ViroNode>
-        </ViroARImageMarker>
-      </ViroNode>
-    ));
+        );
+      }
+      return (
+        <ViroNode position={[0, 0, 0]} key={`${target}cardmain`}>
+          <ViroAmbientLight color="#f0f0f0" intensity={1000} />
+          <ViroARImageMarker
+            key={`${target}MKt`}
+            target={target}
+            onAnchorUpdated={anchor => {
+              _onAnchorUpdate(anchor, target);
+            }}
+          />
+        </ViroNode>
+      );
+    });
 
   return (
     <ViroARScene
@@ -142,26 +158,26 @@ ViroARTrackingTargets.createTargets({
   Botran15: {
     source: No15Etiqueta[0],
     orientation: 'Up',
-    physicalWidth: 0.17, // real world width in meters
     type: 'Image',
+    physicalWidth: 0.153, // real world width in meters
   },
   Botran15Normal: {
     source: No15Etiqueta[1],
     orientation: 'Up',
-    physicalWidth: 0.17, // real world width in meters
     type: 'Image',
+    physicalWidth: 0.153, // real world width in meters
   },
   Botran15Sombra: {
     source: No15Etiqueta[2],
     orientation: 'Up',
-    physicalWidth: 0.17, // real world width in meters
     type: 'Image',
+    physicalWidth: 0.153, // real world width in meters
   },
   Botran15Luz: {
     source: No15Etiqueta[3],
     orientation: 'Up',
-    physicalWidth: 0.17, // real world width in meters
     type: 'Image',
+    physicalWidth: 0.153, // real world width in meters
   },
   Botran18: {
     source: No18Etiqueta[0],
