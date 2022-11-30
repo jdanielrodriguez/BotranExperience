@@ -60,8 +60,6 @@ export default function HomeScreen() {
     target: '',
   });
 
-  let bottle = bottle12;
-
   const _changeColumn = columnNew => {
     pauseTracking = true;
 
@@ -209,12 +207,6 @@ export default function HomeScreen() {
     //   `UPDATE* ${anchor.trackingMethod} - ${isPlaying} - ${target} - ${tempState.target} - Q: ${tempState.quetzal} - P ${pauseTracking}`,
     // );
 
-    if (target.includes('Botran18')) {
-      bottle = bottle18;
-    } else {
-      bottle = bottle12;
-    }
-
     if (!pauseTracking) {
       // Change status only if target is the same as selected
       if (tempState.target === target) {
@@ -242,6 +234,7 @@ export default function HomeScreen() {
         }
       }
     }
+
     // Set target when status is tracking and is another element
     if (anchor.trackingMethod === 'tracking' && tempState.target !== target) {
       tempState.target = target;
@@ -305,7 +298,10 @@ export default function HomeScreen() {
       />
       {(!state.show3D || !state.playAnim) && !pauseTracking && (
         <View style={styles.pointer_bottle_container}>
-          <Image source={bottle} style={styles.pointer_bottle} />
+          <Image
+            source={state.target.includes('Botran18') ? bottle18 : bottle12}
+            style={styles.pointer_bottle}
+          />
         </View>
       )}
       <View style={styles.section}>
