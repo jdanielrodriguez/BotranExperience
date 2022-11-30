@@ -127,11 +127,7 @@ export default function HomeScreen() {
   };
 
   const onFinishSound = () => {
-    console.log('Sound finish');
-
-    if ((state.column === 0 || state.column === 1) && state.objIndex === 0) {
-      _changeObject();
-    }
+    console.log('*** Sound finish ***');
   };
 
   const _changeObject = () => {
@@ -209,9 +205,9 @@ export default function HomeScreen() {
   const _onAnchorUpdate = (anchor, target) => {
     tempState = state;
 
-    console.log(
-      `UPDATE* ${anchor.trackingMethod} - ${isPlaying} - ${target} - ${tempState.target} - Q: ${tempState.quetzal} - P ${pauseTracking}`,
-    );
+    // console.log(
+    //   `UPDATE* ${anchor.trackingMethod} - ${isPlaying} - ${target} - ${tempState.target} - Q: ${tempState.quetzal} - P ${pauseTracking}`,
+    // );
 
     if (target.includes('Botran18')) {
       bottle = bottle18;
