@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '10.0'
+platform :ios, '16.1.2'
 require_relative '../node_modules/react-native/scripts/react_native_pods'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
@@ -13,16 +13,6 @@ target 'BotranExperience' do
   :hermes_enabled => false)
   pod 'ViroReact', :path => '../node_modules/@viro-community/react-viro/ios/'
   pod 'ViroKit', :path => '../node_modules/@viro-community/react-viro/ios/dist/ViroRenderer/'
-  target 'BotranExperienceTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
   use_native_modules!
 end
 
-target 'BotranExperience-tvOS' do
-  target 'BotranExperience-tvOSTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-end
