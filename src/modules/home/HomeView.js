@@ -31,7 +31,7 @@ export default function HomeScreen() {
     // 'Botran12Sombra',
     // 'Botran12Luz',
     // 'Botran15',
-    // 'Botran15Normal',
+    'Botran15Normal',
     // 'Botran15Sombra',
     // 'Botran15Luz',
     // 'Botran18',
