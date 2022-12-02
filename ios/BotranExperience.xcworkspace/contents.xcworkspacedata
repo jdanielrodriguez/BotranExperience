@@ -7,10 +7,4 @@
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:BotranExperience.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:ReactNativeStarter.xcodeproj">
-   </FileRef>
 </Workspace>

@@ -1,7 +1,7 @@
 PODS:
   - boost-for-react-native (1.63.0)
-  - BVLinearGradient (2.5.6):
-    - React
+  - BVLinearGradient (2.6.2):
+    - React-Core
   - DoubleConversion (1.1.6)
   - FBLazyVector (0.63.1)
   - FBReactNativeSpec (0.63.1):
@@ -261,17 +261,19 @@ PODS:
     - React-Core
   - RNCMaskedView (0.1.11):
     - React
-  - RNGestureHandler (1.8.0):
-    - React
-  - RNLocalize (1.4.2):
+  - RNGestureHandler (1.10.3):
+    - React-Core
+  - RNLocalize (1.4.3):
     - React-Core
   - RNReanimated (1.13.4):
     - React-Core
-  - RNScreens (2.11.0):
-    - React
+  - RNScreens (2.18.1):
+    - React-Core
+  - RNShare (8.0.0):
+    - React-Core
   - RNVectorIcons (6.7.0):
     - React
-  - toolbar-android (0.1.0-rc.2):
+  - toolbar-android (0.2.1):
     - React
   - ViroKit (1.0):
     - React
@@ -319,6 +321,7 @@ DEPENDENCIES:
   - RNLocalize (from `../node_modules/react-native-localize`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
+  - RNShare (from `../node_modules/react-native-share`)
   - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
   - "toolbar-android (from `../node_modules/@react-native-community/toolbar-android`)"
   - "ViroKit (from `../node_modules/@viro-community/react-viro/ios/dist/ViroRenderer/`)"
@@ -404,6 +407,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-reanimated"
   RNScreens:
     :path: "../node_modules/react-native-screens"
+  RNShare:
+    :path: "../node_modules/react-native-share"
   RNVectorIcons:
     :path: "../node_modules/react-native-vector-icons"
   toolbar-android:
@@ -417,7 +422,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
-  BVLinearGradient: e3aad03778a456d77928f594a649e96995f1c872
+  BVLinearGradient: 34a999fda29036898a09c6a6b728b0b4189e1a44
   DoubleConversion: cde416483dac037923206447da6e1454df403714
   FBLazyVector: a50434c875bd42f2b1c99c712bda892a1dc659c7
   FBReactNativeSpec: 393853a536428e05a9da00b6290042f09809b15b
@@ -450,16 +455,17 @@ SPEC CHECKSUMS:
   ReactNativeUiLib: 52606c273a072841c6fc5cfc9bd617fc87e5ca15
   RNCAsyncStorage: b03032fdbdb725bea0bd9e5ec5a7272865ae7398
   RNCMaskedView: 0e1bc4bfa8365eba5fbbb71e07fbdc0555249489
-  RNGestureHandler: 7a5833d0f788dbd107fbb913e09aa0c1ff333c39
-  RNLocalize: 452d4118e338dee1e5ca3fac4d5a11a4ab26a46a
+  RNGestureHandler: a479ebd5ed4221a810967000735517df0d2db211
+  RNLocalize: 7c7aeda16c01db7a0918981c14875c0a53be9b79
   RNReanimated: c1b56d030d1616239861534d9adb531f8cffab68
-  RNScreens: 0e91da98ab26d5d04c7b59a9b6bd694124caf88c
+  RNScreens: f7ad633b2e0190b77b6a7aab7f914fad6f198d8d
+  RNShare: 36aa3e6958373a0ad1c95a1c960adef589da3794
   RNVectorIcons: 368d6d8b8301224e5ffb6254191f4f8876c2be0d
-  toolbar-android: 85f3ef4d691469f2d304e7dee4bca013aa1ba1ff
+  toolbar-android: 2a73856e98b750d7e71ce4644d3f41cc98211719
   ViroKit: 700d3d4ca086368d06224de1cbbc19781aea2094
   ViroReact: f4980e6b04918c4340637f9cbaae22a6bb7ea440
   Yoga: d5bd05a2b6b94c52323745c2c2b64557c8c66f64
 
-PODFILE CHECKSUM: f1e9ddee11f7b47bdfa1c34ab0f9fa43565ae965
+PODFILE CHECKSUM: 5825c41082e27bdbb286aad4af8dbbbf6ec5bdae
 
 COCOAPODS: 1.11.3
