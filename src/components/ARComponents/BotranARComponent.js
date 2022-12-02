@@ -67,17 +67,14 @@ export default function BotranARComponent(props) {
   } = props.sceneNavigator.viroAppProps;
 
   const renderScene = nowTracking =>
-    targets.map(target => {
-      if (target === _target) {
+    targets.map((target, i) => {
         return (
           <ViroNode position={[0, 0, 0]} key={`${target}cardmain`}>
             <ViroAmbientLight color="#f0f0f0" intensity={1000} />
             <ViroARImageMarker
               key={`${target}MKt`}
               target={target}
-              // onAnchorFound={anchor => {
-              //   _onAnchorFound(anchor);
-              // }}
+              renderingOrder={i+1}
               onAnchorUpdated={anchor => {
                 _onAnchorUpdate(anchor, target);
               }}
@@ -91,7 +88,7 @@ export default function BotranARComponent(props) {
                       _target={_target}
                       style={style}
                       _changeObject={_changeObject}
-                      playAnim={playAnim}
+                      playAnim={playAnim && target === _target}
                       show3D={show3D}
                       show32D={show32D}
                       selected={selected}
@@ -104,19 +101,6 @@ export default function BotranARComponent(props) {
             </ViroARImageMarker>
           </ViroNode>
         );
-      }
-      return (
-        <ViroNode position={[0, 0, 0]} key={`${target}cardmain`}>
-          <ViroAmbientLight color="#f0f0f0" intensity={1000} />
-          <ViroARImageMarker
-            key={`${target}MKt`}
-            target={target}
-            onAnchorUpdated={anchor => {
-              _onAnchorUpdate(anchor, target);
-            }}
-          />
-        </ViroNode>
-      );
     });
 
   return (
