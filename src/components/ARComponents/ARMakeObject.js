@@ -70,9 +70,9 @@ export default function ARMakeObject(props) {
   console.log(`${_target} ******************** ${_key}`);
 
   // Return null element in case is not the current anchor element
-  // if (_target !== _key) {
-  //   return <></>;
-  // }
+  if (_target !== _key) {
+    return null;
+  }
 
   return (
     <>

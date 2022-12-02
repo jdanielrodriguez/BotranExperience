@@ -31,7 +31,7 @@ export default function HomeScreen() {
     // 'Botran12Sombra',
     // 'Botran12Luz',
     // 'Botran15',
-    // 'Botran15Normal',
+    'Botran15Normal',
     // 'Botran15Sombra',
     // 'Botran15Luz',
     // 'Botran18',
@@ -176,6 +176,8 @@ export default function HomeScreen() {
     tempState = state;
     const { anchorId } = state;
 
+    console.log("*** Anchor found and play ***", tempState.playAnim, anchorId)
+
     if (!tempState.playAnim) {
       tempState.animationName = '';
       tempState.pauseUpdates = true;
@@ -187,9 +189,6 @@ export default function HomeScreen() {
       if (anchorId !== anchor.anchorId) {
         tempState.foundAnchor = anchor || null;
         tempState.anchorId = anchor ? anchor.anchorId : null;
-        tempState.show3D = true;
-        tempState.isTracking = true;
-        tempState.show32D = true;
       }
 
       setState({ ...tempState });
@@ -203,22 +202,18 @@ export default function HomeScreen() {
   const _onAnchorUpdate = (anchor, target) => {
     tempState = state;
 
-    // console.log(
-    //   `UPDATE* ${anchor.trackingMethod} - ${isPlaying} - ${target} - ${tempState.target} - Q: ${tempState.quetzal} - P ${pauseTracking}`,
-    // );
-
     if (!pauseTracking) {
       // Change status only if target is the same as selected
       if (tempState.target === target) {
         if (
-          !tempState.quetzal &&
+          // !tempState.quetzal &&
           !isPlaying &&
           anchor.trackingMethod === 'tracking'
         ) {
           isPlaying = true;
           _onAnchorFound(anchor);
         } else if (
-          !tempState.quetzal &&
+          // !tempState.quetzal &&
           isPlaying &&
           anchor.trackingMethod === 'lastKnownPose'
         ) {
