@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,12 @@
 		38F9982229584B76A18AC230 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9BE56F6176C44163A8FC7956 /* Lato-Light.ttf */; };
 		391527F89E1C4B79A705DE04 /* Lato-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9BFC30A51FB94B4A881576AE /* Lato-Medium.ttf */; };
 		597692039F7D4A87B63BD89C /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 071D280AF6A542A8985DB20E /* Lato-LightItalic.ttf */; };
+		5CBEB0EC293A5306003DA079 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 008F07F21AC5B25A0029DE68 /* main.jsbundle */; };
+		5CD13D37293C5CEC00542A2E /* HarbourBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5CD13D36293C5CEC00542A2E /* HarbourBold.ttf */; };
+		5CD13D39293C5D0300542A2E /* MuseoSansRounded300.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5CD13D38293C5D0300542A2E /* MuseoSansRounded300.ttf */; };
+		5CD13D3B293C5D2200542A2E /* MuseoSansRounded900.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5CD13D3A293C5D2100542A2E /* MuseoSansRounded900.ttf */; };
+		5CD13D41293C5EF200542A2E /* MuseoSansRounded500.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5CD13D40293C5EF100542A2E /* MuseoSansRounded500.ttf */; };
+		5CD13D43293C5F0300542A2E /* MuseoSansRounded700.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5CD13D42293C5F0300542A2E /* MuseoSansRounded700.ttf */; };
 		B0A7D913BBC54C44AF1698B1 /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 28E289B344EA470BB95EE8B2 /* Lato-BoldItalic.ttf */; };
 		C27FBFDB12034472897F8CB9 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF871DC00C4A468BB043F632 /* Lato-Regular.ttf */; };
 		CA5A7C8036FE47B0BDE01EA7 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC477E0AC8F54F1BBC658478 /* Lato-Bold.ttf */; };
@@ -42,6 +48,13 @@
 		3A2ED88A262A4903B3D7737C /* Lato-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Thin.ttf"; path = "../assets/fonts/Lato-Thin.ttf"; sourceTree = "<group>"; };
 		3C425F60B03E5671AF73E2FE /* libPods-BotranExperience.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BotranExperience.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C83D8577C1E4845AACD13FC /* libRNGestureHandler.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNGestureHandler.a; sourceTree = "<group>"; };
+		5CD13D36293C5CEC00542A2E /* HarbourBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = HarbourBold.ttf; path = ../assets/fonts/HarbourBold.ttf; sourceTree = "<group>"; };
+		5CD13D38293C5D0300542A2E /* MuseoSansRounded300.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MuseoSansRounded300.ttf; path = ../assets/fonts/MuseoSansRounded300.ttf; sourceTree = "<group>"; };
+		5CD13D3A293C5D2100542A2E /* MuseoSansRounded900.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MuseoSansRounded900.ttf; path = ../assets/fonts/MuseoSansRounded900.ttf; sourceTree = "<group>"; };
+		5CD13D3C293C5D4900542A2E /* RCTSplashScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RCTSplashScreen.h; path = RCTSplashScreen/RCTSplashScreen.h; sourceTree = "<group>"; };
+		5CD13D3D293C5D4900542A2E /* RCTSplashScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RCTSplashScreen.m; path = RCTSplashScreen/RCTSplashScreen.m; sourceTree = "<group>"; };
+		5CD13D40293C5EF100542A2E /* MuseoSansRounded500.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MuseoSansRounded500.ttf; path = ../assets/fonts/MuseoSansRounded500.ttf; sourceTree = "<group>"; };
+		5CD13D42293C5F0300542A2E /* MuseoSansRounded700.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MuseoSansRounded700.ttf; path = ../assets/fonts/MuseoSansRounded700.ttf; sourceTree = "<group>"; };
 		65C4209D7DE64233A6905E8B /* libRNLocalize-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNLocalize-tvOS.a"; sourceTree = "<group>"; };
 		77256A02D70CA211C5EE661E /* Pods-BotranExperience.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BotranExperience.release.xcconfig"; path = "Target Support Files/Pods-BotranExperience/Pods-BotranExperience.release.xcconfig"; sourceTree = "<group>"; };
 		9BE56F6176C44163A8FC7956 /* Lato-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Light.ttf"; path = "../assets/fonts/Lato-Light.ttf"; sourceTree = "<group>"; };
@@ -121,6 +134,13 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				5CD13D42293C5F0300542A2E /* MuseoSansRounded700.ttf */,
+				5CD13D40293C5EF100542A2E /* MuseoSansRounded500.ttf */,
+				5CD13D3C293C5D4900542A2E /* RCTSplashScreen.h */,
+				5CD13D3D293C5D4900542A2E /* RCTSplashScreen.m */,
+				5CD13D3A293C5D2100542A2E /* MuseoSansRounded900.ttf */,
+				5CD13D38293C5D0300542A2E /* MuseoSansRounded300.ttf */,
+				5CD13D36293C5CEC00542A2E /* HarbourBold.ttf */,
 				13B07FAE1A68108700A75B9A /* BotranExperience */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				83CBBA001A601CBA00E9B192 /* Products */,
@@ -195,7 +215,10 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1320;
+				KnownAssetTags = (
+					New,
+				);
+				LastUpgradeCheck = 1410;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					13B07F861A680F5B00A75B9A = {
@@ -204,7 +227,7 @@
 				};
 			};
 			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "BotranExperience" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -226,16 +249,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CD13D43293C5F0300542A2E /* MuseoSansRounded700.ttf in Resources */,
+				5CD13D41293C5EF200542A2E /* MuseoSansRounded500.ttf in Resources */,
+				5CD13D3B293C5D2200542A2E /* MuseoSansRounded900.ttf in Resources */,
+				5CD13D39293C5D0300542A2E /* MuseoSansRounded300.ttf in Resources */,
+				5CD13D37293C5CEC00542A2E /* HarbourBold.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				CA5A7C8036FE47B0BDE01EA7 /* Lato-Bold.ttf in Resources */,
+				5CBEB0EC293A5306003DA079 /* main.jsbundle in Resources */,
 				B0A7D913BBC54C44AF1698B1 /* Lato-BoldItalic.ttf in Resources */,
 				E35BD30ADBBE43FB97FE667C /* Lato-Italic.ttf in Resources */,
 				38F9982229584B76A18AC230 /* Lato-Light.ttf in Resources */,
 				597692039F7D4A87B63BD89C /* Lato-LightItalic.ttf in Resources */,
+				22D5EB217CB24ED3BD7999AE /* Lato-Semibold.ttf in Resources */,
 				391527F89E1C4B79A705DE04 /* Lato-Medium.ttf in Resources */,
 				C27FBFDB12034472897F8CB9 /* Lato-Regular.ttf in Resources */,
-				22D5EB217CB24ED3BD7999AE /* Lato-Semibold.ttf in Resources */,
 				F88F3BCDB0844DB38555CBF6 /* Lato-Thin.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,7 +284,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
 		1C44759E695E40F7554C085F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -284,13 +313,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BotranExperience/Pods-BotranExperience-frameworks.sh",
-				"${PODS_ROOT}/../../node_modules/@viro-community/react-viro/ios/dist/ViroRenderer/ViroKit.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BotranExperience/Pods-BotranExperience-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ViroKit.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BotranExperience/Pods-BotranExperience-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -302,45 +330,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BotranExperience/Pods-BotranExperience-resources.sh",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Feather.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Foundation.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Octicons.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Zocial.ttf",
-				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BotranExperience/Pods-BotranExperience-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AntDesign.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Entypo.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EvilIcons.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Feather.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Brands.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Regular.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Solid.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Fontisto.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Foundation.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Ionicons.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialCommunityIcons.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Octicons.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimpleLineIcons.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Zocial.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BotranExperience/Pods-BotranExperience-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -378,8 +373,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D11FA3534CDD4F18ACC10110 /* Pods-BotranExperience.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = K9FWZ9Y7MZ;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -390,8 +386,13 @@
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 				);
 				INFOPLIST_FILE = BotranExperience/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				INFOPLIST_KEY_CFBundleDisplayName = "Botran Experience";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 0.0.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -400,6 +401,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.code.BotranExperience;
 				PRODUCT_NAME = BotranExperience;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -408,6 +413,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 77256A02D70CA211C5EE661E /* Pods-BotranExperience.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K9FWZ9Y7MZ;
 				HEADER_SEARCH_PATHS = (
@@ -419,8 +426,13 @@
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 				);
 				INFOPLIST_FILE = BotranExperience/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				INFOPLIST_KEY_CFBundleDisplayName = "Botran Experience";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 0.0.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -429,6 +441,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.code.BotranExperience;
 				PRODUCT_NAME = BotranExperience;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -481,9 +497,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -529,8 +545,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

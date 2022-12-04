@@ -43,6 +43,9 @@
 	<string></string>
 	<key>UIAppFonts</key>
 	<array>
+		<string>HarbourBold.ttf</string>
+		<string>MuseoSansRounded900.ttf</string>
+		<string>MuseoSansRounded300.ttf</string>
 		<string>Lato-Bold.ttf</string>
 		<string>Lato-BoldItalic.ttf</string>
 		<string>Lato-Italic.ttf</string>
@@ -67,22 +70,24 @@
 		<string>Octicons.ttf</string>
 		<string>SimpleLineIcons.ttf</string>
 		<string>Zocial.ttf</string>
-		<string>harbourbold.ttf</string>
-		<string>HarbourBold.ttf</string>
-		<string>MuseoSansRounded900.ttf</string>
-		<string>MuseoSansRounded300.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
+	<string>LaunchScreen.xib</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIStatusBarStyle</key>
+	<string></string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
+		<string>UIInterfaceOrientationPortrait</string>
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>

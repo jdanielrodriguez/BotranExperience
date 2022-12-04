@@ -16,6 +16,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  for (NSString* family in [UIFont familyNames])
+  {
+    NSLog(@"%@", family);
+    for (NSString* name in [UIFont fontNamesForFamilyName: family])
+    {
+      NSLog(@" %@", name);
+    }
+  }
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
   RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
                                                    moduleName:@"BotranExperience"
@@ -28,8 +36,8 @@
   rootViewController.view = rootView;
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
-  // [RNSplashScreen show];
-  [RNSplashScreen showSplash:@"BotranExperience" inRootView:rootView];
+  [RNSplashScreen show];
+  // [RNSplashScreen showSplash:@"BotranExperience" inRootView:rootView];
   return YES;
 }
 

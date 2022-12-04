@@ -1,18 +1,22 @@
-# Uncomment the next line to define a global platform for your project
-platform :ios, '16.1.2'
 require_relative '../node_modules/react-native/scripts/react_native_pods'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
+# Uncomment the next line to define a global platform for your project
+platform :ios, '16.0'
+
 target 'BotranExperience' do
   # Comment the next line if you don't want to use dynamic frameworks
-  # use_frameworks!
-
   config = use_native_modules!
-  use_react_native!(:path => config["reactNativePath"],
-  # to enable hermes on iOS, change `false` to `true` and then install pods
-  :hermes_enabled => false)
+  
+  # use_frameworks!
+  use_react_native!(
+    :path => config[:reactNativePath],
+    # to enable hermes on iOS, change `false` to `true` and then install pods
+    :hermes_enabled => true
+  )
   pod 'ViroReact', :path => '../node_modules/@viro-community/react-viro/ios/'
   pod 'ViroKit', :path => '../node_modules/@viro-community/react-viro/ios/dist/ViroRenderer/'
+
   use_native_modules!
 end
 
