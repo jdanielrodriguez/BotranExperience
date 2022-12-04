@@ -24,7 +24,7 @@ const No12Etiqueta = [
 ];
 
 const No15EtiquetaSimple = require('./../../../assets/images/botellas/marcadores/BOTRAN-No15EtiquetaSimple.png');
-const No15EtiquetaNormal = require('./../../../assets/images/botellas/marcadores/BOTRAN-No15EtiquetaNormal.png');
+const No15EtiquetaNormal = require('./../../../assets/images/botellas/marcadores/BOTRAN-No15EtiquetaNormalCuted.png');
 const No15EtiquetaLuz = require('./../../../assets/images/botellas/marcadores/BOTRAN-No15EtiquetaLuz.png');
 const No15EtiquetaSombra = require('./../../../assets/images/botellas/marcadores/BOTRAN-No15EtiquetaSombra.png');
 
@@ -36,7 +36,7 @@ const No15Etiqueta = [
 ];
 
 const No18EtiquetaSimple = require('./../../../assets/images/botellas/marcadores/BOTRAN-No18EtiquetaSimple.png');
-const No18EtiquetaNormal = require('./../../../assets/images/botellas/marcadores/BOTRAN-No18EtiquetaNormal.png');
+const No18EtiquetaNormal = require('./../../../assets/images/botellas/marcadores/BOTRAN-No18EtiquetaNormalCuted.png');
 const No18EtiquetaLuz = require('./../../../assets/images/botellas/marcadores/BOTRAN-No18EtiquetaLuz.png');
 const No18EtiquetaSombra = require('./../../../assets/images/botellas/marcadores/BOTRAN-No18EtiquetaSombra.png');
 
@@ -67,17 +67,14 @@ export default function BotranARComponent(props) {
   } = props.sceneNavigator.viroAppProps;
 
   const renderScene = nowTracking =>
-    targets.map(target => {
-      if (target === _target) {
+    targets.map((target, i) => {
         return (
           <ViroNode position={[0, 0, 0]} key={`${target}cardmain`}>
             <ViroAmbientLight color="#f0f0f0" intensity={1000} />
             <ViroARImageMarker
               key={`${target}MKt`}
               target={target}
-              // onAnchorFound={anchor => {
-              //   _onAnchorFound(anchor);
-              // }}
+              renderingOrder={i+1}
               onAnchorUpdated={anchor => {
                 _onAnchorUpdate(anchor, target);
               }}
@@ -91,7 +88,7 @@ export default function BotranARComponent(props) {
                       _target={_target}
                       style={style}
                       _changeObject={_changeObject}
-                      playAnim={playAnim}
+                      playAnim={playAnim && target === _target}
                       show3D={show3D}
                       show32D={show32D}
                       selected={selected}
@@ -104,19 +101,6 @@ export default function BotranARComponent(props) {
             </ViroARImageMarker>
           </ViroNode>
         );
-      }
-      return (
-        <ViroNode position={[0, 0, 0]} key={`${target}cardmain`}>
-          <ViroAmbientLight color="#f0f0f0" intensity={1000} />
-          <ViroARImageMarker
-            key={`${target}MKt`}
-            target={target}
-            onAnchorUpdated={anchor => {
-              _onAnchorUpdate(anchor, target);
-            }}
-          />
-        </ViroNode>
-      );
     });
 
   return (
@@ -155,6 +139,8 @@ ViroARTrackingTargets.createTargets({
     physicalWidth: 0.15, // real world width in meters
     type: 'Image',
   },
+
+  // Botran 15 targets
   Botran15: {
     source: No15Etiqueta[0],
     orientation: 'Up',
@@ -179,6 +165,8 @@ ViroARTrackingTargets.createTargets({
     type: 'Image',
     physicalWidth: 0.153, // real world width in meters
   },
+
+  // Botran 18 targets
   Botran18: {
     source: No18Etiqueta[0],
     orientation: 'Up',
