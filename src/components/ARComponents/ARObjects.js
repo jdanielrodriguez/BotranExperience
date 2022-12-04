@@ -72,14 +72,14 @@ export default function ARObjects() {
       {
          src: require("./../../../assets/vrx/02-Columna1/col01-conBotella-12-parte4.vrx"),
          materials: col1Texture,
-         sound: require("./../../../assets/mp3/narracion/4_FERMENTACIÓN.mp3"),
+         sound: require("./../../../assets/mp3/narracion/4_FERMENTACION.mp3"),
          scale: [0.0016, 0.0017, 0.001],
          position: [-0.002, -0.16, 0]
       },
       {
          src: require("./../../../assets/vrx/02-Columna1/col01-conBotella-12-parte5.vrx"),
          materials: col1Texture,
-         sound: require("./../../../assets/mp3/narracion/5_DESTILACIÓN.mp3"),
+         sound: require("./../../../assets/mp3/narracion/5_DESTILACION.mp3"),
          scale: [0.0016, 0.0017, 0.001],
          position: [-0.002, -0.16, 0]
       },
