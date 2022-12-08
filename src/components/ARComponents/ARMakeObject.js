@@ -82,7 +82,7 @@ export default function ARMakeObject(props) {
           <Viro3DObject
             key={`${_key}Obj`}
             source={selected.src}
-            scale={selected.scale ? selected.scale : [0.00095, 0.001, 0.001]}
+            // scale={selected.scale ? selected.scale : [0.00095, 0.001, 0.001]}
             lightReceivingBitMask={5}
             onClick={_changeObject}
             animation={{
@@ -100,7 +100,7 @@ export default function ARMakeObject(props) {
             position={
               selected.position ? selected.position : [-0.001, -0.101, 0]
             }
-            // scale={[0.00130, 0.001, 0.001]}
+            scale={[0.00230, 0.002, 0.002]}
             // position={[0.002,-0.0530,0]}
             onError={_onError}
             visible={playAnim}
