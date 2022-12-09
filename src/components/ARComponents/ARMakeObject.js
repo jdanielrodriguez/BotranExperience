@@ -97,13 +97,12 @@ export default function ARMakeObject(props) {
             resources={selected.materials}
             onLoadStart={_onLoadStart}
             onLoadEnd={_onLoadEnd}
-            position={
-              selected.position ? selected.position : [-0.001, -0.101, 0]
-            }
+            position={[0,-0.17,0]}
             scale={[0.00230, 0.002, 0.002]}
-            // position={[0.002,-0.0530,0]}
+            rotation={[0,0,0]}
             onError={_onError}
             visible={playAnim}
+            highAccuracyEvents={false}
           />
           {selected.sound && (
             <ViroSound
