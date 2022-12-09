@@ -137,8 +137,6 @@ export default function HomeScreen() {
 
         index = state.objIndex;
 
-        console.log(`Position Before C - ${currentColumn} I - ${index}`);
-
         if (objects) {
             // If the animation columns is the last one
             if (currentColumn === objects.length) {
@@ -154,8 +152,6 @@ export default function HomeScreen() {
                 index += 1;
             }
         }
-
-        console.log(`Position After C - ${currentColumn} I - ${index}`);
 
         const newSelected = objects[currentColumn][index];
 
@@ -203,8 +199,6 @@ export default function HomeScreen() {
 
     const _onAnchorUpdate = (anchor, target) => {
         tempState = state;
-
-        console.log("Anchor *** ", anchor.trackingMethod, target, tempState.target);
 
         if (!pauseTracking) {
             // Change status only if target is the same as selected
