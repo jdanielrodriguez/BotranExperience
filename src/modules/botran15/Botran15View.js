@@ -38,14 +38,14 @@ export default function Botran15Screen() {
         resizeMode="stretch"
       /> */}
       <View style={[styles.sectionLarge]}>
-        <View style={{ ...styles.section, height: '10%' }}>
+        <View style={{ ...styles.section, maxHeight: '10%' }}>
           <Image
             source={require('../../../assets/images/botellas/18/logo.png')}
             style={{ ...styles.logo, marginTop: 40 }}
             resizeMode="stretch"
           />
         </View>
-        <View style={{ ...styles.section, height: '20%' }}>
+        <View style={{ ...styles.section }}>
           <Image
             source={require('../../../assets/images/botellas/15/blend.png')}
             style={styles.blend}
@@ -63,7 +63,7 @@ export default function Botran15Screen() {
           style={styles.divider}
           resizeMode="stretch"
         />
-        <View style={{ ...styles.section, height: '35%' }}>
+        <View style={{ ...styles.section }}>
           <View style={{ ...styles.container2 }}>
             <View style={{ display: 'flex', height: '100%', width: '30%' }}>
               <Image
@@ -145,7 +145,7 @@ export default function Botran15Screen() {
           style={styles.divider2}
           resizeMode="stretch"
         />
-        <View style={{ ...styles.section, height: '30%' }}>
+        <View style={{ ...styles.section, height: '35%' }}>
           <Text size={12} style={styles.footer_title}>
             PERFECT SERVE
           </Text>
@@ -206,7 +206,6 @@ const styles = StyleSheet.create({
     position: 'absolute',
     marginTop: 100,
     overflow: 'hidden',
-    height: '93%'
   },
   fondo2: {
     width,
@@ -283,7 +282,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     minWidth: width,
-    minHeight: height + 200,
+    minHeight: height + 175,
   },
   trago: {
     width: 392,
@@ -428,6 +427,7 @@ const styles = StyleSheet.create({
     width: '70%',
     height: '0.5%',
     marginBottom: '3%',
+    marginTop: '3%',
     marginLeft: 'auto',
     marginRight: 'auto',
   },

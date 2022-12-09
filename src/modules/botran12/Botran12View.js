@@ -38,14 +38,14 @@ export default function Botran12Screen() {
         resizeMode="stretch"
       /> */}
       <View style={[styles.sectionLarge]}>
-        <View style={{ ...styles.section, height: '10%', marginTop: '25%' }}>
+        <View style={{ ...styles.section, height: '10%' }}>
           <Image
             source={require('../../../assets/images/botellas/12/logo.png')}
             style={{ ...styles.logo }}
             resizeMode="stretch"
           />
         </View>
-        <View style={{ ...styles.section, height: '30%', marginTop: '-20%' }}>
+        <View style={{ ...styles.section, marginTop: '-25%' }}>
           <Image
             source={require('../../../assets/images/botellas/12/blend.png')}
             style={styles.blend}
@@ -63,7 +63,7 @@ export default function Botran12Screen() {
           style={styles.divider}
           resizeMode="stretch"
         />
-        <View style={{ ...styles.section, height: '40%' }}>
+        <View style={{ ...styles.section}}>
           <View style={{ ...styles.container2 }}>
             <View style={{ display: 'flex', height: '100%', width: '30%' }}>
               <Image
@@ -298,7 +298,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     minWidth: width,
-    minHeight: height + 70,
+    minHeight: height + 150,
     marginLeft: 'auto',
     marginRight: 'auto'
   },
