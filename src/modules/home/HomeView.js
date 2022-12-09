@@ -46,7 +46,7 @@ export default function HomeScreen() {
         show3D: true,
         show32D: false,
         objects,
-        pauseUpdates: false,
+        pauseUpdates: true,
         isTracking: false,
         playAnim: false,
         quetzal: false,
