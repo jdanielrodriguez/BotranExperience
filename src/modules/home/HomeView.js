@@ -195,7 +195,9 @@ export default function HomeScreen() {
     const _onAnchorUpdate = (anchor, target) => {
         tempState = state;
 
-        console.log("*** AnchorData ***", target, anchor.trackingMethod, tempState.target, tempState.lastTarget);
+        if(tempState.anchorId !== anchor.anchorId && tempState.anchorId > 0){
+            return false;
+        }
 
         if (!pauseTracking) {
             // Change status only if target is the same as selected
