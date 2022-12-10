@@ -24,7 +24,7 @@ const No12Etiqueta = [
 ];
 
 const No15EtiquetaSimple = require('./../../../assets/images/botellas/marcadores/BOTRAN-No15EtiquetaSimple.png');
-const No15EtiquetaNormal = require('./../../../assets/images/botellas/marcadores/316984124_526211206215319_31674409309260584_n.jpg');
+const No15EtiquetaNormal = require('./../../../assets/images/botellas/marcadores/20221206_152644.jpg');
 const No15EtiquetaLuz = require('./../../../assets/images/botellas/marcadores/BOTRAN-No15EtiquetaLuz.png');
 const No15EtiquetaSombra = require('./../../../assets/images/botellas/marcadores/BOTRAN-No15EtiquetaSombra.png');
 
