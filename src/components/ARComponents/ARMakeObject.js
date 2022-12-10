@@ -97,9 +97,9 @@ export default function ARMakeObject(props) {
             resources={selected.materials}
             onLoadStart={_onLoadStart}
             onLoadEnd={_onLoadEnd}
-            position={[0,-0.17,0]}
-            scale={[0.00230, 0.002, 0.002]}
-            rotation={[0,0,0]}
+            position={[0,-0.155,0]}
+            scale={[0.002, 0.002, 0.002]}
+            rotation={[10,0,0]}
             onError={_onError}
             visible={playAnim}
             highAccuracyEvents={false}

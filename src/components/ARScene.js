@@ -25,8 +25,10 @@ export default function ARScene(props) {
           scene: props.component || BotranARComponent,
           passProps:{...props}
         }}
+        pauseUpdates
+        hdrEnabled
         viroAppProps={{...props, show32D: props.show32D, selected: props.selected, playAnim: props.playAnim, pauseUpdates: props.pauseUpdates, foundAnchor: props.foundAncho, isTracking: props.isTracking, column: props.column, objIndex: props.objIndex, show3D: props.show3D}}
-        style={styles.f1}
+        style={{flex: 1}}
       />
     </>
   )

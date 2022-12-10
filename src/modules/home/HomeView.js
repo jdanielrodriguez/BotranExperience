@@ -25,7 +25,6 @@ export default function HomeScreen() {
     let isPlaying = false;
     let pauseTracking = false;
     let tempState = {};
-    let lastTarget = '';
     const targets = [
         // 'Botran12',
         'Botran12Normal',
@@ -84,12 +83,11 @@ export default function HomeScreen() {
         tempState.objIndex = index;
         tempState.column = currentColumn;
         tempState.selected = selectedNew;
+
         setState({...tempState});
 
-        setTimeout(() => {
-            isPlaying = false;
-            pauseTracking = false;
-        }, 1000);
+        isPlaying = false;
+        pauseTracking = false;
     };
 
     const _onFinish = () => {
@@ -97,33 +95,33 @@ export default function HomeScreen() {
     };
 
     const _onFinishQuetzal = columnNew => {
-        pauseTracking = true;
-
-        let currentColumn = columnNew === objects.length ? 1 : columnNew;
-
-        index = 0;
-
-        if (!objects[currentColumn]) {
-            currentColumn = 1;
-        }
-
-        if (!objects[currentColumn][index]) {
-            index = 0;
-        }
-        const selectedNew = objects[currentColumn][index];
-        // const temp = state;
-
-        // Change resource online and indicate quetzal animation finish.
-        tempState.selected = selectedNew;
-        tempState.quetzal = false;
-
-        setState({...tempState});
-
-        // After 3 seconds fire new status to indicate tracking can continue
-        setTimeout(() => {
-            isPlaying = false;
-            pauseTracking = false;
-        }, 1000);
+        // pauseTracking = true;
+        //
+        // let currentColumn = columnNew === objects.length ? 1 : columnNew;
+        //
+        // index = 0;
+        //
+        // if (!objects[currentColumn]) {
+        //     currentColumn = 1;
+        // }
+        //
+        // if (!objects[currentColumn][index]) {
+        //     index = 0;
+        // }
+        // const selectedNew = objects[currentColumn][index];
+        // // const temp = state;
+        //
+        // // Change resource online and indicate quetzal animation finish.
+        // tempState.selected = selectedNew;
+        // tempState.quetzal = false;
+        //
+        // setState({...tempState});
+        //
+        // // After 3 seconds fire new status to indicate tracking can continue
+        // setTimeout(() => {
+        //     isPlaying = false;
+        //     pauseTracking = false;
+        // }, 1000);
     };
 
     const onFinishSound = () => {
@@ -163,11 +161,8 @@ export default function HomeScreen() {
 
         setState({...tempState});
 
-        // After 3 seconds fire new status to indicate tracking can continue
-        setTimeout(() => {
-            isPlaying = false;
-            pauseTracking = false;
-        }, 500);
+        isPlaying = false;
+        pauseTracking = false;
     };
 
     const _onAnchorFound = anchor => {
@@ -199,6 +194,10 @@ export default function HomeScreen() {
 
     const _onAnchorUpdate = (anchor, target) => {
         tempState = state;
+
+        if(tempState.anchorId !== anchor.anchorId && tempState.anchorId > 0){
+            return false;
+        }
 
         if (!pauseTracking) {
             // Change status only if target is the same as selected
@@ -342,7 +341,7 @@ const {width, height} = Dimensions.get('window');
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        width,
+        width:'100%'
     },
     container2: {
         flex: 1,
