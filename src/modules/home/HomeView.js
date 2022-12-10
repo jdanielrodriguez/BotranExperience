@@ -342,7 +342,7 @@ const {width, height} = Dimensions.get('window');
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        width,
+        width:'100%'
     },
     container2: {
         flex: 1,
