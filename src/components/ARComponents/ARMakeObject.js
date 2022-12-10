@@ -99,7 +99,7 @@ export default function ARMakeObject(props) {
             onLoadEnd={_onLoadEnd}
             position={[0,-0.155,0]}
             scale={[0.002, 0.002, 0.002]}
-            rotation={[10,-10,0]}
+            rotation={[10,0,0]}
             onError={_onError}
             visible={playAnim}
             highAccuracyEvents={false}
