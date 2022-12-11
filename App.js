@@ -12,7 +12,7 @@ import { persistor, store } from './src/redux/store';
 import AppView from './src/modules/AppViewContainer';
 
 export default function App() {
-  LogBox.ignoreLogs(['Warning: Async Storage has been extracted from react-native core']);
+  LogBox.ignoreAllLogs();
   return (
     <Provider store={store}>
       <NavigationContainer onReady={() => SplashScreen.hide()}>
