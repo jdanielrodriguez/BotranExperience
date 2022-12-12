@@ -1,6 +1,6 @@
 export default {
-  primaryLight: 'MuseoSansRounded300',
-  primaryRegular: 'MuseoSansRounded500',
-  primaryBold: 'MuseoSansRounded900',
-  primarySemiBold: 'HarbourBold',
+  primaryLight: 'MuseoSansRounded-300.',
+  primaryRegular: 'MuseoSansRounded-500',
+  primaryBold: 'MuseoSansRounded-900.',
+  primarySemiBold: 'Harbour-Bold',
 };
