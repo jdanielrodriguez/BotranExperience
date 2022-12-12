@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {
     Dimensions,
-    Image,
+    Image, Platform,
     StyleSheet,
     TouchableOpacity,
     View,
@@ -189,12 +189,42 @@ export default function HomeScreen() {
     };
 
     const _onAnchorLost = anchor => {
-        //    TODO do something on lost anchor
+        console.log("*** iOS *** Lost Anchor", anchor);
+
+        if (isPlaying) {
+            tempState.isTracking = false;
+            tempState.playAnim = false;
+            tempState.pauseUpdates = false;
+            tempState.show3D = false;
+            tempState.show32D = false;
+            tempState.anchorId = null;
+            tempState.foundAnchor = null;
+            tempState.animationName = 'NoAnimation';
+            tempState.target = '';
+            setState({...tempState});
+        }
     };
 
     const _onAnchorUpdate = (anchor, target) => {
         tempState = state;
 
+        if (Platform.OS === 'ios'){
+            if (tempState.target === target && !isPlaying) {
+                isPlaying = true;
+                _onAnchorFound(anchor);
+            }
+        }else{
+            _onAnchorUpdateAndroid(tempState, anchor, target)
+        }
+
+        if (tempState.target === '') {
+            tempState.target = target;
+            tempState.lastTarget = target;
+            setState({...tempState});
+        }
+    };
+
+    const _onAnchorUpdateAndroid = (anchor,target) => {
         if(tempState.anchorId !== anchor.anchorId && tempState.anchorId > 0){
             return false;
         }
@@ -232,7 +262,7 @@ export default function HomeScreen() {
             tempState.lastTarget = target;
             setState({...tempState});
         }
-    };
+    }
 
     const _onCameraTransformUpdate = anchor => {
         tempState = state;
