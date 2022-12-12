@@ -69,8 +69,9 @@ export default function BotranARComponent(props) {
 
     const renderScene = nowTracking => {
         return targets.map((target, i) => {
+            console.log(nowTracking);
             return (
-                <ViroNode position={[0, 0, 0]} rotation={[0,0,0]} key={`${target}cardmain`}>
+                <ViroNode position={[0, 0, 0]} rotation={[0, 0, 0]} key={`${target}cardmain`}>
                     <ViroAmbientLight color="#ffffff" intensity={1000}/>
                     <ViroARImageMarker
                         key={`${target}MKt`}
@@ -81,7 +82,7 @@ export default function BotranARComponent(props) {
                         }}
                         onAnchorRemoved={_onAnchorLost}
                     >
-                        <ViroNode key={`${target}card`} rotation={[0,0,0]}>
+                        <ViroNode key={`${target}card`} rotation={[0, 0, 0]}>
                             <ViroNode rotation={[-90, 0, 0]} key={`${target}cardnode`}>
                                 {nowTracking && (
                                     <ARMakeObject
@@ -113,7 +114,6 @@ export default function BotranARComponent(props) {
             //   _onAnchorUpdate(anchor);
             // }}
             pauseUpdates={pauseUpdates}
-            onAnchorRemoved={_onAnchorLost}
         >
             {renderScene(isTracking)}
         </ViroARScene>
