@@ -113,6 +113,9 @@ export default function ARMakeObject(props) {
                   ? onFinishSound
                   : _changeObject
               }
+              volume={1}
+              muted={false}
+              paused={false}
             />
           )}
         </>

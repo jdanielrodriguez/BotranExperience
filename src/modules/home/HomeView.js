@@ -188,8 +188,8 @@ export default function HomeScreen() {
         }
     };
 
-    const _onAnchorLost = anchor => {
-        console.log("*** iOS *** Lost Anchor", anchor);
+    const _onAnchorLost = () => {
+        console.log("*** iOS *** Lost Anchor");
 
         if (isPlaying) {
             tempState.isTracking = false;
@@ -208,12 +208,12 @@ export default function HomeScreen() {
     const _onAnchorUpdate = (anchor, target) => {
         tempState = state;
 
-        if (Platform.OS === 'ios'){
+        if (Platform.OS === 'ios') {
             if (tempState.target === target && !isPlaying) {
                 isPlaying = true;
                 _onAnchorFound(anchor);
             }
-        }else{
+        } else {
             _onAnchorUpdateAndroid(tempState, anchor, target)
         }
 
@@ -224,8 +224,8 @@ export default function HomeScreen() {
         }
     };
 
-    const _onAnchorUpdateAndroid = (anchor,target) => {
-        if(tempState.anchorId !== anchor.anchorId && tempState.anchorId > 0){
+    const _onAnchorUpdateAndroid = (anchor, target) => {
+        if (tempState.anchorId !== anchor.anchorId && tempState.anchorId > 0) {
             return false;
         }
 
@@ -371,7 +371,7 @@ const {width, height} = Dimensions.get('window');
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        width:'100%'
+        width: '100%'
     },
     container2: {
         flex: 1,
