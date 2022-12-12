@@ -69,7 +69,6 @@ export default function BotranARComponent(props) {
 
     const renderScene = nowTracking => {
         return targets.map((target, i) => {
-            console.log(nowTracking);
             return (
                 <ViroNode position={[0, 0, 0]} rotation={[0, 0, 0]} key={`${target}cardmain`}>
                     <ViroAmbientLight color="#ffffff" intensity={1000}/>
