@@ -32,12 +32,9 @@
 	<key>NSCameraUsageDescription</key>
 	<string>The camera is needed for AR functionality</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string/>
+	<string></string>
 	<key>UIAppFonts</key>
 	<array>
-		<string>HarbourBold.ttf</string>
-		<string>MuseoSansRounded900.ttf</string>
-		<string>MuseoSansRounded300.ttf</string>
 		<string>Lato-Bold.ttf</string>
 		<string>Lato-BoldItalic.ttf</string>
 		<string>Lato-Italic.ttf</string>
@@ -47,10 +44,6 @@
 		<string>Lato-Regular.ttf</string>
 		<string>Lato-Semibold.ttf</string>
 		<string>Lato-Thin.ttf</string>
-		<string>MuseoSansRounded100.ttf</string>
-		<string>MuseoSansRounded1000.ttf</string>
-		<string>MuseoSansRounded700.ttf</string>
-		<string>MuseoSansRounded500.ttf</string>
 		<string>AntDesign.ttf</string>
 		<string>Entypo.ttf</string>
 		<string>EvilIcons.ttf</string>

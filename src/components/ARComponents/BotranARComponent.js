@@ -57,6 +57,7 @@ export default function BotranARComponent(props) {
         _changeObject,
         show3D,
         _onAnchorFound,
+        _onAnchorLost,
         _onAnchorUpdate,
         _onCameraTransformUpdate,
         isTracking,
@@ -77,6 +78,9 @@ export default function BotranARComponent(props) {
                         renderingOrder={i + 1}
                         onAnchorUpdated={anchor => {
                             _onAnchorUpdate(anchor, target);
+                        }}
+                        onAnchorLost={anchor => {
+                            _onAnchorLost(anchor);
                         }}
                     >
                         <ViroNode key={`${target}card`} rotation={[0,0,0]}>
