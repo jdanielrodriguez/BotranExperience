@@ -2,7 +2,7 @@ import {
   createDrawerNavigator, DrawerContentScrollView, DrawerItem
 } from '@react-navigation/drawer';
 import * as React from 'react';
-import { Image, ImageBackground, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { Image, ImageBackground, StyleSheet, Text, View, TouchableOpacity, Platform } from 'react-native';
 import Share from 'react-native-share';
 import { fonts } from '../../styles';
 import NavigatorView from './RootNavigation';
@@ -32,7 +32,7 @@ const drawerData = [
 const Drawer = createDrawerNavigator();
 const compartir = () => {
   const shareOptions = {
-    url: 'https://play.google.com/apps/internaltest/4701166991196422934',
+    url: Platform.OS === 'ios' ? 'https://apps.apple.com/us/app/BotranExperience' : 'https://play.google.com/store/apps/details?id=com.botranexperience',
     message: 'Hey look this Botran AR Experience.'
   };
   Share.open(shareOptions);

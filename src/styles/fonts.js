@@ -1,6 +1,8 @@
+import { Platform } from 'react-native';
+
 export default {
-  primaryLight: 'MuseoSansRounded-300.',
-  primaryRegular: 'MuseoSansRounded-500',
-  primaryBold: 'MuseoSansRounded-900.',
-  primarySemiBold: 'Harbour-Bold',
+  primaryLight: Platform.OS === 'ios' ? 'MuseoSansRounded-300' : 'MuseoSansRounded300',
+  primaryRegular: Platform.OS === 'ios' ? 'MuseoSansRounded-500' : 'MuseoSansRounded500',
+  primaryBold: Platform.OS === 'ios' ? 'MuseoSansRounded-900' : 'MuseoSansRounded900',
+  primarySemiBold: Platform.OS === 'ios' ? 'Harbour-Bold' : 'HarbourBold',
 };

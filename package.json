@@ -11,6 +11,7 @@
     "test:update": "jest -u",
     "test:coverage": "jest --coverage",
     "run:ios": "react-native run-ios",
+    "pod:install": "npx pod-install",
     "run:android": "react-native run-android",
     "lint": "./node_modules/eslint/bin/eslint.js src",
     "lint:fix": "./node_modules/eslint/bin/eslint.js src --fix",

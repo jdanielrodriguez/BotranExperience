@@ -28,7 +28,6 @@
 		28692B042946B77700576CAB /* 20221206_154445.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28692AF82946B77700576CAB /* 20221206_154445.jpg */; };
 		28692B052946B77700576CAB /* 20221206_152644.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28692AF92946B77700576CAB /* 20221206_152644.jpg */; };
 		28692B062946B77700576CAB /* BOTRAN-No12EtiquetaLuz.png in Resources */ = {isa = PBXBuildFile; fileRef = 28692AFA2946B77700576CAB /* BOTRAN-No12EtiquetaLuz.png */; };
-		5C2620882942607400ACCAC1 /* PermissionsAndroid in Resources */ = {isa = PBXBuildFile; fileRef = 5C2620512942606A00ACCAC1 /* PermissionsAndroid */; };
 		5C26208B2942607400ACCAC1 /* Animated in Resources */ = {isa = PBXBuildFile; fileRef = 5C2620542942606A00ACCAC1 /* Animated */; };
 		5C26208D2942607400ACCAC1 /* Utilities in Resources */ = {isa = PBXBuildFile; fileRef = 5C2620562942606B00ACCAC1 /* Utilities */; };
 		5C26208E2942607400ACCAC1 /* StyleSheet in Resources */ = {isa = PBXBuildFile; fileRef = 5C2620572942606B00ACCAC1 /* StyleSheet */; };
@@ -42,7 +41,6 @@
 		5C2620B22942607400ACCAC1 /* CameraRoll in Resources */ = {isa = PBXBuildFile; fileRef = 5C26207B2942607200ACCAC1 /* CameraRoll */; };
 		5C2620B82942607400ACCAC1 /* ReactNative in Resources */ = {isa = PBXBuildFile; fileRef = 5C2620812942607300ACCAC1 /* ReactNative */; };
 		5C2620BE294260C600ACCAC1 /* libViroReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C2620BD294260C600ACCAC1 /* libViroReact.a */; };
-		5C2620C02942636900ACCAC1 /* ViroRenderer in Resources */ = {isa = PBXBuildFile; fileRef = 5C2620BF2942636900ACCAC1 /* ViroRenderer */; };
 		5C2620C229426AEA00ACCAC1 /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C2620C129426AEA00ACCAC1 /* ARKit.framework */; };
 		5C2620C429426B0300ACCAC1 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C2620C329426B0300ACCAC1 /* AssetsLibrary.framework */; };
 		5C2620C629426B7400ACCAC1 /* libReact-Core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C2620C529426B7400ACCAC1 /* libReact-Core.a */; };
@@ -462,14 +460,12 @@
 				5C26208B2942607400ACCAC1 /* Animated in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				5C29FBFB2942499B00BE91AB /* LaunchScreen.storyboard in Resources */,
-				5C2620C02942636900ACCAC1 /* ViroRenderer in Resources */,
 				5C26208E2942607400ACCAC1 /* StyleSheet in Resources */,
 				5C2620982942607400ACCAC1 /* polyfills in Resources */,
 				5C262105294296E600ACCAC1 /* bootsplash_logo@1,5x.png in Resources */,
 				5C2620912942607400ACCAC1 /* Core in Resources */,
 				5C2620B82942607400ACCAC1 /* ReactNative in Resources */,
 				5C2620A02942607400ACCAC1 /* Components in Resources */,
-				5C2620882942607400ACCAC1 /* PermissionsAndroid in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,7 +566,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_ASSET_PATHS = ../assets;
 				DEVELOPMENT_TEAM = K9FWZ9Y7MZ;
 				HEADER_SEARCH_PATHS = (
@@ -592,7 +588,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.0.1;
+				MARKETING_VERSION = 0.0.11;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -614,7 +610,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_ASSET_PATHS = ../assets;
 				DEVELOPMENT_TEAM = K9FWZ9Y7MZ;
 				HEADER_SEARCH_PATHS = (
@@ -636,7 +632,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.0.1;
+				MARKETING_VERSION = 0.0.11;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
