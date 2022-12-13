@@ -18,5 +18,7 @@ target 'BotranExperience' do
   pod 'ViroKit', :path => '../node_modules/@viro-community/react-viro/ios/dist/ViroRenderer/'
   
   use_native_modules!
+  pod 'react-native-idle-timer', :path => '../node_modules/react-native-idle-timer'
+
 end
 

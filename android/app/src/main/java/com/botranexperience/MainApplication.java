@@ -9,6 +9,7 @@ import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
+import com.marcshilling.idletimer.IdleTimerPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.reactcommunity.rnlocalize.RNLocalizePackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
