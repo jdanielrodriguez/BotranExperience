@@ -209,23 +209,23 @@ export default function HomeScreen() {
     const _onAnchorUpdate = (anchor, target) => {
         tempState = state;
 
-        if (Platform.OS === 'ios') {
-            if (tempState.target === target && !isPlaying) {
-                isPlaying = true;
-                _onAnchorFound(anchor);
-            }
-        } else {
-            _onAnchorUpdateAndroid(tempState, anchor, target)
-        }
+    //     if (Platform.OS === 'ios') {
+    //         if (tempState.target === target && !isPlaying) {
+    //             isPlaying = true;
+    //             _onAnchorFound(anchor);
+    //         }
+    //     } else {
+    //         _onAnchorUpdateAndroid(tempState, anchor, target)
+    //     }
 
-        if (tempState.target === '') {
-            tempState.target = target;
-            tempState.lastTarget = target;
-            setState({ ...tempState });
-        }
-    };
+    //     if (tempState.target === '') {
+    //         tempState.target = target;
+    //         tempState.lastTarget = target;
+    //         setState({ ...tempState });
+    //     }
+    // };
 
-    const _onAnchorUpdateAndroid = (anchor, target) => {
+    // const _onAnchorUpdateAndroid = (anchor, target) => {
         if (tempState.anchorId !== anchor.anchorId && tempState.anchorId > 0) {
             return false;
         }
