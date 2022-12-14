@@ -78,7 +78,6 @@ export default function BotranARComponent(props) {
                         onAnchorUpdated={anchor => {
                             _onAnchorUpdate(anchor, target);
                         }}
-                        // onAnchorRemoved={_onAnchorLost}
                     >
                         <ViroNode key={`${target}card`} rotation={[0, 0, 0]}>
                             <ViroNode rotation={[-90, 0, 0]} key={`${target}cardnode`}>
@@ -89,7 +88,7 @@ export default function BotranARComponent(props) {
                                         _target={_target}
                                         style={style}
                                         _changeObject={_changeObject}
-                                        playAnim={playAnim && target === _target}
+                                        playAnim={playAnim}
                                         show3D={show3D}
                                         show32D={show32D}
                                         selected={selected}
