@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {
     Dimensions,
     Image,
@@ -108,7 +108,7 @@ export default function HomeScreen() {
         tempState.column = currentColumn;
         tempState.selected = selectedNew;
 
-        setState({ ...tempState });
+        setState({...tempState});
 
         isPlaying = false;
         pauseTracking = false;
@@ -183,7 +183,7 @@ export default function HomeScreen() {
         tempState.column = currentColumn;
         tempState.selected = newSelected;
 
-        setState({ ...tempState });
+        setState({...tempState});
 
         isPlaying = false;
         pauseTracking = false;
@@ -191,7 +191,7 @@ export default function HomeScreen() {
 
     const _onAnchorFound = anchor => {
         tempState = state;
-        const { anchorId } = state;
+        const {anchorId} = state;
 
         // console.log("*** Anchor found and play ***", tempState.target)
 
@@ -208,18 +208,16 @@ export default function HomeScreen() {
                 tempState.anchorId = anchor ? anchor.anchorId : null;
             }
 
-            setState({ ...tempState });
+            setState({...tempState});
         }
     };
 
     const _onAnchorLost = () => {
-
         if (Platform.OS === 'ios') {
             tempState = state
 
             if (isPlaying) {
                 tempState.isTracking = false;
-                tempState.pauseUpdates = false;
                 tempState.show3D = false;
                 tempState.show32D = false;
                 tempState.anchorId = null;
@@ -283,7 +281,7 @@ export default function HomeScreen() {
                     tempState.foundAnchor = null;
                     tempState.animationName = 'NoAnimation';
                     tempState.target = '';
-                    setState({ ...tempState });
+                    setState({...tempState});
                 }
             }
         }
@@ -292,7 +290,7 @@ export default function HomeScreen() {
         if (anchor.trackingMethod === 'tracking' && tempState.target === '') {
             tempState.target = target;
             tempState.lastTarget = target;
-            setState({ ...tempState });
+            setState({...tempState});
         }
         return false;
     };
@@ -309,7 +307,7 @@ export default function HomeScreen() {
             tempState.playAnim = true;
             tempState.show3D = true;
             tempState.show32D = true;
-            setState({ ...tempState });
+            setState({...tempState});
             // console.log('anchor: ', anchor);
         } else if (anchor.trackingMethod === 'lastKnownPose') {
             tempState.isTracking = false;
@@ -320,7 +318,7 @@ export default function HomeScreen() {
             tempState.anchorId = null;
             tempState.foundAnchor = null;
             tempState.animationName = 'NoAnimation';
-            setState({ ...tempState });
+            setState({...tempState});
             // console.log('STATE: ', state);
         }
     };
@@ -329,7 +327,7 @@ export default function HomeScreen() {
         <View style={styles.container}>
             <ARScene
                 {...state}
-                style={{ zIndex: 1 }}
+                style={{zIndex: 1}}
                 column={state.column}
                 objIndex={state.objIndex}
                 selected={state.selected}
@@ -360,14 +358,14 @@ export default function HomeScreen() {
                 </View>
             )}
             <View style={styles.section}>
-                <View style={{ ...styles.container2, marginLeft: 'auto' }}>
+                <View style={{...styles.container2, marginLeft: 'auto'}}>
                     <TouchableOpacity
                         onPress={() => {
                             _changeColumn(2);
                         }}
-                        style={{ ...styles.btn }}
+                        style={{...styles.btn}}
                     >
-                        <Image source={btnOrigin} style={styles.img} />
+                        <Image source={btnOrigin} style={styles.img}/>
                     </TouchableOpacity>
                     <TouchableOpacity
                         onPress={() => {
@@ -375,32 +373,32 @@ export default function HomeScreen() {
                         }}
                         style={styles.btn}
                     >
-                        <Image source={btnDynamic} style={styles.img} />
+                        <Image source={btnDynamic} style={styles.img}/>
                     </TouchableOpacity>
                 </View>
-                <View style={{ ...styles.container2, marginLeft: 'auto' }}>
+                <View style={{...styles.container2, marginLeft: 'auto'}}>
                     <TouchableOpacity
                         onPress={() => {
                             _changeColumn(4);
                         }}
-                        style={{ ...styles.btn }}
+                        style={{...styles.btn}}
                     >
-                        <Image source={btnAroundWorld} style={styles.img} />
+                        <Image source={btnAroundWorld} style={styles.img}/>
                     </TouchableOpacity>
                     <TouchableOpacity
                         onPress={() => {
                             _changeColumn(5);
                         }}
-                        style={{ ...styles.btn }}
+                        style={{...styles.btn}}
                     >
-                        <Image source={btnSustainable} style={styles.img} />
+                        <Image source={btnSustainable} style={styles.img}/>
                     </TouchableOpacity>
                 </View>
             </View>
         </View>
     );
 }
-const { width, height } = Dimensions.get('window');
+const {width, height} = Dimensions.get('window');
 const styles = StyleSheet.create({
     container: {
         flex: 1,

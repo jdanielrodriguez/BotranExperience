@@ -74,6 +74,8 @@ export default function ARMakeObject(props) {
         return null;
     }
 
+    console.log("Animation is ******",playAnim);
+
     return (
         <>
             {/* <ARSpotLigth /> */}

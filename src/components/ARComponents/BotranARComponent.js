@@ -88,7 +88,7 @@ export default function BotranARComponent(props) {
                                         _target={_target}
                                         style={style}
                                         _changeObject={_changeObject}
-                                        playAnim={playAnim && target === _target}
+                                        playAnim={playAnim}
                                         show3D={show3D}
                                         show32D={show32D}
                                         selected={selected}
