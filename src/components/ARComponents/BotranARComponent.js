@@ -79,7 +79,6 @@ export default function BotranARComponent(props) {
                         onAnchorUpdated={anchor => {
                             _onAnchorUpdate(anchor, target);
                         }}
-                        onAnchorRemoved={_onAnchorLost}
                     >
                         <ViroNode key={`${target}card`} rotation={[0, 0, 0]}>
                             <ViroNode rotation={[-90, 0, 0]} key={`${target}cardnode`}>

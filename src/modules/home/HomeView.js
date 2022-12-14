@@ -11,6 +11,9 @@ import ARObjects from '../../components/ARComponents/ARObjects';
 import ARScene from '../../components/ARScene';
 
 import BotranARComponent from '../../components/ARComponents/BotranARComponent';
+import {clear} from "react-native/Libraries/LogBox/Data/LogBoxData";
+
+let staticInterval = 0;
 
 export default function HomeScreen() {
     const btnOrigin = require('./../../../assets/images/guatemala-origin-button.png');
@@ -20,11 +23,32 @@ export default function HomeScreen() {
     const bottle12 = require('./../../../assets/images/botellas/punteadas/botella-altainfinite.png');
     const bottle18 = require('./../../../assets/images/botellas/punteadas/botella-baja-greyinfinite.png');
     const objects = ARObjects();
+    const intervalID = setInterval(() => {
+        let now = new Date();
+        let seconds = (now.getTime() - lastUpdate.getTime()) / 1000;
+
+        console.log("*** has been from tracking ***", seconds, now, lastUpdate);
+        console.log("*** the interval id is ***", intervalID);
+        console.log("*** the static interval id is ***", staticInterval);
+
+        if (seconds > 2 && intervalID === staticInterval) {
+            _onAnchorLost();
+            now = null;
+            seconds = 0;
+        } else if (intervalID !== staticInterval) {
+            clearInterval(intervalID);
+        }
+    }, 1500);
+
+    staticInterval = intervalID;
+
     let index = 0;
     let column = 0;
     let isPlaying = false;
     let pauseTracking = false;
+    let lastUpdate = new Date();
     let tempState = {};
+
     const targets = [
         // 'Botran12',
         'Botran12Normal',
@@ -189,26 +213,41 @@ export default function HomeScreen() {
     };
 
     const _onAnchorLost = () => {
-        console.log("*** iOS *** Lost Anchor");
 
-        if (isPlaying) {
-            tempState.isTracking = false;
-            tempState.playAnim = false;
-            tempState.pauseUpdates = false;
-            tempState.show3D = false;
-            tempState.show32D = false;
-            tempState.anchorId = null;
-            tempState.foundAnchor = null;
-            tempState.animationName = 'NoAnimation';
-            tempState.target = '';
-            setState({...tempState});
+        if (Platform.OS === 'ios') {
+            tempState = state
+
+            if (isPlaying) {
+                tempState.isTracking = false;
+                tempState.playAnim = false;
+                tempState.pauseUpdates = false;
+                tempState.show3D = false;
+                tempState.show32D = false;
+                tempState.anchorId = null;
+                tempState.foundAnchor = null;
+                tempState.animationName = 'NoAnimation';
+                tempState.target = '';
+                setState({...tempState});
+            }
         }
     };
 
     const _onAnchorUpdate = (anchor, target) => {
         tempState = state;
 
+        // console.log("*** targets are ***", tempState.target, target);
+
+
         if (Platform.OS === 'ios') {
+            // if (tempState.target !== target && tempState.target !== '') {
+            //     _onAnchorLost();
+            //     return false;
+            // }
+
+            lastUpdate = new Date();
+
+            console.log(lastUpdate);
+
             if (tempState.target === target && !isPlaying) {
                 isPlaying = true;
                 _onAnchorFound(anchor);
@@ -291,6 +330,10 @@ export default function HomeScreen() {
             // console.log('STATE: ', state);
         }
     };
+
+    const componentWillUnmount = () => {
+        clearInterval(intervalID);
+    }
 
     return (
         <View style={styles.container}>
