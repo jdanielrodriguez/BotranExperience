@@ -56,7 +56,6 @@ export default function BotranARComponent(props) {
         style,
         _changeObject,
         show3D,
-        _onAnchorFound,
         _onAnchorLost,
         _onAnchorUpdate,
         _onCameraTransformUpdate,

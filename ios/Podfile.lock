@@ -189,6 +189,8 @@ PODS:
   - React-jsinspector (0.63.1)
   - react-native-date-picker (4.2.6):
     - React-Core
+  - react-native-idle-timer (2.1.7):
+    - React-Core
   - react-native-safe-area-context (0.7.3):
     - React
   - react-native-splash-screen (3.3.0):
@@ -301,6 +303,7 @@ DEPENDENCIES:
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
   - react-native-date-picker (from `../node_modules/react-native-date-picker`)
+  - react-native-idle-timer (from `../node_modules/react-native-idle-timer`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - react-native-splash-screen (from `../node_modules/react-native-splash-screen`)
   - react-native-webview (from `../node_modules/react-native-webview`)
@@ -367,6 +370,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
   react-native-date-picker:
     :path: "../node_modules/react-native-date-picker"
+  react-native-idle-timer:
+    :path: "../node_modules/react-native-idle-timer"
   react-native-safe-area-context:
     :path: "../node_modules/react-native-safe-area-context"
   react-native-splash-screen:
@@ -439,6 +444,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: 7ab9cdcdd18d57652fb041f8a147fe9658d4e00a
   React-jsinspector: 2e28bb487e42dda6c94dbfa0c648d1343767a0fb
   react-native-date-picker: 93e43b3084cea595b4d68b1405d6d99849663bd6
+  react-native-idle-timer: 5a71c3e74b2ff1b91a0416193e96dee9603e881d
   react-native-safe-area-context: e200d4433aba6b7e60b52da5f37af11f7a0b0392
   react-native-splash-screen: 4312f786b13a81b5169ef346d76d33bc0c6dc457
   react-native-webview: 994b9f8fbb504d6314dc40d83f94f27c6831b3bf
@@ -466,6 +472,6 @@ SPEC CHECKSUMS:
   ViroReact: f4980e6b04918c4340637f9cbaae22a6bb7ea440
   Yoga: d5bd05a2b6b94c52323745c2c2b64557c8c66f64
 
-PODFILE CHECKSUM: bdc4561701385bebcddd0c6ce90e3b62f59a426c
+PODFILE CHECKSUM: f6fffc472113ecbf40729816a217ea060871351e
 
 COCOAPODS: 1.11.3

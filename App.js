@@ -5,6 +5,7 @@ import { ActivityIndicator, LogBox, StyleSheet, View } from 'react-native';
 import SplashScreen from 'react-native-splash-screen'
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
+import IdleTimerManager from 'react-native-idle-timer';
 import { colors } from './src/styles';
 
 import { persistor, store } from './src/redux/store';
@@ -15,7 +16,7 @@ export default function App() {
   LogBox.ignoreAllLogs();
   return (
     <Provider store={store}>
-      <NavigationContainer onReady={() => SplashScreen.hide()}>
+      <NavigationContainer onReady={() => { SplashScreen.hide(); IdleTimerManager.setIdleTimerDisabled(true); }}>
         <PersistGate
           loading={(
             <View style={styles.container}>
