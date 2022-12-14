@@ -34,7 +34,7 @@
 	<key>NSCameraUsageDescription</key>
 	<string>The camera is needed for AR functionality</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string/>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>The microphone is needed for AR functionality</string>
 	<key>NSPhotoLibraryUsageDescription</key>
@@ -73,6 +73,13 @@
 		<string>MuseoSansRounded500.otf</string>
 		<string>MuseoSansRounded700.otf</string>
 		<string>MuseoSansRounded900.otf</string>
+		<string>HarbourBold.ttf</string>
+		<string>MuseoSansRounded100.ttf</string>
+		<string>MuseoSansRounded1000.ttf</string>
+		<string>MuseoSansRounded300.ttf</string>
+		<string>MuseoSansRounded500.ttf</string>
+		<string>MuseoSansRounded700.ttf</string>
+		<string>MuseoSansRounded900.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen.storyboard</string>
