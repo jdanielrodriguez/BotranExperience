@@ -219,7 +219,6 @@ export default function HomeScreen() {
 
             if (isPlaying) {
                 tempState.isTracking = false;
-                tempState.playAnim = false;
                 tempState.pauseUpdates = false;
                 tempState.show3D = false;
                 tempState.show32D = false;
@@ -227,6 +226,7 @@ export default function HomeScreen() {
                 tempState.foundAnchor = null;
                 tempState.animationName = 'NoAnimation';
                 tempState.target = '';
+                tempState.playAnim = false;
                 setState({...tempState});
             }
         }
@@ -239,14 +239,7 @@ export default function HomeScreen() {
 
 
         if (Platform.OS === 'ios') {
-            // if (tempState.target !== target && tempState.target !== '') {
-            //     _onAnchorLost();
-            //     return false;
-            // }
-
             lastUpdate = new Date();
-
-            console.log(lastUpdate);
 
             if (tempState.target === target && !isPlaying) {
                 isPlaying = true;
