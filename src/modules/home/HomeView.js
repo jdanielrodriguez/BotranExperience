@@ -27,9 +27,9 @@ export default function HomeScreen() {
         let now = new Date();
         let seconds = (now.getTime() - lastUpdate.getTime()) / 1000;
 
-        console.log("*** has been from tracking ***", seconds, now, lastUpdate);
-        console.log("*** the interval id is ***", intervalID);
-        console.log("*** the static interval id is ***", staticInterval);
+        // console.log("*** has been from tracking ***", seconds, now, lastUpdate);
+        // console.log("*** the interval id is ***", intervalID);
+        // console.log("*** the static interval id is ***", staticInterval);
 
         if (seconds > 2 && intervalID === staticInterval) {
             _onAnchorLost();
