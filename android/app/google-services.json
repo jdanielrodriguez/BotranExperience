@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "911736345667",
+    "project_id": "appbotran",
+    "storage_bucket": "appbotran.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:911736345667:android:bcf61fea825ceee966b0f6",
+        "android_client_info": {
+          "package_name": "com.botranexperience"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "911736345667-sdvsm3rnco15jdut55sq4vbeargosm1v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUaaeYmgU1Tf0vHZMnT4Y9F_xOJD8kaZI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "911736345667-sdvsm3rnco15jdut55sq4vbeargosm1v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
