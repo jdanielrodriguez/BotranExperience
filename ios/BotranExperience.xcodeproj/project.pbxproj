@@ -70,6 +70,7 @@
 		5C262107294296E600ACCAC1 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 5C2620FE294296E600ACCAC1 /* images */; };
 		5C262108294296E600ACCAC1 /* bootsplash_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C2620FF294296E600ACCAC1 /* bootsplash_logo.png */; };
 		5C29FBFB2942499B00BE91AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C29FBFA2942499B00BE91AB /* LaunchScreen.storyboard */; };
+		5C68BEEF2950D677004D9524 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C68BEEC2950D677004D9524 /* GoogleService-Info.plist */; };
 		EA799BC01B9A7A335FA3EEA9 /* libPods-BotranExperience.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C425F60B03E5671AF73E2FE /* libPods-BotranExperience.a */; };
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
 /* End PBXBuildFile section */
@@ -81,6 +82,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 01D7495A1CC96385007E93FA;
 			remoteInfo = RNIdleTimer;
+		};
+		5CC4C5372949BF250082FC13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CC4C5332949BF240082FC13 /* RNCWebView.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNCWebView;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -210,8 +218,10 @@
 		5C262109294297FD00ACCAC1 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = assets; path = ../assets; sourceTree = SOURCE_ROOT; };
 		5C29FBFA2942499B00BE91AB /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C2ACDAE2940175100D1DF0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = BotranExperience/Info.plist; sourceTree = "<group>"; };
+		5C68BEEC2950D677004D9524 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "BotranExperience/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5C83D8577C1E4845AACD13FC /* libRNGestureHandler.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNGestureHandler.a; sourceTree = "<group>"; };
 		5CC4C52A294919F50082FC13 /* RNIdleTimer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNIdleTimer.xcodeproj; path = "../node_modules/react-native-idle-timer/ios/RNIdleTimer.xcodeproj"; sourceTree = "<group>"; };
+		5CC4C5332949BF240082FC13 /* RNCWebView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNCWebView.xcodeproj; path = "../node_modules/react-native-webview/ios/RNCWebView.xcodeproj"; sourceTree = "<group>"; };
 		5D46BF7733F547FFB0330708 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		5F629DFB3988493A80D26686 /* HarbourBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = HarbourBold.ttf; path = ../assets/fonts/HarbourBold.ttf; sourceTree = "<group>"; };
 		65C4209D7DE64233A6905E8B /* libRNLocalize-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNLocalize-tvOS.a"; sourceTree = "<group>"; };
@@ -267,6 +277,7 @@
 		13B07FAE1A68108700A75B9A /* BotranExperience */ = {
 			isa = PBXGroup;
 			children = (
+				5C68BEEC2950D677004D9524 /* GoogleService-Info.plist */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -357,9 +368,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		5CC4C5342949BF240082FC13 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5CC4C5382949BF250082FC13 /* libRNCWebView.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				5CC4C5332949BF240082FC13 /* RNCWebView.xcodeproj */,
 				5CC4C52A294919F50082FC13 /* RNIdleTimer.xcodeproj */,
 				5C2620BF2942636900ACCAC1 /* ViroRenderer */,
 				5C2620BD294260C600ACCAC1 /* libViroReact.a */,
@@ -555,6 +575,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 5CC4C5342949BF240082FC13 /* Products */;
+					ProjectRef = 5CC4C5332949BF240082FC13 /* RNCWebView.xcodeproj */;
+				},
+				{
 					ProductGroup = 5CC4C52B294919F50082FC13 /* Products */;
 					ProjectRef = 5CC4C52A294919F50082FC13 /* RNIdleTimer.xcodeproj */;
 				},
@@ -572,6 +596,13 @@
 			fileType = archive.ar;
 			path = libRNIdleTimer.a;
 			remoteRef = 5CC4C52E294919F50082FC13 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5CC4C5382949BF250082FC13 /* libRNCWebView.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNCWebView.a;
+			remoteRef = 5CC4C5372949BF250082FC13 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -614,6 +645,7 @@
 				28692AEE2946B5FB00576CAB /* col00-Intro_Completa-conBotella-12-parte1.vrx in Resources */,
 				28692AE62946AAE100576CAB /* HarbourBold.otf in Resources */,
 				28692AE22946AAD700576CAB /* MuseoSansRounded300.otf in Resources */,
+				5C68BEEF2950D677004D9524 /* GoogleService-Info.plist in Resources */,
 				28692AE02946A99D00576CAB /* MuseoSansRounded500.otf in Resources */,
 				28692AE42946AADD00576CAB /* MuseoSansRounded900.otf in Resources */,
 				5C262103294296E600ACCAC1 /* bootsplash_logo@2x.png in Resources */,
@@ -738,7 +770,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_ASSET_PATHS = ../assets;
 				DEVELOPMENT_TEAM = K9FWZ9Y7MZ;
 				HEADER_SEARCH_PATHS = (
@@ -755,12 +787,12 @@
 				INFOPLIST_FILE = BotranExperience/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Botran AR Experience";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.0.13;
+				MARKETING_VERSION = 0.0.15;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -782,7 +814,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_ASSET_PATHS = ../assets;
 				DEVELOPMENT_TEAM = K9FWZ9Y7MZ;
 				HEADER_SEARCH_PATHS = (
@@ -799,12 +831,12 @@
 				INFOPLIST_FILE = BotranExperience/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Botran AR Experience";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.0.13;
+				MARKETING_VERSION = 0.0.15;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
