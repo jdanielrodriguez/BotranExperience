@@ -7,7 +7,7 @@ platform :ios, '16.0'
 target 'BotranExperience' do
   # Comment the next line if you don't want to use dynamic frameworks
   config = use_native_modules!
-  
+  pod 'Firebase/Analytics'
   # use_frameworks!
   use_react_native!(
     :path => config[:reactNativePath],
@@ -19,8 +19,6 @@ target 'BotranExperience' do
   
   use_native_modules!
   pod 'react-native-idle-timer', :path => '../node_modules/react-native-idle-timer'
-  use_modular_headers!
-  pod 'Firebase/Analytics'
 
 end
 
