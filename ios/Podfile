@@ -19,6 +19,7 @@ target 'BotranExperience' do
   
   use_native_modules!
   pod 'react-native-idle-timer', :path => '../node_modules/react-native-idle-timer'
-
+  pod 'Firebase/Analytics'
+  
 end
 
