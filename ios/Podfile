@@ -5,7 +5,7 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 platform :ios, '16.0'
 
 target 'BotranExperience' do
-  pod 'Firebase/Analytics', :modular_headers => true
+  pod 'Firebase/AnalyticsWithoutAdIdSupport'
   pod 'Firebase', :modular_headers => true
   pod 'FirebaseCore', :modular_headers => true
   pod 'GoogleUtilities', :modular_headers => true
