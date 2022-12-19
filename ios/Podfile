@@ -7,8 +7,9 @@ platform :ios, '16.0'
 target 'BotranExperience' do
   pod 'Firebase/Analytics', :modular_headers => true
   pod 'Firebase', :modular_headers => true
-  pod 'FirebaseCoreInternal', :modular_headers => true
+  pod 'FirebaseCore', :modular_headers => true
   pod 'GoogleUtilities', :modular_headers => true
+  $RNFirebaseAsStaticFramework = true
   # Comment the next line if you don't want to use dynamic frameworks
   config = use_native_modules!
   # use_frameworks!
