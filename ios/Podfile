@@ -19,7 +19,8 @@ target 'BotranExperience' do
   
   use_native_modules!
   pod 'react-native-idle-timer', :path => '../node_modules/react-native-idle-timer'
-  pod 'Firebase/Analytics', :modular_headers => true
+  use_modular_headers!
+  pod 'Firebase/Analytics'
 
 end
 
