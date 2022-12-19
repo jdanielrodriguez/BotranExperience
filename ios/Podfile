@@ -5,9 +5,9 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 platform :ios, '16.0'
 
 target 'BotranExperience' do
+  pod 'Firebase/Analytics'
   # Comment the next line if you don't want to use dynamic frameworks
   config = use_native_modules!
-  pod 'Firebase/Analytics'
   # use_frameworks!
   use_react_native!(
     :path => config[:reactNativePath],
