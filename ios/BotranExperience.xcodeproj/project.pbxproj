@@ -555,13 +555,8 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1410;
+				LastUpgradeCheck = 1420;
 				ORGANIZATIONNAME = Facebook;
-				TargetAttributes = {
-					13B07F861A680F5B00A75B9A = {
-						DevelopmentTeam = K9FWZ9Y7MZ;
-					};
-				};
 			};
 			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "BotranExperience" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -569,6 +564,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
@@ -768,9 +764,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D11FA3534CDD4F18ACC10110 /* Pods-BotranExperience.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_ASSET_PATHS = ../assets;
 				DEVELOPMENT_TEAM = K9FWZ9Y7MZ;
 				HEADER_SEARCH_PATHS = (
@@ -787,12 +784,12 @@
 				INFOPLIST_FILE = BotranExperience/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Botran AR Experience";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.0.19;
+				MARKETING_VERSION = 0.0.21;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -812,9 +809,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 77256A02D70CA211C5EE661E /* Pods-BotranExperience.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_ASSET_PATHS = ../assets;
 				DEVELOPMENT_TEAM = K9FWZ9Y7MZ;
 				HEADER_SEARCH_PATHS = (
@@ -831,12 +829,12 @@
 				INFOPLIST_FILE = BotranExperience/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Botran AR Experience";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.0.19;
+				MARKETING_VERSION = 0.0.21;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
