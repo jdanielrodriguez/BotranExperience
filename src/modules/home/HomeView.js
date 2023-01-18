@@ -236,25 +236,25 @@ export default function HomeScreen() {
         // console.log("*** targets are ***", tempState.target, target);
 
 
-        if (Platform.OS === 'ios') {
-            lastUpdate = new Date();
+    //     if (Platform.OS === 'ios') {
+    //         lastUpdate = new Date();
 
-            if (tempState.target === target && !isPlaying) {
-                isPlaying = true;
-                _onAnchorFound(anchor);
-            }
-        } else {
-            _onAnchorUpdateAndroid(tempState, anchor, target)
-        }
+    //         if (tempState.target === target && !isPlaying) {
+    //             isPlaying = true;
+    //             _onAnchorFound(anchor);
+    //         }
+    //     } else {
+    //         _onAnchorUpdateAndroid(tempState, anchor, target)
+    //     }
 
-        if (tempState.target === '') {
-            tempState.target = target;
-            tempState.lastTarget = target;
-            setState({...tempState});
-        }
-    };
+    //     if (tempState.target === '') {
+    //         tempState.target = target;
+    //         tempState.lastTarget = target;
+    //         setState({...tempState});
+    //     }
+    // };
 
-    const _onAnchorUpdateAndroid = (anchor, target) => {
+    // const _onAnchorUpdateAndroid = (anchor, target) => {
         if (tempState.anchorId !== anchor.anchorId && tempState.anchorId > 0) {
             return false;
         }
