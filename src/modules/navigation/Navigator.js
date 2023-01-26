@@ -32,7 +32,7 @@ const drawerData = [
 const Drawer = createDrawerNavigator();
 const compartir = () => {
   const shareOptions = {
-    url: Platform.OS === 'ios' ? 'https://apps.apple.com/us/app/BotranExperience' : 'https://play.google.com/store/apps/details?id=com.botranexperience',
+    url: Platform.OS === 'ios' ? 'https://apps.apple.com/gt/app/botran-ar-experience/id6444846340' : 'https://play.google.com/store/apps/details?id=com.botranexperience',
     message: 'Hey look this Botran AR Experience.'
   };
   Share.open(shareOptions);
