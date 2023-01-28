@@ -235,7 +235,6 @@ export default function HomeScreen() {
 
         // console.log("*** targets are ***", tempState.target, target);
 
-
         if (Platform.OS === 'ios') {
             lastUpdate = new Date();
 
@@ -243,56 +242,51 @@ export default function HomeScreen() {
                 isPlaying = true;
                 _onAnchorFound(anchor);
             }
+
+            if (tempState.target) {
+                tempState.target = target;
+                tempState.lastTarget = target;
+                setState({...tempState});
+            }
         } else {
-            _onAnchorUpdateAndroid(tempState, anchor, target)
-        }
+            if (tempState.anchorId !== anchor.anchorId && tempState.anchorId > 0) {
+                return false;
+            }
 
-        if (tempState.target === '') {
-            tempState.target = target;
-            tempState.lastTarget = target;
-            setState({...tempState});
-        }
-    };
-
-    const _onAnchorUpdateAndroid = (anchor, target) => {
-        if (tempState.anchorId !== anchor.anchorId && tempState.anchorId > 0) {
-            return false;
-        }
-
-        if (!pauseTracking) {
-            // Change status only if target is the same as selected
-            if (tempState.target === target) {
-                if (
-                    !isPlaying &&
-                    anchor.trackingMethod === 'tracking'
-                ) {
-                    isPlaying = true;
-                    _onAnchorFound(anchor);
-                } else if (
-                    isPlaying &&
-                    anchor.trackingMethod === 'lastKnownPose'
-                ) {
-                    tempState.isTracking = false;
-                    tempState.playAnim = false;
-                    tempState.pauseUpdates = false;
-                    tempState.show3D = false;
-                    tempState.show32D = false;
-                    tempState.anchorId = null;
-                    tempState.foundAnchor = null;
-                    tempState.animationName = 'NoAnimation';
-                    tempState.target = '';
-                    setState({...tempState});
+            if (!pauseTracking) {
+                // Change status only if target is the same as selected
+                if (tempState.target === target) {
+                    if (
+                        !isPlaying &&
+                        anchor.trackingMethod === 'tracking'
+                    ) {
+                        isPlaying = true;
+                        _onAnchorFound(anchor);
+                    } else if (
+                        isPlaying &&
+                        anchor.trackingMethod === 'lastKnownPose'
+                    ) {
+                        tempState.isTracking = false;
+                        tempState.playAnim = false;
+                        tempState.pauseUpdates = false;
+                        tempState.show3D = false;
+                        tempState.show32D = false;
+                        tempState.anchorId = null;
+                        tempState.foundAnchor = null;
+                        tempState.animationName = 'NoAnimation';
+                        tempState.target = '';
+                        setState({...tempState});
+                    }
                 }
             }
-        }
 
-        // Set target when status is tracking and is another element
-        if (anchor.trackingMethod === 'tracking' && tempState.target === '') {
-            tempState.target = target;
-            tempState.lastTarget = target;
-            setState({...tempState});
+            // Set target when status is tracking and is another element
+            if (anchor.trackingMethod === 'tracking' && tempState.target === '') {
+                tempState.target = target;
+                tempState.lastTarget = target;
+                setState({...tempState});
+            }
         }
-        return false;
     };
 
     const _onCameraTransformUpdate = anchor => {
