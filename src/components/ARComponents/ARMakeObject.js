@@ -3,16 +3,16 @@ import React from 'react';
 import {Viro3DObject, ViroSound} from '@viro-community/react-viro';
 // import ARSpotLigth from './ARSpotLigth';
 export default function ARMakeObject(props) {
-    const quetzal = {
-        srcc: require('./../../../assets/vrx/quetzal/01-MODULOS-QUETZAL-VER2-FLATTEN.vrx'),
-        materials: [
-            require('./../../../assets/vrx/quetzal/QUETZAL%20VOLANDO0000.png'),
-            require('./../../../assets/vrx/quetzal/QUETZAL_VOLando02_0001_Layer-1.png'),
-            require('./../../../assets/vrx/quetzal/QUETZAL_VOLando02_0000_Layer-2.png'),
-            require('./../../../assets/vrx/quetzal/QUETZAL_VOLando02_0002_Layer-3.png'),
-        ],
-        sound: require('./../../../assets/mp3/narracion/BOTRAN_NATURE.mp3'),
-    };
+    // const quetzal = {
+    //     srcc: require('./../../../assets/vrx/quetzal/01-MODULOS-QUETZAL-VER2-FLATTEN.vrx'),
+    //     materials: [
+    //         require('./../../../assets/vrx/quetzal/QUETZAL%20VOLANDO0000.png'),
+    //         require('./../../../assets/vrx/quetzal/QUETZAL_VOLando02_0001_Layer-1.png'),
+    //         require('./../../../assets/vrx/quetzal/QUETZAL_VOLando02_0000_Layer-2.png'),
+    //         require('./../../../assets/vrx/quetzal/QUETZAL_VOLando02_0002_Layer-3.png'),
+    //     ],
+    //     sound: require('./../../../assets/mp3/narracion/BOTRAN_NATURE.mp3'),
+    // };
     const {
         selected,
         animationName,
@@ -84,7 +84,6 @@ export default function ARMakeObject(props) {
                     <Viro3DObject
                         key={`${_key}Obj`}
                         source={selected.src}
-                        // scale={selected.scale ? selected.scale : [0.00095, 0.001, 0.001]}
                         lightReceivingBitMask={5}
                         onClick={_changeObject}
                         animation={{
