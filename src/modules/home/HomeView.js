@@ -433,8 +433,8 @@ const styles = StyleSheet.create({
         marginTop: '21%',
     },
     pointer_bottle: {
-        width: '55%',
-        height: '65%',
+        width: '60%',
+        height: '70%',
         marginLeft: 'auto',
         marginRight: 'auto',
         marginTop: -50,
