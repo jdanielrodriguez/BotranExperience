@@ -102,7 +102,7 @@ export default function ARMakeObject(props) {
             scale={[0.002, 0.002, 0.002]}
             rotation={_key === 'Botran15Normal' ? [3.5, 0, 1.5] : [10, 0, 0]}
             onError={_onError}
-            visible={playAnim}
+            visible={true}
             highAccuracyEvents={false}
           />
           {selected.sound && (
